@@ -2,7 +2,7 @@ site_name: My Docs
 site_url: https://gharials.github.io/dev-path/
 nav:
   - Internet & Web:
-    - Internet & Web: internet-web/internet-web.md
+    - Network & Internet Basics: internet-web/network-internet-basics.md
 copyright:
   Copyright &copy; 2024 Gharials.
 theme:

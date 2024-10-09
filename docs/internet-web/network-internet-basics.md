@@ -1,4 +1,4 @@
-# Internet & Web
+# Networking and Internet Basics
 
 Computers in isolation has limited capability. When they are _networked_ (i.e. able to transfer data among each other) their capabilities multiply. Most commonly they can share data among each other.
 
@@ -19,7 +19,7 @@ There are two variants of IP address: the traditional and most widely used _IPv4
 
 ### Finding a computer in a network
 
-Not all hosts (computers) are connected directly to each other in a network; a host usually need to reach another host through a number of other hosts (_hops_ in networking terminology). Requests and responses are conveyed to hosts in a network by finding a _route_ between them.
+Not all hosts (computers) are connected directly to each other in a network; a host usually need to reach another host via a number of other hosts (_hops_ in networking terminology). Requests and responses are conveyed to hosts in a network by finding a _route_ between them.
 
 You can print the route between your host and another with the `tracert` (trace route) command. Here follows an example that lists the hops to reach `google.com`:
 
@@ -64,9 +64,22 @@ A DNS server maps a URL to an IP address.
 
 _To be done._
 
+## Network protocols
+
+Once hosts are connected, then comes the question of _exchanging data_ among them, among the programs running on the hosts to be more precise. The data format cannot be arbitrary; there must be some rules. These rules are called a _protocol._ Depending on application, networks use many protocols. Here follows a few common network protocols.
+
+| Name           | Description
+|----------------|------------
+| HTTP (Hyper Text Transfer Protocol) | Exchanging hyper texts (web pages.)
+| FTP (File Transfer Protocol)  | Used for transferring files among computers.
+| SSH (Secured Shell)  | Used for sending commands to another computer in a network.
+| SMTP (Simple Mail Transfer Protocol) | Used for sending emails.
+
+Each protocol has its own rules (e.g. data formats.)
+
 ## The HTTP protocol
 
-Just like any other protocols, HTTP protocol is an agreement across computers on how they communicate with each other.
+Here follows a brief introduction to arguably the most important protocol, that is HTTP protocol. Just like any other protocols, HTTP protocol is an agreement across computers on how they communicate with each other.
 
 HTTP is a very widely used protocol and it is very straightforward. An _client_ sends a _request_ to a _server_; the server responds by sending a _response._ Both HTTP requests and responses are chunks of data and comply with a format defined by the HTTP protocol.
 
