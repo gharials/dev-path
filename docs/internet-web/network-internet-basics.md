@@ -66,14 +66,14 @@ _To be done._
 
 ## Network protocols
 
-Once hosts are connected, then comes the question of _exchanging data_ among them, among the programs running on the hosts to be more precise. The data format cannot be arbitrary; there must be some rules. These rules are called a _protocol._ Depending on application, networks use many protocols. Here follows a few common network protocols.
+Once hosts are connected, then comes the question of _exchanging data_ among them, among the programs running on the hosts to be more precise. The data format cannot be arbitrary; there must be some rules or conventions. These rules are called a _protocol._ Depending on application, networks use many protocols. Here follows a few common network protocols.
 
-| Name           | Description
+| Name           | Purpose
 |----------------|------------
 | HTTP (Hyper Text Transfer Protocol) | Exchanging hyper texts (web pages.)
-| FTP (File Transfer Protocol)  | Used for transferring files among computers.
-| SSH (Secured Shell)  | Used for sending commands to another computer in a network.
-| SMTP (Simple Mail Transfer Protocol) | Used for sending emails.
+| FTP (File Transfer Protocol)  | Transferring files among computers.
+| SSH (Secured Shell)  | Sending commands to another computer in a network.
+| SMTP (Simple Mail Transfer Protocol) | Sending and receiving emails.
 
 Each protocol has its own rules (e.g. data formats.)
 
@@ -121,6 +121,8 @@ Here follows a sample HTTP response (truncated for brevity):
 ```
 
 The most common HTTP client is a web browser. The web pages a browser display are nothing but rendered HTTP responses.
+
+See the following resource for a more detailed overview of HTTP: [An overview of HTTP - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
 
 ## Web servers or HTTP servers
 
