@@ -36,6 +36,11 @@ As the preceding example shows, an IPv4 address consists of four parts separated
       Default Gateway . . . . . . . . . : 192.168.0.1
     ```
 
+!!! info
+    **Loopback address**
+
+    In a network a computer's IP address is used whenever it is referred by another computer (say for sending a request to an HTTP server running on the computer). But when a computer needs to _refer itself_ (say for sending requests to a server running on the same computer), a special IP address and host name is used, called the _loopback_: the loopback address is `127.0.0.1` and the loopback hostname is `localhost`.
+
 ### Locating a computer in a network (routing)
 
 In a network not all hosts (computers) are connected directly to each other; a host usually needs to reach another host via a number of intermediate hosts (_hops_ in networking terminology); each intermediate host _relays_ the data sent by the original host. Before exchanging data with another host in a network, the destination host has to be located in the network and a _route_ (consisting of intermediate hosts or hops) has to be found between them; the process is called _routing_.
