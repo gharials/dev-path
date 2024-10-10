@@ -19,7 +19,7 @@ There are two variants of IP address: the traditional and most widely used _IPv4
 
 As the preceding example shows, an IPv4 address consists of four parts separated by a dot; each part can have a value up to 255. As the type and number of devices connected to the Internet kept growing, the IPv4 address space got exhausted. IPv6 was introduced as a result to accommodate even more devices. Each device has an IPv6 address as well as its IPv4 address. However, for most practical purposes developers talk in terms of IPv4 addresses.
 
-!!! info
+!!! hands-on
     You can find your computer's IP address by running the `ipconfig` command. Here follows an example:
 
     ```
@@ -89,7 +89,10 @@ _To be done._
 Communication between two hosts in a network is a complex process, spanning across several layers. Each layer's operations cannot be arbitrary; they defined by some rules or conventions and they are called _protocols._ The lower layers take care of identifying hosts, finding routes between them, etc. and their corresponding protocols define the rules for them.
 
 !!! info
-    The canonical model for the network layers is called the _OSI model_ and it consists of 7 layers. See this resource for further information: [What is the OSI Model? 7 layers explained in detail.](https://www.educative.io/blog/osi-model-layers)
+    The canonical model for the network layers is called the _OSI model_ and it consists of 7 layers. See the following resources for further information on OSI model:
+
+    1. [What is layer 7 of the Internet? - Cloudflare](https://www.cloudflare.com/learning/ddos/what-is-layer-7/).
+    2. [What is the OSI Model? 7 layers explained in detail.](https://www.educative.io/blog/osi-model-layers)
 
 Once the lower layers take care of locating and connecting hosts, then comes the question of _exchanging data_ among the applications or programs running on the hosts. The topmost layer protocols define the rules for communication between applications running on two hosts, thus the layer is called _application layer_. There are many application layer protocols used by various applications. Here follows a few commonly used ones:
 
@@ -149,9 +152,12 @@ Here follows a sample HTTP response (truncated for brevity):
   <head>
 ```
 
-See the following resource for a more detailed overview of HTTP: [An overview of HTTP - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
+See the following resources for a more detailed overview of HTTP:
 
-!!! info
+1. [An overview of HTTP - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview).
+2. [What is HTTP? - Cloudflare](https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/).
+
+!!! hands-on
     **SMTP protocol message format**
 
     Just like browsers render HTTP protocol responses in a human readable format, the SMTP clients also do the same for SMTP messages. You can view the SMTP data format by opening an email in your GMail inbox and clicking _Show original_ from the menu at the top-right corner. Here follows an example (truncated for brevity.)
