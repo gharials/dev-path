@@ -41,6 +41,12 @@ As the preceding example shows, an IPv4 address consists of four parts separated
 
     In a network a computer's IP address is used whenever it is referred by another computer (say for sending a request to an HTTP server running on the computer). But when a computer needs to _refer itself_ (say for sending requests to a server running on the same computer), a special IP address and host name is used, called the _loopback_: the loopback address is `127.0.0.1` and the loopback hostname is `localhost`.
 
+#### How IP addresses are assigned
+
+Usually a network router automatically assigns IP addresses to the hosts immediately after they are connected to its network using a protocol called DHCP (Dynamic Host Configuration Protocol). Though it is straightforward as users don't have to configure IP addresses themselves, but this approach has a drawback: the IP addresses are _temporary_; a device may not have the same IP address the next time it connects to the network.
+
+All operating systems allow users to assign static IP addresses of their choice manually. In Windows, you can do it from the Network Operations Center. See this [article](https://pureinfotech.com/set-static-ip-address-windows-10/) for instructions.
+
 ### Locating a computer in a network (routing)
 
 In a network not all hosts (computers) are connected directly to each other; a host usually needs to reach another host via a number of intermediate hosts (_hops_ in networking terminology); each intermediate host _relays_ the data sent by the original host. Before exchanging data with another host in a network, the destination host has to be located in the network and a _route_ (consisting of intermediate hosts or hops) has to be found between them; the process is called _routing_.
