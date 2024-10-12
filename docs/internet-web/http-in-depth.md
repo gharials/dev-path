@@ -8,9 +8,17 @@ The following subsections cover the concepts necessary to get started working wi
 
 ### URLs
 
-See this [resource](https://developer.mozilla.org/en-US/docs/Web/URI#urls) for an overview.
+URLs are used to identify a web server and access its _resources_. Here is how a URL look like:
 
-_To be done._
+`http://www.example.com(1):80(2)/path/to/myfile.html?(3)key1=value1&key2=value2#(4)SomewhereInTheDocument`
+{ .annotate }
+
+1. Host name: `www.example.com` (can be an IP address too).
+2. Port number: `:80` (optional; assumed to be `80` unless specified otherwise).
+3. Query parameter start indicator: `?` (optional; indicates that there are a few query parameters following it in key value format and separated by `&`).
+4. Fragment indicator:  `#` (optional; text following it specifies the section in a web page).
+
+URLs cannot contain any spaces. See this [resource](https://developer.mozilla.org/en-US/docs/Web/URI#urls) for further details.
 
 ### Requests and responses
 
@@ -59,6 +67,8 @@ HTTP requests and responses contain a number of _headers._ They follow this gene
 
 ### Cookies
 
-A server forgets about requests and the hosts they came from after returning a response (that is why HTTP protocol is called _stateless_). A server can never tell from a series of requests it received whether they came from (originate) the same client or not. A special HTTP header called cookie (`Set-Cookie: <cookie-name>=<cookie-value>`) allow a server to pass some data to the client. The client is supposed to include this value automatically in all subsequent requests as a header: `Cookie: <cookie-name>=<cookie-value>`. By sending random numbers as a cookie value and keeping track of the the cookie, a server can detect whether a request came from a known host or a new one.
+A special HTTP header called cookie (`Set-Cookie: <cookie-name>=<cookie-value>`) allow a server to pass some data to the client. The client is supposed to store this value and include it automatically in all subsequent requests as the `Cookie` header (e.g. `Cookie: <cookie-name>=<cookie-value>`).
+
+A server forgets about requests and the hosts they came from after returning a response (that is why HTTP protocol is called _stateless_). A server can never tell from a series of requests it received whether they came from (originate) the same client or not. By sending random numbers as a cookie value and keeping track of the the cookie, a server can detect whether a request came from a known host or a new one.
 
 Cookies have other useful applications too.
