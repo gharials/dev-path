@@ -5,6 +5,7 @@ nav:
     - Operating System Basics: operating-systems/os-basics.md
   - Internet & Web:
     - Network & Internet Basics: internet-web/network-internet-basics.md
+    - HTTP in depth: internet-web/http-in-depth.md
 copyright:
   Copyright &copy; 2024 Gharials.
 theme:
