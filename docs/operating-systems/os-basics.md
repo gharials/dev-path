@@ -2,6 +2,16 @@
 
 A computer consists of these fundamental components: CPUs or processors, memory (aka RAM), and storage (aka disk). Besides these a computer may have many other peripheral devices. An operating system controls and coordinates all _resources_ (e.g. processor, memory, disk, devices, etc.) of a computer. It also controls all programs (_processes_ in OS terminology) running on a computer.
 
+## Command line interfaces (CLIs)
+
+The early operating systems used to have only command line interfaces: users had to perform all tasks by typing in commands. It was inconvenient for many reasons. All modern OSs are graphical user interface based. It may sound strange at first, however, the old command line interfaces (CLI) have some benefits too. That is why the modern OSs provide command line interfaces besides the graphical interface.
+
+CLIs are particularly helpful when you want to automate a _batch of tasks_ (that is a number of tasks to be executed one after another). Say, you want to download and install a few programs one after another. In such situations in a graphical interface, you have to be in front of the computer during the entire process. But if all the download and install commands were written down in a script, as is done in this [example](https://gist.github.com/brettjrea/e566a998d102ea2c2b8220c9c585e438), the commands would execute one after another on their own until they are finished.
+
+The Windows operating system provides two CLIs: the _Command Prompt_ (the old one) and _Power Shell_ (the new and more capable one). Search for command prompt and power shell from start menu if you want to run them. The Linux OSs provide the _Shell_ CLI and its derivative _Bash_.
+
+The window where users input commands is called a _terminal._ Commands vary from CLI to CLI: the same command may work on one but not on the other. The `ls` command, for example, is available in Power Shell but not in Command Prompt.
+
 ## 32-bit and 64-bit OS
 
 Often when you want to download an application, you find that two versions (_builds_) are available: 32-bit and 64-bit (for example, the FileZilla FTP client: [64-bit](https://filezilla-project.org/download.php) and [32-bit](https://filezilla-project.org/download.php?platform=win32)). The two builds provide the same functionality, but they differ on the _type of CPU_ they are targeted for.
