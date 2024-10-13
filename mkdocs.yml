@@ -1,6 +1,8 @@
 site_name: My Docs
 site_url: https://gharials.github.io/dev-path/
 nav:
+  - Programming & Problem Solving:
+    - Mathematics for Programming: programming/math-prog.md
   - Operating Systems:
     - Operating System Basics: operating-systems/os-basics.md
   - Internet & Web:
@@ -38,3 +40,10 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
