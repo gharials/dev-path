@@ -4,13 +4,19 @@ A computer consists of these fundamental components: CPUs or processors, memory 
 
 ## Command line interfaces (CLIs)
 
-The early operating systems used to have only command line interfaces: users had to perform all tasks by typing in commands. It was inconvenient for many reasons. All modern OSs are graphical user interface based. It may sound strange at first, however, the old command line interfaces (CLI) have some benefits too. That is why the modern OSs provide command line interfaces besides the graphical interface.
+The early operating systems used to have only command line interfaces: users had to perform all tasks by typing in commands. It was inconvenient for many reasons. All modern OSs are graphical user interface (GUI) based. It may sound strange at first, however, the old command line interfaces (CLI) have some benefits too. That is why the modern OSs provide command line interfaces besides the graphical interface. The window where users input commands is called a _terminal._
+
+Many operations usually done from GUI has CLI equivalents too. For example, we usually download files through a browser, but it can done from CLI too. The following command downloads the `install.sh` file from the specified URL: `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh`
+
+### Benefits of CLI
 
 CLIs are particularly helpful when you want to automate a _batch of tasks_ (that is a number of tasks to be executed one after another). Say, you want to download and install a few programs one after another. In such situations in a graphical interface, you have to be in front of the computer during the entire process. But if all the download and install commands were written down in a script, as is done in this [example](https://gist.github.com/brettjrea/e566a998d102ea2c2b8220c9c585e438), the commands would execute one after another on their own until they are finished.
 
+### CLIs provided by various OSs
+
 The Windows operating system provides two CLIs: the _Command Prompt_ (the old one) and _Power Shell_ (the new and more capable one). Search for command prompt and power shell from start menu if you want to run them. The Linux OSs provide the _Shell_ CLI and its derivative _Bash_.
 
-The window where users input commands is called a _terminal._ Commands vary from CLI to CLI: the same command may work on one but not on the other. The `ls` command, for example, is available in Power Shell but not in Command Prompt.
+Commands vary from CLI to CLI: the same command may work on one but not on the other. The `ls` command, for example, is available in Power Shell but not in Command Prompt.
 
 ## 32-bit and 64-bit OS
 
