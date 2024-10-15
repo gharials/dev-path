@@ -18,6 +18,13 @@ The Windows operating system provides two CLIs: the _Command Prompt_ (the old on
 
 Commands vary from CLI to CLI: the same command may work on one but not on the other. The `ls` command, for example, is available in Power Shell but not in Command Prompt.
 
+???+ info
+    **Windows Subsystem for Linux (WSL)**
+
+    Linux Shell is the de-facto standard for CLIs, much convenient and more widely used than Windows Command Prompt and Power Shell. Lately, the [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/about) feature in Windows enables running Linux commands from Windows OS. WSL is effectively a Linux OS without GUI within the Windows OS. You can run Linux commands by running WSL on Windows.
+    
+    Getting handy with Linux commands is a big plus for any developer, even if you are a Windows user. See this [video](https://youtu.be/gd7BXuUQ91w?si=wF0gyBJdxJo0IZpV) for an overview of the most frequently used Linux commands.
+
 ## 32-bit and 64-bit OS
 
 Often when you want to download an application, you find that two versions (_builds_) are available: 32-bit and 64-bit (for example, the FileZilla FTP client: [64-bit](https://filezilla-project.org/download.php) and [32-bit](https://filezilla-project.org/download.php?platform=win32)). The two builds provide the same functionality, but they differ on the _type of CPU_ they are targeted for.
