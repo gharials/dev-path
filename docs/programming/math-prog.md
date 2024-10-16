@@ -1,4 +1,4 @@
-# Mathematics For Programming
+# Mathematics for Programming
 
 ## Floor and ceiling functions
 
@@ -38,7 +38,7 @@ The ceiling of any real number is the smallest integer greater than or equal to 
 
 ### The modulo operator
 
-$a \mod m ≡ r$ (pronounced $a$ modulo/mod $m$ equals $r$) means that $r$ is the remainder after dividing $a$ with $m$. Example: $14 \mod 3 ≡ 2$.
+$a \mod m = r$ (pronounced $a$ modulo/mod $m$ equals $r$) means that $r$ is the remainder after dividing $a$ with $m$. Example: $14 \mod 3 = 2$.
 
 In programming languages the `%` operator is used as the modulus operator. Example: `14 % 3`.
 
@@ -61,3 +61,17 @@ Examples: `0x12` (the value is 18, not 12) `0xAF`, `0x2A`, `x20`, `xA4`, `xAC`.
     **Hexadecimal representation of colors**
 
     Colors in computer are represented with numbers. Each color has its own unique number. See this [resource](https://color-hex.org/) for a list of hexadecimal representation of commonly used colors. This hexadecimal color naming format is widely used in HTML and other applications.
+
+## Counting
+
+Counting (aka _combinatorics_) is a vast topic in mathematics. A programmer needs to know a few commonly used counting techniques.
+
+### Sum rule and product rule
+
+The sum and product rule of counting are particularly important. They occur frequently at work. Here follows a working definition of the two rules:
+
+**Sum rule.** If one and only one option is to be chosen from $n$ options and each options have $a_1, a_2, ... a_n$ alternatives, then the total number of choices is $a_1 + a_2 + ... + a_n$.
+
+**Product rule.** If all of the $n$ options must be chosen and there are $a_1, a_2, ... a_n$ alternatives for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total. A common special case of the rule is when each options have the same $m$ number of alternatives, then there are total $m × m × ... × m = m^n$ choices.
+
+Consult this [resource](https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/) for details.
