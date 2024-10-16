@@ -15,7 +15,7 @@ Any complex project requires team collaboration. When a team of developers work 
 
 Git continually tracks every file and directories under its repository directory. If a file is already _tracked_ (staged once with the `git add` command), it tracks the _changes_ that took place within it; it treats other files and directories as _untracked_ and assumes they will be tracked eventually.
 
-However, in a repository, not all files' history are important or not of any interest to the collaborators, thus do not deserve versioning. Still Git keeps treating them as untracked unless they are marked as _ignored._ It causes confusion to developers when they want to check for changes before committing; unwanted files might be staged and committed by mistake. User has to mark such files and directories as to be ignored in a file called `.gitignore`, usually at the repository root. Here follows an example git ignore file.
+However, in a repository, some files' and directories' histories are neither important nor of any interest to the collaborators, thus they do not deserve versioning. Still, Git keeps treating them as untracked, causing confusion to developers when they want to check for changes before committing. Developers are overwhelmed by the list of untracked files, and they might stage unwanted files and commit them by mistake. The repository user has to mark such files and directories as to be ignored in a file called `.gitignore`, usually at the repository root. Here follows an example Git ignore file.
 
 <div class="annotate" markdown>
 ```txt
