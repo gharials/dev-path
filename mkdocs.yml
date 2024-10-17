@@ -3,6 +3,7 @@ site_url: https://gharials.github.io/dev-path/
 nav:
   - Programming & Problem Solving:
     - Mathematics for Programming: programming/math-prog.md
+    - Mental Models for Programmers: programming/mental-models.md
   - Operating Systems:
     - Operating System Basics: operating-systems/os-basics.md
   - Internet & Web:
