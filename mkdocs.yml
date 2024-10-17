@@ -1,5 +1,7 @@
 site_name: My Docs
 site_url: https://gharials.github.io/dev-path/
+repo_url: https://github.com/gharials/dev-path
+edit_uri: blob/main/docs/
 nav:
   - Programming & Problem Solving:
     - Mathematics for Programming: programming/math-prog.md
@@ -45,6 +47,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.arithmatex:
       generic: true
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-committers:
+      repository: gharials/dev-path
+      branch: main
 
 extra_javascript:
   - javascripts/mathjax.js
