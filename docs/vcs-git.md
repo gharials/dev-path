@@ -8,11 +8,11 @@ See these [pages](https://github.com/git-guides) for a more exhaustive and autho
 
 ## The Git workflow
 
-This section gives a overview of how developers use Git. Before using Git on your computer, [download](https://git-scm.com/downloads) and install it.
+This section gives a overview of how Git is used by developers. Before using Git on your computer, [download](https://git-scm.com/downloads) and install it.
 
 ### Creating a local Git repository
 
-You can designate any directory in your computer as a Git repository. In order to do so, open Git Bash in the desired directory and run the `git init` command. This command creates a _local repository_ for you with a default _branch_ called `master`. A `.git` subdirectory also appears in the directory; this directory is used by Git for repository management. Users never need to view or modify the contents in this directory.
+You can turn any directory in your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the `git init` command. This command creates a `.git` subdirectory into the directory. As a result, the directory turns into a Git repository with `master` as the default _branch_.
 
 ???+ info
     **The new `main` and the old `master` branches in GitHub**
@@ -35,6 +35,11 @@ git config --global user.email "youremail@yourdomain.com"
 
 After setting the username and email address, you have a working _local repository._ You can start working in your repository: staging, committing, etc.
 
+???+ info
+    **The `.git` subdirectory**
+
+    The `.git` subdirectory is used by Git for repository management; users never need to view or modify the contents in it. If you delete the `.git` subdirectory, even if keeping the other contents in it intact, your directory no longer remains a Git repository: all Git repository information about the directory will be lost and Git commands will no longer work in the directory.
+
 ### Setting up Git remotes
 
 The changes you make in your repository, that is your commits, remain local until you push them to a _remote_, a shared central repository. For that your have to create a remote repository in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc). After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
@@ -48,7 +53,7 @@ git remote add origin(1) https://github.com/OWNER/REPOSITORY.git(2)
 1. Name of the remote. A local repository may have multiple remotes with their unique names; the default remote name is `origin`.
 2. Link to the remote repository. You can find it in the repository webpage.
 
-Once you have associated a remote with your local repository, you can push your commits to it so that your changes are visible to others with access to the same remote repository. You may never need to associate your repository with a remote if you don't want to share your work with others.
+Once you have associated a remote with your local repository, you can push your commits to it so that your changes become visible to others with access to the same remote repository. You don't need to associate your repository with a remote if you don't want to share your work with others.
 
 ### Creating local repositories with Git clone
 
@@ -58,7 +63,7 @@ Sometimes, you know from the beginning that you want collaboration in the reposi
 git clone https://github.com/github/training-kit.git
 ```
 
-This command creates the repository on your computer and copies all the contents from the remote repository. It also automatically sets the remote repository as the `origin` remote; you don't need to do it manually.
+This command creates a copy or clone of the remote repository in your computer. It also automatically sets the remote repository as the `origin` remote; you don't need to do it manually.
 
 You can use Git clone when you want to work on an existing remote repository created by someone else.
 
