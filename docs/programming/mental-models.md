@@ -25,6 +25,20 @@ Developing an ability to identify associations in various scenarios and also exp
 
 ### Associations in programming
 
-Objects in programming languages are associative by nature. The properties of an object contain the values associated with it. For example, a student object contains only the information associated with a particular student (e.g. name, class, roll number, etc.)
+Objects (called _records_ in some languages) in programming languages are associative by nature. The properties of an object contain the values associated with it. For example, a student object contains only the information associated with a particular student (e.g. name, class, roll number, etc.)
 
 The *map* data structure (called *dictionary* in some languages) is capable of storing and retrieving associations. A map variable can both associate a *key* with a *value,* and also can find the associated value given the key. The mapping rule (which key is to be associated with which value) is up to the programmer.
+
+## Hierarchy
+
+A hierarchy organizes things at a number of levels. A level is owned by its _parent level_ and it owns its _child levels._ Depending on contexts, different terms are used instead of parent and child levels. Hierarchy is a natural way of organizing things on many occasions. A hierarchy may represent ownership, priority, and many other things.
+
+Hierarchies are often represented with [_trees_](https://en.wikipedia.org/wiki/Tree_structure). Organizing things in hierarchies whenever possible helps understand the relationship among them.
+
+### Examples
+
+1. Staffs in organizations are usually organized in a hierarchy called _organizational chart_, or _organogram_. Staffs at a higher level of hierarchy oversees or supervises the ones at the lower levels of hierarchy; staffs at a lower level of hierarchy reports to those at the higher level.
+2. Operating systems organize the files in its disks in a hierarchy called _file tree._ A _parent_ directory owns all the subdirectories and files within it. Deleting a parent directory deletes all its child directories and files too.
+3. Table of contents of a book is also a hierarchy. A chapter contains its sections, subsections. It helps readers navigating through the book.
+4. In source codes, indentations are used to represent hierarchies. A code block is indented to indicate that it is owned by its parent block.
+5. Designers use various [_visual hierarchy_](https://www.interaction-design.org/literature/topics/visual-hierarchy) techniques in designs to indicate priority (e.g. larger or darker texts are more important), help navigation (e.g. a [breadcrumbs](https://careerfoundry.com/en/blog/ui-design/ui-breadcrumbs/)), etc.
