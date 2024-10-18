@@ -392,6 +392,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#state-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      State machines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State machines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-git-version-control-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Git version control system
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -658,6 +697,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#state-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      State machines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="State machines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-git-version-control-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Git version control system
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -677,7 +755,7 @@
 
 
 <h1 id="mental-models-for-programmers">Mental Models for Programmers</h1>
-<p>The first step to solving a problem is to express it properly. Expressing complex ideas require a <em>mental models</em>, analogies which are similar with ideas. Mental models are vital in communicating with collaborators.</p>
+<p>The first step to solving a problem is to express it properly. Expressing complex ideas require a <em>mental models</em>, analogies which are similar with ideas. Mental models not only express a problem but also guide your thought. Mental models are vital in communicating with collaborators.</p>
 <p>This page contains a list of commonly used mental models that often serve as analogies while expressing complex ideas.</p>
 <h2 id="associations-or-maps">Associations or maps</h2>
 <p>The concept association is found everywhere in real world. Two things are associated means that they are somehow <em>related to each other.</em> For example, affixing a price tag to a product is associating the price with the product, meaning that <em>the product's price</em> is the <em>amount printed on the tag.</em></p>
@@ -706,6 +784,28 @@
 <li>In source codes, indentations are used to represent hierarchies. A code block is indented to indicate that it is owned by its parent block.</li>
 <li>Designers use various <a href="https://www.interaction-design.org/literature/topics/visual-hierarchy"><em>visual hierarchy</em></a> techniques in designs to indicate priority (e.g. larger or darker texts are more important), help navigation (e.g. a <a href="https://careerfoundry.com/en/blog/ui-design/ui-breadcrumbs/">breadcrumbs</a>), etc.</li>
 </ol>
+<h2 id="state-machines">State machines</h2>
+<p>In any system, objects exist in various <em>states</em>; various <em>actions</em> change their states; change from one state to another is called a <em>transition.</em> Among all the actions in a system only a few of them are applicable to a state. Some transitions maybe <em>reversible</em>, others maybe <em>irreversible</em>. For example, in an order delivery system an order maybe in these states: <em>order received</em>, <em>packed</em>, <em>cancelled</em>, <em>in transit</em>, <em>delivered</em>, etc.</p>
+<p>State transitions can be represented with state transition diagrams (aka state machine diagrams) or state transition tables.</p>
+<h3 id="examples_2">Examples</h3>
+<p>Identifying the states and transitions in a system help reasoning about the system.</p>
+<h4 id="the-git-version-control-system">The Git version control system</h4>
+<p>A file in a Git repository can be in the following states: <em>untracked</em>, <em>staged</em>, <em>unchanged</em>, or <em>modified</em>. Here follows a state transition diagram that shows how a file's state is changed and which actions cause them. Some transitions are omitted for simplicity.</p>
+<div class="highlight"><pre><span></span><code>---
+title: State transitions of a file in a Git repository
+---
+stateDiagram-v2
+  ut : Untracked
+  st : Staged
+  un : Unchanged
+  md : Modified
+  [*] --&gt; ut : Create a file
+  ut --&gt; st : Stage the file (git add)
+  st --&gt; md : Make changes to the file
+  st --&gt; un : Commit the file (git commit)
+  un --&gt; md : Make changes to the file
+  md --&gt; st : Stage the file (git add)
+</code></pre></div>
 
 
 
