@@ -791,7 +791,7 @@
 <p>Identifying the states and transitions in a system help reasoning about the system.</p>
 <h4 id="the-git-version-control-system">The Git version control system</h4>
 <p>A file in a Git repository can be in the following states: <em>untracked</em>, <em>staged</em>, <em>unchanged</em>, or <em>modified</em>. Here follows a state transition diagram that shows how a file's state is changed and which actions cause them. Some transitions are omitted for simplicity.</p>
-<div class="highlight"><pre><span></span><code>---
+<pre class="mermaid"><code>---
 title: State transitions of a file in a Git repository
 ---
 stateDiagram-v2
@@ -804,8 +804,7 @@ stateDiagram-v2
   st --&gt; md : Make changes to the file
   st --&gt; un : Commit the file (git commit)
   un --&gt; md : Make changes to the file
-  md --&gt; st : Stage the file (git add)
-</code></pre></div>
+  md --&gt; st : Stage the file (git add)</code></pre>
 
 
 
