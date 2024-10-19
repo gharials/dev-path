@@ -87,7 +87,6 @@ Every program you write actually implements a flowchart.
 The following flowchart illustrates a simplified money withdrawal process in an ATM booth. Note that the ATM system is capable of other processes too: checking balance, transferring money, etc. Those processes have their own flowcharts.
 
 ```mermaid
-%% Flowchart
 ---
 title: ATM cash withdrawal
 ---
