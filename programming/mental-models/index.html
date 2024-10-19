@@ -874,28 +874,28 @@ stateDiagram-v2
 title: ATM cash withdrawal
 ---
 flowchart
-    in[Insert card]
-    pin[Enter PIN]
-    pinchk{PIN correct?}
-    retchk{Max retry exceed?}
-    amount[Enter amount]
-    blncchk{Enough balance?}
-    disp[Dispense money]
-    retcrd[Return card]
-    in --&gt; pin
-    %%subgraph identify[Check PIN]
-    pin --&gt; pinchk
-    pinchk --&gt; |No| retchk
-    retchk --&gt; |No| pin
-    %%end
-    pinchk --&gt; |Yes| amount
-    retchk --&gt; |Yes| retcrd
-    %%subgraph withdraw[Withdraw money]
-    amount --&gt; blncchk
-    blncchk --&gt; |No| amount
-    blncchk --&gt; |Yes| disp
-    %%end
-    disp --&gt; retcrd</code></pre>
+  in[Insert card]
+  pin[Enter PIN]
+  pinchk{PIN correct?}
+  retchk{Max retry exceed?}
+  amount[Enter amount]
+  blncchk{Enough balance?}
+  disp[Dispense money]
+  retcrd[Return card]
+  in --&gt; pin
+  %%subgraph identify[Check PIN]
+  pin --&gt; pinchk
+  pinchk --&gt; |No| retchk
+  retchk --&gt; |No| pin
+  %%end
+  pinchk --&gt; |Yes| amount
+  retchk --&gt; |Yes| retcrd
+  %%subgraph withdraw[Withdraw money]
+  amount --&gt; blncchk
+  blncchk --&gt; |No| amount
+  blncchk --&gt; |Yes| disp
+  %%end
+  disp --&gt; retcrd</code></pre>
 
 
 
