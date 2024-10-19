@@ -1,8 +1,8 @@
 # Version Controlling with Git
 
-Git serves two major purposes: _history tracking_ and _collaboration._ When a developer works on a project for a long period, it is difficult for him/her to memorize the changes the project files have gone through. Git preserves the file histories as _commits._ It helps developers go through a files history or the entire repository history whenever necessary.
+Git serves two major purposes: _history tracking_ and _collaboration._ When a developer works on a project for a long period, it is difficult for him/her to memorize the changes the project files have gone through. Git preserves the file histories as _commits._ It helps developers go through a file's history or the entire repository's history whenever necessary.
 
-Any complex project requires team collaboration. When a team of developers work together on the same project, there must be some means to keep their work in sync among themselves. Git serves this purpose with Git _remotes_, a central Git repository. Developers finish their tasks on their local repositories and _push_ their changes to the remote repository when they are done so that other developers can _pull_ his/her changes into their local repositories.
+Any complex project requires team collaboration. When a team of developers works together on the same project, there must be some means to keep their work in sync among themselves. Git serves this purpose with Git _remotes_, a central Git repository. Developers finish their tasks on their local repositories and _push_ their changes to the remote repository when they are done so that other developers can _pull_ their changes into their local repositories.
 
 See these [pages](https://github.com/git-guides) for a more exhaustive and authoritative treatment of Git.
 
@@ -12,14 +12,14 @@ This section gives a overview of how Git is used by developers. Before using Git
 
 ### Creating a local Git repository
 
-You can turn any directory in your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the `git init` command. This command creates a `.git` subdirectory into the directory. As a result, the directory turns into a Git repository with `master` as the default _branch_.
+You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the `git init` command. This command creates a `.git` subdirectory into the directory. As a result, the directory turns into a Git repository with `master` as the default _branch_.
 
 ???+ info
     **The new `main` and the old `master` branches in GitHub**
 
-    A Git repository has to start with an initial or default branch. Traditionally, it used to be called the `master` branch. But due to some [cultural controversies](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) with the name, GitHub has renamed its new repository default branch name to `main`; when you create a new repository in GitHub, its default branch is `main`, instead of the old `master`.
+    A Git repository has to start with an initial or default branch. Traditionally, it used to be called the `master` branch. But due to some [cultural controversies](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) with the name, GitHub has renamed its new repository default branch name to `main`; when you create a new repository in GitHub, its default branch is `main` instead of the old `master`.
 
-    But the Git desktop client still uses `master` as the default branch name when you create a local repository with it (with the `git init` command). The change in the GitHub default branch name causes a problem when you add as GitHub repository as its remote: when you push to GitHub, changes are pushed to the `master` branch, instead of the `main` branch. As a remedy, you can rename the `master` branch to `main` before adding remote or pushing: `git branch -m main`.
+    But the Git desktop client still uses `master` as the default branch name when you create a local repository with it (with the `git init` command). The change in the GitHub default branch name causes a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the `master` branch instead of the `main` branch. As a remedy, you can rename the `master` branch to `main` before adding remote or pushing: `git branch -m main`.
 
 After creating a repository, you have to set your user name and email address with the following commands. The username and email address tell Git it is you who is working in the repository and they are associated with your commits.
 
@@ -31,7 +31,7 @@ git config --global user.email "youremail@yourdomain.com"
 ???+ info
     **The `--global` flag in the `git config` command**
 
-    The `--global` flag in the `git config` command is optional. If you set the flag, the options you are setting becomes global in your computer, that is all the repositories you create in future in your computer uses these config values (e.g. username and email address), you don't need to set them again. See this [resource](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git) for a detailed discussion.
+    The `--global` flag in the `git config` command is optional. If you set the flag, the options you are setting become global in your computer; that is, all the repositories you create in the future on your computer use these config values (e.g. username and email address); you don't need to set them again. See this [resource](https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git) for a detailed discussion.
 
 After setting the username and email address, you have a working _local repository._ You can start working in your repository: staging, committing, etc.
 
@@ -42,7 +42,7 @@ After setting the username and email address, you have a working _local reposito
 
 ### Setting up Git remotes
 
-The changes you make in your repository, that is your commits, remain local until you push them to a _remote_, a shared central repository. For that your have to create a remote repository in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc). After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
+The changes you make in your repository, that is your commits, remain local until you push them to a _remote_, a shared central repository. For that, you have to create a remote repository in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
 
 <div class="annotate" markdown>
 ```
@@ -53,11 +53,11 @@ git remote add origin(1) https://github.com/OWNER/REPOSITORY.git(2)
 1. Name of the remote. A local repository may have multiple remotes with their unique names; the default remote name is `origin`.
 2. Link to the remote repository. You can find it in the repository webpage.
 
-Once you have associated a remote with your local repository, you can push your commits to it so that your changes become visible to others with access to the same remote repository. You don't need to associate your repository with a remote if you don't want to share your work with others.
+Once you have associated a remote with your local repository, you can push your commits to it so that your changes become visible to others with access to the same remote repository. You don't need to associate your repository with a remote if you never want to share your work with others.
 
 ### Creating local repositories with Git clone
 
-Sometimes, you know from the beginning that you want collaboration in the repository you want to start. In that scenario, you don't necessarily need to create a local repository first and associate a remote later. Instead you can create the remote repository first in GitHub and then copy it into your computer with the Git clone command and start working in it.
+Sometimes, you know from the beginning that you want collaboration in the repository you want to start. In that scenario, you don't necessarily need to create a local repository first and associate a remote later. Instead, you can create the remote repository first in GitHub and then copy it into your computer with the Git clone command and start working in it.
 
 ```
 git clone https://github.com/github/training-kit.git
