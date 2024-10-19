@@ -76,9 +76,9 @@ stateDiagram-v2
 
 ## Flowcharts
 
-A _system_ consists of one or more _processes_. A process is a series or sequence of _operations_. One operation leads to another; there may be decisions between the operations (whether the next operation continues or not).
+A _system_ consists of one or more _processes_ (also called simply _flows_). A process is a series or sequence of _operations_. One operation may lead to another; there may be decisions between the operations (which operation takes place next).
 
-Processes are everywhere around us.They are represented with *flowcharts*. All operations preceding an operation are called its _upstream_ operations; conversely,all operations following an operation are called its _downstream_ operations.
+Processes are everywhere around us. They are represented with *flowcharts*. All operations preceding an operation are called its _upstream_ operations; conversely, all operations following an operation are called its _downstream_ operations.
 
 Every program you write actually implements a flowchart.
 
