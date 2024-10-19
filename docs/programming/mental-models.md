@@ -91,14 +91,18 @@ The following flowchart illustrates a simplified money withdrawal process in an 
 title: ATM cash withdrawal
 ---
 flowchart
-  in[Insert card]
+  in([Insert card])
   pin[Enter PIN]
   pinchk{PIN correct?}
-  retchk{Max retry exceed?}
-  amount[Enter amount]
-  blncchk{Enough balance?}
-  disp[Dispense money]
-  retcrd[Return card]
+  retchk{"`Max retry 
+  exceeded?`"}
+  amount["`Enter 
+  amount`"]
+  blncchk{"`Enough 
+  balance?`"}
+  disp["`Dispense 
+  money`"]
+  retcrd([Return card])
   in --> pin
   %%subgraph identify[Check PIN]
   pin --> pinchk
