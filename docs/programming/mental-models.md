@@ -73,3 +73,45 @@ stateDiagram-v2
   un --> md : Make changes to the file
   md --> st : Stage the file (git add)
 ```
+
+## Flowcharts
+
+A _system_ consists of one or more _processes_. A process is a series or sequence of _operations_. One operation leads to another; there may be decisions between the operations (whether the next operation continues or not).
+
+Processes are everywhere around us.They are represented with *flowcharts*. All operations preceding an operation are called its _upstream_ operations; conversely,all operations following an operation are called its _downstream_ operations.
+
+Every program you write actually implements a flowchart.
+
+### Examples
+
+The following flowchart illustrates a simplified money withdrawal process in an ATM booth. Note that the ATM system is capable of other processes too: checking balance, transferring money, etc. Those processes have their own flowcharts.
+
+```mermaid
+%% Flowchart
+---
+title: ATM cash withdrawal
+---
+flowchart
+    in[Insert card]
+    pin[Enter PIN]
+    pinchk{PIN correct?}
+    retchk{Max retry exceed?}
+    amount[Enter amount]
+    blncchk{Enough balance?}
+    disp[Dispense money]
+    retcrd[Return card]
+    in --> pin
+    %%subgraph identify[Check PIN]
+    pin --> pinchk
+    pinchk --> |No| retchk
+    retchk --> |No| pin
+    %%end
+    pinchk --> |Yes| amount
+    retchk --> |Yes| retcrd
+    %%subgraph withdraw[Withdraw money]
+    amount --> blncchk
+    blncchk --> |No| amount
+    blncchk --> |Yes| disp
+    %%end
+    disp --> retcrd
+```
