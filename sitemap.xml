@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://gharials.github.io/dev-path/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
     </url>
     <url>
          <loc>https://gharials.github.io/dev-path/vcs-git/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
     </url>
     <url>
          <loc>https://gharials.github.io/dev-path/internet-web/http-in-depth/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
     </url>
     <url>
          <loc>https://gharials.github.io/dev-path/internet-web/network-internet-basics/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
+    </url>
+    <url>
+         <loc>https://gharials.github.io/dev-path/internet-web/websites/</loc>
+         <lastmod>2024-10-20</lastmod>
     </url>
     <url>
          <loc>https://gharials.github.io/dev-path/operating-systems/os-basics/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
     </url>
     <url>
          <loc>https://gharials.github.io/dev-path/programming/math-prog/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
     </url>
     <url>
          <loc>https://gharials.github.io/dev-path/programming/mental-models/</loc>
-         <lastmod>2024-10-19</lastmod>
+         <lastmod>2024-10-20</lastmod>
     </url>
 </urlset>
