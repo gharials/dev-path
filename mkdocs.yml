@@ -11,6 +11,7 @@ nav:
   - Internet & Web:
     - Network & Internet Basics: internet-web/network-internet-basics.md
     - HTTP in depth: internet-web/http-in-depth.md
+    - How Websites Work: internet-web/websites.md
   - Version Controlling with Git: vcs-git.md
 copyright:
   Copyright &copy; 2024 Gharials.
