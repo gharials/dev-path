@@ -613,7 +613,7 @@
 
 <h1 id="how-websites-work">How websites work</h1>
 <h2 id="how-an-http-server-serves-websites">How an HTTP server serves websites</h2>
-<p>HTTP responses may contain many types of contents in their bodies and the content's type is indicated by the <code>Content-Type</code> header. Websites are nothing but a particular type of HTTP response that contains an HTML document in its body and its <code>Content-Type</code> header is set to <code>text/html</code>. A browser knows how to render an HTML page. An HTML page may refer to some other resources in it, like images, fonts, stylesheets, scripts, etc. Browsers download all resources associated with a page by separate automatic subsequent requests.</p>
+<p>HTTP responses may contain many types of contents in their bodies and the content's type is indicated by the <code>Content-Type</code> header. Websites are nothing but a particular type of HTTP response that contains an HTML document in its body and its <code>Content-Type</code> header is set to <code>text/html</code>. A browser knows how to render an HTML page. An HTML page may refer to some other resources in it, like images, fonts, stylesheets, scripts, etc. After downloading a page, browsers download all resources associated with the page by separate automatic subsequent requests.</p>
 <p>The following diagram shows how an HTML page (<code>/page.html</code>) is served by a server.</p>
 <pre class="mermaid"><code>---
 title: An HTTP server serving a sample HTML page
@@ -627,7 +627,7 @@ sequenceDiagram
     Server--&gt;&gt;Client: style.css,content-type:text/css
     Client-&gt;&gt;Server: script.js
     Server--&gt;&gt;Client: script.js,content-type:text/javascript</code></pre>
-<p>The client (browser) sends a request for the <code>/page.html</code> page to the server; the server returns the page in response. The browser finds that the the HTML file refers to some other resources too, like an image (<code>image.jpg</code>), a stylesheet file (<code>style.css</code>), a script (<code>script.js</code>), etc. The browser makes requests for each of them to the server and the server returns them in response.</p>
+<p>The client (browser) sends a request for the <code>/page.html</code> page to the server; the server returns the page in response. The browser finds that the HTML file refers to some other resources too, like an image (<code>image.jpg</code>), a stylesheet file (<code>style.css</code>), a script (<code>script.js</code>), etc. The browser makes requests for each of them to the server and the server returns them in response.</p>
 
 
 
