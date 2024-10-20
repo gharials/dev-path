@@ -11,14 +11,14 @@ The following diagram shows how an HTML page (`/page.html`) is served by a serve
 title: An HTTP server serving a sample HTML page
 ---
 sequenceDiagram
-    Client->>Server: /page.html
-    Server-->>Client: page.html,content-type:text/html
-    Client->>Server: image.jpg
-    Server-->>Client: image.jpg,content-type:image/jpeg
-    Client->>Server: style.css
-    Server-->>Client: style.css,content-type:text/css
-    Client->>Server: script.js
-    Server-->>Client: script.js,content-type:text/javascript
+    Client->>Server: GET /page.html
+    Server-->>Client: (200) page.html,content-type:text/html
+    Client->>Server: GET /image.jpg
+    Server-->>Client: (200) image.jpg,content-type:image/jpeg
+    Client->>Server: GET /style.css
+    Server-->>Client: (200) style.css,content-type:text/css
+    Client->>Server: GET /script.js
+    Server-->>Client: (200) script.js,content-type:text/javascript
 ```
 
 The client (browser) sends a request for the `/page.html` page to the server; the server returns the page in response. The browser finds that the HTML file refers to some other resources too, like an image (`image.jpg`), a stylesheet file (`style.css`), a script (`script.js`), etc. The browser makes requests for each of them to the server and the server returns them in response.
