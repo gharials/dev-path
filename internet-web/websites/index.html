@@ -619,14 +619,14 @@
 title: An HTTP server serving a sample HTML page
 ---
 sequenceDiagram
-    Client-&gt;&gt;Server: /page.html
-    Server--&gt;&gt;Client: page.html,content-type:text/html
-    Client-&gt;&gt;Server: image.jpg
-    Server--&gt;&gt;Client: image.jpg,content-type:image/jpeg
-    Client-&gt;&gt;Server: style.css
-    Server--&gt;&gt;Client: style.css,content-type:text/css
-    Client-&gt;&gt;Server: script.js
-    Server--&gt;&gt;Client: script.js,content-type:text/javascript</code></pre>
+    Client-&gt;&gt;Server: GET /page.html
+    Server--&gt;&gt;Client: (200) page.html,content-type:text/html
+    Client-&gt;&gt;Server: GET /image.jpg
+    Server--&gt;&gt;Client: (200) image.jpg,content-type:image/jpeg
+    Client-&gt;&gt;Server: GET /style.css
+    Server--&gt;&gt;Client: (200) style.css,content-type:text/css
+    Client-&gt;&gt;Server: GET /script.js
+    Server--&gt;&gt;Client: (200) script.js,content-type:text/javascript</code></pre>
 <p>The client (browser) sends a request for the <code>/page.html</code> page to the server; the server returns the page in response. The browser finds that the HTML file refers to some other resources too, like an image (<code>image.jpg</code>), a stylesheet file (<code>style.css</code>), a script (<code>script.js</code>), etc. The browser makes requests for each of them to the server and the server returns them in response.</p>
 
 
