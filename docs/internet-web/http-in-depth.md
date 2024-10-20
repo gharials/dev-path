@@ -1,4 +1,4 @@
-# HTTP in depth
+# Working with HTTP
 
 There are two basic components in the HTTP protocol: a server and some clients. Clients send requests to a server and the server returns responses. See this [resource](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#http_flow) for understanding the request-response flow in detail.
 
@@ -56,7 +56,13 @@ Each HTTP request follows a _method_. Notice in the sample request that the firs
 
 ### Status codes
 
-Each HTTP response contains a status code, indicating the status of the operation---whether the operation succeeded, failed, or anything else. Notice in the sample response that the first line contains the status code (`200` in that case). Commonly used status codes are `200`, `201`, `404`, etc.
+Each HTTP response contains a status code, indicating the status of the operation---whether the operation succeeded, failed, or anything else. At the same time, status codes also serve as instructions for clients. Notice in the sample response that the first line contains the status code (`200` in that case).
+
+#### The standard status codes
+
+An HTTP server can return any arbitrary number as a status code. There is, however, a standardized list of status codes recognized by all standard clients (e.g., browsers). They are three-digits in length and are organized thematically into classes according to their first digits. Each status code has its own distinct meaning and purpose. See this [resource](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status) for an exhaustive list of HTTP status codes with their descriptions.
+
+Among the status classes, `2xx`, `4xx`, and `5xx` appear more frequently in practice. The `2xx` class indicates that the server has successfully processed the request, where `4xx` and `5xx` indicate a failure in processing. Commonly used status codes are `200`, `304`, `404`, `500`, etc.
 
 ### Headers
 
