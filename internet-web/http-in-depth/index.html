@@ -18,11 +18,11 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>HTTP in depth - My Docs</title>
+        <title>Working with HTTP - My Docs</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#http-in-depth" class="md-skip">
+        <a href="#working-with-http" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTTP in depth
+              Working with HTTP
             
           </span>
         </div>
@@ -460,7 +460,7 @@
           
   
   <span class="md-ellipsis">
-    HTTP in depth
+    Working with HTTP
   </span>
   
 
@@ -471,7 +471,7 @@
         
   
   <span class="md-ellipsis">
-    HTTP in depth
+    Working with HTTP
   </span>
   
 
@@ -535,6 +535,21 @@
       Status codes
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Status codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standard-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The standard status codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -688,6 +703,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Status codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-standard-status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      The standard status codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -731,7 +761,7 @@
   
 
 
-<h1 id="http-in-depth">HTTP in depth</h1>
+<h1 id="working-with-http">Working with HTTP</h1>
 <p>There are two basic components in the HTTP protocol: a server and some clients. Clients send requests to a server and the server returns responses. See this <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#http_flow">resource</a> for understanding the request-response flow in detail.</p>
 <h2 id="fundamental-http-concepts">Fundamental HTTP concepts</h2>
 <p>The following subsections cover the concepts necessary to get started working with HTTP.</p>
@@ -771,7 +801,10 @@ Content-Type: text/html
 <p>Requests made from the browser address bars are always <code>GET</code> requests. Tools like curl or Postman lets you choose the request method.</p>
 </div>
 <h3 id="status-codes">Status codes</h3>
-<p>Each HTTP response contains a status code, indicating the status of the operation---whether the operation succeeded, failed, or anything else. Notice in the sample response that the first line contains the status code (<code>200</code> in that case). Commonly used status codes are <code>200</code>, <code>201</code>, <code>404</code>, etc.</p>
+<p>Each HTTP response contains a status code, indicating the status of the operation---whether the operation succeeded, failed, or anything else. At the same time, status codes also serve as instructions for clients. Notice in the sample response that the first line contains the status code (<code>200</code> in that case).</p>
+<h4 id="the-standard-status-codes">The standard status codes</h4>
+<p>An HTTP server can return any arbitrary number as a status code. There is, however, a standardized list of status codes recognized by all standard clients (e.g., browsers). They are three-digits in length and are organized thematically into classes according to their first digits. Each status code has its own distinct meaning and purpose. See this <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">resource</a> for an exhaustive list of HTTP status codes with their descriptions.</p>
+<p>Among the status classes, <code>2xx</code>, <code>4xx</code>, and <code>5xx</code> appear more frequently in practice. The <code>2xx</code> class indicates that the server has successfully processed the request, where <code>4xx</code> and <code>5xx</code> indicate a failure in processing. Commonly used status codes are <code>200</code>, <code>304</code>, <code>404</code>, <code>500</code>, etc.</p>
 <h3 id="headers">Headers</h3>
 <p>HTTP requests and responses contain a number of <em>headers.</em> They follow this general key-value format: <code>Header-name: value</code>. Headers may vary per request and response. They serve as metadata or directives (instructions) either for the client or the server. For example, the <code>Content-Type</code> header in HTTP responses tells the client how to treat the response body.</p>
 <div class="admonition info">
@@ -804,7 +837,7 @@ Content-Type: text/html
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 12, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 20, 2024</span>
   </span>
 
     
