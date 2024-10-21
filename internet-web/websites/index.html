@@ -542,6 +542,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#repeated-access-to-the-same-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeated access to the same data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#response-size" class="md-nav__link">
     <span class="md-ellipsis">
       Response size
@@ -646,6 +655,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#repeated-access-to-the-same-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeated access to the same data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#response-size" class="md-nav__link">
     <span class="md-ellipsis">
       Response size
@@ -718,11 +736,14 @@ sequenceDiagram
 <p>Dynamic contents, on the other hand, are <em>generated</em> by a server upon receiving a request. In a modern web server, for each URL, programmers define a function associated with the URL that can <em>generate</em> a response. Whenever a request is sent to an URL, the function associated with it generates the response and returns it to the client.</p>
 <h2 id="website-performance">Website performance</h2>
 <p>Several factors affect a website's performance. A developer should be aware of them and a few common techniques used to mitigate them.</p>
-<h3 id="response-size">Response size</h3>
-<p>Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.</p>
+<h3 id="repeated-access-to-the-same-data">Repeated access to the same data</h3>
+<p>Observe that many contents are repeated, like logo images and stylesheets, across pages in a website. For example, different pages in <code>wikipedia.org</code> use the same logo and styles. Therefore, for each page, browsers need to download those same data from the server. Fortunately, browsers and servers together employ a technique to avoid the repeated requests for the same data.</p>
 <p><em>Caching</em> is used as a performance optimization technique to avoid downloading the same response repeatedly. In this technique, both browser and server have their roles. Browsers <em>cache</em> HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and browsers reuse the cached data.</p>
 <p>Let's say that a browser has received some data, say, an image, from a server and cached it as usual. When the browser request for the same data again and the server finds that the data hasn't changed since the client last requested it, the server doesn't send the data again. Instead, the server returns a response with status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304">304 (not modified)</a> and <em>without a body</em>, resulting in a <em>smaller response size.</em></p>
 <p>The <a href="../http-in-depth/#status-codes">status code 304 tells</a> the client that it may use its cached version of the data as it hasn't changed on the server. On the other hand, if the server detects that the data has changed, it returns a usual response with status code <code>200</code> (OK) and the data included in the response body. This technique is particularly useful for static data that hardly changes (e.g., images, stylesheets, etc.). A hard refresh (Ctrl+Shift+R) clears the browser cache and makes the browser download all the data again.</p>
+<h3 id="response-size">Response size</h3>
+<p>Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.</p>
+<p>Compression and minification are two commonly used optimization techniques to reduce the HTTP response size.</p>
 
 
 
