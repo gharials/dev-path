@@ -26,6 +26,31 @@ sequenceDiagram
 
 The client (browser) sends a request for the `/page.html` page to the server; the server returns the page in response. The browser finds that the HTML file refers to some other resources too, like an image (`image.jpg`), a stylesheet file (`style.css`), a script (`script.js`), etc. The browser makes requests for each of them to the server and the server returns them in response.
 
+## Static vs. dynamic contents
+
+An HTTP server serves largely two types of contents: _static_ and _dynamic_. For static contents (also called _static assets_ or just _assets_), programmers use a server directory dedicated for serving static contents. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.
+
+Programmers put all the static assets to be served (e.g., images, fonts, stylesheets, etc.) in the directory. Here follows an example directory (`static/`) and its contents on a server running at `localhost:5000`:
+
+```
+static/
+  index.html
+  style.css
+  image.jpg
+  page.html
+  sub-dir/
+    index.html
+    style-2.css
+    page-2.html
+  sub-dir-2/
+    image-1.jpg
+    image-2.png
+```
+
+For example, if a client requests the URL `http://localhost:5000/image.jpg`, the server returns a response that contains the `image.jpg` file's content as its body. Similarly, the `style-2.css` file is returned for the URL `http://localhost:5000/sub-dir/style-2.css`. As a convention, if a directory is requested instead of a file, like `http://localhost:5000/sub-dir/`, the `index.html` file within the directory is returned. Web servers allow programmers to specify a directory for static contents; the exact instructions vary from server to server. Though very straightforward, this option is too restricted, not suitable for all scenarios; only static pages can be served, no runtime changes.
+
+Dynamic contents, on the other hand, are _generated_ by a server upon receiving a request. In a modern web server, for each URL, programmers define functions associated with the URL that can _generate_ a response. Whenever a request is sent to an URL, the function associated with it generates the response and returns it to the client.
+
 ## Website performance
 
 Several factors affect a website's performance. A developer should be aware of them and a few common techniques used to mitigate them.
