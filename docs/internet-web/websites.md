@@ -1,7 +1,7 @@
 # How websites work
 
 !!! info
-    Have a look at the [Network & Internet Basics](./network-internet-basics.md) and [HTTP in Depth](./http-in-depth.md) articles as prerequisites to this article.
+    Have a look at the [Network & Internet Basics](./network-internet-basics.md) and [Working with HTTP](./http-in-depth.md) articles as prerequisites to this article.
 
 ## How an HTTP server serves websites
 
@@ -34,7 +34,7 @@ Several factors affect a website's performance. A developer should be aware of t
 
 Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.
 
-_Caching_ is used as a performance optimization to avoid downloading the same response again. Browsers _cache_ HTTP responses; that is, they store the responses locally to avoid requesting those data again. Servers also try to avoid sending the same data to the client repetitively.
+_Caching_ is used as a performance optimization technique to avoid downloading the same response repeatedly. In this technique, both browser and server have their roles. Browsers _cache_ HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and browsers reuse the cached data.
 
 Let's say that a browser has received some data, say, an image, from a server and cached it as usual. When the browser request for the same data again and the server finds that the data hasn't changed since the client last requested it, the server doesn't send the data again. Instead, the server returns a response with status code [304 (not modified)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304) and _without a body_, resulting in a _smaller response size._
 
