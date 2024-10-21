@@ -55,12 +55,18 @@ Dynamic contents, on the other hand, are _generated_ by a server upon receiving 
 
 Several factors affect a website's performance. A developer should be aware of them and a few common techniques used to mitigate them.
 
-### Response size
+### Repeated access to the same data
 
-Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.
+Observe that many contents are repeated, like logo images and stylesheets, across pages in a website. For example, different pages in `wikipedia.org` use the same logo and styles. Therefore, for each page, browsers need to download those same data from the server. Fortunately, browsers and servers together employ a technique to avoid the repeated requests for the same data.
 
 _Caching_ is used as a performance optimization technique to avoid downloading the same response repeatedly. In this technique, both browser and server have their roles. Browsers _cache_ HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and browsers reuse the cached data.
 
 Let's say that a browser has received some data, say, an image, from a server and cached it as usual. When the browser request for the same data again and the server finds that the data hasn't changed since the client last requested it, the server doesn't send the data again. Instead, the server returns a response with status code [304 (not modified)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304) and _without a body_, resulting in a _smaller response size._
 
 The [status code 304 tells](./http-in-depth.md#status-codes) the client that it may use its cached version of the data as it hasn't changed on the server. On the other hand, if the server detects that the data has changed, it returns a usual response with status code `200` (OK) and the data included in the response body. This technique is particularly useful for static data that hardly changes (e.g., images, stylesheets, etc.). A hard refresh (Ctrl+Shift+R) clears the browser cache and makes the browser download all the data again.
+
+### Response size
+
+Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.
+
+Compression and minification are two commonly used optimization techniques to reduce the HTTP response size.
