@@ -49,7 +49,7 @@ static/
 
 For example, if a client requests the URL `http://localhost:5000/image.jpg`, the server returns a response that contains the `image.jpg` file's content as its body. Similarly, the `style-2.css` file is returned for the URL `http://localhost:5000/sub-dir/style-2.css`. As a convention, if a directory is requested instead of a file, like `http://localhost:5000/sub-dir/`, the `index.html` file within the directory is returned. Web servers allow programmers to specify a directory for static contents; the exact instructions vary from server to server. Though very straightforward, this option is too restricted, not suitable for all scenarios; only static pages can be served, no runtime changes.
 
-Dynamic contents, on the other hand, are _generated_ by a server upon receiving a request. In a modern web server, for each URL, programmers define functions associated with the URL that can _generate_ a response. Whenever a request is sent to an URL, the function associated with it generates the response and returns it to the client.
+Dynamic contents, on the other hand, are _generated_ by a server upon receiving a request. In a modern web server, for each URL, programmers define a function associated with the URL that can _generate_ a response. Whenever a request is sent to an URL, the function associated with it generates the response and returns it to the client.
 
 ## Website performance
 
