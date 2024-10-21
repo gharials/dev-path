@@ -28,9 +28,9 @@ The client (browser) sends a request for the `/page.html` page to the server; th
 
 ## Static vs. dynamic contents
 
-An HTTP server serves largely two types of contents: _static_ and _dynamic_. For static contents (also called _static assets_ or just _assets_), programmers use a server directory dedicated for serving static contents. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.
+An HTTP server serves largely two types of contents: _static_ and _dynamic_. For static contents (also called _static assets_ or just _assets_), programmers use a server directory dedicated for serving static contents. All the static assets to be served (e.g., images, fonts, stylesheets, etc.) are put in the directory. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.
 
-Programmers put all the static assets to be served (e.g., images, fonts, stylesheets, etc.) in the directory. Here follows an example directory (`static/`) and its contents on a server running at `localhost:5000`:
+Here follows an example directory (`static/`) and its contents on a server running at `localhost:5000`:
 
 ```
 static/
