@@ -14,6 +14,7 @@ The following sequence diagram shows how an HTML page (`/page.html`) is served b
 title: An HTTP server serving a sample HTML page
 ---
 sequenceDiagram
+    autonumber
     Client->>Server: GET /page.html
     Server-->>Client: (200) page.html,content-type:text/html
     Client->>Server: GET /image.jpg
@@ -57,9 +58,9 @@ Several factors affect a website's performance. A developer should be aware of t
 
 ### Repeated access to the same data
 
-Observe that many contents are repeated, like logo images and stylesheets, across pages in a website. For example, different pages in `wikipedia.org` use the same logo and styles. Therefore, for each page, browsers need to download those same data from the server. Fortunately, browsers and servers together employ a technique to avoid the repeated requests for the same data.
+Observe that many contents are repeated, like logo images and stylesheets, across pages in a website. For example, different pages in `wikipedia.org` use the same logo and styles. Therefore, for each page, browsers need to download those same data from the server. Fortunately, browsers and servers together employ _caching_ as a technique to avoid the repeated requests for the same data.
 
-_Caching_ is used as a performance optimization technique to avoid downloading the same response repeatedly. In this technique, both browser and server have their roles. Browsers _cache_ HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and browsers reuse the cached data.
+In caching, both browser and server have their roles. Browsers _cache_ HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and browsers reuse the cached data.
 
 Let's say that a browser has received some data, say, an image, from a server and cached it as usual. When the browser request for the same data again and the server finds that the data hasn't changed since the client last requested it, the server doesn't send the data again. Instead, the server returns a response with status code [304 (not modified)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304) and _without a body_, resulting in a _smaller response size._
 
