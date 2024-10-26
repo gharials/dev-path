@@ -73,7 +73,7 @@ HTTP requests and responses contain a number of _headers._ They follow this gene
 
 ### Cookies
 
-A special HTTP header called cookie (`Set-Cookie: <cookie-name>=<cookie-value>`) allow a server to pass some data to the client. The client is supposed to store this value and include it automatically in all subsequent requests as the `Cookie` header (e.g. `Cookie: <cookie-name>=<cookie-value>`).
+A special HTTP header named `Set-Cookie` is called a _cookie._ If a server returns a cookie in a response (e.g., `Set-Cookie: <cookie-name>=<cookie-value>`), the client stores the cookie value locally. After that, in all subsequent requests to the server, the client includes the locally stored cookie value automatically as the `Cookie` header (e.g., `Cookie: <cookie-name>=<cookie-value>`). In summary, cookies allow a server to pass some data to clients and get that data back from them each time.
 
 A server forgets about requests and the hosts they came from after returning a response (that is why HTTP protocol is called _stateless_). A server can never tell from a series of requests it received whether they came from (originate) the same client or not. By sending random numbers as a cookie value and keeping track of the the cookie, a server can detect whether a request came from a known host or a new one.
 
