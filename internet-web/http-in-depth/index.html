@@ -813,7 +813,7 @@ Content-Type: text/html
 </div>
 <h3 id="cookies">Cookies</h3>
 <p>A special HTTP header named <code>Set-Cookie</code> is called a <em>cookie.</em> If a server returns a cookie in a response (e.g., <code>Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</code>), the client stores the cookie value locally. After that, in all subsequent requests to the server, the client includes the locally stored cookie value automatically as the <code>Cookie</code> header (e.g., <code>Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;</code>). In summary, cookies allow a server to pass some data to clients and get that data back from them each time.</p>
-<p>A server forgets about requests and the hosts they came from after returning a response (that is why HTTP protocol is called <em>stateless</em>). A server can never tell from a series of requests it received whether they came from (originate) the same client or not. By sending random numbers as a cookie value and keeping track of the the cookie, a server can detect whether a request came from a known host or a new one.</p>
+<p>A server forgets about requests and the hosts they came from after returning a response (that is why the HTTP protocol is called <em>stateless</em>). A server can never tell from a series of requests it received whether they came from (originate) the same client or not. In other words, servers cannot <em>identify</em> a client. Cookies provide a commonly used means for servers to identify clients: a server sends distinct numbers as cookies to different clients and checks the cookie value in all requests.</p>
 <p>Cookies have other useful applications too.</p>
 
 
