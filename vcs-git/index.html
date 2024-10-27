@@ -699,11 +699,11 @@
 <p>This section gives a overview of how Git is used by developers. Before using Git on your computer, <a href="https://git-scm.com/downloads">download</a> and install it.</p>
 <h3 id="creating-a-local-git-repository">Creating a local Git repository</h3>
 <p>You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the <code>git init</code> command. This command creates a <code>.git</code> subdirectory into the directory. As a result, the directory turns into a Git repository with <code>master</code> as the default <em>branch</em>.</p>
-<details class="info" open="open">
-<summary>Info</summary>
+<details class="warning" open="open">
+<summary>Warning</summary>
 <p><strong>The new <code>main</code> and the old <code>master</code> branches in GitHub</strong></p>
-<p>A Git repository has to start with an initial or default branch. Traditionally, it used to be called the <code>master</code> branch. But due to some <a href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">cultural controversies</a> with the name, GitHub has renamed its new repository default branch name to <code>main</code>; when you create a new repository in GitHub, its default branch is <code>main</code> instead of the old <code>master</code>.</p>
-<p>But the Git desktop client still uses <code>master</code> as the default branch name when you create a local repository with it (with the <code>git init</code> command). The change in the GitHub default branch name causes a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the <code>master</code> branch instead of the <code>main</code> branch. As a remedy, you can rename the <code>master</code> branch to <code>main</code> before adding remote or pushing: <code>git branch -m main</code>.</p>
+<p>A Git repository starts with an initial or default branch called <code>master</code>. But due to some <a href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">cultural controversies</a> with the name <em>master</em>, GitHub has adopted a new convention: when you create a new repository in GitHub, its default branch is <code>main</code> instead of the old <code>master</code>.</p>
+<p>But the default branch name is still <code>master</code> when you create a local repository with the Git desktop client (with the <code>git init</code> command). So, as GitHub has renamed its default branch name to <code>main</code>, you have a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the <code>master</code> branch instead of the <code>main</code> branch. As a remedy, you can rename your local <code>master</code> branch to <code>main</code> before adding remote or pushing: <code>git branch -m main</code>.</p>
 </details>
 <p>After creating a repository, you have to set your user name and email address with the following commands. The username and email address tell Git it is you who is working in the repository and they are associated with your commits.</p>
 <div class="highlight"><pre><span></span><code>git config --global user.name &quot;Your Name&quot;
@@ -776,7 +776,7 @@ some-dir/sub-dir/another-file.txt (3)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 27, 2024</span>
   </span>
 
     
