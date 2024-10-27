@@ -14,12 +14,12 @@ This section gives a overview of how Git is used by developers. Before using Git
 
 You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the `git init` command. This command creates a `.git` subdirectory into the directory. As a result, the directory turns into a Git repository with `master` as the default _branch_.
 
-???+ info
+???+ warning
     **The new `main` and the old `master` branches in GitHub**
 
-    A Git repository has to start with an initial or default branch. Traditionally, it used to be called the `master` branch. But due to some [cultural controversies](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) with the name, GitHub has renamed its new repository default branch name to `main`; when you create a new repository in GitHub, its default branch is `main` instead of the old `master`.
+    A Git repository starts with an initial or default branch called `master`. But due to some [cultural controversies](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) with the name _master_, GitHub has adopted a new convention: when you create a new repository in GitHub, its default branch is `main` instead of the old `master`.
 
-    But the Git desktop client still uses `master` as the default branch name when you create a local repository with it (with the `git init` command). The change in the GitHub default branch name causes a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the `master` branch instead of the `main` branch. As a remedy, you can rename the `master` branch to `main` before adding remote or pushing: `git branch -m main`.
+    But the default branch name is still `master` when you create a local repository with the Git desktop client (with the `git init` command). So, as GitHub has renamed its default branch name to `main`, you have a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the `master` branch instead of the `main` branch. As a remedy, you can rename your local `master` branch to `main` before adding remote or pushing: `git branch -m main`.
 
 After creating a repository, you have to set your user name and email address with the following commands. The username and email address tell Git it is you who is working in the repository and they are associated with your commits.
 
