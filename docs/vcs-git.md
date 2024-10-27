@@ -1,6 +1,6 @@
 # Version Controlling with Git
 
-A project consists of many files, and a file may go through a long series of changes. As the number of files grows in a project, keeping track of their changes becomes increasingly difficult. A _version control system (VCS)_ is a tool that keeps track of the changes in files. Git is by far the most popular VCS used by developers.
+Starting with only a few files, a project may eventually grow into a large number of files, and a file may go through a long sequence of changes. As the number of files grows in a project, keeping track of their changes becomes increasingly difficult for developers. A _version control system (VCS)_ is a tool that keeps track of the changes in files. Git is by far the most popular VCS used by developers, though there are a few more, like [Mercurial](https://www.mercurial-scm.org/), [Subversion](https://subversion.apache.org/), etc.
 
 Git serves two major purposes for developers and teams: _history tracking_ and _collaboration._ When a developer works on a project for a long period, it is difficult for him/her to memorize the changes the project files have gone through. Git preserves the file histories as _commits._ It helps developers go through a file's history or the entire repository's history whenever necessary.
 
