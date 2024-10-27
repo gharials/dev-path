@@ -1,6 +1,8 @@
 # Version Controlling with Git
 
-Git serves two major purposes: _history tracking_ and _collaboration._ When a developer works on a project for a long period, it is difficult for him/her to memorize the changes the project files have gone through. Git preserves the file histories as _commits._ It helps developers go through a file's history or the entire repository's history whenever necessary.
+A project consists of many files, and a file may go through a long series of changes. As the number of files grows in a project, keeping track of their changes becomes increasingly difficult. A _version control system (VCS)_ is a tool that keeps track of the changes in files. Git is by far the most popular VCS used by developers.
+
+Git serves two major purposes for developers and teams: _history tracking_ and _collaboration._ When a developer works on a project for a long period, it is difficult for him/her to memorize the changes the project files have gone through. Git preserves the file histories as _commits._ It helps developers go through a file's history or the entire repository's history whenever necessary.
 
 Any complex project requires team collaboration. When a team of developers works together on the same project, there must be some means to keep their work in sync among themselves. Git serves this purpose with Git _remotes_, a central Git repository. Developers finish their tasks on their local repositories and _push_ their changes to the remote repository when they are done so that other developers can _pull_ their changes into their local repositories.
 
