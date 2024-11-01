@@ -60,6 +60,7 @@ plugins:
       branch: main
 
 extra:
+  disqus: fnasim
   analytics:
     provider: google
     property: G-SNZ8GRY8TV
