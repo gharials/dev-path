@@ -685,11 +685,12 @@
 
 <h1 id="problem-solving-tactics">Problem-Solving Tactics</h1>
 <h2 id="loop-invariants">Loop invariants</h2>
-<p>Loop invariants is an important problem-solving tactic. Large classes of problems consist of a number of smaller <em>subproblems</em>. Such problems are solved by loops designed for solving them.</p>
-<p>The loop has to be designed in such a way that after each iteration of the loop, the problem is <em>partially solved</em> up to that point. Given the partial solution, the loop body has to find the solution for the subproblem larger by 1. That way, after the loop completes, the whole problem is solved.</p>
-<p>The loop body differs from problem to problem. It is the programmer's job to recognize the subproblem structure and write a loop body that maintains the loop invariant.</p>
+<p>Loop invariants is an important problem-solving tactic. A certain class of problems consist of a number of smaller <em>subproblems</em>. Such problems are solved by loops designed for solving them. Starting from the smallest subproblem, the loop proceeds to bigger subproblems in each iteration, and eventually solves the whole problem.</p>
+<p>The loop has to be designed in such a way that after each iteration of the loop, the problem is <em>partially solved</em> up to that point. Given the partial solution of smaller subproblems, the loop body has to find the solution for the subproblem larger in size by 1. That way, after the loop terminates, the whole problem is solved.</p>
+<p>Notice that after each iteration, the loop ensures that the condition <em>the subproblem has been solved</em> holds true. The condition is called the <em>loop invariant.</em></p>
+<p>It is the programmer's job to recognize how the problem can be divided into subproblems and write a loop body that maintains the loop invariant. The loop body differs from problem to problem.</p>
 <h3 id="example">Example</h3>
-<p>Let's assume that a problem asks to sort an array <span class="arithmatex">\(a\)</span> consisting of <span class="arithmatex">\(n\)</span> elements. A loop designed for solving that problem assumes that the problem is solved for subproblem <span class="arithmatex">\([a_0 ... a_{i - 1}]\)</span>, that is, elements <span class="arithmatex">\([a_0 ... a_{i - 1}]\)</span> has been sorted. Given that elements <span class="arithmatex">\([a_0 ... a_{i - 1}]\)</span> has been sorted and a new element <span class="arithmatex">\(a_i\)</span>, the loop body has to sort elements <span class="arithmatex">\([a_0 ... a_i]\)</span>. As the loop body ensures that elements <span class="arithmatex">\([a_0 ... a_i]\)</span> is sorted, when the loop terminates, the whole array is sorted.</p>
+<p>Let's assume that a problem asks to sort an array <span class="arithmatex">\(a\)</span> consisting of <span class="arithmatex">\(n\)</span> elements. A loop designed for solving that problem assumes that the problem is solved for subproblem <span class="arithmatex">\([a_0 ... a_{i - 1}]\)</span>, that is, elements <span class="arithmatex">\([a_0 ... a_{i - 1}]\)</span> has been sorted. Given that elements <span class="arithmatex">\([a_0 ... a_{i - 1}]\)</span> has been sorted and a new element <span class="arithmatex">\(a_i\)</span>, the loop body has to sort elements <span class="arithmatex">\([a_0 ... a_i]\)</span>. As the loop body ensures that elements <span class="arithmatex">\([a_0 ... a_i]\)</span> is sorted, when the loop terminates, the whole array is sorted. The loop invariant in this case is <em>the array <span class="arithmatex">\([a_0…a_i]\)</span> is sorted.</em></p>
 
 
 
@@ -712,7 +713,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 10, 2024</span>
   </span>
 
     
