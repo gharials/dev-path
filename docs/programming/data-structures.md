@@ -1,5 +1,14 @@
 In programs, data is organized based on various scenarios. The techniques of representing data in programs are called data structures. Each data structure vary from the other and are suitable for different scenarios.
 
+A few commonly used data structures are the following:
+
+1. Arrays.
+2. Stacks.
+3. Queues.
+4. Linked lists.
+5. Maps.
+6. Graphs.
+
 ## Linked lists
 
 In the _linked list_ data structure data is organized as sequential _nodes_. Each node contains some data and points (links) to its next node. The first node is called the _head_ of the linked list, and the last node, which points to no node, is called its _tail_.
