@@ -6,6 +6,7 @@ nav:
   - Programming & Problem Solving:
     - Mathematics for Programming: programming/math-prog.md
     - Mental Models for Programmers: programming/mental-models.md
+    - Programming Languages: programming/programming-languages.md
     - Data Structures: programming/data-structures.md
     - Problem Solving Tactics: programming/problem-solving-tactics.md
   - Operating Systems:
