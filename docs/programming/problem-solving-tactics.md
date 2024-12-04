@@ -20,7 +20,9 @@ Backtracking is an important problem solving technique.
 
 ### Backtracking problems
 
-Backtracking problems consists of a number of _steps_ with each step having a few _possibilities_. Backtracking requires _traversing all the possibilities_ consisting of all the steps. For example, printing all possible $n$ digit numbers can be viewed as a problem consisting of $n$ steps. For each step, there are 10 possibilities, that is the 10 decimal digits. Printing all possible $n$-digit number means trying all the possibilities for each of the $n$ steps.
+Backtracking problems consist of a number of _steps_ with each step having a few _possibilities_. Backtracking requires _traversing all the possibilities_ consisting of all the steps. For example, printing all possible $n$ digit numbers can be viewed as a problem consisting of $n$ steps. For each step, there are 10 possibilities, that is the 10 decimal digits. Printing all possible $n$-digit numbers means trying all the possibilities for each of the $n$ steps.
+
+The number of steps and the possibilities for each step may vary problem to problem. For the all possible $n$-digit numbers problem, for each step, the possibilities are the same, all the 10 decimal digits. For the all possible subsets of a set of size $n$ problem, for each step there are two possibilities, whether the element is included in the subset or not. For some problems, the possibilities may not be independent like the earlier. For example, in finding all possible permutations, an element chosen at a step cannot be chosen in later steps; the function has to keep track of it.
 
 ### Backtracking algorithms
 
@@ -40,4 +42,4 @@ let printAllNumbers = (n, p) => {
 }
 ```
 
-In the preceding example of a backtracking function for printing all possible $n$-digit numbers, the step is identified by the parameter `n`. The `for` loop tries a possibility, that is a digit `i`, and calls the function itself to find the all possible $n-1$-digit numbers.
+In the preceding example of a backtracking function for printing all possible $n$-digit numbers, the step is identified by the parameter `n`. For any step `n`, the `for` loop tries a possibility, that is a digit `i`, and calls the function itself with parameter `n-1` to find the all possible $n-1$-digit numbers after it. Once the function returns after trying all the $n-1$-digit numbers, the loop tries the next possibility, that is the next digit `i`, and again calls the function itself to find the all possible $n-1$-digit numbers after it. This process continues until all the possibilities of the current step, that is all the 10 decimal digits, are tried.
