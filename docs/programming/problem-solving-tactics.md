@@ -13,3 +13,31 @@ It is the programmer's job to recognize how the problem can be divided into subp
 ### Example
 
 Let's assume that a problem asks to sort an array $a$ consisting of $n$ elements. A loop designed for solving that problem assumes that the problem is solved for subproblem $[a_0 ... a_{i - 1}]$, that is, elements $[a_0 ... a_{i - 1}]$ has been sorted. Given that elements $[a_0 ... a_{i - 1}]$ has been sorted and a new element $a_i$, the loop body has to sort elements $[a_0 ... a_i]$. As the loop body ensures that elements $[a_0 ... a_i]$ is sorted, when the loop terminates, the whole array is sorted. The loop invariant in this case is _the array $[a_0…a_i]$ is sorted._
+
+## Backtracking
+
+Backtracking is an important problem solving technique.
+
+### Backtracking problems
+
+Backtracking problems consists of a number of _steps_ with each step having a few _possibilities_. Backtracking requires _traversing all the possibilities_ consisting of all the steps. For example, printing all possible $n$ digit numbers can be viewed as a problem consisting of $n$ steps. For each step, there are 10 possibilities, that is the 10 decimal digits. Printing all possible $n$-digit number means trying all the possibilities for each of the $n$ steps.
+
+### Backtracking algorithms
+
+Backtracking algorithms employ recursion to solve a backtracking problem. Each function call takes care of a step where the step is identified by a function parameter. After choosing a possibility for its step, the function lets exploring all the possibilities for the rest of the steps by calling the function itself with a smaller parameter.
+
+```js
+let printAllNumbers = (n, p) => {
+    
+    if (n == 0) {
+        console.log(p);
+        return;
+    }
+
+    for (let i = 0; i < 10; i++) {
+        printAllNumbers(n - 1, p + i);
+    }
+}
+```
+
+In the preceding example of a backtracking function for printing all possible $n$-digit numbers, the step is identified by the parameter `n`. The `for` loop tries a possibility, that is a digit `i`, and calls the function itself to find the all possible $n-1$-digit numbers.
