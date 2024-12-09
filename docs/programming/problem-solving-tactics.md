@@ -14,13 +14,33 @@ It is the programmer's job to recognize how the problem can be divided into subp
 
 Let's assume that a problem asks to sort an array $a$ consisting of $n$ elements. A loop designed for solving that problem assumes that the problem is solved for subproblem $[a_0 ... a_{i - 1}]$, that is, elements $[a_0 ... a_{i - 1}]$ has been sorted. Given that elements $[a_0 ... a_{i - 1}]$ has been sorted and a new element $a_i$, the loop body has to sort elements $[a_0 ... a_i]$. As the loop body ensures that elements $[a_0 ... a_i]$ is sorted, when the loop terminates, the whole array is sorted. The loop invariant in this case is _the array $[a_0…a_i]$ is sorted._
 
+## Recursion
+
+Recursion is an important problem solving technique. It is useful in problems where solution to the problem has a relationship with the solution to its smaller case.
+
+### Designing recursion
+
+Finding recursive solution to a problem mainly involves the following two steps:
+
+1. Find the relationship between the solution of $n$ and the solution of $n - 1$.
+2. Define the result for the base conditions.
+
+### Properties of recursion
+
+Keep the following properties of recursion in mind:
+
+* A _chain of function calls_ is needed to solve a problem.
+* Each function call has its _own copy_ of all of its local variables, including its parameters.
+* All the calls, however, have access to the _global variables_ of the program.
+* The calling function _waits_ for the result to be returned by the function it called with a smaller parameter.
+
 ## Backtracking
 
-Backtracking is an important problem solving technique.
+Backtracking is an important problem solving technique exploiting recursion.
 
 ### Backtracking problems
 
-Backtracking problems consist of a number of _steps_ with each step having a few _possibilities_. Backtracking requires _traversing all the possibilities_ consisting of all the steps. For example, printing all possible $n$ digit numbers can be viewed as a problem consisting of $n$ steps. For each step, there are 10 possibilities, that is the 10 decimal digits. Printing all possible $n$-digit numbers means trying all the possibilities for each of the $n$ steps.
+Backtracking problems consist of a number of _steps_ with each step having a few _possibilities_. Backtracking requires _traversing all the possibilities_ consisting of all the steps. For example, printing all possible $n$-digit numbers can be viewed as a problem consisting of $n$ steps. For each step, there are 10 possibilities, that is the 10 decimal digits. Printing all possible $n$-digit numbers means trying all the possibilities for each of the $n$ steps.
 
 The number of steps and the possibilities for each step may vary problem to problem. For the all possible $n$-digit numbers problem, for each step, the possibilities are the same, all the 10 decimal digits. For the all possible subsets of a set of size $n$ problem, for each step there are two possibilities, whether the element is included in the subset or not. For some problems, the possibilities may not be independent like the earlier. For example, in finding all possible permutations, an element chosen at a step cannot be chosen in later steps; the function has to keep track of it.
 
