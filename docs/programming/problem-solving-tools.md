@@ -32,3 +32,27 @@ console.log(arr);
 In the preceding example, the array of a few students with their marks is sorted in increasing order. The custom comparison function passed to the `sort` function call specifies that two objects (`a` and `b`) shall be compared based on their `marks` property.
 
 The comparison function can be used for integers too. The JavaScript sort function [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) documents how to write the comparison function. Programmers have to check out the documentation of their own language sort function.
+
+## Grid traversal delta
+
+Many problems require traversing on a 2D grid. Traversing on a 2D grid is usually done by moving to any of the 4 adjacent cells of a cell. The following two arrays, called _deltas_, together encode the four possible movements in a compact format.
+
+```js
+let dx = [0, 1, -1, 0];
+let dy = [1, 0, 0, -1];
+```
+
+The first array `dx` encodes the possible changes in `x` direction and the array `dy` does the same for `y` direction. Adding any pair of them together (e.g., `dx[0], dy[0]`) to any given coordinate `(x, y)` gives a possible adjacent coordinate.
+
+The following loop checks all the 4 adjacent cells of the coordinate `(x, y)`. Without it, 4 different blocks would be necessary.
+
+```js
+let x = 10, y = 12;
+
+for (let i = 0; i < 4; i++) {
+    let newX = x + dx[i]; // new x coordinate
+    let newY = y + dy[i]; // new y coordinate
+
+    // perform any necessary checks on (newX, newY)
+}
+```
