@@ -432,6 +432,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#grid-traversal-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid traversal delta
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -707,6 +716,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#grid-traversal-delta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grid traversal delta
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -749,6 +767,22 @@
 </code></pre></div>
 <p>In the preceding example, the array of a few students with their marks is sorted in increasing order. The custom comparison function passed to the <code>sort</code> function call specifies that two objects (<code>a</code> and <code>b</code>) shall be compared based on their <code>marks</code> property.</p>
 <p>The comparison function can be used for integers too. The JavaScript sort function <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">documentation</a> documents how to write the comparison function. Programmers have to check out the documentation of their own language sort function.</p>
+<h2 id="grid-traversal-delta">Grid traversal delta</h2>
+<p>Many problems require traversing on a 2D grid. Traversing on a 2D grid is usually done by moving to any of the 4 adjacent cells of a cell. The following two arrays, called <em>deltas</em>, together encode the four possible movements in a compact format.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">];</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">dy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">];</span>
+</code></pre></div>
+<p>The first array <code>dx</code> encodes the possible changes in <code>x</code> direction and the array <code>dy</code> does the same for <code>y</code> direction. Adding any pair of them together (e.g., <code>dx[0], dy[0]</code>) to any given coordinate <code>(x, y)</code> gives a possible adjacent coordinate.</p>
+<p>The following loop checks all the 4 adjacent cells of the coordinate <code>(x, y)</code>. Without it, 4 different blocks would be necessary.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">12</span><span class="p">;</span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">newX</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">dx</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// new x coordinate</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">newY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">dy</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span><span class="w"> </span><span class="c1">// new y coordinate</span>
+
+<span class="w">    </span><span class="c1">// perform any necessary checks on (newX, newY)</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
