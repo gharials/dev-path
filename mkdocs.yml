@@ -8,6 +8,7 @@ nav:
     - Mental Models for Programmers: programming/mental-models.md
     - Programming Languages: programming/programming-languages.md
     - Data Structures: programming/data-structures.md
+    - Problem Solving Tools: programming/problem-solving-tools.md
     - Problem Solving Tactics: programming/problem-solving-tactics.md
   - Operating Systems:
     - Operating System Basics: operating-systems/os-basics.md
