@@ -16,6 +16,8 @@ nav:
     - Network & Internet Basics: internet-web/network-internet-basics.md
     - Working with HTTP: internet-web/http-in-depth.md
     - How Websites Work: internet-web/websites.md
+  - Building Softwares:
+    - Web Applications: building-softwares/web-applications.md
   - Version Controlling with Git: vcs-git.md
 copyright:
   Copyright &copy; 2024 Gharials.
