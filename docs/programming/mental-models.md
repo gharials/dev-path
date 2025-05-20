@@ -1,8 +1,26 @@
 # Mental Models for Programmers
 
-The first step to solving a problem is to express it properly. Expressing complex ideas require a _mental models_, analogies which are similar with ideas. Mental models not only express a problem but also guide your thought. Mental models are vital in communicating with collaborators.
+The first step to solving a problem is to express it properly. Expressing complex ideas requires _mental models_, analogies that are similar to ideas. Mental models not only express a problem but also guide your thought and aid your reasoning.
+
+Mental models are also vital in communicating ideas with collaborators.
 
 This page contains a list of commonly used mental models that often serve as analogies while expressing complex ideas.
+
+## Ranges or intervals
+
+### Representing ranges
+
+A range is a set of numbers between two numbers. For example, the range of numbers between $x$ and $y$, where $x \leq y$, is represented as $[x, y]$. The first number, $x$, is called the _lower bound_ of the range and the second number, $y$, is called the _upper bound_ of the range. A range may be _inclusive_ or _exclusive_. For example, the range $[1, 10]$ is inclusive, while $(1, 10)$ is exclusive.
+
+### Common range tasks
+
+* Checking if a number is in a range.
+* Finding the intersection or overlap of two ranges.
+* Finding the union of two ranges.
+* Finding the complement of a range.
+* Checking if a range is a subset of another range.
+
+## Grids or matrices
 
 ## Associations or maps 
 
