@@ -29,7 +29,11 @@ The client (browser) sends a request for the `/page.html` page to the server; th
 
 ## Static vs. dynamic contents
 
-An HTTP server serves largely two types of contents: _static_ and _dynamic_. For static contents (also called _static assets_ or just _assets_), programmers use a server directory dedicated for serving static contents. All the static assets to be served (e.g., images, fonts, stylesheets, etc.) are put in the directory. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.
+An HTTP server serves largely two types of content: _static_ and _dynamic_.
+
+### Serving static contents
+
+For static contents (also called _static assets_ or just _assets_), programmers use a server directory dedicated for serving static contents. All the static assets to be served (e.g., images, fonts, stylesheets, etc.) are put in the directory. Web servers allow programmers to specify a directory for static contents; the exact instructions vary from server to server. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.
 
 Here follows an example directory (`static/`) and its contents on a server running at `localhost:5000`:
 
@@ -48,9 +52,35 @@ static/
     image-2.png
 ```
 
-For example, if a client requests the URL `http://localhost:5000/image.jpg`, the server returns a response that contains the `image.jpg` file's content as its body. Similarly, the `style-2.css` file is returned for the URL `http://localhost:5000/sub-dir/style-2.css`. As a convention, if a directory is requested instead of a file, like `http://localhost:5000/sub-dir/`, the `index.html` file within the directory is returned. Web servers allow programmers to specify a directory for static contents; the exact instructions vary from server to server. Though very straightforward, this option is too restricted, not suitable for all scenarios; only static pages can be served, no runtime changes.
+For example, if a client requests the URL `http://localhost:5000/image.jpg`, the server returns a response that contains the `image.jpg` file's content as its body. Similarly, the `style-2.css` file is returned for the URL `http://localhost:5000/sub-dir/style-2.css`.
 
-Dynamic contents, on the other hand, are _generated_ by a server upon receiving a request. In a modern web server, for each URL, programmers define a function associated with the URL that can _generate_ a response. Whenever a request is sent to an URL, the function associated with it generates the response and returns it to the client.
+!!! info
+    **The `index.html` convention for directories.**
+
+    As a convention, if a directory is requested instead of a file, like `http://localhost:5000/sub-dir/`, the `index.html` file within the directory is returned.
+
+### Serving dynamic contents
+
+Dynamic content, on the other hand, is _generated_ by a server upon receiving a request. In a modern web server, for each URL, programmers define a function associated with the URL that can _generate_ a response. Whenever a request is sent to a URL, the function associated with it generates the response and returns it to the client.
+
+Unlike static contents, the same URL may return different responses at different times, depending on the data available to the server at that time. For example, a URL like `http://localhost:5000/products/123` may return a product page for product ID `123` at one time and a different product page for the same product ID at another time.
+
+???+ info
+    **Progressive Web Applications (PWA)**
+
+    In the last few years, a new trend has emerged for dynamically generating HTMLs in browsers. In this technique, the HTML body generation logic is written in JavaScript and linked in an HTML with an empty body except a `div`, as is done in the following example. After a browser loads this HTML, the JavaScript file generates the whole HTML body.
+
+    ```html
+    <html>
+      <head>
+         <title>Page title</title>
+         <link rel="preload" as="script" href="/static/pwa-app.js">
+      </head>
+      <body><div id="app"></div><body>
+    </html>
+    ```
+
+    Several frameworks, like React and Vue, support building PWAs. A detailed treatment of PWA is out of the current article's scope.
 
 ## Website performance
 
