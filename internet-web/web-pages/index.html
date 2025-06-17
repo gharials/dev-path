@@ -8,10 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://gharials.github.io/dev-path/internet-web/websites/">
+        <link rel="canonical" href="https://gharials.github.io/dev-path/internet-web/web-pages/">
       
       
-        <link rel="prev" href="../http-in-depth/">
+        <link rel="prev" href="../web-servers/">
       
       
         <link rel="next" href="../../building-softwares/web-applications/">
@@ -22,7 +22,7 @@
     
     
       
-        <title>How Web Servers Work - Developer's Path</title>
+        <title>How Web Pages Work - Developer's Path</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-web-servers-work" class="md-skip">
+        <a href="#how-web-pages-work" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How Web Servers Work
+              How Web Pages Work
             
           </span>
         </div>
@@ -576,6 +576,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Web Servers Work
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -593,7 +616,7 @@
   
   
   <span class="md-ellipsis">
-    How Web Servers Work
+    How Web Pages Work
     
   </span>
   
@@ -606,7 +629,7 @@
   
   
   <span class="md-ellipsis">
-    How Web Servers Work
+    How Web Pages Work
     
   </span>
   
@@ -629,37 +652,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-an-http-server-serves-websites" class="md-nav__link">
+  <a href="#linking-external-resources-with-html" class="md-nav__link">
     <span class="md-ellipsis">
-      How an HTTP server serves websites
+      Linking external resources with HTML
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#static-vs-dynamic-contents" class="md-nav__link">
+  <a href="#browser-as-a-javascript-runner" class="md-nav__link">
     <span class="md-ellipsis">
-      Static vs. dynamic contents
+      Browser as a JavaScript runner
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Static vs. dynamic contents">
+    <nav class="md-nav" aria-label="Browser as a JavaScript runner">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serving-static-contents" class="md-nav__link">
+  <a href="#javascript-dom" class="md-nav__link">
     <span class="md-ellipsis">
-      Serving static contents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#serving-dynamic-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Serving dynamic contents
+      JavaScript DOM
     </span>
   </a>
   
@@ -671,28 +685,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#website-performance" class="md-nav__link">
+  <a href="#how-html-and-client-side-javascript-work-together" class="md-nav__link">
     <span class="md-ellipsis">
-      Website performance
+      How HTML and client-side JavaScript work together
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Website performance">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-of-client-side-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application of client-side JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application of client-side JavaScript">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#repeated-access-to-the-same-data" class="md-nav__link">
+  <a href="#how-html-forms-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Repeated access to the same data
+      How HTML forms work
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#response-size" class="md-nav__link">
+  <a href="#validating-forms" class="md-nav__link">
     <span class="md-ellipsis">
-      Response size
+      Validating forms
     </span>
   </a>
   
@@ -836,37 +859,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-an-http-server-serves-websites" class="md-nav__link">
+  <a href="#linking-external-resources-with-html" class="md-nav__link">
     <span class="md-ellipsis">
-      How an HTTP server serves websites
+      Linking external resources with HTML
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#static-vs-dynamic-contents" class="md-nav__link">
+  <a href="#browser-as-a-javascript-runner" class="md-nav__link">
     <span class="md-ellipsis">
-      Static vs. dynamic contents
+      Browser as a JavaScript runner
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Static vs. dynamic contents">
+    <nav class="md-nav" aria-label="Browser as a JavaScript runner">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#serving-static-contents" class="md-nav__link">
+  <a href="#javascript-dom" class="md-nav__link">
     <span class="md-ellipsis">
-      Serving static contents
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#serving-dynamic-contents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Serving dynamic contents
+      JavaScript DOM
     </span>
   </a>
   
@@ -878,28 +892,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#website-performance" class="md-nav__link">
+  <a href="#how-html-and-client-side-javascript-work-together" class="md-nav__link">
     <span class="md-ellipsis">
-      Website performance
+      How HTML and client-side JavaScript work together
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Website performance">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-of-client-side-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application of client-side JavaScript
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Application of client-side JavaScript">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#repeated-access-to-the-same-data" class="md-nav__link">
+  <a href="#how-html-forms-work" class="md-nav__link">
     <span class="md-ellipsis">
-      Repeated access to the same data
+      How HTML forms work
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#response-size" class="md-nav__link">
+  <a href="#validating-forms" class="md-nav__link">
     <span class="md-ellipsis">
-      Response size
+      Validating forms
     </span>
   </a>
   
@@ -929,79 +952,27 @@
   
 
 
-<h1 id="how-web-servers-work">How Web Servers Work</h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Have a look at the <a href="../network-internet-basics/">Network &amp; Internet Basics</a> and <a href="../http-in-depth/">Working with HTTP</a> articles as prerequisites to this article.</p>
-</div>
-<h2 id="how-an-http-server-serves-websites">How an HTTP server serves websites</h2>
-<p>HTTP responses may contain many types of contents in their bodies and the content's type is indicated by the <code>Content-Type</code> header. Websites are nothing but a particular type of HTTP response that contains an HTML document in its body and its <code>Content-Type</code> header is set to <code>text/html</code>. A browser knows how to render an HTML page. An HTML page may refer to some other resources in it, like images, fonts, stylesheets, scripts, etc. After downloading a page, browsers download all resources associated with the page by separate automatic subsequent requests.</p>
-<p>The following sequence diagram shows how an HTML page (<code>/page.html</code>) is served by a server.</p>
-<pre class="mermaid"><code>---
-title: An HTTP server serving a sample HTML page
----
-sequenceDiagram
-    autonumber
-    Client-&gt;&gt;Server: GET /page.html
-    Server--&gt;&gt;Client: (200) page.html,content-type:text/html
-    Client-&gt;&gt;Server: GET /image.jpg
-    Server--&gt;&gt;Client: (200) image.jpg,content-type:image/jpeg
-    Client-&gt;&gt;Server: GET /style.css
-    Server--&gt;&gt;Client: (200) style.css,content-type:text/css
-    Client-&gt;&gt;Server: GET /script.js
-    Server--&gt;&gt;Client: (200) script.js,content-type:text/javascript</code></pre>
-<p>The client (browser) sends a request for the <code>/page.html</code> page to the server; the server returns the page in response. The browser finds that the HTML file refers to some other resources too, like an image (<code>image.jpg</code>), a stylesheet file (<code>style.css</code>), a script (<code>script.js</code>), etc. The browser makes requests for each of them to the server and the server returns them in response.</p>
-<h2 id="static-vs-dynamic-contents">Static vs. dynamic contents</h2>
-<p>An HTTP server serves largely two types of content: <em>static</em> and <em>dynamic</em>.</p>
-<h3 id="serving-static-contents">Serving static contents</h3>
-<p>For static contents (also called <em>static assets</em> or just <em>assets</em>), programmers use a server directory dedicated for serving static contents. All the static assets to be served (e.g., images, fonts, stylesheets, etc.) are put in the directory. Web servers allow programmers to specify a directory for static contents; the exact instructions vary from server to server. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.</p>
-<p>Here follows an example directory (<code>static/</code>) and its contents on a server running at <code>localhost:5000</code>:</p>
-<div class="highlight"><pre><span></span><code>static/
-  index.html
-  style.css
-  image.jpg
-  page.html
-  sub-dir/
-    index.html
-    style-2.css
-    page-2.html
-  sub-dir-2/
-    image-1.jpg
-    image-2.png
-</code></pre></div>
-<p>For example, if a client requests the URL <code>http://localhost:5000/image.jpg</code>, the server returns a response that contains the <code>image.jpg</code> file's content as its body. Similarly, the <code>style-2.css</code> file is returned for the URL <code>http://localhost:5000/sub-dir/style-2.css</code>.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><strong>The <code>index.html</code> convention for directories.</strong></p>
-<p>As a convention, if a directory is requested instead of a file, like <code>http://localhost:5000/sub-dir/</code>, the <code>index.html</code> file within the directory is returned.</p>
-</div>
-<h3 id="serving-dynamic-contents">Serving dynamic contents</h3>
-<p>Dynamic content, on the other hand, is <em>generated</em> by a server upon receiving a request. In a modern web server, for each URL, programmers define a function associated with the URL that can <em>generate</em> a response. Whenever a request is sent to a URL, the function associated with it generates the response and returns it to the client.</p>
-<p>Unlike static contents, the same URL may return different responses at different times, depending on the data available to the server at that time. For example, a URL like <code>http://localhost:5000/products/123</code> may return a product page for product ID <code>123</code> at one time and a different product page for the same product ID at another time.</p>
-<details class="info" open="open">
-<summary>Info</summary>
-<p><strong>Progressive Web Applications (PWA)</strong></p>
-<p>In the last few years, a new trend has emerged for dynamically generating HTMLs in browsers. In this technique, the HTML body generation logic is written in JavaScript and linked in an HTML with an empty body except a <code>div</code>, as is done in the following example. After a browser loads this HTML, the JavaScript file generates the whole HTML body.</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Page title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;preload&quot;</span> <span class="na">as</span><span class="o">=</span><span class="s">&quot;script&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/pwa-app.js&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Several frameworks, like React and Vue, support building PWAs. A detailed treatment of PWA is out of the current article's scope.</p>
-</details>
-<h2 id="website-performance">Website performance</h2>
-<p>Several factors affect a website's performance, that is, how fast a website can return responses. A developer should be aware of them and a few common techniques used to mitigate them.</p>
-<h3 id="repeated-access-to-the-same-data">Repeated access to the same data</h3>
-<p>Observe that many contents are repeated, like logo images and stylesheets, across pages in a website. For example, different pages in <code>wikipedia.org</code> use the same logo and styles. Therefore, for each page, browsers are supposed to download those same data from the server. Fortunately, browsers and servers together employ <em>caching</em> as a technique to avoid the repeated requests for the same data.</p>
-<p>In caching, both browser and server have their roles. Browsers <em>cache</em> HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and as a result, browsers reuse the cached data.</p>
-<p>Let's say that a browser has received some data, say, an image, from a server and cached it as usual. When the browser requests the same data again and the server finds that the data hasn't changed since the client last requested it, the server doesn't send the data again. Instead, the server returns a response with status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304">304 (not modified)</a> and <em>without a body</em>, resulting in a <em>smaller response size.</em></p>
-<p>The <a href="../http-in-depth/#status-codes">status code 304 tells</a> the client that it may use its cached version of the data as it hasn't changed on the server. On the other hand, if the server detects that the data has changed, it returns a usual response with status code <code>200</code> (OK) and the data included in the response body. This technique is particularly useful for static data that hardly changes (e.g., images, stylesheets, etc.). A hard refresh (Ctrl+Shift+R) clears the browser cache and makes the browser download all the data again.</p>
-<h3 id="response-size">Response size</h3>
-<p>Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.</p>
-<p>Compression and minification are two commonly used optimization techniques to reduce the HTTP response size.</p>
+<h1 id="how-web-pages-work">How Web Pages Work</h1>
+<h2 id="linking-external-resources-with-html">Linking external resources with HTML</h2>
+<p>An HTML document alone cannot build a complex web page. It may need some additional files (images, CSS files, for example), called <em>external resources.</em> These external resources needed are specified with the <code>&lt;link&gt;</code> tag within the <code>&lt;head&gt;</code> tag of the HTML document. The external resources are usually stored in the server's <a href="websites.md#serving-static-contents">static directory</a>. After receiving an HTML, browsers send requests to the server for each of the specified external resources.</p>
+<p>An HTML may also need JavaScript files. They are specified as external resources with the <code>&lt;script&gt;</code> tag.</p>
+<h2 id="browser-as-a-javascript-runner">Browser as a JavaScript runner</h2>
+<p>Like NodeJS (the <code>node</code> command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.</p>
+<p>Where NodeJS can run <em>any</em> JavaScript file, browsers can <em>only</em> run JavaScript files included in HTML files. JavaScript running on a browser is called <em>client-side JavaScript</em>, and running on a server with NodeJS is called <em>server-side JavaScript.</em> As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.</p>
+<p>Users can interact with client-side JavaScript from browser console.</p>
+<h3 id="javascript-dom">JavaScript DOM</h3>
+<p>Most importantly, client-side JavaScript has access to the HTML document's <em>object representation</em>, called <a href="https://www.w3schools.com/js/js_htmldom.asp">DOM</a> (Document Object Model), through a special object named <code>document</code>. The object is created automatically and is accessible from everywhere in any client-side JavaScript file. Elements of the HTML document can be read and modified through the <code>document</code> object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.</p>
+<h2 id="how-html-and-client-side-javascript-work-together">How HTML and client-side JavaScript work together</h2>
+<p>HTML elements can associate functions with its <em>events</em>. For example, <code>&lt;element onClick="function1()"/&gt;</code> means call <code>function1</code> when element is clicked; <code>&lt;element onLoad="function2()"/&gt;</code> means call <code>function2</code> when element loads. Here both <code>function1</code> and <code>function2</code> are defined in the linked JavaScript files. Here is an exhaustive list of <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">HTML events</a>.</p>
+<p>An HTML file may have one or more associated JavaScript files containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the <code>document</code> object. HTML elements can be accessed with the <code>document</code> object in <a href="https://www.w3schools.com/js/js_htmldom_document.asp">several ways</a>: <code>document.getElementById</code> is a popular way.</p>
+<p>The architecture in summary: <em>perform some operation (function) when something happens (event) to an element.</em></p>
+<h2 id="application-of-client-side-javascript">Application of client-side JavaScript</h2>
+<p>Application of client-side JS in <em>validating</em> HTML forms.</p>
+<h3 id="how-html-forms-work">How HTML forms work</h3>
+<p>Forms are used to accept inputs from user and passing them to server for storing in database. A form contains a number of inputs of various types and a submit button. When user clicks the submit button, the inputs are passed (<em>submitted</em>) to the server.</p>
+<p>A server has a URL that handles the form data. The URL that handles the form data is specified in the <code>action</code> attribute (e.g., <code>&lt;form action="/submit"&gt;</code>). The request method can also be specified with the <code>method</code> attribute (e.g., <code>&lt;form action="/submit" method="POST"&gt;</code>. Method can be either <code>GET</code> or <code>POST</code>. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.</p>
+<h3 id="validating-forms">Validating forms</h3>
+<p>Users may input incorrect data or forget to input mandatory data. The user inputs have to be checked (called <em>validation</em>) before storing in database.</p>
 
 
 
@@ -1024,7 +995,7 @@ sequenceDiagram
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2025 02:08:30 UTC">June 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2025 04:41:21 UTC">June 17, 2025</span>
   </span>
 
     
@@ -1034,7 +1005,7 @@ sequenceDiagram
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2024 07:29:10 UTC">October 20, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2025 04:41:21 UTC">June 17, 2025</span>
   </span>
 
     

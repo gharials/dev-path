@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://gharials.github.io/dev-path/internet-web/network-internet-basics/">
+        <link rel="canonical" href="https://gharials.github.io/dev-path/internet-web/web-servers/">
       
       
-        <link rel="prev" href="../../operating-systems/os-basics/">
+        <link rel="prev" href="../http-in-depth/">
       
       
-        <link rel="next" href="../http-in-depth/">
+        <link rel="next" href="../web-pages/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Network & Internet Basics - Developer's Path</title>
+        <title>How Web Servers Work - Developer's Path</title>
       
     
     
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#networking-and-internet-basics" class="md-skip">
+        <a href="#how-web-servers-work" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Network & Internet Basics
+              How Web Servers Work
             
           </span>
         </div>
@@ -530,32 +530,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Network & Internet Basics
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../network-internet-basics/" class="md-nav__link">
         
   
   
@@ -566,134 +544,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#network-and-the-internet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network and the Internet
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Network and the Internet">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#identifying-computers-in-a-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      Identifying computers in a network
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Identifying computers in a network">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-ip-addresses-are-assigned" class="md-nav__link">
-    <span class="md-ellipsis">
-      How IP addresses are assigned
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#locating-a-computer-in-a-network-routing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Locating a computer in a network (routing)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dns-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      DNS servers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtual-private-network-vpn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Virtual Private Network (VPN)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-protocols" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network protocols
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-http-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      The HTTP protocol
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The HTTP protocol">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#http-clients" class="md-nav__link">
-    <span class="md-ellipsis">
-      HTTP clients
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-servers-or-http-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web servers or HTTP servers
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -726,10 +576,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../web-servers/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How Web Servers Work
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -740,6 +612,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-an-http-server-serves-websites" class="md-nav__link">
+    <span class="md-ellipsis">
+      How an HTTP server serves websites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-vs-dynamic-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static vs. dynamic contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Static vs. dynamic contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serving-static-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serving static contents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serving-dynamic-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serving dynamic contents
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#website-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Website performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Website performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeated-access-to-the-same-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeated access to the same data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Response size
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -892,61 +859,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#network-and-the-internet" class="md-nav__link">
+  <a href="#how-an-http-server-serves-websites" class="md-nav__link">
     <span class="md-ellipsis">
-      Network and the Internet
+      How an HTTP server serves websites
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Network and the Internet">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-vs-dynamic-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Static vs. dynamic contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Static vs. dynamic contents">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identifying-computers-in-a-network" class="md-nav__link">
+  <a href="#serving-static-contents" class="md-nav__link">
     <span class="md-ellipsis">
-      Identifying computers in a network
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Identifying computers in a network">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#how-ip-addresses-are-assigned" class="md-nav__link">
-    <span class="md-ellipsis">
-      How IP addresses are assigned
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#locating-a-computer-in-a-network-routing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Locating a computer in a network (routing)
+      Serving static contents
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#dns-servers" class="md-nav__link">
+  <a href="#serving-dynamic-contents" class="md-nav__link">
     <span class="md-ellipsis">
-      DNS servers
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#virtual-private-network-vpn" class="md-nav__link">
-    <span class="md-ellipsis">
-      Virtual Private Network (VPN)
+      Serving dynamic contents
     </span>
   </a>
   
@@ -958,28 +901,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#network-protocols" class="md-nav__link">
+  <a href="#website-performance" class="md-nav__link">
     <span class="md-ellipsis">
-      Network protocols
+      Website performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Website performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repeated-access-to-the-same-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repeated access to the same data
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#the-http-protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      The HTTP protocol
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="The HTTP protocol">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#http-clients" class="md-nav__link">
+  <a href="#response-size" class="md-nav__link">
     <span class="md-ellipsis">
-      HTTP clients
+      Response size
     </span>
   </a>
   
@@ -987,15 +930,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web-servers-or-http-servers" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web servers or HTTP servers
-    </span>
-  </a>
   
 </li>
       
@@ -1018,233 +952,79 @@
   
 
 
-<h1 id="networking-and-internet-basics">Networking and Internet Basics</h1>
-<p>Computers in isolation has limited capability. When they are <em>networked</em> (i.e. able to transfer data among each other) their capabilities multiply. Most commonly they can share data among each other.</p>
-<p>Network is ubiquitous in computers these days. A sound grasp of how the Internet and Web works is important for any software developer.</p>
-<h2 id="network-and-the-internet">Network and the Internet</h2>
-<h3 id="identifying-computers-in-a-network">Identifying computers in a network</h3>
-<p>Each device connected to a network (e.g. computers, smart phones, routers, cameras, etc.) is <em>uniquely identified</em> with its <em>IP address.</em> Devices connected to a network are called <em>hosts</em> or <em>nodes</em> in networking terminology.</p>
-<p>There are two variants of IP address: the traditional and most widely used <em>IPv4 addresses</em> and its upgrade <em>IPv6 addresses.</em></p>
-<table>
-<thead>
-<tr>
-<th>Variant</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IPv4</td>
-<td><code>10.195.66.1</code></td>
-</tr>
-<tr>
-<td>IPv6</td>
-<td><code>fe80::9f01:3291:9a7f:aa4a%54</code></td>
-</tr>
-</tbody>
-</table>
-<p>As the preceding example shows, an IPv4 address consists of four parts separated by a dot; each part can have a value up to 255. As the type and number of devices connected to the Internet kept growing, the IPv4 address space got exhausted. IPv6 was introduced as a result to accommodate even more devices. Each device has an IPv6 address as well as its IPv4 address. However, for most practical purposes developers talk in terms of IPv4 addresses.</p>
-<div class="admonition hands-on">
-<p class="admonition-title">Hands-on</p>
-<p>You can find your computer's IP address by running the <code>ipconfig</code> command. Here follows an example:</p>
-<div class="highlight"><pre><span></span><code>PS C:\Users\user_name&gt; ipconfig
-Windows IP Configuration
-
-... ...
-
-Wireless LAN adapter Wi-Fi:
-
-  Connection-specific DNS Suffix  . :
-  IPv4 Address. . . . . . . . . . . : 192.168.0.156
-  Subnet Mask . . . . . . . . . . . : 255.255.255.0
-  Default Gateway . . . . . . . . . : 192.168.0.1
-</code></pre></div>
-</div>
+<h1 id="how-web-servers-work">How Web Servers Work</h1>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><strong>Loopback address</strong></p>
-<p>In a network a computer's IP address is used whenever it is referred by another computer (say for sending a request to an HTTP server running on the computer). But when a computer needs to <em>refer itself</em> (say for sending requests to a server running on the same computer), a special IP address and host name is used, called the <em>loopback</em>: the loopback address is <code>127.0.0.1</code> and the loopback hostname is <code>localhost</code>.</p>
+<p>Have a look at the <a href="../network-internet-basics/">Network &amp; Internet Basics</a> and <a href="../http-in-depth/">Working with HTTP</a> articles as prerequisites to this article.</p>
 </div>
-<h4 id="how-ip-addresses-are-assigned">How IP addresses are assigned</h4>
-<p>Usually a network router automatically assigns IP addresses to the hosts immediately after they are connected to its network using a protocol called DHCP (Dynamic Host Configuration Protocol). Though it is straightforward as users don't have to configure IP addresses themselves, but this approach has a drawback: the IP addresses are <em>temporary</em>; a device may not have the same IP address the next time it connects to the network.</p>
-<p>All operating systems allow users to assign static IP addresses of their choice manually. In Windows, you can do it from the Network Operations Center. See this <a href="https://pureinfotech.com/set-static-ip-address-windows-10/">article</a> for instructions.</p>
-<h3 id="locating-a-computer-in-a-network-routing">Locating a computer in a network (routing)</h3>
-<p>In a network not all hosts (computers) are connected directly to each other; a host usually needs to reach another host via a number of intermediate hosts, called <em>hops</em> in networking terminology; each intermediate host <em>relays</em> the data sent by the original host. Before exchanging data with another host in a network, the destination host has to be located in the network and a <em>route</em>, consisting of intermediate hosts or hops, has to be found between them; the process is called <em>routing</em>.</p>
+<h2 id="how-an-http-server-serves-websites">How an HTTP server serves websites</h2>
+<p>HTTP responses may contain many types of contents in their bodies and the content's type is indicated by the <code>Content-Type</code> header. Websites are nothing but a particular type of HTTP response that contains an HTML document in its body and its <code>Content-Type</code> header is set to <code>text/html</code>. A browser knows how to render an HTML page. An HTML page may refer to some other resources in it, like images, fonts, stylesheets, scripts, etc. After downloading a page, browsers download all resources associated with the page by separate automatic subsequent requests.</p>
+<p>The following sequence diagram shows how an HTML page (<code>/page.html</code>) is served by a server.</p>
+<pre class="mermaid"><code>---
+title: An HTTP server serving a sample HTML page
+---
+sequenceDiagram
+    autonumber
+    Client-&gt;&gt;Server: GET /page.html
+    Server--&gt;&gt;Client: (200) page.html,content-type:text/html
+    Client-&gt;&gt;Server: GET /image.jpg
+    Server--&gt;&gt;Client: (200) image.jpg,content-type:image/jpeg
+    Client-&gt;&gt;Server: GET /style.css
+    Server--&gt;&gt;Client: (200) style.css,content-type:text/css
+    Client-&gt;&gt;Server: GET /script.js
+    Server--&gt;&gt;Client: (200) script.js,content-type:text/javascript</code></pre>
+<p>The client (browser) sends a request for the <code>/page.html</code> page to the server; the server returns the page in response. The browser finds that the HTML file refers to some other resources too, like an image (<code>image.jpg</code>), a stylesheet file (<code>style.css</code>), a script (<code>script.js</code>), etc. The browser makes requests for each of them to the server and the server returns them in response.</p>
+<h2 id="static-vs-dynamic-contents">Static vs. dynamic contents</h2>
+<p>An HTTP server serves largely two types of content: <em>static</em> and <em>dynamic</em>.</p>
+<h3 id="serving-static-contents">Serving static contents</h3>
+<p>For static contents (also called <em>static assets</em> or just <em>assets</em>), programmers use a server directory dedicated for serving static contents. All the static assets to be served (e.g., images, fonts, stylesheets, etc.) are put in the directory. Web servers allow programmers to specify a directory for static contents; the exact instructions vary from server to server. If the requested URL matches a file in the directory, the server returns a response with the file's content as its body.</p>
+<p>Here follows an example directory (<code>static/</code>) and its contents on a server running at <code>localhost:5000</code>:</p>
+<div class="highlight"><pre><span></span><code>static/
+  index.html
+  style.css
+  image.jpg
+  page.html
+  sub-dir/
+    index.html
+    style-2.css
+    page-2.html
+  sub-dir-2/
+    image-1.jpg
+    image-2.png
+</code></pre></div>
+<p>For example, if a client requests the URL <code>http://localhost:5000/image.jpg</code>, the server returns a response that contains the <code>image.jpg</code> file's content as its body. Similarly, the <code>style-2.css</code> file is returned for the URL <code>http://localhost:5000/sub-dir/style-2.css</code>.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>You can print the route between your host and another with the <code>tracert</code> (trace route) command. Here follows an example that lists the hops to reach <code>google.com</code>:</p>
-<div class="highlight"><pre><span></span><code>PS C:\Users\user_name&gt; tracert google.com
-
-Tracing route to google.com [74.125.68.102]
-over a maximum of 30 hops:
-
-  1     1 ms     2 ms     1 ms  192.168.0.1
-  2     5 ms     2 ms     4 ms  10.195.66.1
-  3     8 ms     4 ms     3 ms  10.20.242.41
-  4     9 ms     1 ms     1 ms  100.64.171.53
-  5     6 ms     5 ms     5 ms  10.20.105.5
-  6     9 ms     9 ms     5 ms  10.10.100.89
-  7     7 ms     6 ms     9 ms  10.14.14.45
-  8    14 ms     8 ms    10 ms  103.26.244.34.summitgw.net [103.26.244.34]
-  9    39 ms    36 ms    36 ms  74.125.32.222
-10    38 ms    39 ms    37 ms  142.251.77.187
-11    36 ms    39 ms    37 ms  142.251.255.56
-12    58 ms    56 ms    56 ms  192.178.242.79
-13    91 ms    87 ms    88 ms  72.14.239.151
-14    89 ms    88 ms    89 ms  142.251.252.45
-15    89 ms    87 ms    88 ms  216.239.35.167
-16     *        *        *     Request timed out.
-17     *        *        *     Request timed out.
-18     *        *        *     Request timed out.
-19     *        *        *     Request timed out.
-20     *        *        *     Request timed out.
-21     *        *        *     Request timed out.
-22     *        *        *     Request timed out.
-23     *        *        *     Request timed out.
-24     *        *        *     Request timed out.
-25    84 ms    85 ms   101 ms  sc-in-f102.1e100.net [74.125.68.102]
-</code></pre></div>
+<p><strong>The <code>index.html</code> convention for directories.</strong></p>
+<p>As a convention, if a directory is requested instead of a file, like <code>http://localhost:5000/sub-dir/</code>, the <code>index.html</code> file within the directory is returned.</p>
 </div>
-<h3 id="dns-servers">DNS servers</h3>
-<p>A DNS server maps a URL to an IP address.</p>
-<h3 id="virtual-private-network-vpn">Virtual Private Network (VPN)</h3>
-<p><em>To be done.</em></p>
-<h2 id="network-protocols">Network protocols</h2>
-<p>Communication between two hosts in a network is a complex process, spanning across several layers. Each layer's operations cannot be arbitrary; they defined by some rules or conventions and they are called <em>protocols.</em> The lower layers take care of identifying hosts, finding routes between them, etc. and their corresponding protocols define the rules for them.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>The canonical model for the network layers is called the <em>OSI model</em> and it consists of 7 layers. See the following resources for further information on OSI model:</p>
-<ol>
-<li><a href="https://www.cloudflare.com/learning/ddos/what-is-layer-7/">What is layer 7 of the Internet? - Cloudflare</a>.</li>
-<li><a href="https://www.educative.io/blog/osi-model-layers">What is the OSI Model? 7 layers explained in detail.</a></li>
-</ol>
-</div>
-<p>Once the lower layers take care of locating and connecting hosts, then comes the question of <em>exchanging data</em> among the applications or programs running on the hosts. The topmost layer protocols define the rules for communication between applications running on two hosts, thus the layer is called <em>application layer</em>. There are many application layer protocols used by various applications. Here follows a few commonly used ones:</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Purpose</th>
-<th>Applications</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>HTTP (Hyper Text Transfer Protocol)</td>
-<td>Exchanging hyper texts (web pages.)</td>
-<td>HTTP clients (e.g. web browsers) and HTTP servers.</td>
-</tr>
-<tr>
-<td>FTP (File Transfer Protocol)</td>
-<td>Transferring files among computers.</td>
-<td>FTP clients and servers.</td>
-</tr>
-<tr>
-<td>SSH (Secured Shell)</td>
-<td>Sending commands to another computer in a network.</td>
-<td>Command line interfaces.</td>
-</tr>
-<tr>
-<td>SMTP (Simple Mail Transfer Protocol)</td>
-<td>Sending and receiving emails.</td>
-<td>Email clients and servers.</td>
-</tr>
-</tbody>
-</table>
-<p>So whenever an application (e.g. a web browser) wants to send data to another application (e.g. a web server) in a destination host the following process take place:</p>
-<ol>
-<li>The application encodes the data according to its protocol rules (e.g. HTTP) and delegate the data to the lower layers.</li>
-<li>The lower layers locate the destination host, find a route to it, and transfer the data.</li>
-<li>The target application in the destination receives the data from the lower layers and interprets it.</li>
-</ol>
-<h2 id="the-http-protocol">The HTTP protocol</h2>
-<p>Here follows a brief introduction to arguably the most important protocol for developers, that is HTTP protocol. Just like any other protocols, HTTP protocol is an agreement across computers on how they communicate with each other.</p>
-<p>HTTP is a very widely used protocol and it is very straightforward. An <em>client</em> sends a <em>request</em> to a <em>server</em>; the server responds by sending a <em>response.</em> Both HTTP requests and responses are chunks of text that comply with the format defined by the HTTP protocol.</p>
-<p>Here follows a sample HTTP request:</p>
-<div class="highlight"><pre><span></span><code>&gt; GET / HTTP/2
-&gt; Host: squidfunk.github.io
-&gt; user-agent: curl/7.68.0
-&gt; accept: */*
-&gt;
+<h3 id="serving-dynamic-contents">Serving dynamic contents</h3>
+<p>Dynamic content, on the other hand, is <em>generated</em> by a server upon receiving a request. In a modern web server, for each URL, programmers define a function associated with the URL that can <em>generate</em> a response. Whenever a request is sent to a URL, the function associated with it generates the response and returns it to the client.</p>
+<p>Unlike static contents, the same URL may return different responses at different times, depending on the data available to the server at that time. For example, a URL like <code>http://localhost:5000/products/123</code> may return a product page for product ID <code>123</code> at one time and a different product page for the same product ID at another time.</p>
+<details class="info" open="open">
+<summary>Info</summary>
+<p><strong>Progressive Web Applications (PWA)</strong></p>
+<p>In the last few years, a new trend has emerged for dynamically generating HTMLs in browsers. In this technique, the HTML body generation logic is written in JavaScript and linked in an HTML with an empty body except a <code>div</code>, as is done in the following example. After a browser loads this HTML, the JavaScript file generates the whole HTML body.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Page title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+     <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;preload&quot;</span> <span class="na">as</span><span class="o">=</span><span class="s">&quot;script&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/pwa-app.js&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;app&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Here follows a sample HTTP response (truncated for brevity):</p>
-<div class="highlight"><pre><span></span><code>&lt; HTTP/2 404
-&lt; server: GitHub.com
-&lt; content-type: text/html; charset=utf-8
-&lt; permissions-policy: interest-cohort=()
-&lt; etag: &quot;66faf066-239b&quot;
-&lt; content-security-policy: default-src &#39;none&#39;; style-src &#39;unsafe-inline&#39;; img-src data:; connect-src &#39;self&#39;
-&lt; x-github-request-id: 10F5:828B2:2098D6:2375FD:6706D2E2
-&lt; accept-ranges: bytes
-&lt; age: 0
-&lt; date: Wed, 09 Oct 2024 19:00:50 GMT
-&lt; via: 1.1 varnish
-&lt; x-served-by: cache-qpg1281-QPG
-&lt; x-cache: MISS
-&lt; x-cache-hits: 0
-&lt; x-timer: S1728500451.655837,VS0,VE227
-&lt; vary: Accept-Encoding
-&lt; x-fastly-request-id: 335b9c29f98a9efccc02baf27f1f85956b479cef
-&lt; content-length: 9115
-&lt;
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-</code></pre></div>
-<p>See the following resources for a more detailed overview of HTTP:</p>
-<ol>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview">An overview of HTTP - MDN</a>.</li>
-<li><a href="https://www.cloudflare.com/learning/ddos/glossary/hypertext-transfer-protocol-http/">What is HTTP? - Cloudflare</a>.</li>
-</ol>
-<div class="admonition hands-on">
-<p class="admonition-title">Hands-on</p>
-<p><strong>SMTP protocol message format</strong></p>
-<p>Just like browsers render HTTP protocol responses in a human readable format, the SMTP clients also do the same for SMTP messages. You can view the SMTP data format by opening an email in your GMail inbox and clicking <em>Show original</em> from the menu at the top-right corner. Here follows an example (truncated for brevity.)</p>
-<div class="highlight"><pre><span></span><code>    Delivered-To: xyz@gmail.com
-    Received: by 2002:a05:7301:1295:b0:143:a58e:7c2 with SMTP id li21csp1060487dyb;
-            Wed, 9 Oct 2024 07:38:48 -0700 (PDT)
-    X-Google-Smtp-Source: AGHT+IF0EsEGjnTjO1OQSvXexSVk0cXsi6tXAtMi9OvnqD4W48BpVZvJ9jhtjZcV/omRJuSVe2ix
-    X-Received: by 2002:a05:6808:1918:b0:3e3:9ba3:5ca5 with SMTP id 5614622812f47-3e3e66b83cbmr2574514b6e.4.1728484727789;
-            Wed, 09 Oct 2024 07:38:47 -0700 (PDT)
-    ARC-Seal: i=1; a=rsa-sha256; t=1728484727; cv=none;
-            d=google.com; s=arc-20240605;
-            b=V0sGpNclrHonaLsSo0xoUXlEwDcdzbeNvW4EibEwotDLMFSgRwfb0AyK7GL9Nu7v2A
-             oqphKbv6+3WikWFgoIaBvF414W6qEQSNAz7O4lMePge8Jb4dEgjqzlAURXfUtrtsC9tx
-             BazNgxsABLDrbkRx6WXCiXsMJ0vBpGyIOrxeJ9QSv6cQxLQnbdt/RnuqCHfVcqVrymZd
-             8kL693/jYWcNg/PaHnmQOC114OWskO4LghCYsodCNMvVfzs1wMwyaWI3imJoXYyzPwJO
-             f1e//S4RnxNRdNQrYxm6HNcI2A6AQR47JZy5NTF6KfYXP8ny2kon2qO6GTT7851b+lNs
-             qmJQ==
-    ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
-            h=require-recipient-valid-since:feedback-id:list-unsubscribe-post
-             :list-unsubscribe:date:to:mime-version:subject:message-id:from
-             :dkim-signature:dkim-signature;
-            bh=4I8kyeWK9z0QNSWoIxvIg13pExRhwI9CyWfOtW5ILnY=;
-            fh=CO2obA5JRueXe+/8D0Bn8bvfiXWnfEzdHxRLiyhFm+8=;
-            b=kwe2HuwvHGBbJFykARio8/vCB/BUDbs8Ngl7GuD+x9FtCbQWDnVcxLC8nC2kJH4NnO
-             nlRRH0NEANHoIV3TsFd9uGOLWtyWFIBv3dRyzu9RT5MijWzmo9glCx/pNp59UK04ivyg
-             uOhkYC33iAyXQ2TE0KO2y0sigdu5a5Xt3Q4LT92ZhP7cHbDPLPg17Ey3w96K2TOiFSor
-             y98JQTlLs+GaNUVfhAgd3rhCJ5q5A7CG6NaRJ1RTxgNoS/9I/YwA6pbeIMtD6S4kpAvB
-             QbR5bCpmAChkkwEgF6Qo8lyXha8MaKA7m0/w25qzWy9GIhtIBVFHALVXWYBEnEACDcVD
-             EeJw==;
-            dara=google.com
-    ARC-Authentication-Results: i=1; mx.google.com;
-           dkim=pass header.i=@maile.linkedin.com header.s=d2048-202308-0e header.b=rxdH9Gey;
-           dkim=pass header.i=@linkedin.com header.s=d2048-202308-00 header.b=&quot;T1v+/v9R&quot;;
-           spf=pass (google.com: domain of m-723o1y6u5nc3q4w91izccdjanxjjmqr07listkcmsu7kfb4qd6losn0mer7@bounce.linkedin.com designates 2620:109:c003:104::202 as permitted sender) smtp.mailfrom=m-723o1y6u5nc3q4w91izccdjanxjjmqr07listkcmsu7kfb4qd6losn0mer7@bounce.linkedin.com;
-           dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
-    Return-Path: &lt;m-723o1y6u5nc3q4w91izccdjanxjjmqr07listkcmsu7kfb4qd6losn0mer7@bounce.linkedin.com&gt;
-    Received: from maile-db.linkedin.com (maile-db.linkedin.com. [2620:109:c003:104::202])
-            by mx.google.com with ESMTPS id 41be03b00d2f7-7e9f6e88b33si10996189a12.776.2024.10.09.07.38.47
-            for &lt;xyz@gmail.com&gt;
-            (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
-            Wed, 09 Oct 2024 07:38:47 -0700 (PDT)
-    Received-SPF: pass (google.com: domain of m-723o1y6u5nc3q4w91izccdjanxjjmqr07listkcmsu7kfb4qd6losn0mer7@bounce.linkedin.com designates 2620:109:c003:104::202 as permitted sender) client-ip=2620:109:c003:104::202;    
-</code></pre></div>
-</div>
-<h3 id="http-clients">HTTP clients</h3>
-<p>The most common HTTP client is a web browser. The web pages a browser display are nothing but HTTP responses rendered in a human readable format. There are other clients that can issue HTTP requests and receive responses. Two among them are particularly useful for developers: cURL (command line) and <a href="https://www.postman.com/downloads/">Postman</a> (graphical).</p>
-<h2 id="web-servers-or-http-servers">Web servers or HTTP servers</h2>
-<p>HTTP servers or web servers are <em>programs</em> that can accept HTTP requests and return HTTP responses. Web servers are discussed in detail in the <a href="../web-servers/"><em>How Web Servers Work</em></a> article.</p>
+<p>Several frameworks, like React and Vue, support building PWAs. A detailed treatment of PWA is out of the current article's scope.</p>
+</details>
+<h2 id="website-performance">Website performance</h2>
+<p>Several factors affect a website's performance, that is, how fast a website can return responses. A developer should be aware of them and a few common techniques used to mitigate them.</p>
+<h3 id="repeated-access-to-the-same-data">Repeated access to the same data</h3>
+<p>Observe that many contents are repeated, like logo images and stylesheets, across pages in a website. For example, different pages in <code>wikipedia.org</code> use the same logo and styles. Therefore, for each page, browsers are supposed to download those same data from the server. Fortunately, browsers and servers together employ <em>caching</em> as a technique to avoid the repeated requests for the same data.</p>
+<p>In caching, both browser and server have their roles. Browsers <em>cache</em> HTTP responses, which means they store the responses locally. Servers avoid sending data that a client requested earlier unless there are changes to it since the last time; on such occasions, they signal the browser that the requested data has no changes and as a result, browsers reuse the cached data.</p>
+<p>Let's say that a browser has received some data, say, an image, from a server and cached it as usual. When the browser requests the same data again and the server finds that the data hasn't changed since the client last requested it, the server doesn't send the data again. Instead, the server returns a response with status code <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304">304 (not modified)</a> and <em>without a body</em>, resulting in a <em>smaller response size.</em></p>
+<p>The <a href="../http-in-depth/#status-codes">status code 304 tells</a> the client that it may use its cached version of the data as it hasn't changed on the server. On the other hand, if the server detects that the data has changed, it returns a usual response with status code <code>200</code> (OK) and the data included in the response body. This technique is particularly useful for static data that hardly changes (e.g., images, stylesheets, etc.). A hard refresh (Ctrl+Shift+R) clears the browser cache and makes the browser download all the data again.</p>
+<h3 id="response-size">Response size</h3>
+<p>Both HTTP requests and responses travel over networks. An HTTP client downloads the HTTP responses on the client computer. The response size affects the download speed: a response with a larger body takes longer to download.</p>
+<p>Compression and minification are two commonly used optimization techniques to reduce the HTTP response size.</p>
 
 
 
@@ -1277,7 +1057,7 @@ over a maximum of 30 hops:
     <span class="md-icon" title="Created">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 9, 2024 19:34:29 UTC">October 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 20, 2024 07:29:10 UTC">October 20, 2024</span>
   </span>
 
     
