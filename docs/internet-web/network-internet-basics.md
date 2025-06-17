@@ -221,4 +221,4 @@ The most common HTTP client is a web browser. The web pages a browser display ar
 
 ## Web servers or HTTP servers
 
-HTTP servers or web servers are _programs_ that can accept HTTP requests and return HTTP responses. Web servers are discussed in detail in the [_How Web Servers Work_](./websites.md) article.
+HTTP servers or web servers are _programs_ that can accept HTTP requests and return HTTP responses. Web servers are discussed in detail in the [_How Web Servers Work_](./web-servers.md) article.

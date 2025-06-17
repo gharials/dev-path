@@ -15,7 +15,7 @@ nav:
   - Internet & Web:
     - Network & Internet Basics: internet-web/network-internet-basics.md
     - Working with HTTP: internet-web/http-in-depth.md
-    - How Web Servers Work: internet-web/websites.md
+    - How Web Servers Work: internet-web/web-servers.md
   - Building Softwares:
     - Web Applications: building-softwares/web-applications.md
   - Version Controlling with Git: vcs-git.md
