@@ -2,7 +2,7 @@
 
 ## Linking external resources with HTML
 
-An HTML document alone cannot build a complex web page. It may need some additional files (images, CSS files, for example), called *external resources.* These external resources needed are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](websites.md#serving-static-contents). After receiving an HTML, browsers send requests to the server for each of the specified external resources.
+An HTML document alone cannot build a complex web page. It may need some additional files (images, CSS files, for example), called *external resources.* These external resources needed are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](websites.md#serving-static-contents). After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified external resources.
 
 An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
 
@@ -28,14 +28,17 @@ The architecture in summary: _perform some operation (function) when something h
 
 ## Application of client-side JavaScript
 
-Application of client-side JS in *validating* HTML forms.
+Application of client-side JS in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called *validation*) before storing in database.
 
-### How HTML forms work
+!!!info
+    **How HTML forms work.**
 
-Forms are used to accept inputs from user and passing them to server for storing in database. A form contains a number of inputs of various types and a submit button. When user clicks the submit button, the inputs are passed (*submitted*) to the server.
+    Forms are used to accept inputs from user and passing them to server for storing in database. A form contains a number of inputs of various types and a submit button. When user clicks the submit button, the inputs are passed (*submitted*) to the server.
 
-A server has a URL that handles the form data. The URL that handles the form data is specified in the `action` attribute (e.g., `<form action="/submit">`). The request method can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. Method can be either `GET` or `POST`. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.
+    A server has a URL that handles the form data. The URL that handles the form data is specified in the `action` attribute (e.g., `<form action="/submit">`). The request method can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. Method can be either `GET` or `POST`. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.
 
-### Validating forms
+In a simple HTML form, the data can be validated by the server only after the user submits the form. This approach unnecessarily wastes network travel cost and server resources.
 
-Users may input incorrect data or forget to input mandatory data. The user inputs have to be checked (called *validation*) before storing in database.
+### Validating forms with client-side JS
+
+If the form data could be validated at the browser, before submitting to server, both network travel and server processing could be avoided. Client-side JavaScript is very useful for this purpose: write a JavaScript function that contains the logic to validate the form. In the function, find the form element using the `document` object. Access and check the form input values. Call the function when user clicks the submit button. Submit to server only after the function finds no error in the inputs.
