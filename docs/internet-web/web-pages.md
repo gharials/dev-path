@@ -26,9 +26,11 @@ An HTML file may have one or more associated JavaScript files containing the fun
 
 The architecture in summary: _perform some operation (function) when something happens (event) to an element._
 
-## Application of client-side JavaScript
+## Applications of client-side JavaScript
 
-Application of client-side JS in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called *validation*) before storing in database.
+### Validating forms with client-side JS
+
+Client-side JavaScript has its application in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called *validation*) before storing in database.
 
 !!!info
     **How HTML forms work.**
@@ -38,7 +40,5 @@ Application of client-side JS in *validating* HTML forms. Users may input incorr
     A server has a URL that handles the form data. The URL that handles the form data is specified in the `action` attribute (e.g., `<form action="/submit">`). The request method can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. Method can be either `GET` or `POST`. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.
 
 In a simple HTML form, the data can be validated by the server only after the user submits the form. This approach unnecessarily wastes network travel cost and server resources.
-
-### Validating forms with client-side JS
 
 If the form data could be validated at the browser, before submitting to server, both network travel and server processing could be avoided. Client-side JavaScript is very useful for this purpose: write a JavaScript function that contains the logic to validate the form. In the function, find the form element using the `document` object. Access and check the form input values. Call the function when user clicks the submit button. Submit to server only after the function finds no error in the inputs.
