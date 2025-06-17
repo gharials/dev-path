@@ -1,0 +1,41 @@
+# How Web Pages Work
+
+## Linking external resources with HTML
+
+An HTML document alone cannot build a complex web page. It may need some additional files (images, CSS files, for example), called *external resources.* These external resources needed are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](websites.md#serving-static-contents). After receiving an HTML, browsers send requests to the server for each of the specified external resources.
+
+An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
+
+## Browser as a JavaScript runner
+
+Like NodeJS (the `node` command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.
+    
+Where NodeJS can run *any* JavaScript file, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
+
+Users can interact with client-side JavaScript from browser console.
+
+### JavaScript DOM
+
+Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file. Elements of the HTML document can be read and modified through the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
+
+## How HTML and client-side JavaScript work together
+
+HTML elements can associate functions with its _events_. For example, `<element onClick="function1()"/>` means call `function1` when element is clicked; `<element onLoad="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
+
+An HTML file may have one or more associated JavaScript files containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the `document` object. HTML elements can be accessed with the `document` object in [several ways](https://www.w3schools.com/js/js_htmldom_document.asp): `document.getElementById` is a popular way.
+
+The architecture in summary: _perform some operation (function) when something happens (event) to an element._
+
+## Application of client-side JavaScript
+
+Application of client-side JS in *validating* HTML forms.
+
+### How HTML forms work
+
+Forms are used to accept inputs from user and passing them to server for storing in database. A form contains a number of inputs of various types and a submit button. When user clicks the submit button, the inputs are passed (*submitted*) to the server.
+
+A server has a URL that handles the form data. The URL that handles the form data is specified in the `action` attribute (e.g., `<form action="/submit">`). The request method can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. Method can be either `GET` or `POST`. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.
+
+### Validating forms
+
+Users may input incorrect data or forget to input mandatory data. The user inputs have to be checked (called *validation*) before storing in database.
