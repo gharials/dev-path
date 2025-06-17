@@ -1,4 +1,4 @@
-# How websites work
+# How Web Servers Work
 
 !!! info
     Have a look at the [Network & Internet Basics](./network-internet-basics.md) and [Working with HTTP](./http-in-depth.md) articles as prerequisites to this article.
