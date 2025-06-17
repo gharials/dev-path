@@ -49,7 +49,7 @@ All operating systems allow users to assign static IP addresses of their choice 
 
 ### Locating a computer in a network (routing)
 
-In a network not all hosts (computers) are connected directly to each other; a host usually needs to reach another host via a number of intermediate hosts (_hops_ in networking terminology); each intermediate host _relays_ the data sent by the original host. Before exchanging data with another host in a network, the destination host has to be located in the network and a _route_ (consisting of intermediate hosts or hops) has to be found between them; the process is called _routing_.
+In a network not all hosts (computers) are connected directly to each other; a host usually needs to reach another host via a number of intermediate hosts, called _hops_ in networking terminology; each intermediate host _relays_ the data sent by the original host. Before exchanging data with another host in a network, the destination host has to be located in the network and a _route_, consisting of intermediate hosts or hops, has to be found between them; the process is called _routing_.
 
 !!! info
     You can print the route between your host and another with the `tracert` (trace route) command. Here follows an example that lists the hops to reach `google.com`:
@@ -221,4 +221,4 @@ The most common HTTP client is a web browser. The web pages a browser display ar
 
 ## Web servers or HTTP servers
 
-HTTP servers are _programs_ that can accept HTTP requests and return HTTP responses.
+HTTP servers or web servers are _programs_ that can accept HTTP requests and return HTTP responses. Web servers are discussed in detail in the [_How Web Servers Work_](./websites.md) article.
