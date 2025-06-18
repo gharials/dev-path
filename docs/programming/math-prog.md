@@ -1,5 +1,7 @@
 # Mathematics for Programming
 
+Mathematics for programming is mainly about integers. There's a dedicated branch of mathematics called _Discrete Mathematics_ for its study. The following basic mathematical ideas are necessary for programmers. Consult an authoritative discrete mathematics book for further details.
+
 ## Floor and ceiling functions
 
 ### The floor function
@@ -44,18 +46,22 @@ In programming languages the `%` operator is used as the modulus operator. Examp
 
 ## Number formats
 
+Besides the usual 10-based decimal representation of numbers, a programmer has to be familiar with the following number representations.
+
+### Binary numbers
+
+A binary digit is called a _bit_, short for _binary digit_, named by computer scientist [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Additionally, 8 bits is called a _byte_ and computers mostly work with bytes.
+
 ### Hexadecimal numbers
 
-Binary representation of numbers are too long and often hard to work with. The 16-based hexadecimal representation is shorter and more convenient for practical uses. There are 16 digits in this format and each digit is equivalent to 4 binary digits or 4 _bits_ (a binary digit is called a bit, named by computer scientist [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon)).
-
-The 16 hexadecimal digits are the following: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`. Sometimes, small cases (`a, b, c, d, e, f`) are used to represent the last digits. A hexadecimal number is prefixed by a `0x` (or `x` sometimes) to indicate that it is a hexadecimal number.
+Binary representation of numbers are too long and often hard to work with. The 16-based hexadecimal representation is shorter and more convenient for practical uses. There are 16 digits in this format: `0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F`. Sometimes, small cases (`a, b, c, d, e, f`) are used to represent the last digits. A hexadecimal number is prefixed by a `0x` (or `x` sometimes) to indicate that it is a hexadecimal number.
 
 Examples: `0x12` (the value is 18, not 12) `0xAF`, `0x2A`, `x20`, `xA4`, `xAC`.
 
 ???+ info
     **Hexadecimal representation of bytes**
     
-    Computers mostly work with _bytes_ (8 bits equal a byte). Two hexadecimal digits form a byte (e.g. `0x7A`).
+    Notice that each hexadecimal digit is equivalent to 4 binary digits or 4 _bits_ and two hexadecimal digits form a byte (e.g. `0x7A`).
 
 ???+ info
     **Hexadecimal representation of colors**
@@ -70,8 +76,16 @@ Counting (aka _combinatorics_) is a vast topic in mathematics. A programmer need
 
 The sum and product rule of counting are particularly important. They occur frequently at work. Here follows a working definition of the two rules:
 
-**Sum rule.** If one and only one option is to be chosen from $n$ options and each options have $a_1, a_2, ... a_n$ alternatives, then the total number of choices is $a_1 + a_2 + ... + a_n$.
+**Sum rule.** If one and only one option is to be chosen from $n$ options and each option has $a_1, a_2, ... a_n$ alternatives, then the total number of choices is $a_1 + a_2 + ... + a_n$.
 
-**Product rule.** If all of the $n$ options must be chosen and there are $a_1, a_2, ... a_n$ alternatives for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total. A common special case of the rule is when each options have the same $m$ number of alternatives, then there are total $m × m × ... × m = m^n$ choices.
+**Product rule.** If all of the $n$ options must be chosen and there are $a_1, a_2, ... a_n$ alternatives for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total. A common special case of the rule is when each option has the same $m$ number of alternatives, then there are total $m × m × ... × m = m^n$ choices.
 
 Consult this [resource](https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/) for details.
+
+## Logarithms
+
+Relationship between power and logarithm: $\log_b n = x$ means $b^x = n$. In other words, _$n$ can be successively divided by $b$ for $x$ times._
+
+For example, $\log_2 8 = 3$ means $2^3 = 8$, or $8$ can be successively divided by $2$ for $3$ times: $8 / 2 = 4$, $4 / 2 = 2$, and $2 / 2 = 1$.
+
+In computer science, $2$-based logarithm is frequent. It is sometimes written as $\lg$ in short (e.g., $\lg n = x$ means $2^x = n$).
