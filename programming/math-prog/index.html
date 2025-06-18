@@ -397,6 +397,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#binary-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hexadecimal-numbers" class="md-nav__link">
     <span class="md-ellipsis">
       Hexadecimal numbers
@@ -431,6 +440,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logarithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logarithms
+    </span>
+  </a>
   
 </li>
       
@@ -954,6 +972,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#binary-numbers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary numbers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#hexadecimal-numbers" class="md-nav__link">
     <span class="md-ellipsis">
       Hexadecimal numbers
@@ -991,6 +1018,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logarithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logarithms
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1011,6 +1047,7 @@
 
 
 <h1 id="mathematics-for-programming">Mathematics for Programming</h1>
+<p>Mathematics for programming is mainly about integers. There's a dedicated branch of mathematics called <em>Discrete Mathematics</em> for its study. The following basic mathematical ideas are necessary for programmers. Consult an authoritative discrete mathematics book for further details.</p>
 <h2 id="floor-and-ceiling-functions">Floor and ceiling functions</h2>
 <h3 id="the-floor-function">The floor function</h3>
 <p>The floor of any real number is the greatest integer less than or equal to it. Floor of <span class="arithmatex">\(x\)</span> is denoted as <span class="arithmatex">\(⌊x⌋\)</span>. Examples: <span class="arithmatex">\(⌊2.3⌋ = 2\)</span>, <span class="arithmatex">\(⌊8.9⌋ = 8\)</span>, <span class="arithmatex">\(⌊7.0⌋ = 7\)</span>.</p>
@@ -1041,14 +1078,16 @@
 <p><span class="arithmatex">\(a \mod m = r\)</span> (pronounced <span class="arithmatex">\(a\)</span> modulo/mod <span class="arithmatex">\(m\)</span> equals <span class="arithmatex">\(r\)</span>) means that <span class="arithmatex">\(r\)</span> is the remainder after dividing <span class="arithmatex">\(a\)</span> with <span class="arithmatex">\(m\)</span>. Example: <span class="arithmatex">\(14 \mod 3 = 2\)</span>.</p>
 <p>In programming languages the <code>%</code> operator is used as the modulus operator. Example: <code>14 % 3</code>.</p>
 <h2 id="number-formats">Number formats</h2>
+<p>Besides the usual 10-based decimal representation of numbers, a programmer has to be familiar with the following number representations.</p>
+<h3 id="binary-numbers">Binary numbers</h3>
+<p>A binary digit is called a <em>bit</em>, short for <em>binary digit</em>, named by computer scientist <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a>. Additionally, 8 bits is called a <em>byte</em> and computers mostly work with bytes.</p>
 <h3 id="hexadecimal-numbers">Hexadecimal numbers</h3>
-<p>Binary representation of numbers are too long and often hard to work with. The 16-based hexadecimal representation is shorter and more convenient for practical uses. There are 16 digits in this format and each digit is equivalent to 4 binary digits or 4 <em>bits</em> (a binary digit is called a bit, named by computer scientist <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a>).</p>
-<p>The 16 hexadecimal digits are the following: <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</code>. Sometimes, small cases (<code>a, b, c, d, e, f</code>) are used to represent the last digits. A hexadecimal number is prefixed by a <code>0x</code> (or <code>x</code> sometimes) to indicate that it is a hexadecimal number.</p>
+<p>Binary representation of numbers are too long and often hard to work with. The 16-based hexadecimal representation is shorter and more convenient for practical uses. There are 16 digits in this format: <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</code>. Sometimes, small cases (<code>a, b, c, d, e, f</code>) are used to represent the last digits. A hexadecimal number is prefixed by a <code>0x</code> (or <code>x</code> sometimes) to indicate that it is a hexadecimal number.</p>
 <p>Examples: <code>0x12</code> (the value is 18, not 12) <code>0xAF</code>, <code>0x2A</code>, <code>x20</code>, <code>xA4</code>, <code>xAC</code>.</p>
 <details class="info" open="open">
 <summary>Info</summary>
 <p><strong>Hexadecimal representation of bytes</strong></p>
-<p>Computers mostly work with <em>bytes</em> (8 bits equal a byte). Two hexadecimal digits form a byte (e.g. <code>0x7A</code>).</p>
+<p>Notice that each hexadecimal digit is equivalent to 4 binary digits or 4 <em>bits</em> and two hexadecimal digits form a byte (e.g. <code>0x7A</code>).</p>
 </details>
 <details class="info" open="open">
 <summary>Info</summary>
@@ -1059,9 +1098,13 @@
 <p>Counting (aka <em>combinatorics</em>) is a vast topic in mathematics. A programmer needs to know a few commonly used counting techniques.</p>
 <h3 id="sum-rule-and-product-rule">Sum rule and product rule</h3>
 <p>The sum and product rule of counting are particularly important. They occur frequently at work. Here follows a working definition of the two rules:</p>
-<p><strong>Sum rule.</strong> If one and only one option is to be chosen from <span class="arithmatex">\(n\)</span> options and each options have <span class="arithmatex">\(a_1, a_2, ... a_n\)</span> alternatives, then the total number of choices is <span class="arithmatex">\(a_1 + a_2 + ... + a_n\)</span>.</p>
-<p><strong>Product rule.</strong> If all of the <span class="arithmatex">\(n\)</span> options must be chosen and there are <span class="arithmatex">\(a_1, a_2, ... a_n\)</span> alternatives for each of them, then there are <span class="arithmatex">\(a_1 × a_2 × ... × a_n\)</span> choices in total. A common special case of the rule is when each options have the same <span class="arithmatex">\(m\)</span> number of alternatives, then there are total <span class="arithmatex">\(m × m × ... × m = m^n\)</span> choices.</p>
+<p><strong>Sum rule.</strong> If one and only one option is to be chosen from <span class="arithmatex">\(n\)</span> options and each option has <span class="arithmatex">\(a_1, a_2, ... a_n\)</span> alternatives, then the total number of choices is <span class="arithmatex">\(a_1 + a_2 + ... + a_n\)</span>.</p>
+<p><strong>Product rule.</strong> If all of the <span class="arithmatex">\(n\)</span> options must be chosen and there are <span class="arithmatex">\(a_1, a_2, ... a_n\)</span> alternatives for each of them, then there are <span class="arithmatex">\(a_1 × a_2 × ... × a_n\)</span> choices in total. A common special case of the rule is when each option has the same <span class="arithmatex">\(m\)</span> number of alternatives, then there are total <span class="arithmatex">\(m × m × ... × m = m^n\)</span> choices.</p>
 <p>Consult this <a href="https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/">resource</a> for details.</p>
+<h2 id="logarithms">Logarithms</h2>
+<p>Relationship between power and logarithm: <span class="arithmatex">\(\log_b n = x\)</span> means <span class="arithmatex">\(b^x = n\)</span>. In other words, <em><span class="arithmatex">\(n\)</span> can be successively divided by <span class="arithmatex">\(b\)</span> for <span class="arithmatex">\(x\)</span> times.</em></p>
+<p>For example, <span class="arithmatex">\(\log_2 8 = 3\)</span> means <span class="arithmatex">\(2^3 = 8\)</span>, or <span class="arithmatex">\(8\)</span> can be successively divided by <span class="arithmatex">\(2\)</span> for <span class="arithmatex">\(3\)</span> times: <span class="arithmatex">\(8 / 2 = 4\)</span>, <span class="arithmatex">\(4 / 2 = 2\)</span>, and <span class="arithmatex">\(2 / 2 = 1\)</span>.</p>
+<p>In computer science, <span class="arithmatex">\(2\)</span>-based logarithm is frequent. It is sometimes written as <span class="arithmatex">\(\lg\)</span> in short (e.g., <span class="arithmatex">\(\lg n = x\)</span> means <span class="arithmatex">\(2^x = n\)</span>).</p>
 
 
 
@@ -1084,7 +1127,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 16, 2024 00:25:16 UTC">October 16, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 21:46:32 UTC">June 18, 2025</span>
   </span>
 
     
