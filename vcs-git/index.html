@@ -746,6 +746,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic-git-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Git concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Git concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-git-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       The Git workflow
@@ -782,17 +824,26 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#git-ignore" class="md-nav__link">
     <span class="md-ellipsis">
       Git ignore
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -831,6 +882,48 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#basic-git-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Git concepts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Git concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repository
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-git-workflow" class="md-nav__link">
     <span class="md-ellipsis">
       The Git workflow
@@ -867,17 +960,26 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#git-ignore" class="md-nav__link">
     <span class="md-ellipsis">
       Git ignore
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with branches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -905,16 +1007,23 @@
 <p>Git serves two major purposes for developers and teams: <em>history tracking</em> and <em>collaboration.</em> When a developer works on a project for a long period, it is difficult for him/her to memorize the changes the project files have gone through. Git preserves the file histories as <em>commits.</em> It helps developers go through a file's history or the entire repository's history whenever necessary.</p>
 <p>Any complex project requires team collaboration. When a team of developers works together on the same project, there must be some means to keep their work in sync among themselves. Git serves this purpose with Git <em>remotes</em>, a central Git repository. Developers finish their tasks on their local repositories and <em>push</em> their changes to the remote repository when they are done so that other developers can <em>pull</em> their changes into their local repositories.</p>
 <p>See these <a href="https://github.com/git-guides">pages</a> for a more exhaustive and authoritative treatment of Git.</p>
-<h2 id="the-git-workflow">The Git workflow</h2>
-<p>This section gives a overview of how Git is used by developers. Before using Git on your computer, <a href="https://git-scm.com/downloads">download</a> and install it.</p>
-<h3 id="creating-a-local-git-repository">Creating a local Git repository</h3>
-<p>You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the <code>git init</code> command. This command creates a <code>.git</code> subdirectory into the directory. As a result, the directory turns into a Git repository with <code>master</code> as the default <em>branch</em>.</p>
+<h2 id="basic-git-concepts">Basic Git concepts</h2>
+<h3 id="repository">Repository</h3>
+<p>A directory to be watched for changes by Git is called a repository. Git monitors the repository directory for changes.</p>
+<h3 id="commits">Commits</h3>
+<p>Units of changes in a repository recorded by Git are called <em>commits.</em> Each commit has its automatically generated unique ID. The latest commit is also identified by its alias <code>HEAD</code>. The sequence of commits of a branch in a repository is called its <em>commit history.</em></p>
+<h3 id="branches">Branches</h3>
+<p>Each branch is a copy of the repository with its own commit history. Each branch has its own unique name. At any time your working directory refers to a branch. The default branch name is <code>master</code>. You can create new branches and switch between them.</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p><strong>The new <code>main</code> and the old <code>master</code> branches in GitHub</strong></p>
 <p>A Git repository starts with an initial or default branch called <code>master</code>. But due to some <a href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">cultural controversies</a> with the name <em>master</em>, GitHub has adopted a new convention: when you create a new repository in GitHub, its default branch is <code>main</code> instead of the old <code>master</code>.</p>
 <p>But the default branch name is still <code>master</code> when you create a local repository with the Git desktop client (with the <code>git init</code> command). So, as GitHub has renamed its default branch name to <code>main</code>, you have a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the <code>master</code> branch instead of the <code>main</code> branch. As a remedy, you can rename your local <code>master</code> branch to <code>main</code> before adding remote or pushing: <code>git branch -m main</code>.</p>
 </details>
+<h2 id="the-git-workflow">The Git workflow</h2>
+<p>This section gives an overview of how Git is used by developers. Before using Git on your computer, <a href="https://git-scm.com/downloads">download</a> and install it.</p>
+<h3 id="creating-a-local-git-repository">Creating a local Git repository</h3>
+<p>You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the <code>git init</code> command. This command creates a <code>.git</code> subdirectory into the directory. As a result, the directory turns into a Git repository with <code>master</code> as the default <em>branch</em>.</p>
 <p>After creating a repository, you have to set your user name and email address with the following commands. The username and email address tell Git it is you who is working in the repository and they are associated with your commits.</p>
 <div class="highlight"><pre><span></span><code>git config --global user.name &quot;Your Name&quot;
 git config --global user.email &quot;youremail@yourdomain.com&quot;
@@ -947,7 +1056,7 @@ git config --global user.email &quot;youremail@yourdomain.com&quot;
 </code></pre></div>
 <p>This command creates a copy or clone of the remote repository in your computer. It also automatically sets the remote repository as the <code>origin</code> remote; you don't need to do it manually.</p>
 <p>You can use Git clone when you want to work on an existing remote repository created by someone else.</p>
-<h2 id="git-ignore">Git ignore</h2>
+<h3 id="git-ignore">Git ignore</h3>
 <p>Git continually tracks every file and directories under its repository directory. If a file is already <em>tracked</em> (staged once with the <code>git add</code> command), it tracks the <em>changes</em> that took place within it; it treats other files and directories as <em>untracked</em> and assumes they will be tracked eventually.</p>
 <p>However, in a repository, some files' and directories' histories are neither important nor of any interest to the collaborators, thus they do not deserve versioning. Still, Git keeps treating them as untracked, causing confusion to developers when they want to check for changes before committing. Developers are overwhelmed by the list of untracked files, and they might stage unwanted files and commit them by mistake. The repository user has to mark such files and directories as to be ignored in a file called <code>.gitignore</code>, usually at the repository root. Here follows an example Git ignore file.</p>
 <div class="annotate">
@@ -964,6 +1073,9 @@ some-dir/sub-dir/another-file.txt (3)
 <li>Ignore all <code>png</code> files in the repository.</li>
 </ol>
 <p>Consult this <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore">resource</a> for further details on Git ignore.</p>
+<h3 id="working-with-branches">Working with branches</h3>
+<p>A new branch is created with the <code>git branch &lt;branch-name&gt;</code> command. A new branch starts from the current commit of the current branch. Therefore, the new branch and its source branch have a common history up to the branch creation commit. Creating a branch is like copying the working directory to a new location and starting to work there. Branches are usually merged back into their source branches eventually.</p>
+<p>Switching between different branches is done with the <code>git checkout &lt;branch-name&gt;</code> command. Git brings the working directory to the state of the branch you switched to. Conceptually, it is like Git keeps copies of the repository in branches, and when you switch branches, it brings the copy of the branch you switched to into the working directory.</p>
 
 
 
@@ -986,7 +1098,7 @@ some-dir/sub-dir/another-file.txt (3)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 27, 2024 00:45:11 UTC">October 27, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 07:42:53 UTC">June 18, 2025</span>
   </span>
 
     
