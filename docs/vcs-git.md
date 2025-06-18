@@ -8,13 +8,19 @@ Any complex project requires team collaboration. When a team of developers works
 
 See these [pages](https://github.com/git-guides) for a more exhaustive and authoritative treatment of Git.
 
-## The Git workflow
+## Basic Git concepts
 
-This section gives a overview of how Git is used by developers. Before using Git on your computer, [download](https://git-scm.com/downloads) and install it.
+### Repository
 
-### Creating a local Git repository
+A directory to be watched for changes by Git is called a repository. Git monitors the repository directory for changes.
 
-You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the `git init` command. This command creates a `.git` subdirectory into the directory. As a result, the directory turns into a Git repository with `master` as the default _branch_.
+### Commits
+
+Units of changes in a repository recorded by Git are called _commits._ Each commit has its automatically generated unique ID. The latest commit is also identified by its alias `HEAD`. The sequence of commits of a branch in a repository is called its _commit history._
+
+### Branches
+
+Each branch is a copy of the repository with its own commit history. Each branch has its own unique name. At any time your working directory refers to a branch. The default branch name is `master`. You can create new branches and switch between them.
 
 ???+ warning
     **The new `main` and the old `master` branches in GitHub**
@@ -22,6 +28,14 @@ You can turn any directory on your computer into a Git repository. In order to d
     A Git repository starts with an initial or default branch called `master`. But due to some [cultural controversies](https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main) with the name _master_, GitHub has adopted a new convention: when you create a new repository in GitHub, its default branch is `main` instead of the old `master`.
 
     But the default branch name is still `master` when you create a local repository with the Git desktop client (with the `git init` command). So, as GitHub has renamed its default branch name to `main`, you have a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the `master` branch instead of the `main` branch. As a remedy, you can rename your local `master` branch to `main` before adding remote or pushing: `git branch -m main`.
+
+## The Git workflow
+
+This section gives an overview of how Git is used by developers. Before using Git on your computer, [download](https://git-scm.com/downloads) and install it.
+
+### Creating a local Git repository
+
+You can turn any directory on your computer into a Git repository. In order to do so, open Git Bash in an existing directory or in a newly created one, and run the `git init` command. This command creates a `.git` subdirectory into the directory. As a result, the directory turns into a Git repository with `master` as the default _branch_.
 
 After creating a repository, you have to set your user name and email address with the following commands. The username and email address tell Git it is you who is working in the repository and they are associated with your commits.
 
@@ -69,7 +83,7 @@ This command creates a copy or clone of the remote repository in your computer. 
 
 You can use Git clone when you want to work on an existing remote repository created by someone else.
 
-## Git ignore
+### Git ignore
 
 Git continually tracks every file and directories under its repository directory. If a file is already _tracked_ (staged once with the `git add` command), it tracks the _changes_ that took place within it; it treats other files and directories as _untracked_ and assumes they will be tracked eventually.
 
@@ -90,3 +104,9 @@ some-dir/sub-dir/another-file.txt (3)
 4. Ignore all `png` files in the repository.
 
 Consult this [resource](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) for further details on Git ignore.
+
+### Working with branches
+
+A new branch is created with the `git branch <branch-name>` command. A new branch starts from the current commit of the current branch. Therefore, the new branch and its source branch have a common history up to the branch creation commit. Creating a branch is like copying the working directory to a new location and starting to work there. Branches are usually merged back into their source branches eventually.
+
+Switching between different branches is done with the `git checkout <branch-name>` command. Git brings the working directory to the state of the branch you switched to. Conceptually, it is like Git keeps copies of the repository in branches, and when you switch branches, it brings the copy of the branch you switched to into the working directory.
