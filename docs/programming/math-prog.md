@@ -46,9 +46,13 @@ In programming languages the `%` operator is used as the modulus operator. Examp
 
 ## Number formats
 
-Besides the usual 10-based decimal representation of numbers, a programmer has to be familiar with the following number representations.
+Numbers are represented with _digits_ and _place values_. The most common number system, the _decimal system_, is 10-based, meaning it has 10 digits and its place value increases by a factor of 10. For example, the number $253$ actually equals $2 × 10^2 + 5 × 10^1 + 3 × 10^0 = 200 + 50 + 3$.
+
+There are number formats with a base other than the usual 10-based decimal. A programmer has to be familiar with the following number representations.
 
 ### Binary numbers
+
+Binary representation is 2-based, meaning it has only two digits: `0` and `1`. The place value of a binary number increases by a factor of 2. For example, the binary number `1011` actually equals $1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 8 + 0 + 2 + 1 = 11$ in decimal.
 
 A binary digit is called a _bit_, short for _binary digit_, named by computer scientist [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Additionally, 8 bits is called a _byte_ and computers mostly work with bytes.
 
