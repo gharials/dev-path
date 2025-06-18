@@ -1078,8 +1078,10 @@
 <p><span class="arithmatex">\(a \mod m = r\)</span> (pronounced <span class="arithmatex">\(a\)</span> modulo/mod <span class="arithmatex">\(m\)</span> equals <span class="arithmatex">\(r\)</span>) means that <span class="arithmatex">\(r\)</span> is the remainder after dividing <span class="arithmatex">\(a\)</span> with <span class="arithmatex">\(m\)</span>. Example: <span class="arithmatex">\(14 \mod 3 = 2\)</span>.</p>
 <p>In programming languages the <code>%</code> operator is used as the modulus operator. Example: <code>14 % 3</code>.</p>
 <h2 id="number-formats">Number formats</h2>
-<p>Besides the usual 10-based decimal representation of numbers, a programmer has to be familiar with the following number representations.</p>
+<p>Numbers are represented with <em>digits</em> and <em>place values</em>. The most common number system, the <em>decimal system</em>, is 10-based, meaning it has 10 digits and its place value increases by a factor of 10. For example, the number <span class="arithmatex">\(253\)</span> actually equals <span class="arithmatex">\(2 × 10^2 + 5 × 10^1 + 3 × 10^0 = 200 + 50 + 3\)</span>.</p>
+<p>There are number formats with a base other than the usual 10-based decimal. A programmer has to be familiar with the following number representations.</p>
 <h3 id="binary-numbers">Binary numbers</h3>
+<p>Binary representation is 2-based, meaning it has only two digits: <code>0</code> and <code>1</code>. The place value of a binary number increases by a factor of 2. For example, the binary number <code>1011</code> actually equals <span class="arithmatex">\(1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 8 + 0 + 2 + 1 = 11\)</span> in decimal.</p>
 <p>A binary digit is called a <em>bit</em>, short for <em>binary digit</em>, named by computer scientist <a href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</a>. Additionally, 8 bits is called a <em>byte</em> and computers mostly work with bytes.</p>
 <h3 id="hexadecimal-numbers">Hexadecimal numbers</h3>
 <p>Binary representation of numbers are too long and often hard to work with. The 16-based hexadecimal representation is shorter and more convenient for practical uses. There are 16 digits in this format: <code>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F</code>. Sometimes, small cases (<code>a, b, c, d, e, f</code>) are used to represent the last digits. A hexadecimal number is prefixed by a <code>0x</code> (or <code>x</code> sometimes) to indicate that it is a hexadecimal number.</p>
@@ -1127,7 +1129,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 21:46:32 UTC">June 18, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 18, 2025 22:03:10 UTC">June 18, 2025</span>
   </span>
 
     
