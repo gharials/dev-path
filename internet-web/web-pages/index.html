@@ -652,9 +652,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linking-external-resources-with-html" class="md-nav__link">
+  <a href="#the-fundamental-building-blocks-of-a-web-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Linking external resources with HTML
+      The fundamental building blocks of a web page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-resources-with-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking resources with HTML
     </span>
   </a>
   
@@ -850,9 +859,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linking-external-resources-with-html" class="md-nav__link">
+  <a href="#the-fundamental-building-blocks-of-a-web-page" class="md-nav__link">
     <span class="md-ellipsis">
-      Linking external resources with HTML
+      The fundamental building blocks of a web page
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linking-resources-with-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linking resources with HTML
     </span>
   </a>
   
@@ -935,8 +953,40 @@
 
 
 <h1 id="how-web-pages-work">How Web Pages Work</h1>
-<h2 id="linking-external-resources-with-html">Linking external resources with HTML</h2>
-<p>An HTML document alone cannot build a complex web page. It may need some additional files (images, CSS files, for example), called <em>external resources.</em> These external resources needed are specified with the <code>&lt;link&gt;</code> tag within the <code>&lt;head&gt;</code> tag of the HTML document. The external resources are usually stored in the server's <a href="websites.md#serving-static-contents">static directory</a>. After receiving an HTML, browsers <a href="../web-servers/#how-an-http-server-serves-websites">send requests to the server</a> for each of the specified external resources.</p>
+<h2 id="the-fundamental-building-blocks-of-a-web-page">The fundamental building blocks of a web page</h2>
+<ul>
+<li><em>HTML document.</em> For displaying the content to the user.</li>
+<li><em>Images.</em> For displaying images on the page.</li>
+<li><em>CSS.</em> For styling the content.</li>
+<li><em>JavaScript.</em> For making the web page interactive.</li>
+</ul>
+<p>The HTML document is the main file of a web page. But a complex web page needs some additional files (images, CSS files, scripts, etc.), called <em>linked resources.</em></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Passing CSS and JavaScript within HTML</strong></p>
+<p>CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This is done with the <code>&lt;style&gt;</code> and <code>&lt;script&gt;</code> tags, respectively. Example follows:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">greet</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hello, World!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;greet()&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to My Web Page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is a simple web page.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<h2 id="linking-resources-with-html">Linking resources with HTML</h2>
+<p>The resources needed by an HTML are specified with the <code>&lt;link&gt;</code> tag within the <code>&lt;head&gt;</code> tag of the HTML document. The external resources are usually stored in the server's <a href="websites.md#serving-static-contents">static directory</a>. After receiving an HTML, browsers <a href="../web-servers/#how-an-http-server-serves-websites">send requests to the server</a> for each of the specified resources.</p>
 <p>An HTML may also need JavaScript files. They are specified as external resources with the <code>&lt;script&gt;</code> tag.</p>
 <h2 id="browser-as-a-javascript-runner">Browser as a JavaScript runner</h2>
 <p>Like NodeJS (the <code>node</code> command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.</p>
@@ -981,7 +1031,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2025 13:09:05 UTC">June 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 20, 2025 15:26:28 UTC">June 20, 2025</span>
   </span>
 
     
