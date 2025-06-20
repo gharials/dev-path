@@ -1,8 +1,43 @@
 # How Web Pages Work
 
-## Linking external resources with HTML
+## The fundamental building blocks of a web page
 
-An HTML document alone cannot build a complex web page. It may need some additional files (images, CSS files, for example), called *external resources.* These external resources needed are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](websites.md#serving-static-contents). After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified external resources.
+* _HTML document._ For displaying the content to the user.
+* _Images._ For displaying images on the page.
+* _CSS._ For styling the content.
+* _JavaScript._ For making the web page interactive.
+
+The HTML document is the main file of a web page. But a complex web page needs some additional files (images, CSS files, scripts, etc.), called *linked resources.*
+
+!!!info
+    **Passing CSS and JavaScript within HTML**
+
+    CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This is done with the `<style>` and `<script>` tags, respectively. Example follows:
+
+    ```html
+    <html>
+    <head>
+      <style>
+        body {
+          background-color: lightblue;
+        }
+      </style>
+      <script>
+        function greet() {
+          alert("Hello, World!");
+        }
+      </script>
+    </head>
+    <body onload="greet()">
+      <h1>Welcome to My Web Page</h1>
+      <p>This is a simple web page.</p>
+    </body>
+    </html>
+    ```
+
+## Linking resources with HTML
+
+The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](websites.md#serving-static-contents). After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
 
 An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
 
