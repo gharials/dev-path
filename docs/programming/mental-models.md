@@ -19,8 +19,17 @@ A range is a set of numbers between two numbers. For example, the range of numbe
 * Finding the union of two ranges.
 * Finding the complement of a range.
 * Checking if a range is a subset of another range.
+* Shifting a range, cyclically or not.
+
+### Applications of ranges
+
+* **Binary search.** A range represents the search space in binary search algorithm. Initially, the range is the complete array to be searched. In each iteration, binary search halves the search space based on the comparison with the middle element of the range.
 
 ## Grids or matrices
+
+### Common grid tasks
+
+* Traversing a grid based on adjacency.
 
 ## Associations or maps 
 
