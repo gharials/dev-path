@@ -39,7 +39,7 @@ The HTML document is the main file of a web page. But a complex web page needs s
 
 ## Linking resources with HTML
 
-The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](websites.md#serving-static-contents). After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
+The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
 
 An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
 
@@ -49,7 +49,7 @@ Like NodeJS (the `node` command), every browser can run JavaScript programs too.
     
 Where NodeJS can run *any* JavaScript file, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
 
-Users can interact with client-side JavaScript from browser console.
+Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
 ### JavaScript DOM
 
@@ -76,6 +76,6 @@ Client-side JavaScript has its application in *validating* HTML forms. Users may
 
     A server has a URL that handles the form data. The URL that handles the form data is specified in the `action` attribute (e.g., `<form action="/submit">`). The request method can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. Method can be either `GET` or `POST`. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.
 
-In a simple HTML form, the data can be validated by the server only after the user submits the form. This approach unnecessarily wastes network travel cost and server resources.
+In a simple HTML form, upon submission form data is sent to the server. The server then validates the form data. This approach incurs unnecessary network travel costs and server resources.
 
-If the form data could be validated at the browser, before submitting to server, both network travel and server processing could be avoided. Client-side JavaScript is very useful for this purpose: write a JavaScript function that contains the logic to validate the form. In the function, find the form element using the `document` object. Access and check the form input values. Call the function when user clicks the submit button. Submit to server only after the function finds no error in the inputs.
+If the form data could be validated at the browser, before submitting to the server, both network travel and server processing could be avoided. Client-side JavaScript is very useful for this purpose: write a JavaScript function that contains the logic to validate the form. In the function, find the form element using the `document` object. Access and check the form input values. Call the function when the user clicks the submit button. Submit to the server only after the function finds no error in the inputs.
