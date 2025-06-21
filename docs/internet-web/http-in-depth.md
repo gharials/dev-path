@@ -69,7 +69,7 @@ Among the status classes, `2xx`, `4xx`, and `5xx` appear more frequently in prac
 HTTP requests and responses contain a number of _headers._ They follow this general key-value format: `Header-name: value`. Headers may vary per request and response. They serve as metadata or directives (instructions) either for the client or the server. For example, the `Content-Type` header in HTTP responses tells the client how to treat the response body.
 
 !!! info
-    An HTTP response sent by a server may contain any kind of data. Then how does a browser understand its format? The `content-type: text/html` header tells browsers that the content is an HTML page and browsers render it.
+    An HTTP response sent by a server may contain any kind of data. Then how does a browser understand its format? The `content-type: text/html` header tells browsers that the content is an HTML page and browsers render it. A programmer can fool a browser by sending an HTML page with a different content type, like `content-type: text/plain`. In that case, the browser will not render the page as HTML but will display it as plain text.
 
 ### Cookies
 
