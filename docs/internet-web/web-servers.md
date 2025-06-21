@@ -3,6 +3,8 @@
 !!! info
     Have a look at the [Network & Internet Basics](./network-internet-basics.md) and [Working with HTTP](./http-in-depth.md) articles as prerequisites to this article.
 
+The basic job of a web server is to [return HTTP responses to HTTP requests](./network-internet-basics.md#web-servers-or-http-servers). In other words, a web server exchanges data (requests and responses) with clients (usually browsers) over the [HTTP protocol](./network-internet-basics.md#the-http-protocol). This simple task is the foundation of how websites work. It is the idea behind very complex websites like Facebook, Google, and Wikipedia and mobile applications like WhatsApp, Instagram, and Twitter.
+
 ## How an HTTP server serves websites
 
 HTTP responses may contain many types of contents in their bodies and the content's type is indicated by the `Content-Type` header. Websites are nothing but a particular type of HTTP response that contains an HTML document in its body and its `Content-Type` header is set to `text/html`. A browser knows how to render an HTML page. An HTML page may refer to some other resources in it, like images, fonts, stylesheets, scripts, etc. After downloading a page, browsers download all resources associated with the page by separate automatic subsequent requests.
