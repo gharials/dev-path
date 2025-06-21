@@ -957,6 +957,7 @@
 <p class="admonition-title">Info</p>
 <p>Have a look at the <a href="../network-internet-basics/">Network &amp; Internet Basics</a> and <a href="../http-in-depth/">Working with HTTP</a> articles as prerequisites to this article.</p>
 </div>
+<p>The basic job of a web server is to <a href="../network-internet-basics/#web-servers-or-http-servers">return HTTP responses to HTTP requests</a>. In other words, a web server exchanges data (requests and responses) with clients (usually browsers) over the <a href="../network-internet-basics/#the-http-protocol">HTTP protocol</a>. This simple task is the foundation of how websites work. It is the idea behind very complex websites like Facebook, Google, and Wikipedia and mobile applications like WhatsApp, Instagram, and Twitter.</p>
 <h2 id="how-an-http-server-serves-websites">How an HTTP server serves websites</h2>
 <p>HTTP responses may contain many types of contents in their bodies and the content's type is indicated by the <code>Content-Type</code> header. Websites are nothing but a particular type of HTTP response that contains an HTML document in its body and its <code>Content-Type</code> header is set to <code>text/html</code>. A browser knows how to render an HTML page. An HTML page may refer to some other resources in it, like images, fonts, stylesheets, scripts, etc. After downloading a page, browsers download all resources associated with the page by separate automatic subsequent requests.</p>
 <p>The following sequence diagram shows how an HTML page (<code>/page.html</code>) is served by a server.</p>
@@ -1047,7 +1048,7 @@ sequenceDiagram
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 17, 2025 04:36:27 UTC">June 17, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2025 00:50:35 UTC">June 21, 2025</span>
   </span>
 
     
