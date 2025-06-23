@@ -1,5 +1,8 @@
 # React JS
 
+!!! info
+    Have a look at the [How Web Pages Work](../internet-web/web-pages.md) article as a prerequisite to this article.
+
 Generating HTML using JavaScript functions demo.
 
 Components instead of a large single HTML file. JavaScript functions generating parts of the HTML document.
