@@ -4,12 +4,20 @@ A web page is primarily an HTML document. A server only [transfers the HTML docu
 
 ## The fundamental building blocks of a web page
 
+A web page is made up of the following fundamental building blocks:
+
 * _HTML document._ For displaying the content to the user.
 * _Images._ For displaying images on the page.
 * _CSS._ For styling the content.
 * _JavaScript._ For making the web page interactive.
 
 The HTML document is the main file of a web page. But a complex web page needs some additional files (images, CSS files, scripts, etc.), called *linked resources.*
+
+### Linking resources with HTML
+
+The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
+
+An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
 
 !!!info
     **Passing CSS and JavaScript within HTML**
@@ -36,12 +44,6 @@ The HTML document is the main file of a web page. But a complex web page needs s
     </body>
     </html>
     ```
-
-## Linking resources with HTML
-
-The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
-
-An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
 
 ## Styling web pages with CSS
 
