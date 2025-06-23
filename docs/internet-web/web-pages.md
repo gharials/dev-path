@@ -128,4 +128,4 @@ If the form data could be validated at the browser, before submitting to the ser
 
 ## Developing basic web pages
 
-Create an HTML file; create a CSS file for styling it; create a JavaScript file for various events handling; link the CSS and JavaScript files to the HTML document. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.
+Create an HTML file; create a CSS file for styling it; create a JavaScript file for various events handling; link the CSS and JavaScript files to the HTML document. Put those files in a [server static directory](./web-servers.md#serving-static-contents) for serving to the client. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.
