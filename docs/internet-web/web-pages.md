@@ -91,9 +91,11 @@ The `#id` selector selects an element with a specific `id` attribute. For exampl
 }
 ```
 
-Notice that an id selector is more specific than a class selector. It selects only one element, while a class selector can select multiple elements. 
+!!! info
 
-In other words, an id selector has a [one-to-one mapping](../programming/mental-models.md#associations-or-maps) with an HTML element, while a class selector has a [one-to-many](../programming/mental-models.md#associations-or-maps) mapping with HTML elements.
+    **Scopes of class and id selectors**
+
+    In an HTML document, `id` attributes of elements are unique, meaning that only one element can have a specific `id`. Therefore, a CSS id selector selects only one element. In contrast, `class` attributes can be shared by multiple elements, so a CSS class selector can select multiple elements. This is why the id selector is more specific than the class selector. In other words, an id selector has a [one-to-one mapping](../programming/mental-models.md#associations-or-maps) with an HTML element, while a class selector has a [one-to-many](../programming/mental-models.md#associations-or-maps) mapping with HTML elements.
 
 ### The box model
 
