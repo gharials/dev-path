@@ -686,6 +686,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#css-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS selectors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS selectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-class-selector" class="md-nav__link">
     <span class="md-ellipsis">
       The class selector
@@ -700,6 +710,11 @@
       The id selector
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -965,6 +980,16 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#css-selectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSS selectors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CSS selectors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#the-class-selector" class="md-nav__link">
     <span class="md-ellipsis">
       The class selector
@@ -979,6 +1004,11 @@
       The id selector
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1135,7 +1165,10 @@
 </code></pre></div>
 </div>
 <h2 id="styling-web-pages-with-css">Styling web pages with CSS</h2>
-<p>Each HTML element can by styled separately. CSS has a set of predefined style properties that can be applied to HTML elements. For example, the <code>color</code> property sets the text color, and the <code>background-color</code> property sets the background color of an element.</p>
+<p>By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, <em>CSS</em> (Cascading Style Sheets) is used. </p>
+<p>CSS controls the look of an HTML element with its <em>style properties</em>: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can be applied to HTML elements. For example, the <code>color</code> property sets the text color, and the <code>background-color</code> property sets the background color of an element.</p>
+<p>This simple idea styles all the complex and attractive web pages we see in the internet.</p>
+<h3 id="css-selectors">CSS selectors</h3>
 <p>Style properties are grouped under <em>selectors.</em> A selector determines the elements to which the style properties apply. For example, the <code>body</code> selector selects the <code>&lt;body&gt;</code> element, and the <code>h1</code> selector selects all <code>&lt;h1&gt;</code> elements in the HTML document. In the following example, the <code>body</code> selector sets the background color of the entire page, and the <code>h1</code> selector sets the text color of all <code>&lt;h1&gt;</code> elements:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
@@ -1145,16 +1178,15 @@
 <span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">darkblue</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>This simple idea styles all the complex and attractive web pages we see in the internet.</p>
 <p>Two additional CSS selectors are frequently used: the class selector and the id selector. They give more control over which elements to style.</p>
-<h3 id="the-class-selector">The class selector</h3>
+<h4 id="the-class-selector">The class selector</h4>
 <p>The <code>.class</code> selector selects all elements with a specific <code>class</code> attribute. For example, <code>.highlight</code> selects all elements with <code>class="highlight"</code>.</p>
 <p>In the following example, the <code>.highlight</code> selector sets the background color of all elements with <code>class="highlight"</code> to yellow, and the <code>#header</code> selector sets the text color of the element with <code>id="header"</code> to red:</p>
 <div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">highlight</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="the-id-selector">The id selector</h3>
+<h4 id="the-id-selector">The id selector</h4>
 <p>The <code>#id</code> selector selects an element with a specific <code>id</code> attribute. For example, <code>#header</code> selects the element with <code>id="header"</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="p">#</span><span class="nn">header</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
@@ -1245,7 +1277,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2025 12:32:32 UTC">June 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2025 18:00:45 UTC">June 25, 2025</span>
   </span>
 
     
