@@ -87,6 +87,49 @@ The `#id` selector selects an element with a specific `id` attribute. For exampl
 }
 ```
 
+### The box model
+
+CSS views an HTML element as contained in a rectangular box. This box has four parts: _content_, _padding_, _border_, and _margin_. Those four parts can be controlled with CSS properties. The way these boxes are displayed on the page is called the _CSS box model_.
+
+The following diagram illustrates the box model:
+
+```mermaid
+flowchart TD
+  subgraph MarginBox["Margin"]
+    BorderBox
+  end
+
+  subgraph BorderBox["Border"]
+    PaddingBox
+  end
+
+  subgraph PaddingBox["Padding"]
+    ContentBox["Content"]
+  end
+```
+
+1. _Content._ This is the actual content inside the element, such as text, images, or other elements. The size of the content can be controlled using properties like `width` and `height`.
+
+2. _Padding._ Padding is the space between the content and the element's border. It creates inner spacing around the content. You can control it using the `padding` property (e.g., `padding: 10px;`).
+
+3. _Border._ The border wraps around the padding and content. It can be styled using properties like `border-width`, `border-style`, and `border-color`.
+
+4. _Margin._ Margin is the space outside the border, separating the element from other elements. It creates outer spacing around the element. You can control it using the `margin` property (e.g., `margin: 20px;`).
+
+#### Example
+
+Here follows a sample CSS code that demonstrates the box model. Use it on a simple HTML document to see how the box model works:
+
+```css
+div {
+  width: 200px; /* Content width */
+  height: 100px; /* Content height */
+  padding: 20px; /* Space inside the border */
+  border: 5px solid black; /* Border around the element */
+  margin: 10px; /* Space outside the border */
+}
+```
+
 ## Browser as a JavaScript runner
 
 Like NodeJS (the `node` command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.
