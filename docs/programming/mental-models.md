@@ -39,7 +39,7 @@ The concept association is found everywhere in real world. Two things are associ
 
 Associations may be used for _identification_ (e.g. roll number uniquely identifies a student), for indicating _ownership_ (e.g. labels on parcels), and many other relationships. We can picture associations as arrows pointing from an object to another or from a set of objects to another.
 
-Depending on context, an object may be associated with only one other object (one-to-one) or multiple objects (one-to-many).
+Depending on context, an object may be associated with only one other object (_one-to-one_) or multiple objects (_one-to-many_).
 
 Inspired by the mathematical concept of *map* (aka functions) the word map is often used instead of association: for example, the two objects are mapped to each other, a mapping exists between the objects, map this thing to that thing, etc.
 

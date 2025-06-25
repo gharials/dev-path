@@ -91,6 +91,10 @@ The `#id` selector selects an element with a specific `id` attribute. For exampl
 }
 ```
 
+Notice that an id selector is more specific than a class selector. It selects only one element, while a class selector can select multiple elements. 
+
+In other words, an id selector has a [one-to-one mapping](../programming/mental-models.md#associations-or-maps) with an HTML element, while a class selector has a [one-to-many](../programming/mental-models.md#associations-or-maps) mapping with HTML elements.
+
 ### The box model
 
 CSS views an HTML element as contained in a rectangular box. This box has four parts: _content_, _padding_, _border_, and _margin_. Those four parts can be controlled with CSS properties. The way these boxes are displayed on the page is called the _CSS box model_.
