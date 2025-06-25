@@ -23,6 +23,8 @@ A range is a set of numbers between two numbers. For example, the range of numbe
 
 ### Applications of ranges
 
+* **Iterating over a range.** A loop usually iterates over a range of numbers. For example, in a `for` loop, the range is defined by the starting and ending values of the loop variable. The following common loop iterates over the range $[0, n)$ or, alternatively, $[0, n-1]$: `for (let i = 0; i < n; i++)`.
+
 * **Binary search.** A range represents the search space in binary search algorithm. Initially, the range is the complete array to be searched. In each iteration, binary search halves the search space based on the comparison with the middle element of the range.
 
 ## Grids or matrices
