@@ -80,9 +80,13 @@ Counting (aka _combinatorics_) is a vast topic in mathematics. A programmer need
 
 The sum and product rule of counting are particularly important. They occur frequently at work. Here follows a working definition of the two rules:
 
-**Sum rule.** If one and only one option is to be chosen from $n$ options and each option has $a_1, a_2, ... a_n$ alternatives, then the total number of choices is $a_1 + a_2 + ... + a_n$.
+**Sum rule.** If a task has $n$ options and each option has $a_1, a_2, ... a_n$ choices, then there are $a_1 + a_2 + ... + a_n$ choices in total for completing the task.
 
-**Product rule.** If all of the $n$ options must be chosen and there are $a_1, a_2, ... a_n$ alternatives for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total. A common special case of the rule is when each option has the same $m$ number of alternatives, then there are total $m × m × ... × m = m^n$ choices.
+For example, there are two options, buses and trains, to travel from city $A$ to $B$. There are $4$ buses and $3$ trains. Therefore, there are $4 + 3 = 7$ choices for traveling from city $A$ to $B$ in total.
+
+**Product rule.** If a task has $n$ steps and there are $a_1, a_2, ... a_n$ choices for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total for completing the task. A common special case of the rule is when each option has the same $m$ number of alternatives, then there are total $m × m × ... × m = m^n$ choices.
+
+For example, you have to travel from city $A$ to $C$ via city $B$. From city $A$ to $B$, there are $3$ trains, and from city $B$ to $C$, there are $2$ buses. Then, there are $3 × 2 = 6$ choices for traveling from city $A$ to $C$ in total.
 
 Consult this [resource](https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/) for details.
 
