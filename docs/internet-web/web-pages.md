@@ -47,7 +47,13 @@ An HTML may also need JavaScript files. They are specified as external resources
 
 ## Styling web pages with CSS
 
-Each HTML element can by styled separately. CSS has a set of predefined style properties that can be applied to HTML elements. For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
+By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
+
+CSS controls the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can be applied to HTML elements. For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
+
+This simple idea styles all the complex and attractive web pages we see in the internet.
+
+### CSS selectors
 
 Style properties are grouped under _selectors._ A selector determines the elements to which the style properties apply. For example, the `body` selector selects the `<body>` element, and the `h1` selector selects all `<h1>` elements in the HTML document. In the following example, the `body` selector sets the background color of the entire page, and the `h1` selector sets the text color of all `<h1>` elements:
 
@@ -61,11 +67,9 @@ h1 {
 }
 ```
 
-This simple idea styles all the complex and attractive web pages we see in the internet.
-
 Two additional CSS selectors are frequently used: the class selector and the id selector. They give more control over which elements to style.
 
-### The class selector
+#### The class selector
 
 The `.class` selector selects all elements with a specific `class` attribute. For example, `.highlight` selects all elements with `class="highlight"`.
 
@@ -77,7 +81,7 @@ In the following example, the `.highlight` selector sets the background color of
 }
 ```
 
-### The id selector
+#### The id selector
 
 The `#id` selector selects an element with a specific `id` attribute. For example, `#header` selects the element with `id="header"`.
 
