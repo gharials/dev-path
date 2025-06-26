@@ -365,9 +365,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#representing-ranges" class="md-nav__link">
+  <a href="#representing-ranges-in-programs" class="md-nav__link">
     <span class="md-ellipsis">
-      Representing ranges
+      Representing ranges in programs
     </span>
   </a>
   
@@ -980,9 +980,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#representing-ranges" class="md-nav__link">
+  <a href="#representing-ranges-in-programs" class="md-nav__link">
     <span class="md-ellipsis">
-      Representing ranges
+      Representing ranges in programs
     </span>
   </a>
   
@@ -1179,8 +1179,11 @@
 <p>Mental models are also vital in communicating ideas with collaborators.</p>
 <p>This page contains a list of commonly used mental models that often serve as analogies while expressing complex ideas.</p>
 <h2 id="ranges-or-intervals">Ranges or intervals</h2>
-<h3 id="representing-ranges">Representing ranges</h3>
 <p>A range is a set of numbers between two numbers. For example, the range of numbers between <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span>, where <span class="arithmatex">\(x \leq y\)</span>, is represented as <span class="arithmatex">\([x, y]\)</span>. The first number, <span class="arithmatex">\(x\)</span>, is called the <em>lower bound</em> of the range and the second number, <span class="arithmatex">\(y\)</span>, is called the <em>upper bound</em> of the range. A range may be <em>inclusive</em> or <em>exclusive</em>. For example, the range <span class="arithmatex">\([1, 10]\)</span> is inclusive, while <span class="arithmatex">\((1, 10)\)</span> is exclusive.</p>
+<h3 id="representing-ranges-in-programs">Representing ranges in programs</h3>
+<p>The simplest way to represent a range in programs is with a pair of variables, one for the lower bound and the other for the upper bound. For example, a range <span class="arithmatex">\([x, y]\)</span> is represented with two variables <code>x</code> and <code>y</code>, where <code>x</code> is the lower bound and <code>y</code> is the upper bound.</p>
+<p>Additionally, a list of ranges is often represented with a two-dimensional array, where each element is a pair of numbers representing the lower and upper bounds of a range. For example, in JavaScript, the list of ranges <span class="arithmatex">\([[1, 5], [6, 10]]\)</span> may be represented as <code>let ranges = [[1, 5], [6, 10]]</code>.</p>
+<p>It should also be obvious that a range can also be represented with objects. For example, in JavaScript, a range can be represented as an object with <code>lower</code> and <code>upper</code> properties: <code>let range = { lower: 1, upper: 5 }</code>.</p>
 <h3 id="common-range-tasks">Common range tasks</h3>
 <ul>
 <li>Checking if a number is in a range.</li>
@@ -1310,7 +1313,7 @@ flowchart
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 25, 2025 18:12:54 UTC">June 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2025 07:54:35 UTC">June 26, 2025</span>
   </span>
 
     
