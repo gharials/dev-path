@@ -16,7 +16,9 @@ A directory to be watched for changes by Git is called a repository. Git monitor
 
 ### Commits
 
-A directory starts as empty, and over time it goes through changes. Git records the changes, and each unit of change recorded by Git is called a _commit._ While working in a repository, the repository user chooses the changes to be recorded, called _staging_. After that, the user asks Git to record the staged changes, called _committing._ Each commit has its automatically generated unique ID. The latest commit is also identified by its alias, `HEAD`. The sequence of commits of a branch in a repository shows the changes the repository has gone through, known as the _commit history_ of the branch.
+Ordinarily, we start a project in an empty directory, and over time it goes through changes. At any instant, we only have the latest state of the directory, but we don't any record of the changes it has gone through. In a Git repository, Git records the changes, and each unit of change recorded by Git is called a _commit._
+
+While working in a repository, the repository user chooses the changes to be recorded, called _staging_. After that, the user asks Git to record the staged changes, called _committing._ Each commit has its automatically generated unique ID. The latest commit is also identified by its alias, `HEAD`. The sequence of commits of a branch in a repository shows the changes the repository has gone through, known as the _commit history_ of the branch.
 
 ### Branches
 
