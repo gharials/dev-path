@@ -12,15 +12,15 @@ See these [pages](https://github.com/git-guides) for a more exhaustive and autho
 
 ### Repository
 
-A directory to be watched for changes by Git is called a repository. Git monitors the repository directory for changes.
+A directory to be watched for changes by Git is called a repository. Git monitors the repository directory for changes and records the change history as [commits](#commits).
 
 ### Commits
 
-Units of changes in a repository recorded by Git are called _commits._ Each commit has its automatically generated unique ID. The latest commit is also identified by its alias `HEAD`. The sequence of commits of a branch in a repository is called its _commit history._
+A directory starts as empty, and over time it goes through changes. Git records the changes, and each unit of change recorded by Git is called a _commit._ While working in a repository, the repository user chooses the changes to be recorded, called _staging_. After that, the user asks Git to record the staged changes, called _committing._ Each commit has its automatically generated unique ID. The latest commit is also identified by its alias, `HEAD`. The sequence of commits of a branch in a repository shows the changes the repository has gone through, known as the _commit history_ of the branch.
 
 ### Branches
 
-Each branch is a copy of the repository with its own commit history. Each branch has its own unique name. At any time your working directory refers to a branch. The default branch name is `master`. You can create new branches and switch between them.
+Each branch is a copy of the repository with its own commit history. Each branch has its own unique name. At any time, your working directory points to a branch. The default branch, the initial copy of the repository, is called `master`. You can [create new branches](#working-with-branches) and switch between them.
 
 ???+ warning
     **The new `main` and the old `master` branches in GitHub**
@@ -110,3 +110,15 @@ Consult this [resource](https://www.atlassian.com/git/tutorials/saving-changes/g
 A new branch is created with the `git branch <branch-name>` command. A new branch starts from the current commit of the current branch. Therefore, the new branch and its source branch have a common history up to the branch creation commit. Creating a branch is like copying the working directory to a new location and starting to work there. Branches are usually merged back into their source branches eventually.
 
 Switching between different branches is done with the `git checkout <branch-name>` command. Git brings the working directory to the state of the branch you switched to. Conceptually, it is like Git keeps copies of the repository in branches, and when you switch branches, it brings the copy of the branch you switched to into the working directory.
+
+In the following example diagram, a branch called `feature` is created from the `main` branch, which conceptually copies the working directory to a new location. After that, some commits are made in the new branch, meaning the changes are made in the copied working directory, whereas the `main` branch remains unchanged. If you switch back to the `main` branch, the working directory is brought back to the state of the `main` branch, which does not include the changes made in the `feature` branch. 
+
+```mermaid
+gitGraph
+   commit id: "Initial commit"
+   commit id: "Main work"
+   branch feature
+   checkout feature
+   commit id: "Feature work 1"
+   commit id: "Feature work 2"
+```
