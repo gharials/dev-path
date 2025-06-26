@@ -22,7 +22,12 @@ While working in a repository, the repository user chooses the changes to be rec
 
 ### Branches
 
-Each branch is a copy of the repository with its own commit history. Each branch has its own unique name. At any time, your working directory points to a branch. The default branch, the initial copy of the repository, is called `master`. You can [create new branches](#working-with-branches) and switch between them.
+While working on a project, developers often need to work on a new feature without affecting the existing code. In such situations, without a repository, developers would have to create a copy of the project directory, and start working there. Also, whenever they want to work on the existing code, they would have to switch back to the original directory.
+
+Git simplifies this process with _branches._ A branch is a copy of the repository with its own commit history. You can [create new branches](#working-with-branches) and switch between them. Whenever you want to work on a different branch, Git brings the branch copy into your working directory. This is called _checking out_ a branch.
+
+Each branch has its own unique name. At any time, your working directory points to a branch. The default branch, the initial copy of the repository, is called `master`.
+
 
 ???+ warning
     **The new `main` and the old `master` branches in GitHub**
