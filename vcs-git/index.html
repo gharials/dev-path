@@ -1011,7 +1011,8 @@
 <h3 id="repository">Repository</h3>
 <p>A directory to be watched for changes by Git is called a repository. Git monitors the repository directory for changes and records the change history as <a href="#commits">commits</a>.</p>
 <h3 id="commits">Commits</h3>
-<p>A directory starts as empty, and over time it goes through changes. Git records the changes, and each unit of change recorded by Git is called a <em>commit.</em> While working in a repository, the repository user chooses the changes to be recorded, called <em>staging</em>. After that, the user asks Git to record the staged changes, called <em>committing.</em> Each commit has its automatically generated unique ID. The latest commit is also identified by its alias, <code>HEAD</code>. The sequence of commits of a branch in a repository shows the changes the repository has gone through, known as the <em>commit history</em> of the branch.</p>
+<p>Ordinarily, we start a project in an empty directory, and over time it goes through changes. At any instant, we only have the latest state of the directory, but we don't any record of the changes it has gone through. In a Git repository, Git records the changes, and each unit of change recorded by Git is called a <em>commit.</em></p>
+<p>While working in a repository, the repository user chooses the changes to be recorded, called <em>staging</em>. After that, the user asks Git to record the staged changes, called <em>committing.</em> Each commit has its automatically generated unique ID. The latest commit is also identified by its alias, <code>HEAD</code>. The sequence of commits of a branch in a repository shows the changes the repository has gone through, known as the <em>commit history</em> of the branch.</p>
 <h3 id="branches">Branches</h3>
 <p>Each branch is a copy of the repository with its own commit history. Each branch has its own unique name. At any time, your working directory points to a branch. The default branch, the initial copy of the repository, is called <code>master</code>. You can <a href="#working-with-branches">create new branches</a> and switch between them.</p>
 <details class="warning" open="open">
@@ -1106,7 +1107,7 @@ some-dir/sub-dir/another-file.txt (3)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2025 10:18:37 UTC">June 26, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 26, 2025 17:55:02 UTC">June 26, 2025</span>
   </span>
 
     
