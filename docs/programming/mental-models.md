@@ -8,9 +8,15 @@ This page contains a list of commonly used mental models that often serve as ana
 
 ## Ranges or intervals
 
-### Representing ranges
-
 A range is a set of numbers between two numbers. For example, the range of numbers between $x$ and $y$, where $x \leq y$, is represented as $[x, y]$. The first number, $x$, is called the _lower bound_ of the range and the second number, $y$, is called the _upper bound_ of the range. A range may be _inclusive_ or _exclusive_. For example, the range $[1, 10]$ is inclusive, while $(1, 10)$ is exclusive.
+
+### Representing ranges in programs
+
+The simplest way to represent a range in programs is with a pair of variables, one for the lower bound and the other for the upper bound. For example, a range $[x, y]$ is represented with two variables `x` and `y`, where `x` is the lower bound and `y` is the upper bound.
+
+Additionally, a list of ranges is often represented with a two-dimensional array, where each element is a pair of numbers representing the lower and upper bounds of a range. For example, in JavaScript, the list of ranges $[[1, 5], [6, 10]]$ may be represented as `let ranges = [[1, 5], [6, 10]]`.
+
+It should also be obvious that a range can also be represented with objects. For example, in JavaScript, a range can be represented as an object with `lower` and `upper` properties: `let range = { lower: 1, upper: 5 }`.
 
 ### Common range tasks
 
