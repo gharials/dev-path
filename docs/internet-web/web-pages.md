@@ -118,13 +118,14 @@ flowchart TD
   end
 ```
 
-1. _Content._ This is the actual content inside the element, such as text, images, or other elements. The size of the content can be controlled using properties like `width` and `height`.
+Here is a table summarizing the four parts of the box model:
 
-2. _Padding._ Padding is the space between the content and the element's border. It creates inner spacing around the content. You can control it using the `padding` property (e.g., `padding: 10px;`).
-
-3. _Border._ The border wraps around the padding and content. It can be styled using properties like `border-width`, `border-style`, and `border-color`.
-
-4. _Margin._ Margin is the space outside the border, separating the element from other elements. It creates outer spacing around the element. You can control it using the `margin` property (e.g., `margin: 20px;`).
+| # | Part      | Description | Controlling properties |
+|---|-----------|-------------|------------------------|
+| 1 | _Content_ | The actual content inside the element, such as text, images, or other elements. | `width`, `height` |
+| 2 | _Padding_ | The space between the content and the element's border, creating inner spacing around the content. | `padding` (e.g., `padding: 10px;`) |
+| 3 | _Border_  | The border that wraps around the padding and content, which can be styled. | `border-width`, `border-style`, `border-color` |
+| 4 | _Margin_  | The space outside the border, separating the element from other elements, creating outer spacing around the element. | `margin` (e.g., `margin: 20px;`) |
 
 #### Example
 
