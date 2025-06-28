@@ -2,6 +2,7 @@
 
 ## Overview
 
+* _Programming & Problem Solving_ - Introduces the logical and mathematical foundations of programming, problem solving, and algorithm design. It covers basic programming concepts and problem-solving techniques.
 * _Internet and Web_ - Gives an overview of how the internet works, how web pages are served, and how to build basic web pages. Prepares the ground for learning web development.
 
 ## Instructions
