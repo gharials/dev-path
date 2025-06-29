@@ -8,6 +8,8 @@ Mathematics for programming is mainly about integers. There's a dedicated branch
 
 The floor of any real number is the greatest integer less than or equal to it. Floor of $x$ is denoted as $⌊x⌋$. Examples: $⌊2.3⌋ = 2$, $⌊8.9⌋ = 8$, $⌊7.0⌋ = 7$.
 
+Sometimes we need to find the floor of the division of two integers, like $⌊n / d⌋$. In these cases, the floor is the _quotient of the division_. That means if $n = d × m + r$, then the floor is $m$. For example, $⌊14 / 4⌋ = 3$, because $14 = 4 × 3 + 2$. Dividing two integers this way is known as _integer division_.
+
 ???+ info
     **Integer division results in programming languages**
 
