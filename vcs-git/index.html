@@ -782,6 +782,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remotes
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -933,6 +942,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remotes
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1053,6 +1071,13 @@
 <p>A Git repository starts with an initial or default branch called <code>master</code>. But due to some <a href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">cultural controversies</a> with the name <em>master</em>, GitHub has adopted a new convention: when you create a new repository in GitHub, its default branch is <code>main</code> instead of the old <code>master</code>.</p>
 <p>But the default branch name is still <code>master</code> when you create a local repository with the Git desktop client (with the <code>git init</code> command). So, as GitHub has renamed its default branch name to <code>main</code>, you have a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the <code>master</code> branch instead of the <code>main</code> branch. As a remedy, you can rename your local <code>master</code> branch to <code>main</code> before adding remote or pushing: <code>git branch -m main</code>.</p>
 </details>
+<h3 id="remotes">Remotes</h3>
+<p>A Git <em>remote</em> is a server that contains a copy of a Git repository, including all of its branches, commits, and files. After working on a local repository, you can <em>push</em> your changes to a remote periodically so that other developers can access your changes. Similarly, you can <em>pull</em> changes from a remote repository to keep your local repository up to date with the latest changes made by others.</p>
+<p>Git remotes has two main benefits:</p>
+<ul>
+<li><em>Backup.</em> If your computer crashes, you can always recover your work from the remote repository.</li>
+<li><em>Collaboration.</em> If you are working in a team, you can share your changes with your teammates by pushing to the remote repository.</li>
+</ul>
 <h2 id="the-git-workflow">The Git workflow</h2>
 <p>This section gives an overview of how Git is used by developers. Before using Git on your computer, <a href="https://git-scm.com/downloads">download</a> and install it.</p>
 <h3 id="creating-a-local-git-repository">Creating a local Git repository</h3>
@@ -1101,7 +1126,7 @@ some-dir/sub-dir/another-file.txt (3)
    commit id: "Feature work 1"
    commit id: "Feature work 2"</code></pre>
 <h3 id="working-with-remotes">Working with remotes</h3>
-<p>The changes you make in your repository, that is your commits, remain local in your computer until you push them to a <em>remote</em>, a shared central repository. We can either start by creating a local repository first and then associating it with a remote, or we can clone an existing remote repository.</p>
+<p>The changes you make in your repository, that is your commits, remain local in your computer until you push them to a <a href="#remotes">remote</a>, a shared central repository. We can either start by creating a local repository first and then associating it with a remote, or we can clone an existing remote repository.</p>
 <h4 id="setting-up-git-remotes-in-local-repositories">Setting up Git remotes in local repositories</h4>
 <p>For repositories without an existing remote, you have to create a remote repository first in GitHub or in any other such provider (e.g. <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/">Bitbucket</a>, etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:</p>
 <div class="annotate">
@@ -1141,7 +1166,7 @@ some-dir/sub-dir/another-file.txt (3)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 22:01:52 UTC">June 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 22:09:29 UTC">June 29, 2025</span>
   </span>
 
     
