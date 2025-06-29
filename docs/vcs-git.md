@@ -105,9 +105,11 @@ gitGraph
 
 ### Working with remotes
 
+The changes you make in your repository, that is your commits, remain local in your computer until you push them to a _remote_, a shared central repository. We can either start by creating a local repository first and then associating it with a remote, or we can clone an existing remote repository.
+
 #### Setting up Git remotes in local repositories
 
-The changes you make in your repository, that is your commits, remain local in your computer until you push them to a _remote_, a shared central repository. For that, you have to create a remote repository first in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
+For repositories without an existing remote, you have to create a remote repository first in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
 
 <div class="annotate" markdown>
 ```
@@ -118,7 +120,9 @@ git remote add origin(1) https://github.com/OWNER/REPOSITORY.git(2)
 1. Name of the remote. A local repository may have multiple remotes with their unique names; the default remote name is `origin`.
 2. Link to the remote repository. You can find it in the repository webpage.
 
-After associating a remote with your local repository, whenever you push your commits to the remote, your changes become visible to other users who have access to the same remote repository. You don't need to associate your repository with a remote if you never want to share your work with others.
+After associating a remote with your local repository, whenever you push your commits to the remote, your changes become visible to other users who have access to the same remote repository.
+
+You don't need to associate your repository with a remote if you never want to share your work with others.
 
 #### Creating local repositories with Git clone
 
