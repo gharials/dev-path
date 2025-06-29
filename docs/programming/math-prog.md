@@ -54,7 +54,13 @@ There are number formats with a base other than the usual 10-based decimal. A pr
 
 Binary representation is 2-based, meaning it has only two digits: `0` and `1`. The place value of a binary number increases by a factor of 2. For example, the binary number `1011` actually equals $1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 8 + 0 + 2 + 1 = 11$ in decimal.
 
-A binary digit is called a _bit_, short for _binary digit_, named by computer scientist [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Additionally, 8 bits is called a _byte_ and computers mostly work with bytes.
+!!! question
+    **Find the binary representation of an integer**
+
+    Finding the binary representation of an integer means finding the binary digits of an integer, which is similar to finding all the decimal digits of an integer. In binary, however, the number is successively divided by 2 instead of 10. Try to write a program that finds the binary representation of an integer.
+
+!!! info
+    A binary digit is called a _bit_, short for _binary digit_, named by computer scientist [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Additionally, 8 bits is called a _byte_ and computers mostly work with bytes.
 
 ### Hexadecimal numbers
 
@@ -70,7 +76,7 @@ Examples: `0x12` (the value is 18, not 12) `0xAF`, `0x2A`, `x20`, `xA4`, `xAC`.
 ???+ info
     **Hexadecimal representation of colors**
 
-    Colors in computer are represented with numbers. Each color has its own unique number. See this [resource](https://color-hex.org/) for a list of hexadecimal representation of commonly used colors. This hexadecimal color naming format is widely used in HTML and other applications.
+    Colors in computer are represented with numbers. Each color has its own unique number. For example, the color white is represented as `0xFFFFFF`, while black is `0x000000`. See this [resource](https://color-hex.org/) for a list of hexadecimal representation of commonly used colors. This hexadecimal color naming format is widely used in HTML and other applications.
 
 ## Counting
 
