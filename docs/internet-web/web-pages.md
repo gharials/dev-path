@@ -81,6 +81,8 @@ In the following example, the `.highlight` selector sets the background color of
 }
 ```
 
+Note that an HTML element can have multiple classes. For example, `<div class="highlight important">` has two classes: `highlight` and `important`. The `div` element will get the styles defined for both classes.
+
 #### The id selector
 
 The `#id` selector selects an element with a specific `id` attribute. For example, `#header` selects the element with `id="header"`.
