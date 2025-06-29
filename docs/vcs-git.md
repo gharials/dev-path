@@ -105,9 +105,9 @@ gitGraph
 
 ### Working with remotes
 
-#### Setting up Git remotes
+#### Setting up Git remotes in local repositories
 
-The changes you make in your repository, that is your commits, remain local until you push them to a _remote_, a shared central repository. For that, you have to create a remote repository in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
+The changes you make in your repository, that is your commits, remain local in your computer until you push them to a _remote_, a shared central repository. For that, you have to create a remote repository first in GitHub or in any other such provider (e.g. [GitLab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:
 
 <div class="annotate" markdown>
 ```
@@ -118,16 +118,14 @@ git remote add origin(1) https://github.com/OWNER/REPOSITORY.git(2)
 1. Name of the remote. A local repository may have multiple remotes with their unique names; the default remote name is `origin`.
 2. Link to the remote repository. You can find it in the repository webpage.
 
-Once you have associated a remote with your local repository, you can push your commits to it so that your changes become visible to others with access to the same remote repository. You don't need to associate your repository with a remote if you never want to share your work with others.
+After associating a remote with your local repository, whenever you push your commits to the remote, your changes become visible to other users who have access to the same remote repository. You don't need to associate your repository with a remote if you never want to share your work with others.
 
 #### Creating local repositories with Git clone
 
-Sometimes, you know from the beginning that you want collaboration in the repository you want to start. In that scenario, you don't necessarily need to create a local repository first and associate a remote later. Instead, you can create the remote repository first in GitHub and then copy it into your computer with the Git clone command and start working in it.
+Sometimes, you may want to work on a remote repository already created by someone else. In that scenario, you can copy the remote repository into your computer with the Git clone command and start working in it.
 
 ```
 git clone https://github.com/github/training-kit.git
 ```
 
-This command creates a copy or clone of the remote repository in your computer. It also automatically sets the remote repository as the `origin` remote; you don't need to do it manually.
-
-You can use Git clone when you want to work on an existing remote repository created by someone else.
+This command creates a copy or clone of the remote repository in your computer. It also _automatically sets the remote repository_ as the `origin` remote; you don't need to do it manually.
