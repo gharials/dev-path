@@ -35,6 +35,15 @@ Each branch has its own unique name. At any time, your working directory points 
 
     But the default branch name is still `master` when you create a local repository with the Git desktop client (with the `git init` command). So, as GitHub has renamed its default branch name to `main`, you have a problem when you add a GitHub repository as its remote: when you push to GitHub, changes are pushed to the `master` branch instead of the `main` branch. As a remedy, you can rename your local `master` branch to `main` before adding remote or pushing: `git branch -m main`.
 
+### Remotes
+
+A Git _remote_ is a server that contains a copy of a Git repository, including all of its branches, commits, and files. After working on a local repository, you can _push_ your changes to a remote periodically so that other developers can access your changes. Similarly, you can _pull_ changes from a remote repository to keep your local repository up to date with the latest changes made by others.
+
+Git remotes has two main benefits:
+
+* _Backup._ If your computer crashes, you can always recover your work from the remote repository.
+* _Collaboration._ If you are working in a team, you can share your changes with your teammates by pushing to the remote repository.
+
 ## The Git workflow
 
 This section gives an overview of how Git is used by developers. Before using Git on your computer, [download](https://git-scm.com/downloads) and install it.
@@ -105,7 +114,7 @@ gitGraph
 
 ### Working with remotes
 
-The changes you make in your repository, that is your commits, remain local in your computer until you push them to a _remote_, a shared central repository. We can either start by creating a local repository first and then associating it with a remote, or we can clone an existing remote repository.
+The changes you make in your repository, that is your commits, remain local in your computer until you push them to a [remote](#remotes), a shared central repository. We can either start by creating a local repository first and then associating it with a remote, or we can clone an existing remote repository.
 
 #### Setting up Git remotes in local repositories
 
