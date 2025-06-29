@@ -49,13 +49,13 @@ An HTML may also need JavaScript files. They are specified as external resources
 
 By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
 
-CSS controls the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can be applied to HTML elements. For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
+CSS controls the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can control various style aspects of HTML elements (e.g., color, layout, spacing, positioning, etc.). For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
 
 This simple idea styles all the complex and attractive web pages we see in the internet.
 
 ### CSS selectors
 
-Style properties are grouped under _selectors._ A selector determines the elements to which the style properties apply. For example, the `body` selector selects the `<body>` element, and the `h1` selector selects all `<h1>` elements in the HTML document. In the following example, the `body` selector sets the background color of the entire page, and the `h1` selector sets the text color of all `<h1>` elements:
+Style properties are grouped under _selectors._ A selector determines the _scope_ of the style properties, that is, to which HTML elements the style properties apply. In the following example, the `body` selector sets the background color of the entire page, and the `h1` selector sets the text color of all `<h1>` elements. The properties under the `body` selector apply to the `<body>` element, and the properties under the `h1` selector apply to all `<h1>` elements in the HTML document:
 
 ```css
 body {
@@ -67,7 +67,7 @@ h1 {
 }
 ```
 
-Two additional CSS selectors are frequently used: the class selector and the id selector. They give more control over which elements to style.
+Notice that selectors like `body` and `h1` have _too broad a scope_. They apply to _all elements_ of those types in the document. Two additional CSS selectors give more _fine-grained_, that is, more specific, control over their scopes: the class selector and the id selector.
 
 #### The class selector
 
@@ -80,6 +80,8 @@ In the following example, the `.highlight` selector sets the background color of
   background-color: yellow;
 }
 ```
+
+Note that an HTML element can have multiple classes. For example, `<div class="highlight important">` has two classes: `highlight` and `important`. The `div` element will get the styles defined for both classes.
 
 #### The id selector
 
@@ -141,21 +143,29 @@ div {
 }
 ```
 
-## Browser as a JavaScript runner
+## Client-side JavaScript
+
+Just like without CSS a web page looks plain, without interactivity, response to user actions, a web page is static and unresponsive. Without interactivity, a web page is just a collection of text and images. Users can only read the text and see the images. In the early days of the web, web pages were designed to display text and images.
+
+These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as clicking buttons, inputting text, and submitting forms. This is where client-side JavaScript comes in.
+
+Before getting into how JavaScript brings interactivity to web pages, it is important to understand how browsers run JavaScript.
+
+### Browser as a JavaScript runner
 
 Like NodeJS (the `node` command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.
     
-Where NodeJS can run *any* JavaScript file, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
+Where NodeJS can run *any* JavaScript file chosen by the user, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
 
 Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
-### JavaScript DOM
+#### JavaScript DOM
 
 Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
-## How HTML and client-side JavaScript work together
+### How HTML and client-side JavaScript work together
 
 HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onClick="function1()"/>` means call `function1` when element is clicked; `<element onLoad="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
 
@@ -163,9 +173,9 @@ An HTML file may have one or more associated JavaScript files containing the fun
 
 The architecture in summary: _perform some operation (function) when something happens (event) to an element._
 
-## Applications of client-side JavaScript
+### Applications of client-side JavaScript
 
-### Validating forms with client-side JS
+#### Validating forms with client-side JS
 
 Client-side JavaScript has its application in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called *validation*) before storing in database.
 
@@ -182,4 +192,4 @@ If the form data could be validated at the browser, before submitting to the ser
 
 ## Developing basic web pages
 
-Create an HTML file; create a CSS file for styling it; create a JavaScript file for various events handling; link the CSS and JavaScript files to the HTML document. Put those files in a [server static directory](./web-servers.md#serving-static-contents) for serving to the client. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.
+Knowledge of HTML, CSS, and JavaScript is enough to create a basic web page: create an HTML file; create a CSS file for styling it; create a JavaScript file for various event handling; and link the CSS and JavaScript files to the HTML document. Put those files in a [server static directory](./web-servers.md#serving-static-contents) for serving to the client. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.
