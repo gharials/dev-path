@@ -27,7 +27,7 @@ The ceiling of any real number is the smallest integer greater than or equal to 
 
     Floor and ceiling functions must not be confused with _rounding off_.
 
-???+ info
+???+ tip
     **Getting ceiling of integer division results in programming languages**
 
     As mentioned earlier, most languages floors the division result of two integers. Sometimes, however, you want the ceiling of division results instead. The trick is to add the divisor minus $1$ to the dividend before division. See the following snippet for an illustration in the C language:
