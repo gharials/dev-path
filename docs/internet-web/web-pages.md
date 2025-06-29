@@ -141,15 +141,23 @@ div {
 }
 ```
 
-## Browser as a JavaScript runner
+## Client-side JavaScript
+
+Just like without CSS a web page looks plain, without interactivity, response to user actions, a web page is static and unresponsive. Without interactivity, a web page is just a collection of text and images. Users can only read the text and see the images. In the early days of the web, web pages were designed to display text and images.
+
+These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as clicking buttons, inputting text, and submitting forms. This is where client-side JavaScript comes in.
+
+Before getting into how JavaScript brings interactivity to web pages, it is important to understand how browsers run JavaScript.
+
+### Browser as a JavaScript runner
 
 Like NodeJS (the `node` command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.
     
-Where NodeJS can run *any* JavaScript file, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
+Where NodeJS can run *any* JavaScript file chosen by the user, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
 
 Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
-### JavaScript DOM
+#### JavaScript DOM
 
 Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
 
