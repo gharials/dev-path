@@ -55,7 +55,7 @@ This simple idea styles all the complex and attractive web pages we see in the i
 
 ### CSS selectors
 
-Style properties are grouped under _selectors._ A selector determines the elements to which the style properties apply. For example, the `body` selector selects the `<body>` element, and the `h1` selector selects all `<h1>` elements in the HTML document. In the following example, the `body` selector sets the background color of the entire page, and the `h1` selector sets the text color of all `<h1>` elements:
+Style properties are grouped under _selectors._ A selector determines the _scope_ of the style properties, that is, to which HTML elements the style properties apply. In the following example, the `body` selector sets the background color of the entire page, and the `h1` selector sets the text color of all `<h1>` elements. The properties under the `body` selector apply to the `<body>` element, and the properties under the `h1` selector apply to all `<h1>` elements in the HTML document:
 
 ```css
 body {
@@ -67,7 +67,7 @@ h1 {
 }
 ```
 
-Two additional CSS selectors are frequently used: the class selector and the id selector. They give more control over which elements to style.
+Notice that selectors like `body` and `h1` have _too broad a scope_. They apply to _all elements_ of those types in the document. Two additional CSS selectors give more _fine-grained_, that is, more specific, control over their scopes: the class selector and the id selector.
 
 #### The class selector
 
