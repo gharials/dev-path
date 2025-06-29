@@ -165,7 +165,7 @@ Most importantly, client-side JavaScript has access to the HTML document's _obje
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
-## How HTML and client-side JavaScript work together
+### How HTML and client-side JavaScript work together
 
 HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onClick="function1()"/>` means call `function1` when element is clicked; `<element onLoad="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
 
@@ -173,9 +173,9 @@ An HTML file may have one or more associated JavaScript files containing the fun
 
 The architecture in summary: _perform some operation (function) when something happens (event) to an element._
 
-## Applications of client-side JavaScript
+### Applications of client-side JavaScript
 
-### Validating forms with client-side JS
+#### Validating forms with client-side JS
 
 Client-side JavaScript has its application in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called *validation*) before storing in database.
 
@@ -192,4 +192,4 @@ If the form data could be validated at the browser, before submitting to the ser
 
 ## Developing basic web pages
 
-Create an HTML file; create a CSS file for styling it; create a JavaScript file for various events handling; link the CSS and JavaScript files to the HTML document. Put those files in a [server static directory](./web-servers.md#serving-static-contents) for serving to the client. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.
+Knowledge of HTML, CSS, and JavaScript is enough to create a basic web page: create an HTML file; create a CSS file for styling it; create a JavaScript file for various event handling; and link the CSS and JavaScript files to the HTML document. Put those files in a [server static directory](./web-servers.md#serving-static-contents) for serving to the client. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.
