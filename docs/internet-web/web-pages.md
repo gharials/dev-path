@@ -49,7 +49,7 @@ An HTML may also need JavaScript files. They are specified as external resources
 
 By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
 
-CSS controls the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can be applied to HTML elements. For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
+CSS controls the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can control various style aspects of HTML elements (e.g., color, layout, spacing, positioning, etc.). For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
 
 This simple idea styles all the complex and attractive web pages we see in the internet.
 
