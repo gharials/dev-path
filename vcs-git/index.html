@@ -835,9 +835,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-git-remotes" class="md-nav__link">
+  <a href="#setting-up-git-remotes-in-local-repositories" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up Git remotes
+      Setting up Git remotes in local repositories
     </span>
   </a>
   
@@ -986,9 +986,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#setting-up-git-remotes" class="md-nav__link">
+  <a href="#setting-up-git-remotes-in-local-repositories" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up Git remotes
+      Setting up Git remotes in local repositories
     </span>
   </a>
   
@@ -1101,8 +1101,8 @@ some-dir/sub-dir/another-file.txt (3)
    commit id: "Feature work 1"
    commit id: "Feature work 2"</code></pre>
 <h3 id="working-with-remotes">Working with remotes</h3>
-<h4 id="setting-up-git-remotes">Setting up Git remotes</h4>
-<p>The changes you make in your repository, that is your commits, remain local until you push them to a <em>remote</em>, a shared central repository. For that, you have to create a remote repository in GitHub or in any other such provider (e.g. <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/">Bitbucket</a>, etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:</p>
+<h4 id="setting-up-git-remotes-in-local-repositories">Setting up Git remotes in local repositories</h4>
+<p>The changes you make in your repository, that is your commits, remain local in your computer until you push them to a <em>remote</em>, a shared central repository. For that, you have to create a remote repository first in GitHub or in any other such provider (e.g. <a href="https://about.gitlab.com/">GitLab</a>, <a href="https://bitbucket.org/">Bitbucket</a>, etc.) After creating the repository in GitHub, copy its link and associate it as a remote in your local repository with the following command:</p>
 <div class="annotate">
 <div class="highlight"><pre><span></span><code>git remote add origin(1) https://github.com/OWNER/REPOSITORY.git(2)
 </code></pre></div>
@@ -1111,13 +1111,12 @@ some-dir/sub-dir/another-file.txt (3)
 <li>Name of the remote. A local repository may have multiple remotes with their unique names; the default remote name is <code>origin</code>.</li>
 <li>Link to the remote repository. You can find it in the repository webpage.</li>
 </ol>
-<p>Once you have associated a remote with your local repository, you can push your commits to it so that your changes become visible to others with access to the same remote repository. You don't need to associate your repository with a remote if you never want to share your work with others.</p>
+<p>After associating a remote with your local repository, whenever you push your commits to the remote, your changes become visible to other users who have access to the same remote repository. You don't need to associate your repository with a remote if you never want to share your work with others.</p>
 <h4 id="creating-local-repositories-with-git-clone">Creating local repositories with Git clone</h4>
-<p>Sometimes, you know from the beginning that you want collaboration in the repository you want to start. In that scenario, you don't necessarily need to create a local repository first and associate a remote later. Instead, you can create the remote repository first in GitHub and then copy it into your computer with the Git clone command and start working in it.</p>
+<p>Sometimes, you may want to work on a remote repository already created by someone else. In that scenario, you can copy the remote repository into your computer with the Git clone command and start working in it.</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/github/training-kit.git
 </code></pre></div>
-<p>This command creates a copy or clone of the remote repository in your computer. It also automatically sets the remote repository as the <code>origin</code> remote; you don't need to do it manually.</p>
-<p>You can use Git clone when you want to work on an existing remote repository created by someone else.</p>
+<p>This command creates a copy or clone of the remote repository in your computer. It also <em>automatically sets the remote repository</em> as the <code>origin</code> remote; you don't need to do it manually.</p>
 
 
 
@@ -1140,7 +1139,7 @@ some-dir/sub-dir/another-file.txt (3)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 21:39:13 UTC">June 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 29, 2025 21:53:30 UTC">June 29, 2025</span>
   </span>
 
     
