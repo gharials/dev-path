@@ -18,20 +18,24 @@ Additionally, a list of ranges is often represented with a two-dimensional array
 
 It should also be obvious that a range can also be represented with objects. For example, in JavaScript, a range can be represented as an object with `lower` and `upper` properties: `let range = { lower: 1, upper: 5 }`.
 
-### Common range tasks
-
-* Checking if a number is in a range.
-* Finding the intersection or overlap of two ranges.
-* Finding the union of two ranges.
-* Finding the complement of a range.
-* Checking if a range is a subset of another range.
-* Shifting a range, cyclically or not.
-
 ### Applications of ranges
 
 * **Iterating over a range.** A loop usually iterates over a range of numbers. For example, in a `for` loop, the range is defined by the starting and ending values of the loop variable. The following common loop iterates over the range $[0, n)$ or, alternatively, $[0, n-1]$: `for (let i = 0; i < n; i++)`.
 
 * **Binary search.** A range represents the search space in binary search algorithm. Initially, the range is the complete array to be searched. In each iteration, binary search halves the search space based on the comparison with the middle element of the range.
+
+???+ question "Problems"
+    1. Given an interval/range $[x, y]$, find if the integer $n$ falls within the interval/range.
+    2. Given an interval/range $[x, y]$, shift it by $k$ positions to the right or left.
+    2. Given two intervals/ranges $[x_1, y_1]$ and $[x_2, y_2]$, check whether they _overlap_ or not.
+    3. Given two overlapping intervals $[x_1, y_1]$ and $[x_2, y_2]$, _merge/unify_ them into one interval.
+    4. Given two overlapping intervals $[x_1, y_1]$ and $[x_2, y_2]$, find their _intersection_ interval.
+    5. Given two intervals $[x_1, y_1]$ and $[x_2, y_2]$, check whether the first interval is a _sub-interval_ of the second interval.
+    6. Dividing intervals.
+        1. Given an interval $[x, y]$, divide it into two equal half intervals.
+        2. Given an interval $[x, y]$, divide it into two intervals at index $k$.
+    7. Given a list of intervals (e.g., $[x_1, y_1], [x_2, y_2], … [x_n, y_n]$), [sort](./problem-solving-tools.md#using-custom-comparison-functions) them based on their lower bounds.
+    8. Given a list of intervals (e.g., $[x_1, y_1], [x_2, y_2], … [x_n, y_n]$), check how many of them coincide with a given point $p$. (this problem is also known as _stabbing query_).
 
 ## Grids or matrices
 
