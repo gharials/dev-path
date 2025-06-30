@@ -434,21 +434,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Grids or matrices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-grid-tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common grid tasks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1040,21 +1025,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Grids or matrices">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#common-grid-tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common grid tasks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1234,10 +1204,36 @@
 </ol>
 </details>
 <h2 id="grids-or-matrices">Grids or matrices</h2>
-<h3 id="common-grid-tasks">Common grid tasks</h3>
-<ul>
-<li>Traversing a grid based on adjacency.</li>
-</ul>
+<p>A grid or matrix consists of a number of <em>rows</em> and <em>columns</em>. A grid with <span class="arithmatex">\(m\)</span> rows and <span class="arithmatex">\(n\)</span> columns is called an <span class="arithmatex">\(m × n\)</span> grid. In other words, the grid's <em>dimension</em> is <span class="arithmatex">\(m × n\)</span>.</p>
+<p>In programs, a grid is represented as a two-dimensional array, where each element is a row of the grid.</p>
+<details class="question" open="open">
+<summary>Problems</summary>
+<ol>
+<li>Traversing rows and columns.<ol>
+<li>Given an <span class="arithmatex">\(m × n\)</span> grid of integers, traverse its <span class="arithmatex">\(i\)</span>-th row in forward and reverse directions.</li>
+<li>Given an <span class="arithmatex">\(m × n\)</span> grid of integers, traverse its <span class="arithmatex">\(j\)</span>-th column in forward and reverse directions.</li>
+</ol>
+</li>
+<li>Traverse an <span class="arithmatex">\(m × n\)</span> grid in <em>row-major order</em>, that is, row by row.</li>
+<li>Traverse an <span class="arithmatex">\(m × n\)</span> grid in <em>column-major order</em>, that is, column by column.</li>
+<li>Traversing diagonals.<ol>
+<li>Given an <span class="arithmatex">\(n × n\)</span> <em>square</em> grid of integers, traverse its <em>two diagonals.</em></li>
+<li>Given an <span class="arithmatex">\(m × n\)</span> grid of integers, traverse <em>all of its diagonals.</em><ol>
+<li>How many diagonals are there in an <span class="arithmatex">\(m × n\)</span> grid?</li>
+<li>What is the length of each diagonal in an <span class="arithmatex">\(m × n\)</span> grid?</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Given an <span class="arithmatex">\(m × n\)</span> grid, traverse its <span class="arithmatex">\(p × q\)</span> (<span class="arithmatex">\(p &lt; m\)</span>, <span class="arithmatex">\(q &lt; n\)</span>) <em>sub-grid</em> starting at <span class="arithmatex">\((i, j)\)</span>.</li>
+<li>Given an array of integers of length <span class="arithmatex">\(n\)</span>, divide it into a <span class="arithmatex">\(p × q\)</span> grid.</li>
+<li>Given an array of length <span class="arithmatex">\(n\)</span>, imagine it as a grid with <span class="arithmatex">\(m\)</span> columns. Find the element at <span class="arithmatex">\(i\)</span>-th row and <span class="arithmatex">\(j\)</span>-th column in the imaginary grid.</li>
+<li>Traversal based on adjacency.<ol>
+<li>Starting from a cell <span class="arithmatex">\(x, y\)</span> in a grid, traverse all of its <span class="arithmatex">\(4\)</span> <a href="../problem-solving-tools/#grid-traversal-delta">adjacent cells</a>.</li>
+</ol>
+</li>
+</ol>
+</details>
 <h2 id="associations-or-maps">Associations or maps</h2>
 <p>The concept association is found everywhere in real world. Two things are associated means that they are somehow <em>related to each other.</em> For example, affixing a price tag to a product is associating the price with the product, meaning that <em>the product's price</em> is the <em>amount printed on the tag.</em></p>
 <p>Associations may be used for <em>identification</em> (e.g. roll number uniquely identifies a student), for indicating <em>ownership</em> (e.g. labels on parcels), and many other relationships. We can picture associations as arrows pointing from an object to another or from a set of objects to another.</p>
@@ -1344,7 +1340,7 @@ flowchart
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2025 09:37:13 UTC">June 30, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 30, 2025 09:56:25 UTC">June 30, 2025</span>
   </span>
 
     
