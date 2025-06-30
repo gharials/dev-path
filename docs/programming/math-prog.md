@@ -101,6 +101,21 @@ For example, there are two options, buses and trains, to travel from city $A$ to
 
 For example, you have to travel from city $A$ to $C$ via city $B$. From city $A$ to $B$, there are $3$ trains, and from city $B$ to $C$, there are $2$ buses. Then, there are $3 × 2 = 6$ choices for traveling from city $A$ to $C$ in total.
 
+???+ question
+    1. From city $A$ to $B$ there are $m$ routes and from city $B$ to $C$ there are $n$ routes. How many routes are there from city $A$ to $C$?
+    2. A mobile operator has numbers of this format: `0147 xxx xxx`. The first digits are fixed for the operator and the last $6$ digits may vary. How many users can this operator have at most?
+    3. How many iterations do the following loop execute?
+       ```javascript
+       for (let i = 0; i < n; i++) {
+
+           for (let j = 0; j < l; j++) {
+           }
+
+           for (let l = 0; l < m; l++) {
+           }
+       }
+       ```
+
 Consult this [resource](https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/) for details.
 
 ## Logarithms
