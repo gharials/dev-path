@@ -52,6 +52,18 @@ $a \mod m = r$ (pronounced $a$ modulo/mod $m$ equals $r$) means that $r$ is the 
 
 In programming languages the `%` operator is used as the modulus operator. Example: `14 % 3`.
 
+???+ question "Problems"
+    1. Divisibility and congruence.
+        1. Given an integer $n$, check whether it is divisible by another integer $m$.
+        2. Given an integer $m$, what are the possible remainders after any integer is divided by $m$?
+    2. Digits.
+        1. Given an integer $n$, print all of its digits.
+        2. Given an integer $n$, find the integer that is found by reversing the digits of $n$.
+    3. Pagination.
+        1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements?
+        2. Given that a page can contain $k$ elements, which page does the $i$-th element belong to?
+        3. Given that a page can contain $k$ rows, do the $i$-th and $j$-th elements belong to the same rows in their respective pages?
+
 ## Number formats
 
 Numbers are represented with _digits_ and _place values_. The most common number system, the _decimal system_, is $10$-based, meaning it has 10 digits and its place value increases by a factor of $10$. For example, the number $253$ actually equals $2 × 10^2 + 5 × 10^1 + 3 × 10^0 = 200 + 50 + 3$.
