@@ -1,6 +1,12 @@
 # Mathematics for Programming
 
-Mathematics for programming is mainly about integers. There's a dedicated branch of mathematics called _Discrete Mathematics_ for its study. The following basic mathematical ideas are necessary for programmers. Consult an authoritative discrete mathematics book for further details.
+Mathematics for programming is mainly about [integers](#integers). There's a dedicated branch of mathematics called _Discrete Mathematics_ for its study. The following basic mathematical ideas are necessary for programmers. Consult an authoritative discrete mathematics book for further details.
+
+## Integers
+
+In everyday life, we are used to working with mainly two types of numbers: whole numbers (e.g. $0, 1, 2, 3, ...$) and numbers with fractional parts (e.g. $0.5, 1.2, 3.14, ...$).
+
+In mathematics, _whole numbers_ are called _integers_. They can be both positive and negative, including zero. Examples of integers include $-3$, $0$, and $42$. In daily life, we use integers most commonly for counting objects. Integers are very important in programming and computer science. A programmer should be aware of the basic facts about integers.
 
 ## Floor and ceiling functions
 
