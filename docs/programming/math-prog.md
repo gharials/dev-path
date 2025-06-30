@@ -123,7 +123,7 @@ For example, you have to travel from city $A$ to $C$ via city $B$. From city $A$
            for (let j = 0; j < l; j++) {
            }
 
-           for (let l = 0; l < m; l++) {
+           for (let j = 0; j < m; j++) {
            }
        }
        ```
