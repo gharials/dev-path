@@ -39,9 +39,26 @@ It should also be obvious that a range can also be represented with objects. For
 
 ## Grids or matrices
 
-### Common grid tasks
+A grid or matrix consists of a number of _rows_ and _columns_. A grid with $m$ rows and $n$ columns is called an $m × n$ grid. In other words, the grid's _dimension_ is $m × n$.
 
-* Traversing a grid based on adjacency.
+In programs, a grid is represented as a two-dimensional array, where each element is a row of the grid.
+
+???+ question "Problems"
+    1. Traversing rows and columns.
+        1. Given an $m × n$ grid of integers, traverse its $i$-th row in forward and reverse directions.
+        2. Given an $m × n$ grid of integers, traverse its $j$-th column in forward and reverse directions.
+    2. Traverse an $m × n$ grid in _row-major order_, that is, row by row.
+    3. Traverse an $m × n$ grid in _column-major order_, that is, column by column.
+    4. Traversing diagonals.
+        1. Given an $n × n$ _square_ grid of integers, traverse its _two diagonals._
+        2. Given an $m × n$ grid of integers, traverse _all of its diagonals._
+            1. How many diagonals are there in an $m × n$ grid?
+            2. What is the length of each diagonal in an $m × n$ grid?
+    5. Given an $m × n$ grid, traverse its $p × q$ ($p < m$, $q < n$) _sub-grid_ starting at $(i, j)$.
+    6. Given an array of integers of length $n$, divide it into a $p × q$ grid.
+    7. Given an array of length $n$, imagine it as a grid with $m$ columns. Find the element at $i$-th row and $j$-th column in the imaginary grid.
+    8. Traversal based on adjacency.
+        1. Starting from a cell $x, y$ in a grid, traverse all of its $4$ [adjacent cells](./problem-solving-tools.md#grid-traversal-delta).
 
 ## Associations or maps 
 
