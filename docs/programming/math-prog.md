@@ -48,13 +48,13 @@ In programming languages the `%` operator is used as the modulus operator. Examp
 
 ## Number formats
 
-Numbers are represented with _digits_ and _place values_. The most common number system, the _decimal system_, is 10-based, meaning it has 10 digits and its place value increases by a factor of 10. For example, the number $253$ actually equals $2 × 10^2 + 5 × 10^1 + 3 × 10^0 = 200 + 50 + 3$.
+Numbers are represented with _digits_ and _place values_. The most common number system, the _decimal system_, is $10$-based, meaning it has 10 digits and its place value increases by a factor of $10$. For example, the number $253$ actually equals $2 × 10^2 + 5 × 10^1 + 3 × 10^0 = 200 + 50 + 3$.
 
 There are number formats with a base other than the usual 10-based decimal. A programmer has to be familiar with the following number representations.
 
 ### Binary numbers
 
-Binary representation is 2-based, meaning it has only two digits: `0` and `1`. The place value of a binary number increases by a factor of 2. For example, the binary number `1011` actually equals $1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 8 + 0 + 2 + 1 = 11$ in decimal.
+Binary representation is $2$-based, meaning it has only two digits: $0$ and $1$. The place value of a binary number increases by a factor of $2$. For example, the binary number $1011$ actually equals $1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 8 + 0 + 2 + 1 = 11$ in decimal.
 
 !!! question
     **Find the binary representation of an integer**
@@ -70,12 +70,11 @@ Binary representation of numbers are too long and often hard to work with. The 1
 
 Examples: `0x12` (the value is 18, not 12) `0xAF`, `0x2A`, `x20`, `xA4`, `xAC`.
 
-???+ info
+???+ example
     **Hexadecimal representation of bytes**
     
     Notice that each hexadecimal digit is equivalent to 4 binary digits or 4 _bits_ and two hexadecimal digits form a byte (e.g. `0x7A`).
 
-???+ info
     **Hexadecimal representation of colors**
 
     Colors in computer are represented with numbers. Each color has its own unique number. For example, the color white is represented as `0xFFFFFF`, while black is `0x000000`. See this [resource](https://color-hex.org/) for a list of hexadecimal representation of commonly used colors. This hexadecimal color naming format is widely used in HTML and other applications.
