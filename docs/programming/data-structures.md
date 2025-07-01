@@ -1,4 +1,6 @@
-In programs, data is organized based on various scenarios. The techniques of representing data in programs are called data structures. Each data structure vary from the other and are suitable for different scenarios.
+Computer programs solve practically all sorts of problems in all areas, be it business, finance, biology, or physics. For example, a program can find out the shortest path between two nodes in a graph. But programming languages can represent only a few basic data types, like integers, strings, arrays, etc. How does the program understand complex data like a graph?
+
+The techniques of representing data in programs using the basic data types offered by a programming language are called _data structures_. Data structures convert real-world data into a format suitable for processing by a program. Each data structure varies from the other and is suitable for different scenarios.
 
 A few commonly used data structures are the following:
 
