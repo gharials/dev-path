@@ -154,7 +154,7 @@ Any integer $a$ multiplied by itself $b$ times (i.e., $a \times a \times ... \ti
 
 ### Logarithms
 
-Given an integer $a$ and another integer $b$, finding $a^b$ is straightforward, just multiply $a$ by itself $b$ times. However, given an integer $n$ and another integer $a$, sometimes we need to find $b$ such that $a^b = n$. This is called _finding the logarithm of $n$ with base $a$_, denoted as $\log_a n = b$. For example, $\log_2 8 = 3$, because $2^3 = 8$.
+Given an integer $a$ and another integer $b$, finding $a^b$ is straightforward, just multiply $a$ by itself $b$ times. However, sometimes we need to find the opposite: given an integer $n$ and another integer $a$, find $b$ such that $a^b = n$. The integer $b$ for which $a^b = n$ is called _the logarithm of $n$ with base $a$_, denoted as $\log_a n = b$. For example, $\log_2 8 = 3$, because $2^3 = 8$.
 
 In computer science, $2$-based logarithm is used frequently. It is sometimes written as $\lg$ in short (e.g., $\lg n = x$ means $2^x = n$). The following table shows the relationship $2^n$ and $\lg 2^n$:
 
@@ -165,3 +165,6 @@ In computer science, $2$-based logarithm is used frequently. It is sometimes wri
 | $2$ | $4$     | $2$       |
 | $3$ | $8$     | $3$       |
 | $4$ | $16$    | $4$       |
+
+???+ question "Problems"
+    1. What is the relationship between the number of digits in a binary number and its logarithm with base $2$?
