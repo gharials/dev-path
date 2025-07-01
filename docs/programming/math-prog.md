@@ -74,13 +74,23 @@ There are number formats with a base other than the usual 10-based decimal. A pr
 
 Binary representation is $2$-based, meaning it has only two digits: $0$ and $1$. The place value of a binary number increases by a factor of $2$. For example, the binary number $1011$ actually equals $1 × 2^3 + 0 × 2^2 + 1 × 2^1 + 1 × 2^0 = 8 + 0 + 2 + 1 = 11$ in decimal.
 
-!!! question
+!!! question "Problem"
     **Find the binary representation of an integer**
 
     Finding the binary representation of an integer means finding the binary digits of an integer, which is similar to finding all the decimal digits of an integer. In binary, however, the number is successively divided by 2 instead of 10. Try to write a program that finds the binary representation of an integer.
 
 !!! info
     A binary digit is called a _bit_, short for _binary digit_, named by computer scientist [Claude Shannon](https://en.wikipedia.org/wiki/Claude_Shannon). Additionally, 8 bits is called a _byte_ and computers mostly work with bytes.
+
+Notice the following _two special cases_ of binary numbers: the number $2^n$ in binary is a $1$ followed by $n$ number of $0$s, and, the number $2^n - 1$ in binary is $n$ number of $1$s.
+
+| $n$ | $2^n$ in binary | $2^n - 1$ in binary |
+|-----|--------------|-------------------|
+| $0$ | $1$          | $0$               |
+| $1$ | $10$         | $1$               |
+| $2$ | $100$        | $11$              |
+| $3$ | $1000$       | $111$             |
+| $4$ | $10000$      | $1111$            |
 
 ### Hexadecimal numbers
 
