@@ -146,10 +146,22 @@ Consult this [resource](https://brilliant.org/wiki/rule-of-sum-and-rule-of-produ
 
 We often encounter a common counting problem in practice: given we have containers with capacity $m$ and we have $n$ items to put into them, how many containers do we need at least to put all the items? The well known formula for this problem is this: $\lceil n / m \rceil$. This formula is called the _Pigeonhole principle_. Notice that the formula uses the [ceiling function](#the-ceiling-function).
 
-## Logarithms
+## Powers and logarithms
 
-Relationship between power and logarithm: $\log_b n = x$ means $b^x = n$. In other words, _$n$ can be successively divided by $b$ for $x$ times._
+### Powers
 
-For example, $\log_2 8 = 3$ means $2^3 = 8$, or $8$ can be successively divided by $2$ for $3$ times: $8 / 2 = 4$, $4 / 2 = 2$, and $2 / 2 = 1$.
+Any integer $a$ multiplied by itself $b$ times (i.e., $a \times a \times ... \times a$) is expressed as $a^b = n$. It is commonly referred to as $a$ raised to the power of $b$. The formula $a^b = n$ alternatively means _$n$ can be successively divided by $a$ for $b$ times._ For example, $2^3 = 8$ means $8$ can be successively divided by $2$ for $3$ times: $8 / 2 = 4$, $4 / 2 = 2$, and $2 / 2 = 1$.
 
-In computer science, $2$-based logarithm is frequent. It is sometimes written as $\lg$ in short (e.g., $\lg n = x$ means $2^x = n$).
+### Logarithms
+
+Given an integer $a$ and another integer $b$, finding $a^b$ is straightforward, just multiply $a$ by itself $b$ times. However, given an integer $n$ and another integer $a$, sometimes we need to find $b$ such that $a^b = n$. This is called _finding the logarithm of $n$ with base $a$_, denoted as $\log_a n = b$. For example, $\log_2 8 = 3$, because $2^3 = 8$.
+
+In computer science, $2$-based logarithm is used frequently. It is sometimes written as $\lg$ in short (e.g., $\lg n = x$ means $2^x = n$). The following table shows the relationship $2^n$ and $\lg 2^n$:
+
+| $n$ | $2^n$   | $\lg 2^n$ |
+|-----|---------|-----------|
+| $0$ | $1$     | $0$       |
+| $1$ | $2$     | $1$       |
+| $2$ | $4$     | $2$       |
+| $3$ | $8$     | $3$       |
+| $4$ | $16$    | $4$       |
