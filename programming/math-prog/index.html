@@ -502,11 +502,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#powers-and-logarithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powers and logarithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Powers and logarithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#logarithms" class="md-nav__link">
     <span class="md-ellipsis">
       Logarithms
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1095,11 +1119,35 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#powers-and-logarithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powers and logarithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Powers and logarithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#powers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#logarithms" class="md-nav__link">
     <span class="md-ellipsis">
       Logarithms
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1268,10 +1316,48 @@
 <p>Consult this <a href="https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/">resource</a> for details.</p>
 <h3 id="pigeonhole-principle">Pigeonhole principle</h3>
 <p>We often encounter a common counting problem in practice: given we have containers with capacity <span class="arithmatex">\(m\)</span> and we have <span class="arithmatex">\(n\)</span> items to put into them, how many containers do we need at least to put all the items? The well known formula for this problem is this: <span class="arithmatex">\(\lceil n / m \rceil\)</span>. This formula is called the <em>Pigeonhole principle</em>. Notice that the formula uses the <a href="#the-ceiling-function">ceiling function</a>.</p>
-<h2 id="logarithms">Logarithms</h2>
-<p>Relationship between power and logarithm: <span class="arithmatex">\(\log_b n = x\)</span> means <span class="arithmatex">\(b^x = n\)</span>. In other words, <em><span class="arithmatex">\(n\)</span> can be successively divided by <span class="arithmatex">\(b\)</span> for <span class="arithmatex">\(x\)</span> times.</em></p>
-<p>For example, <span class="arithmatex">\(\log_2 8 = 3\)</span> means <span class="arithmatex">\(2^3 = 8\)</span>, or <span class="arithmatex">\(8\)</span> can be successively divided by <span class="arithmatex">\(2\)</span> for <span class="arithmatex">\(3\)</span> times: <span class="arithmatex">\(8 / 2 = 4\)</span>, <span class="arithmatex">\(4 / 2 = 2\)</span>, and <span class="arithmatex">\(2 / 2 = 1\)</span>.</p>
-<p>In computer science, <span class="arithmatex">\(2\)</span>-based logarithm is frequent. It is sometimes written as <span class="arithmatex">\(\lg\)</span> in short (e.g., <span class="arithmatex">\(\lg n = x\)</span> means <span class="arithmatex">\(2^x = n\)</span>).</p>
+<h2 id="powers-and-logarithms">Powers and logarithms</h2>
+<h3 id="powers">Powers</h3>
+<p>Any integer <span class="arithmatex">\(a\)</span> multiplied by itself <span class="arithmatex">\(b\)</span> times (i.e., <span class="arithmatex">\(a \times a \times ... \times a\)</span>) is expressed as <span class="arithmatex">\(a^b = n\)</span>. It is commonly referred to as <span class="arithmatex">\(a\)</span> raised to the power of <span class="arithmatex">\(b\)</span>. The formula <span class="arithmatex">\(a^b = n\)</span> alternatively means <em><span class="arithmatex">\(n\)</span> can be successively divided by <span class="arithmatex">\(a\)</span> for <span class="arithmatex">\(b\)</span> times.</em> For example, <span class="arithmatex">\(2^3 = 8\)</span> means <span class="arithmatex">\(8\)</span> can be successively divided by <span class="arithmatex">\(2\)</span> for <span class="arithmatex">\(3\)</span> times: <span class="arithmatex">\(8 / 2 = 4\)</span>, <span class="arithmatex">\(4 / 2 = 2\)</span>, and <span class="arithmatex">\(2 / 2 = 1\)</span>.</p>
+<h3 id="logarithms">Logarithms</h3>
+<p>Given an integer <span class="arithmatex">\(a\)</span> and another integer <span class="arithmatex">\(b\)</span>, finding <span class="arithmatex">\(a^b\)</span> is straightforward, just multiply <span class="arithmatex">\(a\)</span> by itself <span class="arithmatex">\(b\)</span> times. However, given an integer <span class="arithmatex">\(n\)</span> and another integer <span class="arithmatex">\(a\)</span>, sometimes we need to find <span class="arithmatex">\(b\)</span> such that <span class="arithmatex">\(a^b = n\)</span>. This is called <em>finding the logarithm of <span class="arithmatex">\(n\)</span> with base <span class="arithmatex">\(a\)</span></em>, denoted as <span class="arithmatex">\(\log_a n = b\)</span>. For example, <span class="arithmatex">\(\log_2 8 = 3\)</span>, because <span class="arithmatex">\(2^3 = 8\)</span>.</p>
+<p>In computer science, <span class="arithmatex">\(2\)</span>-based logarithm is used frequently. It is sometimes written as <span class="arithmatex">\(\lg\)</span> in short (e.g., <span class="arithmatex">\(\lg n = x\)</span> means <span class="arithmatex">\(2^x = n\)</span>). The following table shows the relationship <span class="arithmatex">\(2^n\)</span> and <span class="arithmatex">\(\lg 2^n\)</span>:</p>
+<table>
+<thead>
+<tr>
+<th><span class="arithmatex">\(n\)</span></th>
+<th><span class="arithmatex">\(2^n\)</span></th>
+<th><span class="arithmatex">\(\lg 2^n\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(1\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(1\)</span></td>
+<td><span class="arithmatex">\(2\)</span></td>
+<td><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(2\)</span></td>
+<td><span class="arithmatex">\(4\)</span></td>
+<td><span class="arithmatex">\(2\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(3\)</span></td>
+<td><span class="arithmatex">\(8\)</span></td>
+<td><span class="arithmatex">\(3\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(4\)</span></td>
+<td><span class="arithmatex">\(16\)</span></td>
+<td><span class="arithmatex">\(4\)</span></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -1294,7 +1380,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 1, 2025 07:31:55 UTC">July 1, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 1, 2025 09:26:22 UTC">July 1, 2025</span>
   </span>
 
     
