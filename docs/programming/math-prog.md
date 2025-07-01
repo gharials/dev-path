@@ -46,6 +46,8 @@ The ceiling of any real number is the smallest integer greater than or equal to 
 
 ## Modular arithmetic
 
+When an integer $n$ is divided by another integer $m$, it can have a remainder $r$. It is expressed in this formula $n = m \times q + r$, where $q$ is the quotient. As we will see, the remainder of the division is important in practice.
+
 ### The modulo operator
 
 $a \mod m = r$ (pronounced $a$ modulo/mod $m$ equals $r$) means that $r$ is the remainder after dividing $a$ with $m$. Example: $14 \mod 3 = 2$.
@@ -60,7 +62,7 @@ In programming languages the `%` operator is used as the modulus operator. Examp
         1. Given an integer $n$, print all of its digits.
         2. Given an integer $n$, find the integer that is found by reversing the digits of $n$.
     3. Pagination.
-        1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements?
+        1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements? (This formula is also known as _Pigeonhole principle_.)
         2. Given that a page can contain $k$ elements, which page does the $i$-th element belong to?
         3. Given that a page can contain $k$ rows, do the $i$-th and $j$-th elements belong to the same rows in their respective pages?
 
