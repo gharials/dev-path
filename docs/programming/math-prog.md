@@ -62,7 +62,7 @@ In programming languages the `%` operator is used as the modulus operator. Examp
         1. Given an integer $n$, print all of its digits.
         2. Given an integer $n$, find the integer that is found by reversing the digits of $n$.
     3. Pagination.
-        1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements? (This formula is also known as _Pigeonhole principle_.)
+        1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements? (This formula is also known as [_Pigeonhole principle_](#pigeonhole-principle).)
         2. Given that a page can contain $k$ elements, which page does the $i$-th element belong to?
         3. Given that a page can contain $k$ rows, do the $i$-th and $j$-th elements belong to the same rows in their respective pages?
 
@@ -141,6 +141,10 @@ For example, you have to travel from city $A$ to $C$ via city $B$. From city $A$
        ```
 
 Consult this [resource](https://brilliant.org/wiki/rule-of-sum-and-rule-of-product-problem-solving/) for details.
+ 
+### Pigeonhole principle
+
+We often encounter a common counting problem in practice: given we have containers with capacity $m$ and we have $n$ items to put into them, how many containers do we need at least to put all the items? The well known formula for this problem is this: $\lceil n / m \rceil$. This formula is called the _Pigeonhole principle_. Notice that the formula uses the [ceiling function](#the-ceiling-function).
 
 ## Logarithms
 
