@@ -3,27 +3,13 @@
 !!! info "Prerequisite"
     Have a look at the [How Web Pages Work](../internet-web/web-pages.md) article as a prerequisite to this article.
 
-As we have [seen earlier](../internet-web/web-pages.md), a web page consists of its view and its logic. The view displays the data to the user, while the logic handles user interactions and updates the view accordingly. HTML and CSS takes care of the view, while JavaScript handles the logic.
-
-In traditional web development, for each web page, developers create a large single HTML file with embedded JavaScript to generate dynamic content. In this approach, it becomes harder to add new features and fixing bugs as the application becomes larger.
+In traditional web development, for each web page, developers create a single large HTML file and links CSS and JavaScript to it. In this approach, it becomes harder to add new features and to fix bugs as the application becomes larger.
 
 React framework promotes a _modular development_ approach, meaning developing a web page in small components instead of a large single HTML file. Each component contains a part of the web page. React merges the components into a single HTML file before sending it to the user.
 
-JavaScript functions generating parts of the HTML document instead of programmers writing the HTML themselves.
+## React components
 
-## Fundamental React concepts
-
-* Components.
-
-## Components
-
-Contains the view and its logic in the same place.
-
-### JSX
-
-React uses JSX, a syntax extension that allows writing HTML-like code within JavaScript. JSX makes it easier to visualize the UI structure and is transformed into JavaScript function calls.
-
-JavaScript expression can be embedded in JSX using curly braces `{}`.
+Component is the most important React concept. A component is a JavaScript function that creates a part of a web page whenever it is called. Here follows how a basic React component function looks like:
 
 ```javascript
 import React from 'react';
@@ -40,9 +26,11 @@ function App() {
 export default App;
 ```
 
+A component function returns JSX instead of HTML. JSX is an extension of HTML, which allows using JavaScript expression within HTML.
+
 ## How React generates web pages with components
 
-We only define the component functions, but how does React generated HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief summary of the process.
+We only define the component functions, but how does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief summary of the process.
 
 1. Some event initiates a render. This phase is called _trigger._
 2. After a trigger, React generates the HTML portion string by calling each component function. This phase is called _rendering._
