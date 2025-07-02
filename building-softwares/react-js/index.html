@@ -776,37 +776,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#fundamental-react-concepts" class="md-nav__link">
+  <a href="#react-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Fundamental React concepts
+      React components
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#components" class="md-nav__link">
+  <a href="#how-react-generates-web-pages-with-components" class="md-nav__link">
     <span class="md-ellipsis">
-      Components
+      How React generates web pages with components
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Components">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-react-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with React components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working with React components">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#jsx" class="md-nav__link">
+  <a href="#structure-of-component-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      JSX
+      Structure of component functions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#component-functions" class="md-nav__link">
+  <a href="#react-components-as-pure-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Component functions
+      React components as pure functions
     </span>
   </a>
   
@@ -919,19 +928,10 @@
 <p class="admonition-title">Prerequisite</p>
 <p>Have a look at the <a href="../../internet-web/web-pages/">How Web Pages Work</a> article as a prerequisite to this article.</p>
 </div>
-<p>As we have <a href="../../internet-web/web-pages/">seen earlier</a>, a web page consists of its view and its logic. The view displays the data to the user, while the logic handles user interactions and updates the view accordingly. HTML and CSS takes care of the view, while JavaScript handles the logic.</p>
-<p>In traditional web development, for each web page, developers create a large single HTML file with embedded JavaScript to generate dynamic content. In this approach, it becomes harder to add new features and fixing bugs as the application becomes larger.</p>
+<p>In traditional web development, for each web page, developers create a single large HTML file and links CSS and JavaScript to it. In this approach, it becomes harder to add new features and to fix bugs as the application becomes larger.</p>
 <p>React framework promotes a <em>modular development</em> approach, meaning developing a web page in small components instead of a large single HTML file. Each component contains a part of the web page. React merges the components into a single HTML file before sending it to the user.</p>
-<p>JavaScript functions generating parts of the HTML document instead of programmers writing the HTML themselves.</p>
-<h2 id="fundamental-react-concepts">Fundamental React concepts</h2>
-<ul>
-<li>Components.</li>
-</ul>
-<h2 id="components">Components</h2>
-<p>Contains the view and its logic in the same place.</p>
-<h3 id="jsx">JSX</h3>
-<p>React uses JSX, a syntax extension that allows writing HTML-like code within JavaScript. JSX makes it easier to visualize the UI structure and is transformed into JavaScript function calls.</p>
-<p>JavaScript expression can be embedded in JSX using curly braces <code>{}</code>.</p>
+<h2 id="react-components">React components</h2>
+<p>Component is the most important React concept. A component is a JavaScript function that creates a part of a web page whenever it is called. Here follows how a basic React component function looks like:</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -945,8 +945,22 @@
 
 <span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
-<h3 id="component-functions">Component functions</h3>
-<p>Functions returning JSX are called components.</p>
+<p>A component function returns JSX instead of HTML. JSX is an extension of HTML, which allows using JavaScript expression within HTML.</p>
+<h2 id="how-react-generates-web-pages-with-components">How React generates web pages with components</h2>
+<p>In a React project, we only define the component functions, but how does React generate HTML from them? It is documented in <a href="https://react.dev/learn/render-and-commit">official React docs</a>. Here follows a brief overview of how a web page is created by React from component:</p>
+<ol>
+<li>When a user requests for a web page, React finds out the respective component. This phase is called <em>trigger.</em></li>
+<li>After a trigger, React generates the HTML string by calling the component function. This phase is called <em>rendering.</em></li>
+<li>Then it adds the generated HTML portion into the HTML DOM using <a href="https://www.w3schools.com/jsref/met_document_createelement.asp"><code>appendChild</code></a> so that it becomes visible in the HTML page. This phase is called <em>commit.</em> .</li>
+</ol>
+<p>While rendering a component, if React finds out that it contains child components, it triggers their rendering too. Those components also go through the <em>trigger</em>, <em>render</em>, and <em>commit</em> phases.</p>
+<h2 id="working-with-react-components">Working with React components</h2>
+<h3 id="structure-of-component-functions">Structure of component functions</h3>
+<ol>
+<li>Component function returns JSX. Doesn't modify anything.</li>
+<li>Event handler functions, not called during render, modify state only after the component is rendered and committed.</li>
+</ol>
+<h3 id="react-components-as-pure-functions">React components as pure functions</h3>
 <h3 id="props">Props</h3>
 <p>Parameterized components. Making components reusable.</p>
 <p>Just as parameterized functions allow them to be used for different inputs, components with props also allow them to be used for different data.</p>
@@ -1082,7 +1096,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2025 00:19:14 UTC">July 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2025 10:16:38 UTC">July 2, 2025</span>
   </span>
 
     
