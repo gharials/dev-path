@@ -1,13 +1,23 @@
-# React JS
+# Building web applications with React JS
 
-!!! info
+!!! info "Prerequisite"
     Have a look at the [How Web Pages Work](../internet-web/web-pages.md) article as a prerequisite to this article.
 
-Generating HTML using JavaScript functions demo.
+As we have [seen earlier](../internet-web/web-pages.md), a web page consists of its view and its logic. The view displays the data to the user, while the logic handles user interactions and updates the view accordingly. HTML and CSS takes care of the view, while JavaScript handles the logic.
 
-Components instead of a large single HTML file. JavaScript functions generating parts of the HTML document.
+In traditional web development, for each web page, developers create a large single HTML file with embedded JavaScript to generate dynamic content. In this approach, it becomes harder to add new features and fixing bugs as the application becomes larger.
+
+React framework promotes a _modular development_ approach, meaning developing a web page in small components instead of a large single HTML file. Each component contains a part of the web page. React merges the components into a single HTML file before sending it to the user.
+
+JavaScript functions generating parts of the HTML document instead of programmers writing the HTML themselves.
+
+## Fundamental React concepts
+
+* Components.
 
 ## Components
+
+Contains the view and its logic in the same place.
 
 ### JSX
 
@@ -64,6 +74,14 @@ export default App;
 ## Hooks
 
 ### State variables
+
+A component consists of a view and its logic. The view is rendered based on the data it has. When the data changes, the view should also change to reflect the new data.
+
+Due to some user interactions (e.g. click), some data in a component may change. We may want the change to be reflected in the UI.
+
+For example, a counter component that increments a number each time a button is clicked. Each time the button is clicked, the number should increase by one, and the UI should update to show the new number.
+
+This cannot be achieved by ordinary variables, as they do not trigger re-renders when changed. React provides a way to manage such data using state variables.
 
 Trigger re-renders when changed.
 
@@ -129,9 +147,17 @@ function Timer() {
 }
 ```
 
+Effects, code that must execute after the component is rendered, are passed as a callback to the `useEffect` function.
+
+Note that effects run _after the component is rendered._ For example, here's how an effect calling an API works: render the blank or placeholder JSX and update the state variables with values fetched from a server after that.
+
 ## Routing
 
+A large web application consists of many web pages. Some process requires moving between multiple pages.
+
 Some components are associated with specific URLs, allowing navigation between different views in a single-page application (SPA). React Router is a popular library for handling routing in React applications.
+
+Registering a component in a router means this component will be available in this URL.
 
 ```javascript
 import React from 'react';
@@ -159,3 +185,9 @@ export default App;
 ```
 
 ## Client-side Rendering (CSR) and Server-side Rendering (SSR)
+
+Generating HTML using JavaScript functions demo.
+
+## React workflow
+
+Divide planned web pages into components and develop the components first. Then compose the components together.
