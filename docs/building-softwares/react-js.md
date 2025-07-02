@@ -40,9 +40,24 @@ function App() {
 export default App;
 ```
 
-### Component functions
+## How React generates web pages with components
 
-Functions returning JSX are called components.
+We only define the component functions, but how does React generated HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief summary of the process.
+
+1. Some event initiates a render. This phase is called _trigger._
+2. After a trigger, React generates the HTML portion string by calling each component function. This phase is called _rendering._
+3. Then it adds or updates the generated HTML portion into the HTML DOM. This phase is called _commit._
+    1. For the first render adds with [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp).
+    2. For re-renders due to some event it updates the element.
+
+## Working with React components
+
+### Structure of component functions
+
+1. Component function returns JSX. Doesn't modify anything.
+2. Event handler functions, not called during render, modify state only after the component is rendered and committed.
+
+### React components as pure functions
 
 ### Props
 
