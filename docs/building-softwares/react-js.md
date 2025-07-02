@@ -30,13 +30,13 @@ A component function returns JSX instead of HTML. JSX is an extension of HTML, w
 
 ## How React generates web pages with components
 
-We only define the component functions, but how does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief summary of the process.
+In a React project, we only define the component functions, but how does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief overview of how a web page is created by React from component:
 
-1. Some event initiates a render. This phase is called _trigger._
-2. After a trigger, React generates the HTML portion string by calling each component function. This phase is called _rendering._
-3. Then it adds or updates the generated HTML portion into the HTML DOM. This phase is called _commit._
-    1. For the first render adds with [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp).
-    2. For re-renders due to some event it updates the element.
+1. When a user requests for a web page, React finds out the respective component. This phase is called _trigger._
+2. After a trigger, React generates the HTML string by calling the component function. This phase is called _rendering._
+3. Then it adds the generated HTML portion into the HTML DOM using [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp) so that it becomes visible in the HTML page. This phase is called _commit._ .
+
+While rendering a component, if React finds out that it contains child components, it triggers their rendering too. Those components also go through the _trigger_, _render_, and _commit_ phases.
 
 ## Working with React components
 
