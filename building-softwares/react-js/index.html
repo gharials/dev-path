@@ -18,7 +18,7 @@
     
     
       
-        <title>React JS - Developer's Path</title>
+        <title>Building web applications with React JS - Developer's Path</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#react-js" class="md-skip">
+        <a href="#building-web-applications-with-react-js" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              React JS
+              Building web applications with React JS
             
           </span>
         </div>
@@ -776,6 +776,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#fundamental-react-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fundamental React concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#components" class="md-nav__link">
     <span class="md-ellipsis">
       Components
@@ -877,6 +886,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#react-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      React workflow
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -896,14 +914,21 @@
   
 
 
-<h1 id="react-js">React JS</h1>
+<h1 id="building-web-applications-with-react-js">Building web applications with React JS</h1>
 <div class="admonition info">
-<p class="admonition-title">Info</p>
+<p class="admonition-title">Prerequisite</p>
 <p>Have a look at the <a href="../../internet-web/web-pages/">How Web Pages Work</a> article as a prerequisite to this article.</p>
 </div>
-<p>Generating HTML using JavaScript functions demo.</p>
-<p>Components instead of a large single HTML file. JavaScript functions generating parts of the HTML document.</p>
+<p>As we have <a href="../../internet-web/web-pages/">seen earlier</a>, a web page consists of its view and its logic. The view displays the data to the user, while the logic handles user interactions and updates the view accordingly. HTML and CSS takes care of the view, while JavaScript handles the logic.</p>
+<p>In traditional web development, for each web page, developers create a large single HTML file with embedded JavaScript to generate dynamic content. In this approach, it becomes harder to add new features and fixing bugs as the application becomes larger.</p>
+<p>React framework promotes a <em>modular development</em> approach, meaning developing a web page in small components instead of a large single HTML file. Each component contains a part of the web page. React merges the components into a single HTML file before sending it to the user.</p>
+<p>JavaScript functions generating parts of the HTML document instead of programmers writing the HTML themselves.</p>
+<h2 id="fundamental-react-concepts">Fundamental React concepts</h2>
+<ul>
+<li>Components.</li>
+</ul>
 <h2 id="components">Components</h2>
+<p>Contains the view and its logic in the same place.</p>
 <h3 id="jsx">JSX</h3>
 <p>React uses JSX, a syntax extension that allows writing HTML-like code within JavaScript. JSX makes it easier to visualize the UI structure and is transformed into JavaScript function calls.</p>
 <p>JavaScript expression can be embedded in JSX using curly braces <code>{}</code>.</p>
@@ -945,6 +970,10 @@
 </code></pre></div>
 <h2 id="hooks">Hooks</h2>
 <h3 id="state-variables">State variables</h3>
+<p>A component consists of a view and its logic. The view is rendered based on the data it has. When the data changes, the view should also change to reflect the new data.</p>
+<p>Due to some user interactions (e.g. click), some data in a component may change. We may want the change to be reflected in the UI.</p>
+<p>For example, a counter component that increments a number each time a button is clicked. Each time the button is clicked, the number should increase by one, and the UI should update to show the new number.</p>
+<p>This cannot be achieved by ordinary variables, as they do not trigger re-renders when changed. React provides a way to manage such data using state variables.</p>
 <p>Trigger re-renders when changed.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 
@@ -998,8 +1027,12 @@
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Timer</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">running</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Effects, code that must execute after the component is rendered, are passed as a callback to the <code>useEffect</code> function.</p>
+<p>Note that effects run <em>after the component is rendered.</em> For example, here's how an effect calling an API works: render the blank or placeholder JSX and update the state variables with values fetched from a server after that.</p>
 <h2 id="routing">Routing</h2>
+<p>A large web application consists of many web pages. Some process requires moving between multiple pages.</p>
 <p>Some components are associated with specific URLs, allowing navigation between different views in a single-page application (SPA). React Router is a popular library for handling routing in React applications.</p>
+<p>Registering a component in a router means this component will be available in this URL.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BrowserRouter</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">Router</span><span class="p">,</span><span class="w"> </span><span class="nx">Route</span><span class="p">,</span><span class="w"> </span><span class="nx">Switch</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
 
@@ -1024,6 +1057,9 @@
 <span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="client-side-rendering-csr-and-server-side-rendering-ssr">Client-side Rendering (CSR) and Server-side Rendering (SSR)</h2>
+<p>Generating HTML using JavaScript functions demo.</p>
+<h2 id="react-workflow">React workflow</h2>
+<p>Divide planned web pages into components and develop the components first. Then compose the components together.</p>
 
 
 
@@ -1046,7 +1082,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 23, 2025 05:19:04 UTC">June 23, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2025 00:19:14 UTC">July 2, 2025</span>
   </span>
 
     
