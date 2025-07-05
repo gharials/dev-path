@@ -42,7 +42,7 @@ While rendering a component, if React finds out that it contains child component
 
 ### General structure of a component
 
-```javascript hl_lines="4-8"
+```javascript hl_lines="4-8 10-15"
 import React, { useState } from 'react';
 
 function Counter() {
