@@ -70,16 +70,16 @@ Note importantly that _the function doesn't modify any variables (props, state v
 
 ### Reusing components with props
 
-Parameterized components. Making components reusable.
+We have already learned, React component functions produce parts of a web page. In many web pages, we often see _repeated parts with different data._ For example, a bus ticket booking website may display a list of available buses in a list of cards. Each card is same in structure but contain different data for different buses.
 
-Just as parameterized functions allow them to be used for different inputs, components with props also allow them to be used for different data.
+For such scenarios, React uses parameterized components, making components _reusable_. Parametrized components define a parameter called `props` (short for properties). Properties of the `props` variable are the data passed by the valler. Just as parameterized functions can be used for different inputs, components with props also can be used for different data.
 
-Props are passed to components as attributes in JSX.
+As the following example shows, props are passed to components as attributes in JSX.
 
 ```javascript
 import React from 'react';
 
-function Greeting(props) { // can also use destructuring: ({ name })
+function Greeting(props) { // can be simplified with destructuring: ({ name })
   return <h1>Hello, {props.name}!</h1>;
 }
 
