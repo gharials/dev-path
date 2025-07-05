@@ -869,15 +869,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#routing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Routing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#client-side-rendering-csr-and-server-side-rendering-ssr" class="md-nav__link">
     <span class="md-ellipsis">
       Client-side Rendering (CSR) and Server-side Rendering (SSR)
@@ -1035,50 +1026,56 @@
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="effects">Effects</h3>
-<p>Effects allow you to perform side effects in function components, such as data fetching, subscriptions, or manually changing the DOM. They run after the render phase.</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<p>Notice that the general structure of components raises a question. If we want the component to re-render after some user event (e.g. click), it is simple: we define the change in an event handler. But sometimes we may need to re-render a component after a nonuser event.</p>
+<p>Some components initialize only with props passed to it, but some also need external data. For example, a component has several state variables for displaying the details of a student. It receives a student id as a prop, then it has to fetch the student details from an API and update the state variables. Notice that these changes do not happen as a result of any event, like a click, so event handlers are not suitable here.</p>
+<p>In React components, such changes have to be passed as a callback to <code>useEffect</code> function. React will execute the callback <em>after rendering and committing the component.</em> In other words, a component renders first with the default state variables. After that, the effect runs and sets the state variable values.</p>
+<p>```javascript hl_lines=[7-9]
+import React, { useState, useEffect } from 'react';</p>
+<p>function StudentDetails({ id }) {
+  const [name, setName] = useState("");
+  const [roll, setRoll] = useState("");</p>
+<p>useEffect(() =&gt; {
+    // call API with 'id' and update state variables: 'name' and 'roll'
+  }, []);</p>
+<p>return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Roll: {roll}</p>
+    </div>
+  );
+}
+<div class="highlight"><pre><span></span><code>## Routing
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">Timer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">useEffect</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setInterval</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Timer tick&#39;</span><span class="p">);</span>
-<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
+A large web application consists of many web pages. Some process requires moving between multiple pages.
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Cleanup on unmount</span>
-<span class="w">  </span><span class="p">},</span><span class="w"> </span><span class="p">[]);</span><span class="w"> </span><span class="c1">// Empty dependency array means this effect runs once</span>
+Some components are associated with specific URLs, allowing navigation between different views in a single-page application (SPA). React Router is a popular library for handling routing in React applications.
 
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Timer</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">running</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Effects, code that must execute after the component is rendered, are passed as a callback to the <code>useEffect</code> function.</p>
-<p>Note that effects run <em>after the component is rendered.</em> For example, here's how an effect calling an API works: render the blank or placeholder JSX and update the state variables with values fetched from a server after that.</p>
-<h2 id="routing">Routing</h2>
-<p>A large web application consists of many web pages. Some process requires moving between multiple pages.</p>
-<p>Some components are associated with specific URLs, allowing navigation between different views in a single-page application (SPA). React Router is a popular library for handling routing in React applications.</p>
-<p>Registering a component in a router means this component will be available in this URL.</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BrowserRouter</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">Router</span><span class="p">,</span><span class="w"> </span><span class="nx">Route</span><span class="p">,</span><span class="w"> </span><span class="nx">Switch</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+Registering a component in a router means this component will be available in this URL.
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">Home</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Home</span><span class="o">&lt;</span><span class="err">/h2&gt;;</span>
-<span class="p">}</span>
+```javascript
+import React from &#39;react&#39;;
+import { BrowserRouter as Router, Route, Switch } from &#39;react-router-dom&#39;;
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">About</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="err">/h2&gt;;</span>
-<span class="p">}</span>
+function Home() {
+  return &lt;h2&gt;Home&lt;/h2&gt;;
+}
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nx">Router</span><span class="o">&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">Switch</span><span class="o">&gt;</span>
-<span class="w">        </span><span class="o">&lt;</span><span class="nx">Route</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s2">&quot;/about&quot;</span><span class="w"> </span><span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">About</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
-<span class="w">        </span><span class="o">&lt;</span><span class="nx">Route</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="w"> </span><span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="err">/Switch&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="err">/Router&gt;</span>
-<span class="w">  </span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
-</code></pre></div>
+function About() {
+  return &lt;h2&gt;About&lt;/h2&gt;;
+}
+
+function App() {
+  return (
+    &lt;Router&gt;
+      &lt;Switch&gt;
+        &lt;Route path=&quot;/about&quot; component={About} /&gt;
+        &lt;Route path=&quot;/&quot; component={Home} /&gt;
+      &lt;/Switch&gt;
+    &lt;/Router&gt;
+  );
+}
+export default App;
+</code></pre></div></p>
 <h2 id="client-side-rendering-csr-and-server-side-rendering-ssr">Client-side Rendering (CSR) and Server-side Rendering (SSR)</h2>
 <p>Generating HTML using JavaScript functions demo.</p>
 <h2 id="react-workflow">React workflow</h2>
@@ -1105,7 +1102,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 5, 2025 09:07:34 UTC">July 5, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 5, 2025 09:30:14 UTC">July 5, 2025</span>
   </span>
 
     
