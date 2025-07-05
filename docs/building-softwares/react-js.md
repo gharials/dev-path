@@ -40,12 +40,33 @@ While rendering a component, if React finds out that it contains child component
 
 ## Working with React components
 
-### Structure of component functions
+### General structure of a component
 
-1. Component function returns JSX. Doesn't modify anything.
-2. Event handler functions, not called during render, modify state only after the component is rendered and committed.
+```javascript
+import React, { useState } from 'react';
 
-### React components as pure functions
+function Counter() {
+  const [count, setCount] = useState(0);
+  
+  let increment= () => {
+    setCount(count + 1)
+  }
+  
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={increment()}>Click me</button>
+    </div>
+  );
+}
+```
+
+Just as the preceding example shows, any React component generally has two parts. In the first part, the component function performs some declarations (e.g. state variables, event handler functions, etc.), and in the last part, it returns a JSX.
+
+Note importantly that _the function doesn't modify any variables (props, state variables, or ref variables) in its body_, it only declares the event handler functions that modify variables. Because a component function only _prepares_ the component, modification can _happen only after the component is rendered._
+
+???+ question "Problem"
+    Try modifying a prop or a state variable in the component function body, and see the error you get.
 
 ### Props
 
