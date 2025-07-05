@@ -153,27 +153,31 @@ function Timer() {
 
 ### Effects
 
-Effects allow you to perform side effects in function components, such as data fetching, subscriptions, or manually changing the DOM. They run after the render phase.
+Notice that the general structure of components raises a question. If we want the component to re-render after some user event (e.g. click), it is simple: we define the change in an event handler. But sometimes we may need to re-render a component after a nonuser event.
 
-```javascript
-import React, { useEffect } from 'react';
+Some components initialize only with props passed to it, but some also need external data. For example, a component has several state variables for displaying the details of a student. It receives a student id as a prop, then it has to fetch the student details from an API and update the state variables. Notice that these changes do not happen as a result of any event, like a click, so event handlers are not suitable here.
 
-function Timer() {
+In React components, such changes have to be passed as a callback to `useEffect` function. React will execute the callback _after rendering and committing the component._ In other words, a component renders first with the default state variables. After that, the effect runs and sets the state variable values.
+
+```javascript hl_lines=[7-9]
+import React, { useState, useEffect } from 'react';
+
+function StudentDetails({ id }) {
+  const [name, setName] = useState("");
+  const [roll, setRoll] = useState("");
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      console.log('Timer tick');
-    }, 1000);
+    // call API with 'id' and update state variables: 'name' and 'roll'
+  }, []);
 
-    return () => clearInterval(timer); // Cleanup on unmount
-  }, []); // Empty dependency array means this effect runs once
-
-  return <div>Timer is running</div>;
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Roll: {roll}</p>
+    </div>
+  );
 }
 ```
-
-Effects, code that must execute after the component is rendered, are passed as a callback to the `useEffect` function.
-
-Note that effects run _after the component is rendered._ For example, here's how an effect calling an API works: render the blank or placeholder JSX and update the state variables with values fetched from a server after that.
 
 ## Routing
 
