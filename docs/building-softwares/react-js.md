@@ -159,7 +159,7 @@ Some components initialize only with props passed to it, but some also need exte
 
 In React components, such changes have to be passed as a callback to `useEffect` function. React will execute the callback _after rendering and committing the component._ In other words, a component renders first with the default state variables. After that, the effect runs and sets the state variable values.
 
-```javascript hl_lines=[7-9]
+```javascript hl_lines="7-9"
 import React, { useState, useEffect } from 'react';
 
 function StudentDetails({ id }) {
