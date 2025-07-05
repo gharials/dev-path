@@ -68,7 +68,7 @@ Note importantly that _the function doesn't modify any variables (props, state v
 ???+ question "Problem"
     Try modifying a prop or a state variable in the component function body, and see the error you get.
 
-### Props
+### Reusing components with props
 
 Parameterized components. Making components reusable.
 
