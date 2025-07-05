@@ -804,18 +804,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#structure-of-component-functions" class="md-nav__link">
+  <a href="#general-structure-of-a-component" class="md-nav__link">
     <span class="md-ellipsis">
-      Structure of component functions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#react-components-as-pure-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      React components as pure functions
+      General structure of a component
     </span>
   </a>
   
@@ -955,12 +946,30 @@
 </ol>
 <p>While rendering a component, if React finds out that it contains child components, it triggers their rendering too. Those components also go through the <em>trigger</em>, <em>render</em>, and <em>commit</em> phases.</p>
 <h2 id="working-with-react-components">Working with React components</h2>
-<h3 id="structure-of-component-functions">Structure of component functions</h3>
-<ol>
-<li>Component function returns JSX. Doesn't modify anything.</li>
-<li>Event handler functions, not called during render, modify state only after the component is rendered and committed.</li>
-</ol>
-<h3 id="react-components-as-pure-functions">React components as pure functions</h3>
+<h3 id="general-structure-of-a-component">General structure of a component</h3>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">Counter</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">count</span><span class="p">,</span><span class="w"> </span><span class="nx">setCount</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">increment</span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">setCount</span><span class="p">(</span><span class="nx">count</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">You</span><span class="w"> </span><span class="nx">clicked</span><span class="w"> </span><span class="p">{</span><span class="nx">count</span><span class="p">}</span><span class="w"> </span><span class="nx">times</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">increment</span><span class="p">()}</span><span class="o">&gt;</span><span class="nx">Click</span><span class="w"> </span><span class="nx">me</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Just as the preceding example shows, any React component generally has two parts. In the first part, the component function performs some declarations (e.g. state variables, event handler functions, etc.), and in the last part, it returns a JSX.</p>
+<p>Note importantly that <em>the function doesn't modify any variables (props, state variables, or ref variables) in its body</em>, it only declares the event handler functions that modify variables. Because a component function only <em>prepares</em> the component, modification can <em>happen only after the component is rendered.</em></p>
+<details class="question" open="open">
+<summary>Problem</summary>
+<p>Try modifying a prop or a state variable in the component function body, and see the error you get.</p>
+</details>
 <h3 id="props">Props</h3>
 <p>Parameterized components. Making components reusable.</p>
 <p>Just as parameterized functions allow them to be used for different inputs, components with props also allow them to be used for different data.</p>
@@ -1096,7 +1105,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 2, 2025 10:16:38 UTC">July 2, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 5, 2025 08:59:31 UTC">July 5, 2025</span>
   </span>
 
     
@@ -1127,6 +1136,11 @@
         <a href="https://github.com/fnasimbd" class="md-author" title="@fnasimbd">
           
           <img src="https://avatars.githubusercontent.com/u/3830158?v=4&size=72" alt="fnasimbd">
+        </a>
+      
+        <a href="https://github.com/web-flow" class="md-author" title="@web-flow">
+          
+          <img src="https://avatars.githubusercontent.com/u/19864447?v=4&size=72" alt="web-flow">
         </a>
       
       
