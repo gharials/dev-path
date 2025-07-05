@@ -61,7 +61,7 @@ function Counter() {
 }
 ```
 
-Just as the preceding example shows, any React component generally has two parts. In the first part, the component function performs some declarations (e.g. state variables, event handler functions, etc.), and in the last part, it returns a JSX.
+Just as the preceding example shows, any React component generally has two parts. In the first part, the component function performs some declarations (e.g. state variables, event handler functions, etc.), and in the last part, it returns a JSX. Depending on situation, a component may have more variables and event handlers, and the JSX may be larger, but the general structure remains the same.
 
 Note importantly that _the function doesn't modify any variables (props, state variables, or ref variables) in its body_, it only declares the event handler functions that modify variables. Because a component function only _prepares_ the component, modification can _happen only after the component is rendered._
 
