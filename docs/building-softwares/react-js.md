@@ -126,7 +126,9 @@ function Counter() {
 
 #### Ref variables
 
-Doesn't trigger re-renders when changed, but lives across re-renders. 
+A component may also contain data that are not displayed. Their values may change with events, but the updated values don't need to be displayed. In other words, they _do not trigger re-renders when their values change_. Moreover, we want those _data to be preserved after any re-render._
+
+Ordinary JavaScript variables are not suitable for this purpose either, because they are lost after a re-render.
 
 ```javascript
 import React, { useRef } from 'react';
@@ -148,6 +150,9 @@ function Timer() {
   );
 }
 ```
+
+???+ question "Exercise"
+    Try using an ordinary JavaScript variable instead of a Ref for the same purpose and see what happens.
 
 ### Effects: re-rendering components without events
 
@@ -177,7 +182,7 @@ function StudentDetails({ id }) {
 }
 ```
 
-## Routing
+## Routing: navigating among components
 
 A large web application consists of many web pages. Some process requires moving between multiple pages.
 
