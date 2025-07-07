@@ -95,19 +95,17 @@ function App() {
 export default App;
 ```
 
-## Hooks
+### Managing data in components
 
-### State variables
+A component contains data too. A component broadly contains two kinds of data: first, data that require re-rendering when changed, and second, data that don't require a re-render when they are changed.
 
-A component consists of a view and its logic. The view is rendered based on the data it has. When the data changes, the view should also change to reflect the new data.
+#### State variables
 
-Due to some user interactions (e.g. click), some data in a component may change. We may want the change to be reflected in the UI.
+Some components start by displaying some initial value as data, and after that user interactions (e.g., clicks) may change the data. We want the updated value to be displayed in the UI. For example, a counter component displays 0 as its initial count, and each time a button is clicked, the count increments by 1. After each click, the component should show the updated count. Displaying the updated count requires _re-rendering_ the component.
 
-For example, a counter component that increments a number each time a button is clicked. Each time the button is clicked, the number should increase by one, and the UI should update to show the new number.
+This cannot be achieved with ordinary JavaScript variables, because they do not trigger re-renders when their values change. In React, such data must be declared as _state variables._ State variables mean variables that trigger a re-render of the component when their values change.
 
-This cannot be achieved by ordinary variables, as they do not trigger re-renders when changed. React provides a way to manage such data using state variables.
-
-Trigger re-renders when changed.
+In the following example, `count` is declared as a state variable. A state variable is declared by calling the `useState` hook function. The function takes the initial value of the variable as a parameter and returns a variable and a function for updating the variable.
 
 ```javascript
 import React, { useState } from 'react';
@@ -126,7 +124,7 @@ function Counter() {
 }
 ```
 
-### Ref variables
+#### Ref variables
 
 Doesn't trigger re-renders when changed, but lives across re-renders. 
 
