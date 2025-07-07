@@ -149,9 +149,9 @@ function Timer() {
 }
 ```
 
-### Effects
+### Effects: re-rendering components without events
 
-Notice that the general structure of components raises a question. If we want the component to re-render after some user event (e.g. click), it is simple: we define the change in an event handler. But sometimes we may need to re-render a component after a nonuser event.
+Notice that the [general structure of components](#general-structure-of-a-component) raises a question. If we want the component to re-render after some user event (e.g. click), it is simple: we define the change in an event handler. But sometimes we may need to re-render a component after a nonuser event.
 
 Some components initialize only with props passed to it, but some also need external data. For example, a component has several state variables for displaying the details of a student. It receives a student id as a prop, then it has to fetch the student details from an API and update the state variables. Notice that these changes do not happen as a result of any event, like a click, so event handlers are not suitable here.
 
