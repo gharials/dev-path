@@ -74,7 +74,7 @@ We have already learned, React component functions produce parts of a web page. 
 
 ![image: bus cards](../images/bus-tickets.jpg)
 
-For such scenarios, React uses parameterized components, making components _reusable_, meaning define the component once and use it many times with different data. Parameterized components define a parameter called `props` (short for properties). Properties of the `props` variable are the data passed by the caller. Just as parameterized functions can be used for different inputs, components with props also can be used for different data.
+For such scenarios, we need components whose parts are variable. In React it is done with parameterized components. Parameterized components define a parameter called `props` (short for properties). Callers of the component pass the variable parts as properties of the `props` parameter. Just as parameterized functions can be used for different inputs, components with props can also be used for different data. Such components are _reusable_, meaning a component is defined once and used many times with different data.
 
 The following example shows how props are passed to components. Notice that parameters are passed to the `Greetings` component as attributes.
 
