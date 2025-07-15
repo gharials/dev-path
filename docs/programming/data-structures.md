@@ -11,6 +11,25 @@ A few commonly used data structures are the following:
 5. Maps.
 6. Graphs.
 
+## Strings
+
+???+ question "Problems"
+    1. Given a string, count the number of words in it.
+    2. Finding substrings.
+        1. Given a string, find its substring from index $i$ to $j$.
+        2. Given a string, find a substring of length $n$ starting from index $k$.
+    3. Palindromes (strings that read the same in both directions).
+        1. Given a string containing no spaces, check whether it is a palindrome or not.
+        2. Given a string containing no spaces, check whether the substring of length $n$ starting from index $k$ is a palindrome or not.
+    4. Given two strings containing no spaces, check whether they are _anagrams_ (characters of one string can be rearranged into another) of each other or not.
+    5. Given a string, divide it into multiple strings each of length $n$.
+        1. How many strings will be found as a result?
+        2. What will be the last string's length?
+    6. Given a string, put another string in the middle of it at index $i$.
+        1. What will be the length of the new string?
+        2. What will be the index of the last character in the new string?
+    7. Given a string, create a new string by removing the trailing/leading spaces in it.
+
 ## Arrays
 
 ???+ question "Problems"
