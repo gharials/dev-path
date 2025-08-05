@@ -61,20 +61,22 @@ function Counter() {
 }
 ```
 
-Just as the preceding example shows, any React component generally has two parts. In the first part, the component function performs some declarations (e.g. state variables, event handler functions, etc.), and in the last part, it returns a JSX. Depending on situation, a component may have more variables and event handlers, and the JSX may be larger, but the general structure remains the same.
+Just as the preceding example shows, any React component generally has _two parts_. In the first part, the component function performs some declarations (e.g. state variables, event handler functions, etc.), and in the last part, it returns a JSX. Depending on situation, a component may have more variables and event handlers, and the JSX may be larger, but the general structure remains the same.
 
-Note importantly that _the function doesn't modify any variables (props, state variables, or ref variables) in its body_, it only declares the event handler functions that modify variables. Because a component function only _prepares_ the component, modification can _happen only after the component is rendered._
+Note importantly that the component function _doesn't modify any variables (props, state variables, or ref variables) in its body_; it only declares the event handler functions that modify variables. A component function only _prepares_ the component for rendering, variables can be modified _only after_ the component is rendered.
 
 ???+ question "Problem"
-    Try modifying a prop or a state variable in the component function body, and see the error you get.
+    Try modifying a prop or a state variable in the component function body, and see what happens.
 
 ### Reusing components with props
 
-We have already learned, React component functions produce parts of a web page. In many web pages, we often see _repeated parts with different data._ For example, a bus ticket booking website may display a list of available buses in a list of cards. Each card is same in structure but contain different data for different buses.
+We have already learned, React component functions produce parts of a web page. In many web pages, we often see _repeated parts with different data._ For example, in the following image, a bus ticket booking website displays a list of available buses in a list of cards. Each card is same in structure but contain different data for different buses.
 
-For such scenarios, React uses parameterized components, making components _reusable_. Parametrized components define a parameter called `props` (short for properties). Properties of the `props` variable are the data passed by the valler. Just as parameterized functions can be used for different inputs, components with props also can be used for different data.
+![image: bus cards](../images/bus-tickets.jpg)
 
-As the following example shows, props are passed to components as attributes in JSX.
+For such scenarios, we need components whose parts are variable. In React it is done with parameterized components. Parameterized components define a parameter called `props` (short for properties). Callers of the component pass the variable parts as properties of the `props` parameter. Just as parameterized functions can be used for different inputs, components with props can also be used for different data. Such components are _reusable_, meaning a component is defined once and used many times with different data.
+
+The following example shows how props are passed to components. Notice that parameters are passed to the `Greetings` component as attributes.
 
 ```javascript
 import React from 'react';
