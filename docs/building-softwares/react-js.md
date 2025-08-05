@@ -154,13 +154,11 @@ function Timer() {
 ???+ question "Exercise"
     Try using an ordinary JavaScript variable instead of a Ref for the same purpose and see what happens.
 
-### Effects: re-rendering components without events
+### Effects: post-rendering operations in components
 
-Notice that the [general structure of components](#general-structure-of-a-component) raises a question. If we want the component to re-render after some user event (e.g. click), it is simple: we define the change in an event handler. But sometimes we may need to re-render a component after a nonuser event.
+Just as an event handler function runs after a user event (e.g., a click), React provides a way to run a function _after a component is rendered._ This is called an _effect_. _An effect is a function that runs after the component is rendered and committed._
 
-Some components initialize only with props passed to it, but some also need external data. For example, a component has several state variables for displaying the details of a student. It receives a student id as a prop, then it has to fetch the student details from an API and update the state variables. Notice that these changes do not happen as a result of any event, like a click, so event handlers are not suitable here.
-
-In React components, such changes have to be passed as a callback to `useEffect` function. React will execute the callback _after rendering and committing the component._ In other words, a component renders first with the default state variables. After that, the effect runs and sets the state variable values.
+In React components, effects are passed as a callback to `useEffect` function. React will execute the callback _after rendering and committing the component._ Notice that an event handler function is run only when the event occurs, and it may never run if the event does not occur. But an effect function always runs after the component is rendered, regardless of any user event.
 
 ```javascript hl_lines="7-9"
 import React, { useState, useEffect } from 'react';
@@ -170,7 +168,7 @@ function StudentDetails({ id }) {
   const [roll, setRoll] = useState("");
 
   useEffect(() => {
-    // call API with 'id' and update state variables: 'name' and 'roll'
+    // define the operations to be performed after rendering
   }, []);
 
   return (
