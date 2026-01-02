@@ -37,6 +37,12 @@ It should also be obvious that a range can also be represented with objects. For
     7. Given a list of intervals (e.g., $[x_1, y_1], [x_2, y_2], … [x_n, y_n]$), [sort](./problem-solving-tools.md#using-custom-comparison-functions) them based on their lower bounds.
     8. Given a list of intervals (e.g., $[x_1, y_1], [x_2, y_2], … [x_n, y_n]$), check how many of them coincide with a given point $p$. (this problem is also known as _stabbing query_).
 
+## Tuples
+
+Tuples are _ordered_ list of items. For example, $<4, 5, 6>$ is a tuple of three items. Tuples are often used to represent a fixed number of items that are _related to each other_. For example, a tuple of two items can represent a point in a two-dimensional space, where the first item is the x-coordinate and the second item is the y-coordinate. A tuple can represent a person's name and age, where the first item is the name and the second item is the age. For example, $<Alice, 30>$ is a tuple of two items, where the first item is the name "Alice" and the second item is the age 30.
+
+In programming, tuples are often represented as objects. For example, in JavaScript, a tuple of two items can be represented as an object with `x` and `y` properties: `let point = { x: 4, y: 5 }`.
+
 ## Grids or matrices
 
 A grid or matrix consists of a number of _rows_ and _columns_. A grid with $m$ rows and $n$ columns is called an $m × n$ grid. In other words, the grid's _dimension_ is $m × n$.
