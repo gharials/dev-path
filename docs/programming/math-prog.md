@@ -65,6 +65,9 @@ In programming languages the `%` operator is used as the modulus operator. Examp
         1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements? (This formula is also known as [_Pigeonhole principle_](#pigeonhole-principle).)
         2. Given that a page can contain $k$ elements, which page does the $i$-th element belong to?
         3. Given that a page can contain $k$ rows, do the $i$-th and $j$-th elements belong to the same rows in their respective pages?
+    4. Load distribution.
+        1. The students in a class are to be registered for the annual sports event. There are $2$ registration counters. How to distribute the students evenly to the two counters?
+        2. The students in a class are to be registered for the annual sports event. There are $k$ registration counters. How to distribute the students evenly to the $k$ counters?
 
 ## Number formats
 
