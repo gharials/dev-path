@@ -1371,10 +1371,55 @@
 </code></pre></div>
 </details>
 <h2 id="modular-arithmetic">Modular arithmetic</h2>
-<p>When an integer <span class="arithmatex">\(n\)</span> is divided by another integer <span class="arithmatex">\(m\)</span>, it can have a remainder <span class="arithmatex">\(r\)</span>. It is expressed in this formula <span class="arithmatex">\(n = m \times q + r\)</span>, where <span class="arithmatex">\(q\)</span> is the quotient. As we will see, the remainder of the division is important in practice.</p>
+<p>When an integer <span class="arithmatex">\(n\)</span> is divided by another integer <span class="arithmatex">\(m\)</span>, it can have a remainder <span class="arithmatex">\(r\)</span>. It is expressed in this formula <span class="arithmatex">\(n = m \times q + r\)</span>, where <span class="arithmatex">\(q\)</span> is the quotient. For example, when <span class="arithmatex">\(14\)</span> is divided by <span class="arithmatex">\(3\)</span>, the quotient is <span class="arithmatex">\(4\)</span> and the remainder is <span class="arithmatex">\(2\)</span>, because <span class="arithmatex">\(14 = 3 × 4 + 2\)</span>. Similarly, when <span class="arithmatex">\(20\)</span> is divided by <span class="arithmatex">\(5\)</span>, the quotient is <span class="arithmatex">\(4\)</span> and the remainder is <span class="arithmatex">\(0\)</span>, because <span class="arithmatex">\(20 = 5 × 4 + 0\)</span>. When the remainder is <span class="arithmatex">\(0\)</span>, we say that <span class="arithmatex">\(n\)</span> is <em>divisible</em> by <span class="arithmatex">\(m\)</span>.</p>
+<p>As we will see, remainders division is important in practice.</p>
 <h3 id="the-modulo-operator">The modulo operator</h3>
-<p><span class="arithmatex">\(a \mod m = r\)</span> (pronounced <span class="arithmatex">\(a\)</span> modulo/mod <span class="arithmatex">\(m\)</span> equals <span class="arithmatex">\(r\)</span>) means that <span class="arithmatex">\(r\)</span> is the remainder after dividing <span class="arithmatex">\(a\)</span> with <span class="arithmatex">\(m\)</span>. Example: <span class="arithmatex">\(14 \mod 3 = 2\)</span>.</p>
+<p>There is a standard notation for representing remainders after division. In this notation, <span class="arithmatex">\(a \mod m = r\)</span> (pronounced <span class="arithmatex">\(a\)</span> <em>modulo</em> or just <em>mod</em> <span class="arithmatex">\(m\)</span> equals <span class="arithmatex">\(r\)</span>) means that <span class="arithmatex">\(r\)</span> is the remainder after dividing <span class="arithmatex">\(a\)</span> with <span class="arithmatex">\(m\)</span>. Example: <span class="arithmatex">\(14 \mod 3 = 2\)</span>.</p>
+<p>Notice that <span class="arithmatex">\({mod}\)</span> can be viewed as a function that maps any integer to one of the integers in the set <span class="arithmatex">\(0, 1, 2, ... , m-1\)</span>. For example, for <span class="arithmatex">\(m = 3\)</span>, the function maps any integer to one of the integers in the set <span class="arithmatex">\(0, 1, 2\)</span>.</p>
+<p>Also notice that modular arithmetic has a cyclic nature. For example, when working with <span class="arithmatex">\(m = 3\)</span>, the sequence of integers and their remainders after division by <span class="arithmatex">\(3\)</span> is as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Integer</th>
+<th>Remainder after division by <span class="arithmatex">\(3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(0\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(1\)</span></td>
+<td><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(2\)</span></td>
+<td><span class="arithmatex">\(2\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(3\)</span></td>
+<td><span class="arithmatex">\(0\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(4\)</span></td>
+<td><span class="arithmatex">\(1\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(5\)</span></td>
+<td><span class="arithmatex">\(2\)</span></td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<details class="info" open="open">
+<summary>Info</summary>
+<p><strong>The modulus operator in programming languages</strong></p>
 <p>In programming languages the <code>%</code> operator is used as the modulus operator. Example: <code>14 % 3</code>.</p>
+</details>
 <details class="question" open="open">
 <summary>Problems</summary>
 <ol>
@@ -1395,8 +1440,8 @@
 </ol>
 </li>
 <li>Load distribution.<ol>
-<li>The students in a class are to be registered for the annual sports event. There are <span class="arithmatex">\(2\)</span> registration counters. How to distribute the students evenly to the two counters?</li>
-<li>The students in a class are to be registered for the annual sports event. There are <span class="arithmatex">\(k\)</span> registration counters. How to distribute the students evenly to the <span class="arithmatex">\(k\)</span> counters?</li>
+<li>In a college, students are to be admitted into <span class="arithmatex">\(2\)</span> sections evenly. How to assign students to the sections evenly based on their roll numbers?</li>
+<li>In a college, students are to be admitted into <span class="arithmatex">\(m\)</span> sections evenly. How to assign students to the sections evenly based on their roll numbers?</li>
 </ol>
 </li>
 </ol>
@@ -1560,7 +1605,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 2, 2026 22:58:15 UTC">January 2, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 3, 2026 21:12:47 UTC">January 3, 2026</span>
   </span>
 
     
