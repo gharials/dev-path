@@ -33,7 +33,7 @@ The ceiling of any real number is the smallest integer greater than or equal to 
 !!! warning
     **Floor-ceiling functions and rounding off**
 
-    Floor and ceiling functions must not be confused with _rounding off_.
+    Floor and ceiling functions must not be confused with _rounding off_, which rounds a real number to the nearest integer. For example, rounding off $2.3$ gives $2$, and rounding off $2.7$ gives $3$. In contrast, floor of $2.3$ is $2$ and ceiling of $2.3$ is $3$.
 
 ???+ tip
     **Getting ceiling of integer division results in programming languages**
@@ -43,6 +43,11 @@ The ceiling of any real number is the smallest integer greater than or equal to 
     ```C
     int r = (m + d - 1) / d;
     ```
+
+???+ info
+    **Floor and ceiling as functions**
+
+    Notice that both floor and ceiling can be viewed as functions that map any real number to an integer. Instead of usual function notation $f(x)$, special symbols $⌊x⌋$ and $⌈x⌉$ are used for floor and ceiling respectively.
 
 ## Modular arithmetic
 
@@ -54,9 +59,9 @@ As we will see, remainders division is important in practice.
 
 There is a standard notation for representing remainders after division. In this notation, $a \mod m = r$ (pronounced $a$ _modulo_ or just _mod_ $m$ equals $r$) means that $r$ is the remainder after dividing $a$ with $m$. Example: $14 \mod 3 = 2$.
 
-Notice that ${mod}$ can be viewed as a function that maps any integer to one of the integers in the set $0, 1, 2, ... , m-1$. For example, for $m = 3$, the function maps any integer to one of the integers in the set $0, 1, 2$.
+Notice that ${mod}$ can be viewed as a function that maps any integer to one of the integers in the set $0, 1, 2, ... , m-1$. For example, for $m = 3$, the function maps any integer to one of the integers in the set $0, 1, 2$. Just instead of usual function notation $f(x)$, the special notation $x \mod m$ is used.
 
-Also notice that modular arithmetic has a cyclic nature. For example, when working with $m = 3$, the sequence of integers and their remainders after division by $3$ is as follows:
+Also notice that modular arithmetic has a _cyclic nature_, meaning the remainders repeat after every $m$ integers. For example, when working with $m = 3$, the sequence of integers and their remainders after division by $3$ is as follows:
 
 | Integer | Remainder after division by $3$ |
 |---------|---------------------------------|
@@ -71,7 +76,7 @@ Also notice that modular arithmetic has a cyclic nature. For example, when worki
 ???+ info
     **The modulus operator in programming languages**
 
-    In programming languages the `%` operator is used as the modulus operator. Example: `14 % 3`.
+    In programming languages the `%` operator is used as the modulus operator. Example: `14 % 3` gives `2`.
 
 ???+ question "Problems"
     1. Divisibility and congruence.
