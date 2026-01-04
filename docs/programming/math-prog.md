@@ -148,7 +148,7 @@ The sum and product rule of counting are particularly important. They occur freq
 
 For example, there are two options, buses and trains, to travel from city $A$ to $B$. There are $4$ buses and $3$ trains. Therefore, there are $4 + 3 = 7$ choices for traveling from city $A$ to $B$ in total.
 
-**Product rule.** If a task has $n$ steps and there are $a_1, a_2, ... a_n$ choices for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total for completing the task. A common special case of the rule is when each option has the same $m$ number of alternatives, then there are total $m × m × ... × m = m^n$ choices.
+**Product rule.** If a task has $n$ steps and there are $a_1, a_2, ... a_n$ choices for each of them, then there are $a_1 × a_2 × ... × a_n$ choices in total for completing the task. A common special case of the rule is when each option has the same $m$ number of alternatives, then there are total $\underbrace{m × m × ... × m}_{n} = m^n$ choices.
 
 For example, you have to travel from city $A$ to $C$ via city $B$. From city $A$ to $B$, there are $3$ trains, and from city $B$ to $C$, there are $2$ buses. Then, there are $3 × 2 = 6$ choices for traveling from city $A$ to $C$ in total.
 
@@ -177,7 +177,7 @@ We often encounter a common counting problem in practice: given we have containe
 
 ### Powers
 
-Any integer $a$ multiplied by itself $b$ times (i.e., $a \times a \times ... \times a$) is expressed as $a^b = n$. It is commonly referred to as $a$ raised to the power of $b$. The formula $a^b = n$ alternatively means _$n$ can be successively divided by $a$ for $b$ times._ For example, $2^3 = 8$ means $8$ can be successively divided by $2$ for $3$ times: $8 / 2 = 4$, $4 / 2 = 2$, and $2 / 2 = 1$.
+Any integer $a$ multiplied by itself $b$ times (i.e., $\underbrace{a \times a \times ... \times a}_{b}$) is expressed as $a^b = n$. It is commonly referred to as $a$ raised to the power of $b$. The formula $a^b = n$ alternatively means _$n$ can be successively divided by $a$ for $b$ times._ For example, $2^3 = 8$ means $8$ can be successively divided by $2$ for $3$ times: $8 / 2 = 4$, $4 / 2 = 2$, and $2 / 2 = 1$.
 
 ### Logarithms
 
