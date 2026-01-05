@@ -53,7 +53,7 @@ The ceiling of any real number is the smallest integer greater than or equal to 
 
 When an integer $n$ is divided by another integer $m$, it can have a remainder $r$. It is expressed in this formula $n = m \times q + r$, where $q$ is the quotient. For example, when $14$ is divided by $3$, the quotient is $4$ and the remainder is $2$, because $14 = 3 × 4 + 2$. Similarly, when $20$ is divided by $5$, the quotient is $4$ and the remainder is $0$, because $20 = 5 × 4 + 0$. When the remainder is $0$, we say that $n$ is _divisible_ by $m$.
 
-As we will see, remainders division is important in practice.
+As we will see, remainders of division is important in practice.
 
 ### The modulo operator
 
@@ -61,34 +61,41 @@ There is a standard notation for representing remainders after division. In this
 
 Notice that ${mod}$ can be viewed as a function that maps any integer to one of the integers in the set $0, 1, 2, ... , m-1$. For example, for $m = 3$, the function maps any integer to one of the integers in the set $0, 1, 2$. Just instead of usual function notation $f(x)$, the special notation $x \mod m$ is used.
 
-Also notice that modular arithmetic has a _cyclic nature_, meaning the remainders repeat after every $m$ integers. For example, when working with $m = 3$, the sequence of integers and their remainders after division by $3$ is as follows:
-
-| Integer | Remainder after division by $3$ |
-|---------|---------------------------------|
-| $0$     | $0$                             |
-| $1$     | $1$                             |
-| $2$     | $2$                             |
-| $3$     | $0$                             |
-| $4$     | $1$                             |
-| $5$     | $2$                             |
-| ...     | ...                             |
-
 ???+ info
     **The modulus operator in programming languages**
 
     In programming languages the `%` operator is used as the modulus operator. Example: `14 % 3` gives `2`.
+
+### Congruence
+
+Notice that modular arithmetic has a _cyclic nature_, meaning the remainders repeat after every $m$ integers. For example, when working with $m = 3$, the sequence of integers and their remainders after division by $3$ is as follows:
+
+| $n$     | $n \mod 3$ |
+|---------|------------|
+| $0$     | $0$        |
+| $1$     | $1$        |
+| $2$     | $2$        |
+| $3$     | $0$        |
+| $4$     | $1$        |
+| $5$     | $2$        |
+| ...     | ...        |
+
+Notice that $0$, $3$, $6$, $9$, ... all give remainder $0$ when divided by $3$; similarly, $1$, $4$, $7$, $10$, ... all give remainder $1$; and $2$, $5$, $8$, $11$, ... all give remainder $2$. Integers giving the same remainder when divided by $3$ are said to be _congruent modulo_ $3$. For example, $4$ and $1$ are congruent modulo $3$, while $5$ and $3$ are not.
+
+Two integers $a$ and $b$ are said to be _congruent modulo_ $m$ if they give the same remainder when divided by $m$. It is expressed as $a \equiv b \mod m$, pronounced $a$ is _congruent to_ $b$ _modulo_ $m$. For example, $10 \equiv 4 \mod 6$, because both $10$ and $4$ give remainder $4$ when divided by $6$.
 
 ???+ question "Problems"
     1. Divisibility and congruence.
         1. Given an integer $n$, check whether it is divisible by another integer $m$.
         2. Given an integer $m$, what are the possible remainders after any integer is divided by $m$?
     2. Digits.
+        1. Given an integer $n$, find its last digit.
         1. Given an integer $n$, print all of its digits.
         2. Given an integer $n$, find the integer that is found by reversing the digits of $n$.
     3. Pagination.
         1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements? (This formula is also known as [_Pigeonhole principle_](#pigeonhole-principle).)
         2. Given that a page can contain $k$ elements, which page does the $i$-th element belong to?
-        3. Given that a page can contain $k$ rows, do the $i$-th and $j$-th elements belong to the same rows in their respective pages?
+        3. Given that a page can contain $k$ rows, the $i$-th and $j$-th elements belong to different pages. Do they belong to the same rows in their respective pages?
     4. Load distribution.
         1. In a college, students are to be admitted into $2$ sections evenly. How to assign students to the sections evenly based on their roll numbers?
         2. In a college, students are to be admitted into $m$ sections evenly. How to assign students to the sections evenly based on their roll numbers?
@@ -120,6 +127,10 @@ Notice the following _two special cases_ of binary numbers: the number $2^n$ in 
 | $2$ | $100$        | $11$              |
 | $3$ | $1000$       | $111$             |
 | $4$ | $10000$      | $1111$            |
+
+???+ question "Problems"
+    1. Given a binary number, find its last digit/bit.
+    2. Given a binary number, find all of its digits/bits.
 
 ### Hexadecimal numbers
 
