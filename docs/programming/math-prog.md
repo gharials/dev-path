@@ -93,6 +93,7 @@ Two integers $a$ and $b$ are said to be _congruent modulo_ $m$ if they give the 
         1. Given an integer $n$, print all of its digits.
         2. Given an integer $n$, find the integer that is found by reversing the digits of $n$.
     3. Pagination.
+        1. Given that a table can display $5$ rows per page and there are $n$ rows (numbered from $0$ to $n-1$) in total, draw the pages with tables for various values of $n$.
         1. Given a number of elements $n$ to be paginated (divided into pages). Each page can contain at most $k$ elements. How many pages are required for $n$ elements? (This formula is also known as [_Pigeonhole principle_](#pigeonhole-principle).)
         2. Given that a page can contain $k$ elements, which page does the $i$-th element belong to?
         3. Given that a page can contain $k$ rows, the $i$-th and $j$-th elements belong to different pages. Do they belong to the same rows in their respective pages?
