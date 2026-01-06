@@ -184,36 +184,93 @@ function StudentDetails({ id }) {
 
 ## Routing: navigating among components
 
-A large web application consists of many web pages. Some process requires moving between multiple pages.
+### Background
 
-Some components are associated with specific URLs, allowing navigation between different views in a single-page application (SPA). React Router is a popular library for handling routing in React applications.
+The primary unit of a React application is a component. Learning to create components is the first step towards building React applications. So far, that has been our focus. However, most real-world applications consist of multiple views or pages that users can move between.
 
-Registering a component in a router means this component will be available in this URL.
+### The React Router library
 
-```javascript
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+By default, a React application does not support routing. To add routing capabilities, we need to install a routing library. React Router is a popular library for handling routing in React applications.
 
-function Home() {
-  return <h2>Home</h2>;
-}
+Creating abstractions after reading documentation is an important skill for developers.
 
-function About() {
-  return <h2>About</h2>;
-}
+![React Router](../images/react-router.png)
+
+The preceding schematic diagram shows how routing works in a sample React application. The parent component contains three child components: _Index Component_, _Component 1_, and _Component 2_. It contains two navigation links to navigate to _Component 1_ and _Component 2_.
+
+The parent component also has a region called _outlet_ to render its child components. The outlet may _display any one of its three child components at a time_ depending on the link clicked. The Index Component is displayed by default when the application is loaded, before user clicks any link.
+
+### Enabling routing
+
+To install React Router, use the following command:
+
+```bash
+npm install react-router
+```
+
+### Configuring routing
+
+The mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the `main.jsx` file. The following example shows how to configure routing in a React application.
+
+```jsx
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import { RouterProvider } from 'react-router/dom'
+import { createBrowserRouter } from 'react-router'
+import About from './About.jsx'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <h2>Welcome to the home page!</h2>,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+    ],
+  },
+]);
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <RouterProvider router={router} />
+  </StrictMode>,
+)
+```
+
+### Enabling navigation
+
+```jsx
+import { NavLink, Outlet } from 'react-router';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </Router>
-  );
+    <>
+      <NavLink to="/">Home</NavLink> |{' '}
+      <NavLink to="/about">About</NavLink>
+
+      <Outlet />
+    </>
+  )
 }
-export default App;
+
+export default App
 ```
+
+???+ question "Exercise"
+    1. Create a React application with Vite: `npm create vite@latest my-react-app -- --template react`
+    2. Install React Router: `npm install react-router`
+    3. Configure routing as shown in the previous section.
+    4. Add navigation links to switch between the Home and About pages without reloading the browser.
+    5. Test the application by clicking the navigation links.
+    6. Delete the created application and recreate it from scratch to practice again.
 
 ## Client-side Rendering (CSR) and Server-side Rendering (SSR)
 
