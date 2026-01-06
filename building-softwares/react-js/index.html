@@ -998,6 +998,67 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Routing: navigating among components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Background
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-react-router-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The React Router library
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuring-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1189,32 +1250,78 @@
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="routing-navigating-among-components">Routing: navigating among components</h2>
-<p>A large web application consists of many web pages. Some process requires moving between multiple pages.</p>
-<p>Some components are associated with specific URLs, allowing navigation between different views in a single-page application (SPA). React Router is a popular library for handling routing in React applications.</p>
-<p>Registering a component in a router means this component will be available in this URL.</p>
-<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">BrowserRouter</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">Router</span><span class="p">,</span><span class="w"> </span><span class="nx">Route</span><span class="p">,</span><span class="w"> </span><span class="nx">Switch</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router-dom&#39;</span><span class="p">;</span>
+<h3 id="background">Background</h3>
+<p>The primary unit of a React application is a component. Learning to create components is the first step towards building React applications. So far, that has been our focus. However, most real-world applications consist of multiple views or pages that users can move between.</p>
+<h3 id="the-react-router-library">The React Router library</h3>
+<p>By default, a React application does not support routing. To add routing capabilities, we need to install a routing library. React Router is a popular library for handling routing in React applications.</p>
+<p>Creating abstractions after reading documentation is an important skill for developers.</p>
+<p><img alt="React Router" src="../images/react-router.png" /></p>
+<p>The preceding schematic diagram shows how routing works in a sample React application. The parent component contains three child components: <em>Index Component</em>, <em>Component 1</em>, and <em>Component 2</em>. It contains two navigation links to navigate to <em>Component 1</em> and <em>Component 2</em>.</p>
+<p>The parent component also has a region called <em>outlet</em> to render its child components. The outlet may <em>display any one of its three child components at a time</em> depending on the link clicked. The Index Component is displayed by default when the application is loaded, before user clicks any link.</p>
+<h3 id="enabling-routing">Enabling routing</h3>
+<p>To install React Router, use the following command:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>react-router
+</code></pre></div>
+<h3 id="configuring-routing">Configuring routing</h3>
+<p>The mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the <code>main.jsx</code> file. The following example shows how to configure routing in a React application.</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">StrictMode</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createRoot</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom/client&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="s1">&#39;./index.css&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./App.jsx&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">RouterProvider</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router/dom&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createBrowserRouter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">About</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./About.jsx&#39;</span>
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">Home</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">Home</span><span class="o">&lt;</span><span class="err">/h2&gt;;</span>
-<span class="p">}</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createBrowserRouter</span><span class="p">([</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">App</span><span class="w"> </span><span class="p">/&gt;,</span>
+<span class="w">    </span><span class="nx">children</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">Welcome</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">home</span><span class="w"> </span><span class="nx">page</span><span class="o">!</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;about&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">element</span><span class="o">:</span><span class="w"> </span><span class="p">&lt;</span><span class="nt">About</span><span class="w"> </span><span class="p">/&gt;,</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">]);</span>
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">About</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">h2</span><span class="o">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="err">/h2&gt;;</span>
-<span class="p">}</span>
+<span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)).</span><span class="nx">render</span><span class="p">(</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">StrictMode</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">RouterProvider</span><span class="w"> </span><span class="na">router</span><span class="o">=</span><span class="p">{</span><span class="nx">router</span><span class="p">}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">StrictMode</span><span class="p">&gt;,</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="enabling-navigation">Enabling navigation</h3>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">NavLink</span><span class="p">,</span><span class="w"> </span><span class="nx">Outlet</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-router&#39;</span><span class="p">;</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="nx">Router</span><span class="o">&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="nx">Switch</span><span class="o">&gt;</span>
-<span class="w">        </span><span class="o">&lt;</span><span class="nx">Route</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s2">&quot;/about&quot;</span><span class="w"> </span><span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">About</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
-<span class="w">        </span><span class="o">&lt;</span><span class="nx">Route</span><span class="w"> </span><span class="nx">path</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="w"> </span><span class="nx">component</span><span class="o">=</span><span class="p">{</span><span class="nx">Home</span><span class="p">}</span><span class="w"> </span><span class="o">/&gt;</span>
-<span class="w">      </span><span class="o">&lt;</span><span class="err">/Switch&gt;</span>
-<span class="w">    </span><span class="o">&lt;</span><span class="err">/Router&gt;</span>
-<span class="w">  </span><span class="p">);</span>
+<span class="w">    </span><span class="p">&lt;&gt;</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">NavLink</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span><span class="nx">Home</span><span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span><span class="w"> </span><span class="o">|</span><span class="p">{</span><span class="s1">&#39; &#39;</span><span class="p">}</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">NavLink</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">&quot;/about&quot;</span><span class="p">&gt;</span><span class="nx">About</span><span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span>
+
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">Outlet</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">    </span><span class="p">&lt;/&gt;</span>
+<span class="w">  </span><span class="p">)</span>
 <span class="p">}</span>
-<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">App</span>
 </code></pre></div>
+<details class="question" open="open">
+<summary>Exercise</summary>
+<ol>
+<li>Create a React application with Vite: <code>npm create vite@latest my-react-app -- --template react</code></li>
+<li>Install React Router: <code>npm install react-router</code></li>
+<li>Configure routing as shown in the previous section.</li>
+<li>Add navigation links to switch between the Home and About pages without reloading the browser.</li>
+<li>Test the application by clicking the navigation links.</li>
+<li>Delete the created application and recreate it from scratch to practice again.</li>
+</ol>
+</details>
 <h2 id="client-side-rendering-csr-and-server-side-rendering-ssr">Client-side Rendering (CSR) and Server-side Rendering (SSR)</h2>
 <p>Generating HTML using JavaScript functions demo.</p>
 <h2 id="react-workflow">React workflow</h2>
@@ -1241,7 +1348,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 5, 2025 11:05:26 UTC">August 5, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 19:13:33 UTC">January 6, 2026</span>
   </span>
 
     
