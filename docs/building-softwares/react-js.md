@@ -192,13 +192,17 @@ The primary unit of a React application is a component. Learning to create compo
 
 By default, a React application does not support routing. To add routing capabilities, we need to install a routing library. React Router is a popular library for handling routing in React applications.
 
-Creating abstractions after reading documentation is an important skill for developers.
+Creating abstractions after reading [documentation](https://reactrouter.com/home) is an important skill for developers.
 
 ![React Router](../images/react-router.png)
 
-The preceding schematic diagram shows how routing works in a sample React application. The parent component contains three child components: _Index Component_, _Component 1_, and _Component 2_. It contains two navigation links to navigate to _Component 1_ and _Component 2_.
+The preceding schematic diagram shows a sample React application with routing. The parent component has three associated child components: _Index Component_, _Component 1_, and _Component 2_. It also contains two navigation links to navigate to _Component 1_ and _Component 2_.
 
-The parent component also has a region called _outlet_ to render its child components. The outlet may _display any one of its three child components at a time_ depending on the link clicked. The Index Component is displayed by default when the application is loaded, before user clicks any link.
+The parent component also has a region called _outlet_ to render its child components. The outlet may _display any one of its three child components at a time_ depending on the link clicked. The Index Component is special because it is displayed in the outlet when the application is loaded, before user clicks any link.
+
+Similarly, notice that _Component 1_ itself is a parent component for three other components: _C3_, _C4_, and _C5_. It also has navigation links and an outlet to render its child components.
+
+Now, all of these information has to be passed to the React application. React Router provides the necessary components and functions for that.
 
 ### Enabling routing
 
@@ -212,7 +216,7 @@ npm install react-router
 
 The mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the `main.jsx` file. The following example shows how to configure routing in a React application.
 
-```jsx
+```jsx hl_lines="9-24 28-28"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -245,9 +249,13 @@ createRoot(document.getElementById('root')).render(
 )
 ```
 
+The highlighted `router` variable portion essentially _constructs the route tree of the application_. Then the tree is feed into the application using the `RouterProvider` component (highlighted).
+
 ### Enabling navigation
 
-```jsx
+Configuring routing just passes the mapping between URLs and components to the application. To navigate between components, we need to add navigation links in the parent component and an outlet to render the child components.
+
+```jsx hl_lines="6-7 9-9"
 import { NavLink, Outlet } from 'react-router';
 
 function App() {
@@ -267,10 +275,11 @@ export default App
 ???+ question "Exercise"
     1. Create a React application with Vite: `npm create vite@latest my-react-app -- --template react`
     2. Install React Router: `npm install react-router`
-    3. Configure routing as shown in the previous section.
-    4. Add navigation links to switch between the Home and About pages without reloading the browser.
+    3. Create some components (e.g., Home, About). Keep them as simple as possible. Their content is not important for this exercise.
+    3. Configure various routing combinations in the `main.jsx` file.
+    4. Add navigation links and an outlet in the parent component.
     5. Test the application by clicking the navigation links.
-    6. Delete the created application and recreate it from scratch to practice again.
+    6. Delete the created application and recreate it from scratch to practice again until you feel comfortable with routing in React.
 
 ## Client-side Rendering (CSR) and Server-side Rendering (SSR)
 
