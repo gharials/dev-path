@@ -160,7 +160,7 @@ function Timer() {
 
 Just as an event handler function runs after a user event (e.g., a click), React provides a way to run a function _after a component is rendered._ This is called an _effect_. _An effect is a function that runs after the component is rendered and committed._
 
-In React components, effects are passed as a callback to `useEffect` function. React will execute the callback _after rendering and committing the component._ Notice that an event handler function is run only when the event occurs, and it may never run if the event does not occur. But an effect function always runs after the component is rendered, regardless of any user event.
+In React components, effects are passed as a callback to `useEffect` function. React will execute the callback _after rendering and committing the component._ Notice that an event handler function is run only when the event occurs, and it may never run if the event does not occur. But an effect function always runs after the component is rendered and committed, regardless of any user event.
 
 ```javascript hl_lines="7-9"
 import React, { useState, useEffect } from 'react';
@@ -181,6 +181,14 @@ function StudentDetails({ id }) {
   );
 }
 ```
+
+???+ question "Exercise"
+    1. Create a React application with Vite: `npm create vite@latest my-react-app -- --template react`
+    2. Create a component that has a state variable `count` initialized to 0.
+    3. Add a button that increments the `count` variable by 1 each time it is clicked.
+    4. Use an effect to log the current value of `count` to the console each time the component is rendered.
+    5. Test the application.
+    6. Increase the value of `count` state variable by 1 inside the effect function. Observe what happens. Explain why it happens using the knowledge of state variables, render, commit, and effects.
 
 ## Routing: navigating among components
 
