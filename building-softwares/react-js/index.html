@@ -1230,7 +1230,7 @@
 </details>
 <h3 id="effects-post-rendering-operations-in-components">Effects: post-rendering operations in components</h3>
 <p>Just as an event handler function runs after a user event (e.g., a click), React provides a way to run a function <em>after a component is rendered.</em> This is called an <em>effect</em>. <em>An effect is a function that runs after the component is rendered and committed.</em></p>
-<p>In React components, effects are passed as a callback to <code>useEffect</code> function. React will execute the callback <em>after rendering and committing the component.</em> Notice that an event handler function is run only when the event occurs, and it may never run if the event does not occur. But an effect function always runs after the component is rendered, regardless of any user event.</p>
+<p>In React components, effects are passed as a callback to <code>useEffect</code> function. React will execute the callback <em>after rendering and committing the component.</em> Notice that an event handler function is run only when the event occurs, and it may never run if the event does not occur. But an effect function always runs after the component is rendered and committed, regardless of any user event.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useState</span><span class="p">,</span><span class="w"> </span><span class="nx">useEffect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">StudentDetails</span><span class="p">({</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
@@ -1249,6 +1249,17 @@
 <span class="w">  </span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+<details class="question" open="open">
+<summary>Exercise</summary>
+<ol>
+<li>Create a React application with Vite: <code>npm create vite@latest my-react-app -- --template react</code></li>
+<li>Create a component that has a state variable <code>count</code> initialized to 0.</li>
+<li>Add a button that increments the <code>count</code> variable by 1 each time it is clicked.</li>
+<li>Use an effect to log the current value of <code>count</code> to the console each time the component is rendered.</li>
+<li>Test the application.</li>
+<li>Increase the value of <code>count</code> state variable by 1 inside the effect function. Observe what happens. Explain why it happens using the knowledge of state variables, render, commit, and effects.</li>
+</ol>
+</details>
 <h2 id="routing-navigating-among-components">Routing: navigating among components</h2>
 <h3 id="background">Background</h3>
 <p>The primary unit of a React application is a component. Learning to create components is the first step towards building React applications. So far, that has been our focus. However, most real-world applications consist of multiple views or pages that users can move between.</p>
@@ -1353,7 +1364,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 21:42:31 UTC">January 6, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 6, 2026 22:15:39 UTC">January 6, 2026</span>
   </span>
 
     
