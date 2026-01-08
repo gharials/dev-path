@@ -204,17 +204,16 @@ Creating abstractions after reading [documentation](https://reactrouter.com/home
 
 ![React Router](../images/react-router.png)
 
-The preceding schematic diagram shows a sample React application with routing. The parent component has three associated child components: _Index Component_, _Component 1_, and _Component 2_. It also contains two navigation links to navigate to _Component 1_ and _Component 2_.
+The preceding schematic diagram shows a sample React application with routing. The root component _App_ has two associated child components: _Products_ and _About_. It also contains two navigation links to navigate to the components. Similarly, _Products_ component has three other child components: _P1_, _P2_, and _P3_. It also has three navigation links to its child components.
 
-The parent component also has a region called _outlet_ to render its child components. The outlet may _display any one of its three child components at a time_ depending on the link clicked. The Index Component is special because it is displayed in the outlet when the application is loaded, before user clicks any link.
+Notice that the root component _App_ has a region called _outlet_ to render its child components. The outlet may _display any one of its three child components at a time_ depending on the link clicked. Similarly, the _Products_ component also has an outlet to render its child components.
 
-Similarly, notice that _Component 1_ itself is a parent component for three other components: _C3_, _C4_, and _C5_. It also has navigation links and an outlet to render its child components.
-
-Now, all of these information has to be passed to the React application. React Router provides the necessary components and functions for that.
+1. Now, all of these URL-component mapping has to be passed to the React application.
+2. Each component that has child components must contain navigation links and an outlet to render the child components.
 
 ### Enabling routing
 
-To install React Router, use the following command:
+To install React Router in a React app, use the following command:
 
 ```bash
 npm install react-router
