@@ -225,7 +225,7 @@ npm install react-router
 
 As mentioned earlier, the mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the `main.jsx` file. The following example shows how to configure routing in a React application.
 
-```jsx hl_lines="13-41 45-45"
+```jsx hl_lines="13-42 46-46"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -259,6 +259,7 @@ const router = createBrowserRouter([
             path: 'p3',
             element: <Product3 />,
           }
+        ]
       },
       {
         path: 'about',
