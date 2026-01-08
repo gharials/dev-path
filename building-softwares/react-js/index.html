@@ -1013,10 +1013,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#the-react-router-library" class="md-nav__link">
+  <a href="#routing-in-a-react-application" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The React Router library
+        Routing in a React application
       
     </span>
   </a>
@@ -1024,10 +1024,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#enabling-routing" class="md-nav__link">
+  <a href="#installing-react-router" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Enabling routing
+        Installing React Router
       
     </span>
   </a>
@@ -1262,25 +1262,24 @@
 </details>
 <h2 id="routing-navigating-among-components">Routing: navigating among components</h2>
 <h3 id="background">Background</h3>
-<p>The primary unit of a React application is a component. Learning to create components is the first step towards building React applications. So far, that has been our focus. However, most real-world applications consist of multiple views or pages that users can move between.</p>
-<h3 id="the-react-router-library">The React Router library</h3>
-<p>By default, a React application does not support routing. To add routing capabilities, we need to install a routing library. React Router is a popular library for handling routing in React applications.</p>
-<p>Creating abstractions after reading <a href="https://reactrouter.com/home">documentation</a> is an important skill for developers.</p>
+<p>The primary unit of a React application is a component. Learning to create components is the first step towards building React applications. So far, that has been our focus. However, that is not enough for developing real-world applications, because they consist of multiple views or pages that users can move between.</p>
+<h3 id="routing-in-a-react-application">Routing in a React application</h3>
+<p>Before using routing in a React application, let's understand what routing means in a React application. Routing means navigating between different components (views or pages) of a React application.</p>
 <p><img alt="React Router" src="../../images/react-router.png" /></p>
-<p>The preceding schematic diagram shows a sample React application with routing. The root component <em>App</em> has two associated child components: <em>Products</em> and <em>About</em>. It also contains two navigation links to navigate to the components. Similarly, <em>Products</em> component has three other child components: <em>P1</em>, <em>P2</em>, and <em>P3</em>. It also has three navigation links to its child components.</p>
-<p>Notice that the root component <em>App</em> has a region called <em>outlet</em> to render its child components. The outlet may <em>display any one of its two child components at a time</em> depending on the link clicked. Similarly, the <em>Products</em> component also has an outlet to render its child components.</p>
+<p>The preceding schematic diagram shows a sample React application with routing. The root component <em>App</em> has two associated child components: <em>Products</em> and <em>About</em>. It also contains two navigation links to navigate to the components. Similarly, the <em>Products</em> component has three other child components: <em>P1</em>, <em>P2</em>, and <em>P3</em>. It also has three navigation links to its child components.</p>
+<p>Notice that the root component, <em>App</em>, has a region called <em>"outlet"</em> to render its child components. The outlet may <em>display any one of its two child components at a time</em> depending on the link clicked. Similarly, the <em>Products</em> component also has an outlet to render its child components.</p>
 <p><img alt="React App Route Tree" src="../../images/react-route-tree.png" /></p>
 <p>The tree diagram above shows the mapping between URLs and components of the sample React application. Now, to enable routing in the React application, two things need to be done:</p>
 <ol>
-<li>All of these URL-component mapping, that is the tree diagram above, has to be passed to the React application.</li>
+<li>All of these URL-component mappings, that is, the tree diagram above, have to be passed to the React application so that it <em>knows</em> which component to <a href="#how-react-generates-web-pages-with-components">trigger and render</a> when a user clicks a link.</li>
 <li>Each component that has child components must contain navigation links and an outlet to render the child components.</li>
 </ol>
-<h3 id="enabling-routing">Enabling routing</h3>
-<p>To install React Router in a React app, use the following command:</p>
+<h3 id="installing-react-router">Installing React Router</h3>
+<p>By default, a React application does not support routing. To add routing capabilities, we need to install a routing library. <a href="https://reactrouter.com/home">React Router</a> is a popular library for handling routing in React applications. To install React Router in a React app, use the following command:</p>
 <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>react-router
 </code></pre></div>
 <h3 id="configuring-routing">Configuring routing</h3>
-<p>The mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the <code>main.jsx</code> file. The following example shows how to configure routing in a React application.</p>
+<p>As mentioned earlier, the mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the <code>main.jsx</code> file. The following example shows how to configure routing in a React application.</p>
 <div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">StrictMode</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createRoot</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react-dom/client&#39;</span>
 <span class="k">import</span><span class="w"> </span><span class="s1">&#39;./index.css&#39;</span>
@@ -1337,7 +1336,7 @@
 <span class="kd">function</span><span class="w"> </span><span class="nx">App</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
 <span class="w">    </span><span class="p">&lt;&gt;</span>
-<span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">NavLink</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span><span class="nx">Home</span><span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span><span class="w"> </span><span class="o">|</span><span class="p">{</span><span class="s1">&#39; &#39;</span><span class="p">}</span>
+<span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">NavLink</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">&quot;/products&quot;</span><span class="p">&gt;</span><span class="nx">Products</span><span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span><span class="w"> </span><span class="o">|</span><span class="p">{</span><span class="s1">&#39; &#39;</span><span class="p">}</span>
 </span><span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">NavLink</span><span class="w"> </span><span class="na">to</span><span class="o">=</span><span class="s">&quot;/about&quot;</span><span class="p">&gt;</span><span class="nx">About</span><span class="p">&lt;/</span><span class="nt">NavLink</span><span class="p">&gt;</span>
 </span>
 <span class="hll"><span class="w">      </span><span class="p">&lt;</span><span class="nt">Outlet</span><span class="w"> </span><span class="p">/&gt;</span>
@@ -1385,7 +1384,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 8, 2026 03:17:17 UTC">January 8, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 8, 2026 09:27:11 UTC">January 8, 2026</span>
   </span>
 
     
