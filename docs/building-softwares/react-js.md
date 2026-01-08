@@ -206,9 +206,13 @@ Creating abstractions after reading [documentation](https://reactrouter.com/home
 
 The preceding schematic diagram shows a sample React application with routing. The root component _App_ has two associated child components: _Products_ and _About_. It also contains two navigation links to navigate to the components. Similarly, _Products_ component has three other child components: _P1_, _P2_, and _P3_. It also has three navigation links to its child components.
 
-Notice that the root component _App_ has a region called _outlet_ to render its child components. The outlet may _display any one of its three child components at a time_ depending on the link clicked. Similarly, the _Products_ component also has an outlet to render its child components.
+Notice that the root component _App_ has a region called _outlet_ to render its child components. The outlet may _display any one of its two child components at a time_ depending on the link clicked. Similarly, the _Products_ component also has an outlet to render its child components.
 
-1. Now, all of these URL-component mapping has to be passed to the React application.
+![React App Route Tree](../images/react-route-tree.png)
+
+The tree diagram above shows the mapping between URLs and components of the sample React application. Now, to enable routing in the React application, two things need to be done:
+
+1. All of these URL-component mapping, that is the tree diagram above, has to be passed to the React application.
 2. Each component that has child components must contain navigation links and an outlet to render the child components.
 
 ### Enabling routing
@@ -223,14 +227,18 @@ npm install react-router
 
 The mapping between URLs and components has to be passed to the React application first. It is done at the entry point of the application, usually in the `main.jsx` file. The following example shows how to configure routing in a React application.
 
-```jsx hl_lines="9-24 28-28"
+```jsx hl_lines="13-41 45-45"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import { RouterProvider } from 'react-router/dom'
 import { createBrowserRouter } from 'react-router'
+import App from './App.jsx'
+import Products from './Products.jsx'
 import About from './About.jsx'
+import Product1 from './Product1.jsx'
+import Product2 from './Product2.jsx'
+import Product3 from './Product3.jsx'
 
 const router = createBrowserRouter([
   {
@@ -238,8 +246,21 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: '/',
-        element: <h2>Welcome to the home page!</h2>,
+        path: 'products',
+        element: <Products />,
+        children: [
+          {
+            path: 'p1',
+            element: <Product1 />,
+          },
+          {
+            path: 'p2',
+            element: <Product2 />,
+          },
+          {
+            path: 'p3',
+            element: <Product3 />,
+          }
       },
       {
         path: 'about',
