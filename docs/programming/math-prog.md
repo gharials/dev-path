@@ -8,6 +8,12 @@ In everyday life, we are used to working with mainly two types of numbers: whole
 
 In mathematics, _whole numbers_ are called _integers_. They can be both positive and negative, including zero. Examples of integers include $-3$, $0$, and $42$. In daily life, we use integers most commonly for counting objects. Integers are very important in programming and computer science. A programmer should be aware of the basic facts about integers.
 
+## Min and max functions
+
+???+ question "Problems"
+    1. Given a person has $n$ dollars in his bank account and he wants to withdraw $m$ dollars. Write a function that returns how much money he can withdraw.
+    2. Given a person has $n$ dollars in his bank account and he wants to withdraw $m$ dollars. But the bank requires that a account's balance must not go below $k$ dollars. Write a function that returns how much money he can withdraw.
+
 ## Floor and ceiling functions
 
 ### The floor function
