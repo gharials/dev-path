@@ -10,6 +10,10 @@ In mathematics, _whole numbers_ are called _integers_. They can be both positive
 
 ## Min and max functions
 
+Given two integers $a$ and $b$, the _min_ function returns the smaller of the two integers. It is denoted as $\min(a, b)$. For example, $\min(3, 5) = 3$ and $\min(-2, 4) = -2$.
+
+Similarly, the _max_ function returns the larger of the two integers. It is denoted as $\max(a, b)$. For example, $\max(3, 5) = 5$ and $\max(-2, 4) = 4$.
+
 ???+ question "Problems"
     1. Given a person has $n$ dollars in his bank account and he wants to withdraw $m$ dollars. Write a function that returns how much money he can withdraw.
     2. Given a person has $n$ dollars in his bank account and he wants to withdraw $m$ dollars. But the bank requires that a account's balance must not go below $k$ dollars. Write a function that returns how much money he can withdraw.
