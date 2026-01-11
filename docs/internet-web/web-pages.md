@@ -167,21 +167,21 @@ Elements of the HTML document can be read and modified through the `document` ob
 
 ???+ info "Concept: JavaScript DOM as an API"
 
-    The JavaScript DOM or the `document` object represents an important programming concept called an _API_ (Application Programming Interface). Before understanding APIs in general, we need to understand what an interface is.
+    The JavaScript DOM, or the `document` object, represents an important programming concept called an _API_ (Application Programming Interface). A programmer will encounter this concept frequently. A clear understanding of it is important. Before understanding APIs in general, we need to understand what an interface is.
 
     **What is an interface?**
 
-    In a map the areas around the boundary lines between two countries are called _interfacing regions._ In any interface, there are two parties: the caller and the callee.
+    On a map the areas around the boundary lines between two countries are called _interfacing regions._ In any interface, there are two parties: the caller and the callee.
 
     All complex systems are built using some kind of interfaces. Assembling interfaces.
 
-    We have sockets for lights at every home. They provide power to lights. Now, light socket is a kind of interface. Any light manufacturer can make lights of any shape, six, or color, but following the socket rules.
+    We have sockets for lights at every home. They provide power to lights. Now, a light socket is a kind of interface. Any light manufacturer can make lights of any shape, size, or color, but following the socket rules.
 
     **What is an API?**
 
-    A program may need to interact with many external systems. Writing code for every interaction with a system from scratch would be very complex and time-consuming. An API has it written once and lets other programmers use it whenever needed. These interfaces let write other programs or applications using them. That is why they are called _application programming_ interface.
+    A program may need to interact with many external systems. Writing code for every interaction with a system from scratch would be very complex and time-consuming. An API has it written once and lets other programmers use it whenever needed. These interfaces let you write other programs or applications using them. That is why they are called _application programming_ interfaces.
     
-    For example, a JavaScript program may need to make HTTP requests from it. Making HTTP requests to a server and receiving responses is a very complex operation. The `fetch` function acts as an interface. Some had it implemented once and any caller can use it to make HTTP requests.
+    For example, a JavaScript program may need to make HTTP requests from it. Making HTTP requests to a server and receiving responses is a very complex operation. The `fetch` function acts as an interface. Someone had it implemented once, and any caller can use it to make HTTP requests.
     
     In an API, both parties agree on a set of rules. Firstly, the API represents or models a system. The caller (user of the API) has to know the model. Secondly, the caller has to know the rules of communication with the system. The caller then uses the API to communicate with the system.
 
