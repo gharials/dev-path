@@ -165,6 +165,25 @@ Most importantly, client-side JavaScript has access to the HTML document's _obje
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
+???+ info "JavaScript DOM as an API"
+    The JavaScript DOM or the `document` object is very important. It represents an important programming concept called an _API_ (Application Programming Interface). Before understanding APIs in general, we need to understand what an interface is.
+
+    **What is an interface?**
+
+    In a map the areas around the boundary lines between two countries are called _interfacing regions._ In any interface, there are two parties: the caller and the callee.
+
+    **What is an API?**
+
+    If a programmer had to write code for every interaction with a system from scratch, it would be very complex and time-consuming. An API has it written once and lets programmers use it whenever needed. That is how complex systems are built.
+
+    In an API, both parties agree on a set of rules. Firstly, the API represents or _models_ a system. The caller (user of the API) has to know the model. Secondly, the caller has to know the rules of communication with the system. The caller then uses the API to communicate with the system.
+
+    **JavaScript DOM as an API**
+
+    Now, the JavaScript `document` object allows any JavaScript code to communicate with the HTML document. It models the HTML document as a _tree_. The `document` object has methods, like `getElementById`, that allow accessing elements of the HTML document. It also has methods to modify the HTML document, like `createElement`, `appendChild`, etc.
+ 
+    Without the `document` object, programmers would have to write complex code to access and modify the HTML document. The `document` object removes that complexity and provides a simple way to interact with the HTML document. Therefore, the `document` object is an API that allows JavaScript functions to communicate with the HTML document.
+
 ### How HTML and client-side JavaScript work together
 
 HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onClick="function1()"/>` means call `function1` when element is clicked; `<element onLoad="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
