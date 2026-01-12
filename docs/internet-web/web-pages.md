@@ -171,11 +171,11 @@ Elements of the HTML document can be read and modified through the `document` ob
 
     **What is an interface?**
 
-    On a map the areas around the boundary lines between two countries are called _interfacing regions._ In any interface, there are two parties: the caller and the callee.
+    We have sockets for lights at every home. Now, a light socket is a kind of interface. Lights need power, but light manufacturers don't need to worry about it. They just need to make sure that there lights’ connectors are compatible with the socket design used at homes. As a result, light manufacturers can focus on making lights of many designs, shapes, sizes, and colors.
 
-    All complex systems are built using some kind of interfaces. Assembling interfaces.
+    Notice that providing power and making lights are two different areas. A light socket acts as a link or bridge between them. These type of links or bridges are called interfaces.
 
-    We have sockets for lights at every home. They provide power to lights. Now, a light socket is a kind of interface. Any light manufacturer can make lights of any shape, size, or color, but following the socket rules.
+    All complex systems are built using interfaces of some kind. Interfaces allow two parties work independently. Power manufacturers can improve cables, power supplies, etc., while light manufacturers can improve light technologies (e.g., CFL, LED, etc.). No parties create any problem for the other, because the interface remains the same.
 
     **What is an API?**
 
