@@ -19,6 +19,7 @@ nav:
     - How Web Pages Work: internet-web/web-pages.md
   - Building Softwares:
     - Web Applications: building-softwares/web-applications.md
+    - Software Development Concepts: building-softwares/software-dev-concepts.md
     - Web Applications with React JS: building-softwares/react-js.md
   - Version Controlling with Git: vcs-git.md
 copyright:
