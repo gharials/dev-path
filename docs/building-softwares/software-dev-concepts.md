@@ -6,9 +6,11 @@ Before understanding APIs in general, we need to understand what an interface is
 
 ### What is an interface?
 
-We have sockets for lights at every home. Providing power and making lights are two different areas. A light socket acts as a link or bridge between them. _These type of links or bridges are called interfaces._ Lights need power, but light manufacturers don't need to worry about it. They just need to make sure that there lights’ connectors are compatible with the socket design used at homes. As a result, light manufacturers can focus on making lights of many designs, shapes, sizes, and colors.
+Electricity has revolutionized our lives for more than a century. It has given rise to countless electrical devices that make our lives easier. All electrical devices need power to work. Generating and providing electric power is a complex task, requiring deep expertise. Designing and manufacturing electrical devices is another complex task, requiring different expertise. Now, electric power sockets act as a bridge or link between these two complex tasks. _These types of links or bridges are called interfaces._
 
-All complex systems are built using interfaces of some kind. _Interfaces allow two parties work independently._ Power manufacturers can improve cables, power supplies, etc., while light manufacturers can improve light technologies (e.g., CFL, LED, etc.). No parties create any problem for the other, because the interface remains the same.
+Devices need power, but device manufacturers don't need to worry about it. They just need to make sure that their devices’ connectors are compatible with the socket design used at homes. As a result, device manufacturers can focus on making devices of many types, designs, and functionalities.
+
+All complex systems are built using interfaces of some kind. _Interfaces allow two parties to work independently._ Power manufacturers can improve cables, power supplies, etc., while device manufacturers can improve their devices or research new devices. No parties create any problem for the other, because the bridge between them (the interface) remains the same.
 
 ### What is an API?
 
