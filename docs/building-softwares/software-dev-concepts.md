@@ -12,6 +12,8 @@ Devices need power, but device manufacturers don't need to worry about it. They 
 
 All complex systems are built using interfaces of some kind. _Interfaces allow two parties to work independently._ Power manufacturers can improve cables, power supplies, etc., while device manufacturers can improve their devices or research new devices. No parties create any problem for the other, because the bridge between them (the interface) remains the same.
 
+Whenever an innovator plans a new device, he knows that he can use the existing power sockets to power his device. He can focus on innovating the device itself. That way, interfaces promote innovation. Power manufacturers had no idea about smartphones and other devices, yet they promoted innovation in these fields by removing the power supply problem for device innovators with power sockets.
+
 ### What is an API?
 
 By default, a programming language has very few built-in features. Therefore, very few things can be done using just the language itself, like printing on the console. A real program needs to do many other things outside that.
