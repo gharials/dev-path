@@ -1092,9 +1092,11 @@
 <p>We have sockets for lights at every home. Providing power and making lights are two different areas. A light socket acts as a link or bridge between them. <em>These type of links or bridges are called interfaces.</em> Lights need power, but light manufacturers don't need to worry about it. They just need to make sure that there lights’ connectors are compatible with the socket design used at homes. As a result, light manufacturers can focus on making lights of many designs, shapes, sizes, and colors.</p>
 <p>All complex systems are built using interfaces of some kind. <em>Interfaces allow two parties work independently.</em> Power manufacturers can improve cables, power supplies, etc., while light manufacturers can improve light technologies (e.g., CFL, LED, etc.). No parties create any problem for the other, because the interface remains the same.</p>
 <h3 id="what-is-an-api">What is an API?</h3>
-<p>A program may need to interact with many external systems. Writing code for every interaction with a system from scratch would be very complex and time-consuming. An API has it written once and lets other programmers use it whenever needed. These interfaces let you write other programs or applications using them. That is why they are called <em>application programming</em> interfaces.</p>
-<p>For example, a JavaScript program may need to make HTTP requests from it. Making HTTP requests to a server and receiving responses is a very complex operation. Understanding and implementing it requires deep knowledge of HTTP, networking, and operating systems. Here, the <code>fetch</code> function acts as an interface between HTTP and a JavaScript program. Someone had the HTTP request-response mechanism implemented in the <code>fetch</code> function once, and any caller can use it to make HTTP requests.</p>
-<p>In an API, both parties agree on a set of rules. Firstly, the API represents or models a system. The caller (user of the API) has to know the model. Secondly, the caller has to know the rules of communication with the system. The caller then uses the API to communicate with the system.</p>
+<p>By default, a programming language has very few built-in features. Therefore, very few things can be done using just the language itself, like printing on the console. A real program needs to do many other things outside that.</p>
+<p>For example, a JavaScript program may need to make HTTP requests from it. Making HTTP requests to a server and receiving responses is a very complex operation. Understanding and implementing it requires deep knowledge of HTTP, networking, and operating systems. Here, the <code>fetch</code> function acts as an interface between HTTP and a JavaScript program. Some programmer had the HTTP request-response mechanism implemented in the <code>fetch</code> function once, and any caller can use it to make HTTP requests.</p>
+<p>This way, the <code>fetch</code> function enables other programmers to program new applications using HTTP. That's why it is called an <em>application programming interface</em> (API). Like the <code>fetch</code> function hides the complexity of HTTP, many other APIs hide the complexity of other systems.</p>
+<p>In an API, both parties agree on a set of rules. For example, in the <code>fetch</code> function, the caller has to know how to call it, what parameters to pass, and what it returns. The programmer of the <code>fetch</code> function makes sure that it follows the agreed rules. The caller doesn't need to know <em>how <code>fetch</code> is implemented internally</em>. The caller just needs to know <em>how to use it</em>.</p>
+<p>So, whenever you want to use a complex system in your program, you can install a library that provides an API for that system. You can then use that API to communicate with the complex system without worrying about its internal details.</p>
 
 
 
@@ -1117,7 +1119,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 12, 2026 13:53:39 UTC">January 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 13, 2026 19:52:03 UTC">January 13, 2026</span>
   </span>
 
     
