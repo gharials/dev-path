@@ -6,6 +6,8 @@ Before understanding APIs in general, we need to understand what an interface is
 
 ### What is an interface?
 
+![A power socket acting as an interface between power generation and electrical devices](../images/interface-schematic.png)
+
 Electricity has revolutionized our lives for more than a century. It has given rise to countless electrical devices that make our lives easier. All electrical devices need power to work. Generating and providing electric power is a complex task, requiring deep expertise. Designing and manufacturing electrical devices is another complex task, requiring different expertise. Now, electric power sockets act as a bridge or link between these two complex tasks. _These types of links or bridges are called interfaces._
 
 Devices need power, but device manufacturers don't need to worry about it. They just need to make sure that their devices’ connectors are compatible with the socket design used at homes. As a result, device manufacturers can focus on making devices of many types, designs, and functionalities.
