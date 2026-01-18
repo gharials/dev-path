@@ -195,10 +195,6 @@ A common use of client-side JavaScript is in *validating* HTML forms. Users may 
 
 In a usual HTML form, after a user submits a form, input data is sent to the server. No form data processing takes place at the browser. In this approach, only the server can validate the form data.
 
-<s>This approach incurs unnecessary network travel costs and server resources.</s>
-
-<s>Now, these additional costs can be avoided using JavaScript.</s>
-
 Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs. Notice that each input element in a form and the form itself are all HTML elements. Therefore, they can all have their own events and event handlers. Some of these events can be used for validating form inputs.
 
 | Element | Event      | Description | Example
