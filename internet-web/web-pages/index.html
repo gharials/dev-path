@@ -1578,15 +1578,83 @@
 <p>The architecture in summary: <em>perform some operation (function) when something happens (event) to an element.</em></p>
 <h3 id="applications-of-client-side-javascript">Applications of client-side JavaScript</h3>
 <h4 id="validating-forms-with-client-side-js">Validating forms with client-side JS</h4>
-<p>Client-side JavaScript has its application in <em>validating</em> HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called <em>validation</em>) before storing in database.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p><strong>How HTML forms work.</strong></p>
-<p>Forms are used to accept inputs from user and passing them to server for storing in database. A form contains a number of inputs of various types and a submit button. When user clicks the submit button, the inputs are passed (<em>submitted</em>) to the server.</p>
-<p>A server has a URL that handles the form data. The URL that handles the form data is specified in the <code>action</code> attribute (e.g., <code>&lt;form action="/submit"&gt;</code>). The request method can also be specified with the <code>method</code> attribute (e.g., <code>&lt;form action="/submit" method="POST"&gt;</code>. Method can be either <code>GET</code> or <code>POST</code>. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.</p>
-</div>
-<p>In a simple HTML form, upon submission form data is sent to the server. The server then validates the form data. This approach incurs unnecessary network travel costs and server resources.</p>
-<p>If the form data could be validated at the browser, before submitting to the server, both network travel and server processing could be avoided. Client-side JavaScript is very useful for this purpose: write a JavaScript function that contains the logic to validate the form. In the function, find the form element using the <code>document</code> object, and after that, access and check the form input values. Call the function when the user clicks the submit button. Pass the form to the server only after the function finds no error in the inputs.</p>
+<p>A common use of client-side JavaScript is in <em>validating</em> HTML forms. Users may input incorrect data or forget to input mandatory data while filling out forms. The user inputs have to be checked (called <em>validation</em>) before storing in a database. Before we see how client-side JavaScript validates forms, have a look at how HTML forms usually work in the following info box.</p>
+<details class="info" open="open">
+<summary>How HTML forms work</summary>
+<p>In HTML, forms are used to accept inputs from users and pass them to servers for storing in a database. A form contains a number of inputs of various types and a submit button. When a user clicks the submit button, the inputs are passed (<em>submitted</em>) to the server with an HTTP request.</p>
+<p>A server has a URL that receives the form data, and the URL is specified in the <code>action</code> attribute (e.g., <code>&lt;form action="/submit"&gt;</code>) of the form. Additionally, the request method (either <code>GET</code> or <code>POST</code>) can also be specified with the <code>method</code> attribute (e.g., <code>&lt;form action="/submit" method="POST"&gt;</code>. When a user submits the form, the form fields are converted into a request body, and an HTTP request is made to the specified URL.</p>
+</details>
+<p>In a usual HTML form, after a user submits a form, input data is sent to the server. No form data processing takes place at the browser. In this approach, only the server can validate the form data.</p>
+<p><s>This approach incurs unnecessary network travel costs and server resources.</s></p>
+<p><s>Now, these additional costs can be avoided using JavaScript.</s></p>
+<p>Now, we can use the event and event handler approach described <a href="#how-html-and-client-side-javascript-work-together">in the previous section</a> to validate form inputs. Notice that each input element in a form and the form itself are all HTML elements. Therefore, they can all have their own events and event handlers. Some of these events can be used for validating form inputs.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Event</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Input</td>
+<td><code>onchange</code></td>
+<td>This event occurs when the value of an input element changes and the element loses focus, meaning user goes from one field to another.</td>
+<td><code>&lt;input type="text" onchange="validateName()"&gt;</code> or <code>&lt;input type="text" onchange="validateName(event)"&gt;</code></td>
+</tr>
+<tr>
+<td>Input</td>
+<td><code>oninput</code></td>
+<td>This event occurs when the value of an input element changes, meaning as user types in or deletes characters.</td>
+<td><code>&lt;input type="text" oninput="validateEmail()"&gt;</code> or <code>&lt;input type="text" onchange="validateEmail(event)"&gt;</code></td>
+</tr>
+<tr>
+<td>Form</td>
+<td><code>onsubmit</code></td>
+<td>This event occurs when user clicks the submit button.</td>
+<td><code>&lt;form onsubmit="validateForm()"&gt;</code> or <code>&lt;form onsubmit="validateForm(event)"&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Now, notice that for each input element, we can use the <code>onchange</code> or <code>oninput</code> event handler functions to validate the input value. In the event handler functions, we can access the input values, using either <code>document</code> object or <code>event</code> parameter, and check whether they are correct or not.</p>
+<p>Similarly, we can use the <code>onsubmit</code> event handler of the form element to validate the entire form. This function can prevent form submissions if any of the input values are invalid.</p>
+<details class="question" open="open">
+<summary>Hands-on exercise</summary>
+<p>Create a simple HTML form with the following fields: <em>Name (text)</em>, <em>Email (text)</em>, <em>Age (number)</em>, and a Submit button. Write the following client-side JavaScript functions to validate the form inputs:</p>
+<table>
+<thead>
+<tr>
+<th>element</th>
+<th>event</th>
+<th>Validation logic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td><code>onchange</code> and <code>oninput</code></td>
+<td>Check that the name is not empty.</td>
+</tr>
+<tr>
+<td>Email</td>
+<td><code>onchange</code> and <code>oninput</code></td>
+<td>Check that the email is in a valid email format.</td>
+</tr>
+<tr>
+<td>Age</td>
+<td><code>onchange</code> and <code>oninput</code></td>
+<td>Check that the age is a number between 1 and 120.</td>
+</tr>
+<tr>
+<td>Form</td>
+<td><code>onsubmit</code></td>
+<td>Check that all fields are valid before allowing submission.</td>
+</tr>
+</tbody>
+</table>
+</details>
 <h2 id="developing-basic-web-pages">Developing basic web pages</h2>
 <p>Knowledge of HTML, CSS, and JavaScript is enough to create a basic web page: create an HTML file; create a CSS file for styling it; create a JavaScript file for various event handling; and link the CSS and JavaScript files to the HTML document. Put those files in a <a href="../web-servers/#serving-static-contents">server static directory</a> for serving to the client. This architecture can develop fairly complex web pages. In fact, that is how web pages were built for a long time.</p>
 
@@ -1611,7 +1679,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 18, 2026 18:27:50 UTC">January 18, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 18, 2026 19:04:36 UTC">January 18, 2026</span>
   </span>
 
     
