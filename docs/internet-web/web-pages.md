@@ -185,18 +185,43 @@ The architecture in summary: _perform some operation (function) when something h
 
 #### Validating forms with client-side JS
 
-Client-side JavaScript has its application in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data in forms. The user inputs have to be checked (called *validation*) before storing in database.
+A common use of client-side JavaScript is in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data while filling out forms. The user inputs have to be checked (called *validation*) before storing in a database. Before we see how client-side JavaScript validates forms, have a look at how HTML forms usually work in the following info box.
 
-!!!info
-    **How HTML forms work.**
+???+ info "How HTML forms work"
 
-    Forms are used to accept inputs from user and passing them to server for storing in database. A form contains a number of inputs of various types and a submit button. When user clicks the submit button, the inputs are passed (*submitted*) to the server.
+    In HTML, forms are used to accept inputs from users and pass them to servers for storing in a database. A form contains a number of inputs of various types and a submit button. When a user clicks the submit button, the inputs are passed (*submitted*) to the server with an HTTP request.
 
-    A server has a URL that handles the form data. The URL that handles the form data is specified in the `action` attribute (e.g., `<form action="/submit">`). The request method can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. Method can be either `GET` or `POST`. Upon submitting the form, the form fields are converted into a request body and sent to the server at the specified URL. The server processes the request and returns a response.
+    A server has a URL that receives the form data, and the URL is specified in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. When a user submits the form, the form fields are converted into a request body, and an HTTP request is made to the specified URL.
 
-In a simple HTML form, upon submission form data is sent to the server. The server then validates the form data. This approach incurs unnecessary network travel costs and server resources.
+In a usual HTML form, after a user submits a form, input data is sent to the server. No form data processing takes place at the browser. In this approach, only the server can validate the form data.
 
-If the form data could be validated at the browser, before submitting to the server, both network travel and server processing could be avoided. Client-side JavaScript is very useful for this purpose: write a JavaScript function that contains the logic to validate the form. In the function, find the form element using the `document` object, and after that, access and check the form input values. Call the function when the user clicks the submit button. Pass the form to the server only after the function finds no error in the inputs.
+<s>This approach incurs unnecessary network travel costs and server resources.</s>
+
+<s>Now, these additional costs can be avoided using JavaScript.</s>
+
+Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs. Notice that each input element in a form and the form itself are all HTML elements. Therefore, they can all have their own events and event handlers. Some of these events can be used for validating form inputs.
+
+| Element | Event      | Description | Example
+|---------|------------|-------------|----------
+| Input   | `onchange` | This event occurs when the value of an input element changes and the element loses focus, meaning user goes from one field to another. | `<input type="text" onchange="validateName()">` or `<input type="text" onchange="validateName(event)">`
+| Input   | `oninput`  | This event occurs when the value of an input element changes, meaning as user types in or deletes characters. | `<input type="text" oninput="validateEmail()">` or `<input type="text" onchange="validateEmail(event)">`
+| Form    | `onsubmit` | This event occurs when user clicks the submit button. | `<form onsubmit="validateForm()">` or `<form onsubmit="validateForm(event)">`
+
+Now, notice that for each input element, we can use the `onchange` or `oninput` event handler functions to validate the input value. In the event handler functions, we can access the input values, using either `document` object or `event` parameter, and check whether they are correct or not.
+
+Similarly, we can use the `onsubmit` event handler of the form element to validate the entire form. This function can prevent form submissions if any of the input values are invalid.
+
+???+ question "Hands-on exercise"
+
+    Create a simple HTML form with the following fields: _Name (text)_, _Email (text)_, _Age (number)_, and a Submit button. Write the following client-side JavaScript functions to validate the form inputs:
+
+    | element | event     | Validation logic
+    |---------|-----------|------------------
+    | Name    | `onchange` and `oninput`  | Check that the name is not empty.
+    | Email   | `onchange` and `oninput`  | Check that the email is in a valid email format.
+    | Age     | `onchange` and `oninput`  | Check that the age is a number between 1 and 120.
+    | Form    | `onsubmit` | Check that all fields are valid before allowing submission.
+
 
 ## Developing basic web pages
 
