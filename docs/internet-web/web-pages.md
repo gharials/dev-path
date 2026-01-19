@@ -45,6 +45,14 @@ An HTML may also need JavaScript files. They are specified as external resources
     </html>
     ```
 
+## HTML
+
+### How HTML forms work
+
+In HTML, forms are used to accept inputs from users and pass them to servers for storing in a database. A form contains a number of inputs of various types and a submit button. When a user clicks the submit button, the inputs are passed (*submitted*) to the server with an HTTP request.
+
+A server has a URL that receives the form data, and the URL is specified in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. When a user submits the form, the form fields are converted into a request body, and an HTTP request is made to the specified URL.
+
 ## Styling web pages with CSS
 
 By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
@@ -185,31 +193,32 @@ The architecture in summary: _perform some operation (function) when something h
 
 #### Validating forms with client-side JS
 
-A common use of client-side JavaScript is in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data while filling out forms. The user inputs have to be checked (called *validation*) before storing in a database. Before we see how client-side JavaScript validates forms, have a look at how HTML forms usually work in the following info box.
+A common use of client-side JavaScript is in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data while filling out forms. The user inputs have to be checked (called *validation*) before storing in a database. Before we see how client-side JavaScript validates forms, have a look at [how HTML forms usually work](#how-html-forms-work).
 
-???+ info "How HTML forms work"
+In a usual HTML form, after a user submits a form, input data is sent to the server just as they are. No form data processing takes place at the browser. In this approach, only the server can validate the form data.
 
-    In HTML, forms are used to accept inputs from users and pass them to servers for storing in a database. A form contains a number of inputs of various types and a submit button. When a user clicks the submit button, the inputs are passed (*submitted*) to the server with an HTTP request.
-
-    A server has a URL that receives the form data, and the URL is specified in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. When a user submits the form, the form fields are converted into a request body, and an HTTP request is made to the specified URL.
-
-In a usual HTML form, after a user submits a form, input data is sent to the server. No form data processing takes place at the browser. In this approach, only the server can validate the form data.
-
-Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs. Notice that each input element in a form and the form itself are all HTML elements. Therefore, they can all have their own events and event handlers. Some of these events can be used for validating form inputs.
+Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs. Notice that each input element in a form and the form itself are all HTML elements. Therefore, just like any other HTML elements, they can all have their own events and event handlers. Among the events, the following can be used for validating form inputs.
 
 | Element | Event      | Description | Example
 |---------|------------|-------------|----------
 | Input   | `onchange` | This event occurs when the value of an input element changes and the element loses focus, meaning user goes from one field to another. | `<input type="text" onchange="validateName()">` or `<input type="text" onchange="validateName(event)">`
 | Input   | `oninput`  | This event occurs when the value of an input element changes, meaning as user types in or deletes characters. | `<input type="text" oninput="validateEmail()">` or `<input type="text" onchange="validateEmail(event)">`
-| Form    | `onsubmit` | This event occurs when user clicks the submit button. | `<form onsubmit="validateForm()">` or `<form onsubmit="validateForm(event)">`
+| Form    | `onsubmit` | This event occurs when user clicks the submit button of a form. | `<form onsubmit="validateForm()">` or `<form onsubmit="validateForm(event)">`
 
-Now, notice that for each input element, we can use the `onchange` or `oninput` event handler functions to validate the input value. In the event handler functions, we can access the input values, using either `document` object or `event` parameter, and check whether they are correct or not.
+Now, notice that for each input element, we can use the `onchange` or `oninput` event handler functions to validate the input value. Inside the event handler functions, we can access the input values, using either `document` object or `event` parameter (see the info box below), and check whether they are correct or not.
+
+???+ info "Accessing input values in event handler functions"
+
+    In an event handler function, we can access the HTML element that triggered the event in two ways:
+
+    1. Using the `document` object: We can use methods like `document.getElementById` to get the element and then access its value using the `value` property. For example, if an input element has `id="name"`, we can get its value with `document.getElementById("name").value`.
+    2. Using the `event` parameter: When an event handler function is called, it receives an `event` object as a parameter. This object contains information about the event, including the target element that triggered the event. We can access the value of the input element using `event.target.value`. _Note:_ in this case, the event handler function must declare the `event` parameter, and the HTML element must call the function with the `event` argument, e.g., `onchange="validateName(event)"`.
 
 Similarly, we can use the `onsubmit` event handler of the form element to validate the entire form. This function can prevent form submissions if any of the input values are invalid.
 
 ???+ question "Hands-on exercise"
 
-    Create a simple HTML form with the following fields: _Name (text)_, _Email (text)_, _Age (number)_, and a Submit button. Write the following client-side JavaScript functions to validate the form inputs:
+    Create a simple HTML form with the following fields: _Name (text)_, _Email (text)_, _Age (number)_, and a Submit button. Define event handler functions for the following elements and events to validate the inputs:
 
     | element | event     | Validation logic
     |---------|-----------|------------------
@@ -217,7 +226,6 @@ Similarly, we can use the `onsubmit` event handler of the form element to valida
     | Email   | `onchange` and `oninput`  | Check that the email is in a valid email format.
     | Age     | `onchange` and `oninput`  | Check that the age is a number between 1 and 120.
     | Form    | `onsubmit` | Check that all fields are valid before allowing submission.
-
 
 ## Developing basic web pages
 
