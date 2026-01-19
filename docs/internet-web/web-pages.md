@@ -13,13 +13,27 @@ A web page is made up of the following fundamental building blocks:
 
 The HTML document is the main file of a web page. But a complex web page needs some additional files (images, CSS files, scripts, etc.), called *linked resources.*
 
-### Linking resources with HTML
+### Linking resources with an HTML file
 
-The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
+The resources needed by an HTML are specified with the `<link>` tag within the `<head>` tag of the HTML document. In the following example, a CSS file named `style.css` is specified as an external resource with the `<link>` tag.
 
-An HTML may also need JavaScript files. They are specified as external resources with the `<script>` tag.
+```html
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+```
 
-!!!info
+An HTML may also need JavaScript files. The linking rule is bit different for them. They are specified as external resources with the `<script>` tag. In the following example, a JavaScript file named `script.js` is specified as an external resource with the `<script>` tag.
+
+```html
+<head>
+  <script src="script.js"></script>
+</head>
+```
+
+The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
+
+???+ info
     **Passing CSS and JavaScript within HTML**
 
     CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This is done with the `<style>` and `<script>` tags, respectively. Example follows:
