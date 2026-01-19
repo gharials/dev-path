@@ -222,10 +222,17 @@ Similarly, we can use the `onsubmit` event handler of the form element to valida
 
     | element | event     | Validation logic
     |---------|-----------|------------------
-    | Name    | `onchange` and `oninput`  | Check that the name is not empty.
-    | Email   | `onchange` and `oninput`  | Check that the email is in a valid email format.
-    | Age     | `onchange` and `oninput`  | Check that the age is a number between 1 and 120.
-    | Form    | `onsubmit` | Check that all fields are valid before allowing submission.
+    | _Name_  | `onchange` and `oninput`  | Check that the name is not empty.
+    | _Email_ | `onchange` and `oninput`  | Check that the email is in a valid email format, containing `@` and `.`
+    | _Age_   | `onchange` and `oninput`  | Check that the age is a number between 1 and 120.
+    | _Form_  | `onsubmit` | Check that all fields are valid before allowing submission.
+
+    Implement the following operations in each event handler function:
+
+    1. Print a message on console just to check that the function is called actually.
+    2. Access and print the input values on console using `document` object.
+    3. Access and print the input values on console using `event` parameter.
+    4. Check the respective input values according to the validation logic in the table above.
 
 ## Developing basic web pages
 
