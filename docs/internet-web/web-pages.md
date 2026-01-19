@@ -169,7 +169,7 @@ div {
 
 ## Client-side JavaScript
 
-Just like without CSS a web page looks plain, without interactivity, response to user actions, a web page is static and unresponsive. Without interactivity, a web page is just a collection of text and images. Users can only read the text and see the images. In the early days of the web, web pages were designed to display text and images.
+Just like without CSS a web page looks plain, without interactivity, response to user actions, a web page is static and unresponsive. Without interactivity, a web page is just a collection of text and images. Users can only read the text, see the images, and go to other pages. In the early days of the web, web pages were designed to display text and images.
 
 These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as clicking buttons, inputting text, and submitting forms. This is where client-side JavaScript comes in.
 
@@ -183,7 +183,7 @@ Where NodeJS can run *any* JavaScript file chosen by the user, browsers can *onl
 
 Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
-#### JavaScript DOM
+### JavaScript DOM
 
 Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
 
@@ -213,7 +213,7 @@ A common use of client-side JavaScript is in *validating* HTML forms. Users may 
 
 In a usual HTML form, after a user submits a form, input data is sent to the server just as they are. No form data processing takes place at the browser. In this approach, only the server can validate the form data.
 
-Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs. Notice that each input element in a form and the form itself are all HTML elements. Therefore, just like any other HTML elements, they can all have their own events and event handlers. Among the events, the following can be used for validating form inputs.
+Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs at browser, before submitting to a server. Notice that each input element in a form and the form itself are all HTML elements. Therefore, just like any other HTML elements, they can all have their own events and event handlers. Among the events, the following can be used for validating form inputs.
 
 | Element | Event      | Description | Example
 |---------|------------|-------------|----------
