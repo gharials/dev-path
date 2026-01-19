@@ -67,6 +67,10 @@ In HTML, forms are used to accept inputs from users and pass them to servers for
 
 A server has a URL that receives the form data, and the URL is specified in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. When a user submits the form, the form fields are converted into a request body, and an HTTP request is made to the specified URL.
 
+???+ question "Hands-on exercise"
+
+    Create a simple HTML form with some sample input fields (e.g., name, email, age, etc.) and a submit button. Specify a URL in the `action` attribute and a request method in the `method` attribute of the form. Open the HTML file in a browser, fill out the form, and click the submit button. Check in the browser's developer tools (Network tab) to see the HTTP request made to the specified URL, and also observe how the form fields are passed with the request.
+
 ## Styling web pages with CSS
 
 By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
