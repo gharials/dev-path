@@ -59,7 +59,7 @@ The external resources are usually stored in the server's [static directory](web
     </html>
     ```
 
-## HTML
+## Defining page contents with HTML
 
 ### How HTML forms work
 
