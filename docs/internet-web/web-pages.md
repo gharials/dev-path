@@ -119,9 +119,7 @@ The `#id` selector selects an element with a specific `id` attribute. For exampl
 }
 ```
 
-!!! info
-
-    **Scopes of class and id selectors**
+???+ note "Scopes of class and id selectors"
 
     In an HTML document, `id` attributes of elements are unique, meaning that only one element can have a specific `id`. Therefore, a CSS id selector selects only one element. In contrast, `class` attributes can be shared by multiple elements, so a CSS class selector can select multiple elements. This is why the id selector is more specific than the class selector. In other words, an id selector has a [one-to-one mapping](../programming/mental-models.md#associations-or-maps) with an HTML element, while a class selector has a [one-to-many](../programming/mental-models.md#associations-or-maps) mapping with HTML elements.
 
@@ -191,7 +189,7 @@ Most importantly, client-side JavaScript has access to the HTML document's _obje
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
-???+ info "Concept: JavaScript DOM as an API"
+???+ note "Concept: JavaScript DOM as an API"
 
     The JavaScript DOM, or the `document` object, represents an important programming concept called an [_API_ (Application Programming Interface)](../building-softwares/software-dev-concepts.md#api-application-programming-interface). A programmer will encounter this concept frequently. A clear understanding of it is important.
 
