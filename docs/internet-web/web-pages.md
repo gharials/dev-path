@@ -11,7 +11,7 @@ A web page is made up of the following fundamental building blocks:
 * _CSS._ For styling the content.
 * _JavaScript._ For making the web page interactive.
 
-The HTML document is the main file of a web page. But a complex web page needs some additional files (images, CSS files, scripts, etc.), called *linked resources.*
+Besides an HTML file, a complex web page needs some additional files (images, CSS files, scripts, etc.), called *linked resources.* The HTML document is the nucleus of a web page. It glues all these resources together to form a complete web page. The next section explains how an HTML document links these resources.
 
 ### Linking resources with an HTML file
 
@@ -33,10 +33,9 @@ An HTML may also need JavaScript files. The linking rule is bit different for th
 
 The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
 
-???+ info
-    **Passing CSS and JavaScript within HTML**
+???+ "Passing CSS and JavaScript within HTML"
 
-    CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This is done with the `<style>` and `<script>` tags, respectively. Example follows:
+    CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This approach is suitable for small CSS and JavaScript codes. This is done with the `<style>` and `<script>` tags, respectively. An example follows:
 
     ```html
     <html>
