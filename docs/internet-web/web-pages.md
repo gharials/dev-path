@@ -107,7 +107,9 @@ In the following example, the `.highlight` selector sets the background color of
 }
 ```
 
-Note that an HTML element can have multiple classes. For example, `<div class="highlight important">` has two classes: `highlight` and `important`. The `div` element will get the styles defined for both classes.
+Note that in an HTML document, multiple elements can have the same `class` attribute. So, a CSS class selector style applies to all those elements.
+
+Also note that an HTML element can have multiple classes. For example, `<div class="highlight important">` has two classes: `highlight` and `important`. The `div` element will get the styles defined for both classes.
 
 #### The id selector
 
@@ -119,9 +121,11 @@ The `#id` selector selects an element with a specific `id` attribute. For exampl
 }
 ```
 
-???+ note "Scopes of class and id selectors"
+Note that in an HTML document, `id` attributes are unique, meaning that only one element can have a specific `id`. So, a CSS id selector style applies to only one element.
 
-    In an HTML document, `id` attributes of elements are unique, meaning that only one element can have a specific `id`. Therefore, a CSS id selector selects only one element. In contrast, `class` attributes can be shared by multiple elements, so a CSS class selector can select multiple elements. This is why the id selector is more specific than the class selector. In other words, an id selector has a [one-to-one mapping](../programming/mental-models.md#associations-or-maps) with an HTML element, while a class selector has a [one-to-many](../programming/mental-models.md#associations-or-maps) mapping with HTML elements.
+???+ note "Concept: class and id selectors as associations"
+
+    As we have seen in this section, in an HTML document, only one element can have a specific `id`. On the other hand, multiple elements may have the same `class`. In terms of [_association_ or _mapping_](../programming/mental-models.md#associations-or-maps), an id has a _one-to-one mapping_ with an HTML element, while a class has a _one-to-many_ mapping with HTML elements.
 
 ### The box model
 
