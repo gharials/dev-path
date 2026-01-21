@@ -59,6 +59,12 @@ The external resources are usually stored in the server's [static directory](web
     </html>
     ```
 
+## How web pages are developed
+
+A programmer creates an HTML file, containing the content that she wants to show to the users. She may also create additional files, such as CSS files for styling the page and JavaScript files for adding interactivity to the page. Then all these files are put in a web server's [static directory](./web-servers.md#serving-static-contents). It is a _one-time_ job. 
+
+After that, whenever a user requests the web page, the server returns the HTML file. How a web server does it is explained in [How an HTTP server serves websites](./web-servers.md#how-an-http-server-serves-websites). In the following sections, we will see how HTML, CSS, and JavaScript work together to create a complete web page.
+
 ## Defining page contents with HTML
 
 ### How HTML forms work
