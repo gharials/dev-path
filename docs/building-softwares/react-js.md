@@ -9,6 +9,8 @@ React framework promotes a _modular development_ approach, meaning developing a 
 
 ## Getting started with React
 
+The best way to learn React is by creating a sample React application and experimenting with it. The following steps create a sample React application.
+
 ```bash
 npm create vite@latest my-react-app -- --template react
 cd my react-app
@@ -17,7 +19,7 @@ npm run dev
 ```
 
 ???+ question "Hands-on exercise"
-    1. Create a React application with Vite using the command show above.
+    1. Create a React application with Vite using the command shown above.
     2. Open the application in VS Code and run it with `npm run dev`.
     3. Open the URL shown in the terminal (usually `http://localhost:5173`) in a web browser.
     4. Modify the `App.jsx` file in the `src` directory and see the changes in the browser.
@@ -51,7 +53,7 @@ In a React project, we only define the component functions, but how does React g
 2. After a trigger, React calls the component function. The component function evaluates the JavaScripts expressions in its JSX, if there are any and then returns the HTML string. This phase is called _rendering._
 3. Then it adds the generated HTML portion into the HTML DOM using [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp) so that it becomes visible in the HTML page. This phase is called _commit._ .
 
-While rendering a component, if React finds out that it contains child components, it triggers their rendering too. Those components also go through the _trigger_, _render_, and _commit_ phases.
+While rendering a component, if React finds out that it contains child components, it triggers their rendering too, like a chain reaction. Those components also go through the _trigger_, _render_, and _commit_ phases.
 
 ## Working with React components
 
@@ -198,7 +200,7 @@ function StudentDetails({ id }) {
 ```
 
 ???+ question "Exercise"
-    1. Create a React application with Vite: `npm create vite@latest my-react-app -- --template react`
+    1. Create a React application with Vite (see [instructions above](#getting-started-with-react)).
     2. Create a component that has a state variable `count` initialized to 0.
     3. Add a button that increments the `count` variable by 1 each time it is clicked.
     4. Use an effect to log the current value of `count` to the console each time the component is rendered.
@@ -315,7 +317,7 @@ export default App
 ```
 
 ???+ question "Exercise"
-    1. Create a React application with Vite: `npm create vite@latest my-react-app -- --template react`
+    1. Create a React application with Vite (see [instructions above](#getting-started-with-react)).
     2. Install React Router: `npm install react-router`
     3. Create some components (e.g., Home, About). Keep them as simple as possible. Their content is not important for this exercise.
     3. Configure various routing combinations in the `main.jsx` file.
