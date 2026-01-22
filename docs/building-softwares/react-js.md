@@ -24,7 +24,9 @@ npm run dev
     3. Open the URL shown in the terminal (usually `http://localhost:5173`) in a web browser.
     4. Modify the `App.jsx` file in the `src` directory and see the changes in the browser.
 
-## React components
+## Two fundamental React concepts
+
+### React components
 
 Component is the most important React concept. A component is a JavaScript function that creates a part of a web page whenever it is called. Here follows how a basic React component function looks like:
 
@@ -43,17 +45,9 @@ function App() {
 export default App;
 ```
 
-A component function returns JSX instead of HTML. JSX is an extension of HTML, which allows using JavaScript expression within HTML.
+### JSX: JavaScript XML
 
-## How React generates web pages with components
-
-In a React project, we only define the component functions, but how does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief overview of how a web page is created by React from component:
-
-1. When a user requests for a web page, React finds out the respective component. This phase is called _trigger._
-2. After a trigger, React calls the component function. The component function evaluates the JavaScripts expressions in its JSX, if there are any and then returns the HTML string. This phase is called _rendering._
-3. Then it adds the generated HTML portion into the HTML DOM using [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp) so that it becomes visible in the HTML page. This phase is called _commit._ .
-
-While rendering a component, if React finds out that it contains child components, it triggers their rendering too, like a chain reaction. Those components also go through the _trigger_, _render_, and _commit_ phases.
+Notice that a component function returns JSX instead of HTML. JSX is an extension of HTML, which allows using JavaScript expressions within HTML.
 
 ## Working with React components
 
@@ -173,7 +167,17 @@ function Timer() {
 ???+ question "Exercise"
     Try using an ordinary JavaScript variable instead of a Ref for the same purpose and see what happens.
 
-### Effects: post-rendering operations in components
+## How React generates web pages with components
+
+In a React project, we only define the component functions, but how does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief overview of how a web page is created by React from component:
+
+1. When a user requests for a web page, React finds out the respective component. This phase is called _trigger._
+2. After a trigger, React calls the component function. The component function evaluates the JavaScripts expressions in its JSX, if there are any and then returns the HTML string. This phase is called _rendering._
+3. Then it adds the generated HTML portion into the HTML DOM using [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp) so that it becomes visible in the HTML page. This phase is called _commit._ .
+
+While rendering a component, if React finds out that it contains child components, it triggers their rendering too, like a chain reaction. Those components also go through the _trigger_, _render_, and _commit_ phases.
+
+## Effects: post-rendering operations in components
 
 Just as an event handler function runs after a user event (e.g., a click), React provides a way to run a function _after a component is rendered._ This is called an _effect_. _An effect is a function that runs after the component is rendered and committed._
 
