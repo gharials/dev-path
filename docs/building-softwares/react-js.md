@@ -47,7 +47,10 @@ export default App;
 
 ### JSX: JavaScript XML
 
-Notice that a component function returns JSX instead of HTML. JSX is an extension of HTML, which allows using JavaScript expressions within HTML.
+Notice that a component function returns JSX instead of HTML. JSX is an _extension_ of HTML. Extension means it is similar to HTML but has some additional capabilities. HTML can contain only _static_ values, but JSX may contain JavaScript expressions. Before generating HTML from JSX, React computes the value of the JavaScript expressions in the JSX and replaces the expressions with their computed values.
+
+???+ note "Concept: JSX as a template"
+    A JSX can be seen as a _template_ from which HTML can be created. The same JSX can produce different HTML outputs at different times.
 
 ## Working with React components
 
@@ -78,6 +81,10 @@ Note importantly that the component function _doesn't modify any variables (prop
 
 ???+ question "Problem"
     Try modifying a prop or a state variable in the component function body, and see what happens.
+
+### Nesting components: components within components
+
+A React component may contain one more components within itself.
 
 ### Reusing components with props
 
