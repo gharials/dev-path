@@ -108,6 +108,16 @@ function App() {
 export default App;
 ```
 
+### When React generates web pages from components
+
+In a React project, we only define the component functions, but when does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief overview of how a web page is created by React from component:
+
+1. When a user requests for a web page, React finds out the respective component. This phase is called _trigger._
+2. After a trigger, React calls the component function. The component function evaluates the JavaScripts expressions in its JSX, if there are any and then returns the HTML string. This phase is called _rendering._
+3. Then it adds the generated HTML portion into the HTML DOM using [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp) so that it becomes visible in the HTML page. This phase is called _commit._ .
+
+While rendering a component, if React finds out that it contains child components, it triggers their rendering too, like a chain reaction. Those components also go through the _trigger_, _render_, and _commit_ phases.
+
 ### Managing data in components
 
 A component contains data too. A component broadly contains two kinds of data: first, data that require re-rendering when changed, and second, data that don't require a re-render when they are changed.
@@ -166,16 +176,6 @@ function Timer() {
 
 ???+ question "Exercise"
     Try using an ordinary JavaScript variable instead of a Ref for the same purpose and see what happens.
-
-## How React generates web pages with components
-
-In a React project, we only define the component functions, but how does React generate HTML from them? It is documented in [official React docs](https://react.dev/learn/render-and-commit). Here follows a brief overview of how a web page is created by React from component:
-
-1. When a user requests for a web page, React finds out the respective component. This phase is called _trigger._
-2. After a trigger, React calls the component function. The component function evaluates the JavaScripts expressions in its JSX, if there are any and then returns the HTML string. This phase is called _rendering._
-3. Then it adds the generated HTML portion into the HTML DOM using [`appendChild`](https://www.w3schools.com/jsref/met_document_createelement.asp) so that it becomes visible in the HTML page. This phase is called _commit._ .
-
-While rendering a component, if React finds out that it contains child components, it triggers their rendering too, like a chain reaction. Those components also go through the _trigger_, _render_, and _commit_ phases.
 
 ## Effects: post-rendering operations in components
 
