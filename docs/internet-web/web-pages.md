@@ -183,17 +183,17 @@ div {
 
 Just like without CSS a web page looks plain, without interactivity, response to user actions, a web page is static and unresponsive. Without interactivity, a web page is just a collection of text and images. Users can only read the text, see the images, and go to other pages. In the early days of the web, web pages were designed to display text and images.
 
-These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as clicking buttons, inputting text, and submitting forms. This is where client-side JavaScript comes in.
+These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as when a user clicks a button, inputs text, and submitting forms. This is where client-side JavaScript comes in.
 
-Before getting into how JavaScript brings interactivity to web pages, it is important to understand how browsers run JavaScript.
+Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs_. See the info box below for details.
 
-### Browser as a JavaScript runner
+??? note "Concept: Browser as a JavaScript runner"
 
-Like NodeJS (the `node` command), every browser can run JavaScript programs too. In fact, JavaScript was originally designed only to be run on browsers and remained so for a long time, NodeJS came later.
-    
-Where NodeJS can run *any* JavaScript file chosen by the user, browsers can *only* run JavaScript files included in HTML files. JavaScript running on a browser is called *client-side JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript works together with the HTML document and helps in making web pages interactive.
+    JavaScript was originally designed only for running in browsers and remained so for a long time, NodeJS came later.
 
-Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
+    Where NodeJS can run *any* JavaScript file chosen by the user, with the `node file.js` command, browsers can *only* run JavaScript files [included to an HTML file](#linking-resources-with-an-html-file). JavaScript running on a browser is called *client-side JavaScript* or *browser JavaScript*, and running on a server with NodeJS is called *server-side JavaScript.* As we will see, client-side JavaScript [works together with an HTML document](#how-html-and-client-side-javascript-work-together) and helps in making web pages interactive.
+
+    Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
 ### JavaScript DOM
 
