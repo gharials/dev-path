@@ -201,7 +201,7 @@ Most importantly, client-side JavaScript has access to the HTML document's _obje
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
-???+ note "Concept: JavaScript DOM as an API"
+??? note "Concept: JavaScript DOM as an API"
 
     The JavaScript DOM, or the `document` object, represents an important programming concept called an [_API_ (Application Programming Interface)](../building-softwares/software-dev-concepts.md#api-application-programming-interface). A programmer will encounter this concept frequently. A clear understanding of it is important.
 
@@ -235,16 +235,16 @@ Now, we can use the event and event handler approach described [in the previous 
 
 Now, notice that for each input element, we can use the `onchange` or `oninput` event handler functions to validate the input value. Inside the event handler functions, we can access the input values, using either `document` object or `event` parameter (see the info box below), and check whether they are correct or not.
 
-???+ info "Accessing input values in event handler functions"
+??? info "Accessing input values in event handler functions"
 
     In an event handler function, we can access the HTML element that triggered the event in two ways:
 
-    1. Using the `document` object: We can use methods like `document.getElementById` to get the element and then access its value using the `value` property. For example, if an input element has `id="name"`, we can get its value with `document.getElementById("name").value`.
-    2. Using the `event` parameter: When an event handler function is called, it receives an `event` object as a parameter. This object contains information about the event, including the target element that triggered the event. We can access the value of the input element using `event.target.value`. _Note:_ in this case, the event handler function must declare the `event` parameter, and the HTML element must call the function with the `event` argument, e.g., `onchange="validateName(event)"`.
+    1. **Using the `document` object:** We can use methods like `document.getElementById` to get the element and then access its value using the `value` property. For example, if an input element has `id="name"`, we can get its value with `document.getElementById("name").value`.
+    2. **Using the `event` parameter:** When an event handler function is called, it receives an `event` object as a parameter. This object contains information about the event, including the target element that triggered the event. We can access the value of the input element using `event.target.value`. _Note:_ in this case, the event handler function must declare the `event` parameter, and the HTML element must call the function with the `event` argument, e.g., `onchange="validateName(event)"`.
 
 Similarly, we can use the `onsubmit` event handler of the form element to validate the entire form. This function can prevent form submissions if any of the input values are invalid.
 
-???+ question "Hands-on exercise"
+??? question "Hands-on exercise: validate a form"
 
     Create a simple HTML form with the following fields: _Name (text)_, _Email (text)_, _Age (number)_, and a Submit button. Define event handler functions for the following elements and events to validate the inputs:
 
