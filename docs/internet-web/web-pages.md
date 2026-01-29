@@ -68,9 +68,9 @@ After that, whenever a user requests the web page, the server returns the HTML f
 
 ### How HTML forms work
 
-In HTML, forms are used to accept inputs from users and pass them to servers for storing in a database. A form contains a number of inputs of various types and a submit button. When a user clicks the submit button, the inputs are passed (*submitted*) to the server with an HTTP request.
+A website not only _displays data_ to users. It also _takes data_ from users. In HTML, forms are used for that. A form is just an HTML element. It has a number of nested input elements of various types and a submit button. When a user clicks the submit button, all the inputs in the form are passed (*submitted*) to the server through an HTTP request.
 
-A server has a URL that receives the form data, and the URL is specified in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be specified with the `method` attribute (e.g., `<form action="/submit" method="POST">`. When a user submits the form, the form fields are converted into a request body, and an HTTP request is made to the specified URL.
+A server has a URL for receiving the form data. The URL is set in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be set with the `method` attribute (e.g., `<form action="/submit" method="POST">`). When a user submits the form, the browser sends an HTTP request to the `action` URL with the form fields included in the request body.
 
 ???+ question "Hands-on exercise"
 
