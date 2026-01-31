@@ -66,6 +66,8 @@ After that, whenever a user requests the web page, the server returns the HTML f
 
 ## Defining page contents with HTML
 
+HTML defines the content of a web page, which means the things we want to show to the user on browser. Browser knows how to read an HTML document and display it to the user.
+
 ### How HTML forms work
 
 A website not only _displays data_ to users. It also _takes data_ from users. In HTML, forms are used for that. A form is just an HTML element. It has a number of nested input elements of various types and a submit button. When a user clicks the submit button, all the inputs in the form are passed (*submitted*) to the server through an HTTP request.
