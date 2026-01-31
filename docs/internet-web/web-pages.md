@@ -195,6 +195,14 @@ Before getting into how JavaScript makes web pages interactive, just keep in min
 
     Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
+    ??? question "Hands-on exercise: Accessing JavaScript from browser console"
+        
+        1. Create an HTML file and a JavaScript file [linked](#linking-resources-with-an-html-file) to it.
+        2. Define some variables and a function in the JavaScript file.
+        3. Access the HTML file from a browser and open browser console.
+        4. Print the variables on console.
+        5. Call the functions and print their return values on console.
+
 ### JavaScript DOM: accessing HTML from JavaScript
 
 Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
@@ -219,7 +227,7 @@ The architecture in summary: _perform some operation (function) when something h
 
 ### Applications of client-side JavaScript
 
-We have learned that [DOM](#javascript-dom-accessing-html-from-javascript) allows us to access HTML from JavaScript and [event handling](#event-handling-calling-javascript-from-html) lets call JavaScript functions from HTML. In this section, we will see how we can use them together in a useful way.
+We have learned that [DOM](#javascript-dom-accessing-html-from-javascript) allows us to access HTML from JavaScript and [event handling](#event-handling-calling-javascript-from-html) lets call JavaScript functions from HTML.
 
 #### Validating forms with client-side JS
 
