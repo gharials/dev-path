@@ -185,7 +185,7 @@ Just like without CSS a web page looks plain, without interactivity, response to
 
 These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as when a user clicks a button, inputs text, and submitting forms. This is where client-side JavaScript comes in.
 
-Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs_. See the info box below for details.
+Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
 
 ??? note "Concept: Browser as a JavaScript runner"
 
@@ -195,7 +195,7 @@ Before getting into how JavaScript makes web pages interactive, just keep in min
 
     Users can interact with client-side JavaScript from browser console. That means users can access the variables and functions defined in the JavaScript files linked to the HTML document.
 
-### JavaScript DOM
+### JavaScript DOM: accessing HTML from JavaScript
 
 Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
 
@@ -209,15 +209,17 @@ Elements of the HTML document can be read and modified through the `document` ob
  
     Without the `document` object, programmers would have to write complex code to access and modify the HTML document. The `document` object removes that complexity and provides a simple way to interact with the HTML document. Therefore, the `document` object is an API that allows JavaScript functions to communicate with the HTML document.
 
-### How HTML and client-side JavaScript work together
+### Event handling: calling JavaScript from HTML
 
 HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onclick="function1()"/>` means call `function1` when element is clicked; `<element onload="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
 
-An HTML file may have one or more associated JavaScript files containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the `document` object. HTML elements can be accessed with the `document` object in [several ways](https://www.w3schools.com/js/js_htmldom_document.asp): `document.getElementById` is a popular way.
+An HTML file may have one or more [linked JavaScript files](#linking-resources-with-an-html-file) containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the `document` object. HTML elements can be accessed with the `document` object in [several ways](https://www.w3schools.com/js/js_htmldom_document.asp): `document.getElementById` is a popular way.
 
 The architecture in summary: _perform some operation (function) when something happens (event) to an element._
 
 ### Applications of client-side JavaScript
+
+We have learned that [DOM](#javascript-dom-accessing-html-from-javascript) allows us to access HTML from JavaScript and [event handling](#event-handling-calling-javascript-from-html) lets call JavaScript functions from HTML. In this section, we will see how we can use them together in a useful way.
 
 #### Validating forms with client-side JS
 
