@@ -60,9 +60,22 @@ The external resources are usually stored in the server's [static directory](web
 
 ## How web pages are developed
 
-A programmer creates an HTML file, containing the content that she wants to show to the users. She may also create additional files, such as CSS files for styling the page and JavaScript files for adding interactivity to the page. Then all these files are put in a web server's [static directory](./web-servers.md#serving-static-contents). It is a _one-time_ job. 
+To create a web page, a programmer has to create an HTML file for it, containing the content that she wants to show to the users. She may also create additional files, such as CSS files for styling the page and JavaScript files for adding interactivity to the page. We will learn about them later. Then all these files are put in an HTTP server's [static directory](./web-servers.md#serving-static-contents). It is a _one-time_ job. 
 
 After that, whenever a user requests the web page, the server returns the HTML file. How a web server does it is explained in [How an HTTP server serves websites](./web-servers.md#how-an-http-server-serves-websites). In the following sections, we will see how HTML, CSS, and JavaScript work together to create a complete web page.
+
+???+ info "The Live Server VSCode extension"
+
+    Setting up an HTTP server takes some time. The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VSCode extension simplifies the job for programmers. It turns the directory open in VSCode (_working directory_) into an HTTP server's [static directory](web-servers.md#serving-static-contents) in a click. As a result, programmers can experiment more frequently.
+    
+    Install the Live Server extension in VSCode if it is not already installed. Use it for doing the exercises on this page.
+
+??? question "Hands-on exercise: Using Live Server in VSCode"
+
+    * Create an HTML file, a CSS file, and a JavaScript file.
+    * [Link](#linking-resources-with-an-html-file) the CSS and the JavaScript files with the HTML file.
+    * Run Live Server and access the HTML from a web browser.
+
 
 ## Defining page contents with HTML
 
