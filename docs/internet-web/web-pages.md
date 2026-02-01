@@ -246,11 +246,11 @@ We have learned that [DOM](#javascript-dom-accessing-html-from-javascript) allow
 
 #### Validating forms with client-side JS
 
-A common use of client-side JavaScript is in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data while filling out forms. The user inputs have to be checked (called *validation*) before storing in a database. Before we see how client-side JavaScript validates forms, have a look at [how HTML forms usually work](#how-html-forms-work).
+A common use of client-side JavaScript is in *validating* HTML forms. Users may input incorrect data or forget to input mandatory data while filling out forms. Checking form inputs before sending them to a server is called validation. Before we see how client-side JavaScript validates forms, have a look at [how HTML forms usually work](#how-html-forms-work).
 
-In a usual HTML form, after a user submits a form, input data is sent to the server just as they are. No form data processing takes place at the browser. In this approach, only the server can validate the form data.
+In a usual HTML form, after a user submits a form, input data is sent to the server just as they are, without any check at the browser. In this approach, only the server can validate the form data. Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs at browser, before sending to a server.
 
-Now, we can use the event and event handler approach described [in the previous section](#how-html-and-client-side-javascript-work-together) to validate form inputs at browser, before submitting to a server. Notice that each input element in a form and the form itself are all HTML elements. Therefore, just like any other HTML elements, they can all have their own events and event handlers. Among the events, the following can be used for validating form inputs.
+Notice that each input element in a form and the form itself are all HTML elements. Therefore, just like any other HTML elements, they can all have their own events and event handlers. Among the events, the following can be used for validating form inputs.
 
 | Element | Event      | Description | Example
 |---------|------------|-------------|----------
@@ -286,6 +286,7 @@ Similarly, we can use the `onsubmit` event handler of the form element to valida
     2. Access and print the input values on console using `document` object.
     3. Access and print the input values on console using `event` parameter.
     4. Check the respective input values according to the validation logic in the table above.
+    5. Observe and distinguish between the `onchange` and `oninput` event handler behaviors.
 
 ## Developing basic web pages
 
