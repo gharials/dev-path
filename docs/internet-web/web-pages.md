@@ -33,7 +33,7 @@ An HTML may also need JavaScript files. The linking rule is bit different for th
 
 The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
 
-???+ "Passing CSS and JavaScript within HTML"
+???+ info "Passing CSS and JavaScript within HTML"
 
     CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This approach is suitable for small CSS and JavaScript codes. This is done with the `<style>` and `<script>` tags, respectively. An example follows:
 
@@ -133,7 +133,7 @@ The `#id` selector selects an element with a specific `id` attribute. For exampl
 
 Note that in an HTML document, `id` attributes are unique, meaning that only one element can have a specific `id`. So, a CSS id selector style applies to only one element.
 
-???+ note "Concept: class and id selectors as associations"
+??? note "Concept: class and id selectors as _associations_"
 
     As we have seen in this section, in an HTML document, only one element can have a specific `id`. On the other hand, multiple elements may have the same `class`. In terms of [_association_ or _mapping_](../programming/mental-models.md#associations-or-maps), an id has a _one-to-one mapping_ with an HTML element, while a class has a _one-to-many_ mapping with HTML elements.
 
@@ -211,7 +211,7 @@ Most importantly, client-side JavaScript has access to the HTML document's _obje
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
-??? note "Concept: JavaScript DOM as an API"
+??? note "Concept: JavaScript DOM as an _API_"
 
     The JavaScript DOM, or the `document` object, represents an important programming concept called an [_API_ (Application Programming Interface)](../building-softwares/software-dev-concepts.md#api-application-programming-interface). A programmer will encounter this concept frequently. A clear understanding of it is important.
 
