@@ -245,7 +245,7 @@ Just like without CSS a web page looks plain, without interactivity, response to
 
 These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as when a user clicks a button, inputs text, and submitting forms. This is where client-side JavaScript comes in.
 
-HTML only knows how to define _**what to show** to users_. It doesn't know _**what do do** when something happens,_ but JavaScript does. Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
+HTML only knows how to define _**what to show** to users_. It doesn't know _**what to do** when something happens,_ but JavaScript does. Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
 
 ??? note "Concept: Browser as a JavaScript runner"
 
@@ -291,7 +291,7 @@ Elements of the HTML document can be read and modified through the `document` ob
 
 ### Applications of client-side JavaScript
 
-We have learned that [DOM](#javascript-dom-accessing-html-from-javascript) allows us to access HTML from JavaScript and [event handling](#event-handling-calling-javascript-from-html) lets call JavaScript functions from HTML.
+We have learned how to _access JavaScript functions from HTML_ using [event handling](#event-handling-calling-javascript-from-html) lets call JavaScript functions from HTML and also how to _access HTML from JavaScript_ using [DOM](#javascript-dom-accessing-html-from-javascript). In this section, we will see how we can use both capabilities together in some interesting scenarios.
 
 #### Validating forms with client-side JS
 
