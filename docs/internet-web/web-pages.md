@@ -2,6 +2,10 @@
 
 In this page, we will learn about the fundamental building blocks of a web page. These days, real web pages are not developed exactly in this style. However, a programmer must have a clear idea about the concepts, because they are fundamental. All other techniques, like [React](../building-softwares/react-js.md) are based on it.
 
+!!! abstract "How to read this page"
+
+    After reading each section, make sure you can do the exercises in the section on your own any time.
+
 ## The fundamental building blocks of a web page
 
 A web page is made up of the following fundamental building blocks:
