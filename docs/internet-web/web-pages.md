@@ -102,7 +102,25 @@ If no URL is set in the form `action` attribute, browser sends a request to the 
     * Set a file name that exists as the `action` value (e.g., `action="/file.html"`).
     * Fill out the form again and observe the requests in the network tab in browser developer console.
 
-???+ question "Hands-on exercise"
+#### How form data is sent to server
+
+Each input field becomes a [query parameter](./http-in-depth.md#urls) with the `name` attribute in the request URL. Let's take the following form for example:
+
+```html
+<html>
+  <head>
+  </head>
+  <form action="/submit_url">
+    <input name="name" type="text"/>
+    <input name="email" type="text"/>
+    <input type="submit" value="Submit"/>
+  </form>
+</html>
+```
+
+It becomes `GET http://localhost:{port}/submit_url?name=user_input&email=user_input`. Create the sample form and observe the requests it sends after submission in browser developer console.
+
+??? question "Hands-on exercise: basic form handling"
 
     * Create a simple HTML form with some sample input fields (e.g., name, email, age, etc.) and a submit button.
     * Specify a URL in the `action` attribute and a request method in the `method` attribute of the form.
