@@ -80,6 +80,12 @@ After that, whenever a user requests the web page, the server returns the HTML f
     * [Link](#linking-resources-with-an-html-file) the CSS and the JavaScript files with the HTML file.
     * Run Live Server and access the HTML from a web browser.
 
+???+ abstract "Section summary"
+
+    * _Web pages are a few files, HTML, CSS, JavaScript, etc._
+    * _A web developer writes those files and puts them in a server._
+    * _Web servers (HTTP servers) only send the files to users._
+
 ## Defining page contents with HTML
 
 HTML defines the content of a web page, which means the things we want to show to the user on browser. Browser knows how to read an HTML document and display it to the user.
