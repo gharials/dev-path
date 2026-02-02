@@ -246,6 +246,10 @@ These days, web pages are not limited to just displaying text and images. Comple
 
 Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
 
+??? info "In-depth resource on JavaScript"
+
+    See the excellent online book [The Modern JavaScript Tutorial](https://javascript.info/) for an in-depth coverage of JavaScript.
+
 ??? note "Concept: Browser as a JavaScript runner"
 
     JavaScript was originally designed only for running in browsers and remained so for a long time, NodeJS came later.
