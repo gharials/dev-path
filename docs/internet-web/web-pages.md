@@ -4,7 +4,22 @@ In this page, we will learn about the fundamental concepts needed to build a bas
 
 !!! abstract "How to read this page"
 
-    After reading each section, make sure you can do the exercises in the section on your own any time. Also make sure that you appreciate the points in the section summaries.
+    **Structure**
+
+    The page is divided into the following key sections:
+
+    * Relationship between HTML, CSS, and JavaScript.
+    * Relationship between a web page and a web server.
+    * Overview of HTML.
+    * Overview of CSS.
+    * Overview of client-side JavaScript.
+
+    **Learning objectives**
+
+    After reading each section, make sure the following:
+
+    * You can do the exercises in the section easily on your own any time. Take help and do the same exercises multiple times if necessary. 
+    * You appreciate the points stated in the section summaries and you can explain them in your own language.
 
 ## The fundamental building blocks of a web page
 
