@@ -64,9 +64,9 @@ To create a web page, a programmer has to create an HTML file for it, containing
 
 After that, whenever a user requests the web page, the server returns the HTML file. How a web server does it is explained in [How an HTTP server serves websites](./web-servers.md#how-an-http-server-serves-websites). In the following sections, we will see how HTML, CSS, and JavaScript work together to create a complete web page.
 
-???+ info "The Live Server VSCode extension"
+???+ info "The VSCode _Live Server_ extension"
 
-    Setting up an HTTP server takes some time. The [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) VSCode extension simplifies the job for programmers. It turns the directory open in VSCode (_working directory_) into an HTTP server's [static directory](web-servers.md#serving-static-contents) in a click. As a result, programmers can experiment more frequently.
+    Setting up an HTTP server takes some time. The VSCode [_Live Server_](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension simplifies the job for programmers. When user clicks "Open with Live Server" on any file, the directory open in VSCode (_working directory_) becomes an HTTP server's [static directory](web-servers.md#serving-static-contents). All files in the working directory can be accessed from browser. As a result, programmers can experiment more frequently.
     
     Install the Live Server extension in VSCode if it is not already installed. Use it for doing the exercises on this page.
 
