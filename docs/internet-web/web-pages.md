@@ -1,10 +1,10 @@
 # How Web Pages Work
 
-In this page, we will learn about the fundamental building blocks of a web page. These days, real web pages are not developed exactly in this style. However, a programmer must have a clear idea about the concepts, because they are fundamental. All other techniques, like [React](../building-softwares/react-js.md) are based on it.
+In this page, we will learn about the fundamental concepts needed to build a basic web page. These days, real web pages are not developed exactly in this style. However, a programmer must have a clear idea about the concepts, because they are fundamental. All other techniques, like [React](../building-softwares/react-js.md) are based on these concepts.
 
 !!! abstract "How to read this page"
 
-    After reading each section, make sure you can do the exercises in the section on your own any time.
+    After reading each section, make sure you can do the exercises in the section on your own any time. Also make sure that you appreciate the points in the section summaries.
 
 ## The fundamental building blocks of a web page
 
@@ -84,7 +84,8 @@ After that, whenever a user requests the web page, the server returns the HTML f
 
     * _Web pages are a few files, HTML, CSS, JavaScript, etc._
     * _A web developer writes those files and puts them in a server._
-    * _Web servers (HTTP servers) only send the files to users._
+    * _Web servers (HTTP servers) only send the files (serves) to users._
+    * _Building a web page and serving a web page are two different tasks._
 
 ## Defining page contents with HTML
 
@@ -92,7 +93,7 @@ HTML defines the content of a web page, which means the things we want to show t
 
 ### How HTML forms work
 
-A website not only _displays data_ to users. It also _takes data_ from users. In HTML, forms are used for that. A form is just an HTML element. It has a number of nested input elements of various types and a submit button. When a user clicks the submit button, all the inputs in the form are passed (*submitted*) to the server through an HTTP request.
+Only _displaying data_ to users is not sufficient for a real-world website. It must also be able to _take data_ from users. In HTML, forms are used for that. A form is just an HTML element. It has a number of nested input elements of various types and a submit button. When a user clicks the submit button, all the inputs in the form are passed (*submitted*) to the server through an HTTP request.
 
 A server has a URL for receiving the form data. The URL is set in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be set with the `method` attribute (e.g., `<form action="/submit" method="POST">`). When a user submits the form, the browser sends an HTTP request to the `action` URL with the form fields included in the request body.
 
@@ -140,9 +141,9 @@ It becomes `GET http://localhost:{port}/submit_url?name=user_input&email=user_in
 
 ## Styling web pages with CSS
 
-By default, without any styling, a web page looks plain and unappealing. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
+By default, without any styling, a web page looks plain and unappealing. For example, all texts have the same font and color. To make it visually attractive, _CSS_ (Cascading Style Sheets) is used. 
 
-CSS controls the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can control various style aspects of HTML elements (e.g., color, layout, spacing, positioning, etc.). For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
+CSS is a language that defines the look of an HTML element with its _style properties_: e.g., the text color, background color, font size, etc. CSS has lots of predefined style properties that can control various style aspects of HTML elements (e.g., color, layout, spacing, positioning, etc.). For example, the `color` property sets the text color, and the `background-color` property sets the background color of an element.
 
 This simple idea styles all the complex and attractive web pages we see in the internet.
 
@@ -244,11 +245,7 @@ Just like without CSS a web page looks plain, without interactivity, response to
 
 These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as when a user clicks a button, inputs text, and submitting forms. This is where client-side JavaScript comes in.
 
-Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
-
-??? info "In-depth resource on JavaScript"
-
-    See the excellent online book [The Modern JavaScript Tutorial](https://javascript.info/) for an in-depth coverage of JavaScript.
+HTML only knows how to define _**what to show** to users_. It doesn't know _**what do do** when something happens,_ but JavaScript does. Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
 
 ??? note "Concept: Browser as a JavaScript runner"
 
@@ -265,6 +262,10 @@ Before getting into how JavaScript makes web pages interactive, just keep in min
         3. Access the HTML file from a browser and open browser console.
         4. Print the variables on console.
         5. Call the functions and print their return values on console.
+
+??? info "In-depth resource on JavaScript"
+
+    See the excellent online book [The Modern JavaScript Tutorial](https://javascript.info/) for an in-depth coverage of JavaScript.
 
 ### Event handling: calling JavaScript from HTML
 
