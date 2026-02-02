@@ -1,6 +1,6 @@
 # How Web Pages Work
 
-A web page is primarily an HTML document. A server only [transfers the HTML document](./web-servers.md#how-an-http-server-serves-websites) and related files to the browser when a user requests a web page. The HTML document contains the content that the user sees on the web page.
+In this page, we will learn about the fundamental building blocks of a web page. These days, real web pages are not developed exactly in this style. However, a programmer must have a clear idea about the concepts, because they are fundamental. All other techniques, like [React](../building-softwares/react-js.md) are based on it.
 
 ## The fundamental building blocks of a web page
 
