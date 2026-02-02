@@ -218,6 +218,14 @@ Before getting into how JavaScript makes web pages interactive, just keep in min
         4. Print the variables on console.
         5. Call the functions and print their return values on console.
 
+### Event handling: calling JavaScript from HTML
+
+HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onclick="function1()"/>` means call `function1` when element is clicked; `<element onload="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
+
+An HTML file may have one or more [linked JavaScript files](#linking-resources-with-an-html-file) containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the `document` object. HTML elements can be accessed with the `document` object in [several ways](https://www.w3schools.com/js/js_htmldom_document.asp): `document.getElementById` is a popular way.
+
+The architecture in summary: _perform some operation (function) when something happens (event) to an element._
+
 ### JavaScript DOM: accessing HTML from JavaScript
 
 Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
@@ -231,14 +239,6 @@ Elements of the HTML document can be read and modified through the `document` ob
     The JavaScript `document` object allows any JavaScript code to communicate with the HTML document. The `document` object has methods, like `getElementById`, that allow accessing elements of the HTML document. It also has methods to modify the HTML document, like `createElement`, `appendChild`, etc.
  
     Without the `document` object, programmers would have to write complex code to access and modify the HTML document. The `document` object removes that complexity and provides a simple way to interact with the HTML document. Therefore, the `document` object is an API that allows JavaScript functions to communicate with the HTML document.
-
-### Event handling: calling JavaScript from HTML
-
-HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onclick="function1()"/>` means call `function1` when element is clicked; `<element onload="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
-
-An HTML file may have one or more [linked JavaScript files](#linking-resources-with-an-html-file) containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the `document` object. HTML elements can be accessed with the `document` object in [several ways](https://www.w3schools.com/js/js_htmldom_document.asp): `document.getElementById` is a popular way.
-
-The architecture in summary: _perform some operation (function) when something happens (event) to an element._
 
 ### Applications of client-side JavaScript
 
