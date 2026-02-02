@@ -76,7 +76,6 @@ After that, whenever a user requests the web page, the server returns the HTML f
     * [Link](#linking-resources-with-an-html-file) the CSS and the JavaScript files with the HTML file.
     * Run Live Server and access the HTML from a web browser.
 
-
 ## Defining page contents with HTML
 
 HTML defines the content of a web page, which means the things we want to show to the user on browser. Browser knows how to read an HTML document and display it to the user.
@@ -104,7 +103,9 @@ If no URL is set in the form `action` attribute, browser sends a request to the 
 
 #### How form data is sent to server
 
-Each input field becomes a [query parameter](./http-in-depth.md#urls) with the `name` attribute in the request URL. Let's take the following form for example:
+How form data is sent to server depends on the [request method](./http-in-depth.md#request-methods) set in the `method` attribute of a form. The `method` value can be either `GET` or `POST`. If no `method` value is is set, `GET` is assumed as the method. A request is sent to the `action` URL using the method.
+
+In a get request, each input field of the form becomes a [query parameter](./http-in-depth.md#urls) with the `name` attribute in the request URL. Let's take the following form for example:
 
 ```html
 <html>
