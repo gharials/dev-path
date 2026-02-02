@@ -87,13 +87,13 @@ A website not only _displays data_ to users. It also _takes data_ from users. In
 
 A server has a URL for receiving the form data. The URL is set in the `action` attribute (e.g., `<form action="/submit">`) of the form. Additionally, the request method (either `GET` or `POST`) can also be set with the `method` attribute (e.g., `<form action="/submit" method="POST">`). When a user submits the form, the browser sends an HTTP request to the `action` URL with the form fields included in the request body.
 
-??? info "How the form `action` attribute works"
+#### How the form `action` attribute works
 
-    If a URL is set in the form `action` attribute, browser sends a request to the URL after submit is clicked and shows the response on browser.
+If a URL is set in the form `action` attribute, browser sends a request to the URL after submit is clicked and shows the response on browser.
 
-    If no URL is set in the form `action` attribute, browser sends a request to the form URL itself. For example, if `http://localhost:5500/form.html` is the form URL, and no `action` attribute is set in the form, browser redirects to `http://localhost:5500/form.html` again on form submission.
+If no URL is set in the form `action` attribute, browser sends a request to the form URL itself. For example, if `http://localhost:5500/form.html` is the form URL, and no `action` attribute is set in the form, browser redirects to `http://localhost:5500/form.html` again on form submission.
 
-    **Exercise**
+??? question "Hands-on exercise: understand `action` attribute values"
 
     * Create a simple form without an `action` attribute.
     * Fill out the form and observe the requests in the network tab in browser developer console.
