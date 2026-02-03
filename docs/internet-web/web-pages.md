@@ -50,8 +50,6 @@ An HTML may also need JavaScript files. The linking rule is bit different for th
 </head>
 ```
 
-The external resources are usually stored in the server's [static directory](web-servers.md#serving-static-contents), but can be in an external server too. After receiving an HTML, browsers [send requests to the server](./web-servers.md#how-an-http-server-serves-websites) for each of the specified resources.
-
 ???+ info "Passing CSS and JavaScript within HTML"
 
     CSS and JavaScript can also be passed within the HTML document itself, instead of linking them as external resources. This approach is suitable for small CSS and JavaScript codes. This is done with the `<style>` and `<script>` tags, respectively. An example follows:
@@ -81,7 +79,7 @@ The external resources are usually stored in the server's [static directory](web
 
 To create a web page, a programmer has to create an HTML file for it, containing the content that she wants to show to the users. She may also create additional files, such as CSS files for styling the page and JavaScript files for adding interactivity to the page. We will learn about them later. Then all these files are put in an HTTP server's [static directory](./web-servers.md#serving-static-contents). It is a _one-time_ job. 
 
-After that, whenever a user requests the web page, the server returns the HTML file. How a web server does it is explained in [How an HTTP server serves websites](./web-servers.md#how-an-http-server-serves-websites). In the following sections, we will see how HTML, CSS, and JavaScript work together to create a complete web page.
+After that, whenever a user requests the web page, the server returns the HTML file and the CSS and JavaScript files [linked to it](#linking-resources-with-an-html-file). How a web server does it is explained in [How an HTTP server serves websites](./web-servers.md#how-an-http-server-serves-websites). In the following sections, we will see how HTML, CSS, and JavaScript work together to create a complete web page.
 
 ???+ info "The VSCode _Live Server_ extension"
 
@@ -260,7 +258,7 @@ Just like without CSS a web page looks plain, without interactivity, response to
 
 These days, web pages are not limited to just displaying text and images. Complex applications are built as web pages. These applications must be able to respond to user actions, such as when a user clicks a button, inputs text, and submitting forms. This is where client-side JavaScript comes in.
 
-HTML only knows how to define _**what to show** to users_. It doesn't know _**what to do** when something happens,_ but JavaScript does. Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
+HTML can only define _**what to show** to users_. It can't define _**what to do** when something happens,_ which JavaScript can. Before getting into how JavaScript makes web pages interactive, just keep in mind that _every browser can run JavaScript programs (see the info box below for details)_.
 
 ??? note "Concept: Browser as a JavaScript runner"
 
@@ -286,7 +284,7 @@ HTML only knows how to define _**what to show** to users_. It doesn't know _**wh
 
 HTML elements can associate functions with its _events_; those functions are called _event handlers._ For example, `<element onclick="function1()"/>` means call `function1` when element is clicked; `<element onload="function2()"/>` means call `function2` when element loads. Here both `function1` and `function2` are defined in the linked JavaScript files. Here is an exhaustive list of [HTML events](https://www.w3schools.com/jsref/dom_obj_event.asp).
 
-An HTML file may have one or more [linked JavaScript files](#linking-resources-with-an-html-file) containing the functions associated with various events in the HTML file. Functions have access to the HTML document with the `document` object. HTML elements can be accessed with the `document` object in [several ways](https://www.w3schools.com/js/js_htmldom_document.asp): `document.getElementById` is a popular way.
+An HTML file may have one or more [linked JavaScript files](#linking-resources-with-an-html-file) containing the functions associated with various events in the HTML file.
 
 The architecture in summary: _perform some operation (function) when something happens (event) to an element._
 
