@@ -143,7 +143,7 @@ In a get request, each input field of the form becomes a [query parameter](./htt
 </html>
 ```
 
-It becomes `GET http://localhost:{port}/submit_url?name=user_input&email=user_input`. Create the sample form and observe the requests it sends after submission in browser developer console.
+As the form doesn't specify any `method` attribute, it sends the following GET request: `GET http://localhost:{port}/submit_url?name=user_input&email=user_input`. Create the sample form and observe the requests it sends after submission in browser developer console.
 
 ??? question "Hands-on exercise: basic form handling"
 
@@ -151,6 +151,14 @@ It becomes `GET http://localhost:{port}/submit_url?name=user_input&email=user_in
     * Specify a URL in the `action` attribute and a request method in the `method` attribute of the form.
     * Open the HTML file in a browser, fill out the form, and click the submit button.
     * Check in the browser's developer tools (Network tab) to see the HTTP request made to the specified URL, and also observe how the form fields are passed with the request.
+
+???+ abstract "Section summary"
+
+    * _HTML defines the content (i.e, texts, images, etc.) that users see on browser._
+    * _HTML forms collect data from users._
+        * _A URL set in the `action` attribute handles the form input._
+        * _When user clicks the submit button, all form inputs are sent to the `action` URL._
+        * _The request method of sending form data is set in the `method` attribute of the form._ 
 
 ## Styling web pages with CSS
 
