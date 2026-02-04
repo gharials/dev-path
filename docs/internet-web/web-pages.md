@@ -290,7 +290,7 @@ The architecture in summary: _perform some operation (function) when something h
 
 ### JavaScript DOM: accessing HTML from JavaScript
 
-Most importantly, client-side JavaScript has access to the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
+Client-side JavaScript can access the HTML document's _object representation_, called [DOM](https://www.w3schools.com/js/js_htmldom.asp) (Document Object Model), through a special object named `document`. The object is created automatically and is accessible from everywhere in any client-side JavaScript file.
 
 Elements of the HTML document can be read and modified through the `document` object. Therefore, it is the link between the HTML document and client-side JavaScript. Whenever accessing and manipulating the HTML document with client-side JavaScript is needed, use the `document` object. This allows JavaScript to dynamically change the content, structure, and style of a webpage.
 
@@ -304,7 +304,7 @@ Elements of the HTML document can be read and modified through the `document` ob
 
 ### Applications of client-side JavaScript
 
-We have learned how to _access JavaScript functions from HTML_ using [event handling](#event-handling-calling-javascript-from-html) lets call JavaScript functions from HTML and also how to _access HTML from JavaScript_ using [DOM](#javascript-dom-accessing-html-from-javascript). In this section, we will see how we can use both capabilities together in some interesting scenarios.
+We have learned how to _access JavaScript functions from HTML_ using [event handling](#event-handling-calling-javascript-from-html) and also how to _access HTML from JavaScript_ using [DOM](#javascript-dom-accessing-html-from-javascript). In this section, we will see how we can use both capabilities together in some interesting scenarios.
 
 #### Validating forms with client-side JS
 
