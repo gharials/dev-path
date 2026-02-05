@@ -16,10 +16,10 @@ In this page, we will learn about the fundamental concepts needed to build a bas
 
     **Learning objectives**
 
-    After reading each section, make sure the following:
+    Each section touches only the basics needed for building a basic web page. After reading each section, make sure the following:
 
     * You can do the exercises in the section easily on your own any time. Take help and do the same exercises multiple times if necessary. 
-    * You appreciate the points stated in the section summaries and you can explain them in your own language.
+    * You appreciate the points stated in the section summaries and you can express them in your own language.
 
 ## The fundamental building blocks of a web page
 
