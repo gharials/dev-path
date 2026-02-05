@@ -104,6 +104,14 @@ After that, whenever a user requests the web page, the server returns the HTML f
 
 HTML defines the content of a web page, which means the things we want to show to the user on browser. Browser knows how to read an HTML document and display it to the user.
 
+### HTML elements
+
+In an HTML document, elements are organized as a [hierarchy](../programming/mental-models.md#hierarchy). HTML elements are described with _tags_. A tag describes what kind of element an element is. _Attributes_ of a tag gives information about the element.
+
+??? note "Concept: Attributes in HTML tags and in JavaScript objects"
+
+    Attributes are like properties of a JavaScript object.
+
 ### How HTML forms work
 
 Only _displaying data_ to users is not sufficient for a real-world website. It must also be able to _take data_ from users. In HTML, forms are used for that. A form is just an HTML element. It has a number of nested input elements of various types and a submit button. When a user clicks the submit button, all the inputs in the form are passed (*submitted*) to the server through an HTTP request.
